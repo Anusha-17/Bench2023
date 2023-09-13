@@ -1,0 +1,1 @@
+cmd_/home/anusha/Anusha/LDD/Char_Driver/char_driver_static.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/anusha/Anusha/LDD/Char_Driver/char_driver_static.ko /home/anusha/Anusha/LDD/Char_Driver/char_driver_static.o /home/anusha/Anusha/LDD/Char_Driver/char_driver_static.mod.o;  true

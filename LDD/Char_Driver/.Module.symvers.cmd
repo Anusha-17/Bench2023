@@ -1,0 +1,1 @@
+cmd_/home/anusha/Anusha/LDD/Char_Driver/Module.symvers :=  scripts/mod/modpost -m -a     -o /home/anusha/Anusha/LDD/Char_Driver/Module.symvers -T /home/anusha/Anusha/LDD/Char_Driver/modules.order -i Module.symvers -e 

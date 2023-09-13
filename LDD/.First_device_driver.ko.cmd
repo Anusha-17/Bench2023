@@ -1,0 +1,1 @@
+cmd_/home/anusha/Anusha/LDD/First_device_driver.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/anusha/Anusha/LDD/First_device_driver.ko /home/anusha/Anusha/LDD/First_device_driver.o /home/anusha/Anusha/LDD/First_device_driver.mod.o;  true

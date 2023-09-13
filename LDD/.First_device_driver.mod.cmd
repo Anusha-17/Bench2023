@@ -1,0 +1,1 @@
+cmd_/home/anusha/Anusha/LDD/First_device_driver.mod := printf '%s\n'   First_device_driver.o | awk '!x[$$0]++ { print("/home/anusha/Anusha/LDD/"$$0) }' > /home/anusha/Anusha/LDD/First_device_driver.mod
