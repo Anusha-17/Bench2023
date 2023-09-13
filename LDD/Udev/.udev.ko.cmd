@@ -1,0 +1,1 @@
+cmd_/home/anusha/ANUSHA/LDD/Udev/udev.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/anusha/ANUSHA/LDD/Udev/udev.ko /home/anusha/ANUSHA/LDD/Udev/udev.o /home/anusha/ANUSHA/LDD/Udev/udev.mod.o;  true

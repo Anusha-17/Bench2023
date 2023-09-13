@@ -1,0 +1,1 @@
+cmd_/home/anusha/ANUSHA/LDD/Char_Driver_Dynamic/char_driver_dynamic.mod := printf '%s\n'   char_driver_dynamic.o | awk '!x[$$0]++ { print("/home/anusha/ANUSHA/LDD/Char_Driver_Dynamic/"$$0) }' > /home/anusha/ANUSHA/LDD/Char_Driver_Dynamic/char_driver_dynamic.mod
