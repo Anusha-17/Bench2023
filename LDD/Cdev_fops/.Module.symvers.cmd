@@ -1,0 +1,1 @@
+cmd_/home/anusha/ANUSHA/LDD/Cdev_fops/Module.symvers :=  scripts/mod/modpost -m -a     -o /home/anusha/ANUSHA/LDD/Cdev_fops/Module.symvers -T /home/anusha/ANUSHA/LDD/Cdev_fops/modules.order -i Module.symvers -e 
