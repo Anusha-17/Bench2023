@@ -1,4 +1,4 @@
-#include<iostream>
+/*#include<iostream>
 using namespace std;
 void add()
 {
@@ -23,6 +23,25 @@ int main()
 	add();
 	add(a,b);
 	add(a,b,c);
+	return 0;
+}*/
+
+#include<iostream>
+using namespace std;
+int add(int a,int b)
+{
+	return a+b;
+}
+double add(double a,double b)
+{
+	return a+b;
+}
+int main()
+{
+	int n1 = add(2,3);
+	double n2 = add(2.3,3.4);
+	cout << "Int: " << n1 << "\n";
+	cout << "Double: " << n2 << "\n";
 	return 0;
 }
 
