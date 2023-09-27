@@ -1,0 +1,151 @@
+QCarCam test application.
+
+Test application that reads a configuration XML for the camera and windowing properties.
+It sets up the display windows using the native OS APIs through test_util library.
+It sets up the cameras using the QCarCam API. 
+
+======
+Usage:
+======
+qcarcam_test [-config=FILE] [-dumpFrame=FREQ] [-startStop=FREQ | -pauseResume=FREQ] \
+    [-noDisplay] [-singlethread] [-printfps=TIME] [-checkbuf=ENABLE] [-showStats=ENABLE] \
+    [-c2d=ENABLE] [-cache] [-csc=ENABLE] [-di=MODE] [-nomenu|-nonInteractive] \
+    [-fatalErrorRecover] [-checkdualcsi] [-retry] [-seconds=TIME] [-gpioNumber=GPIO] \
+    [-gpioMode=MODE] [-allocator=ALLOCATOR]
+
+
+-config=FILE
+    XML configuration file to be used.
+    Default if argument unspecified is qcarcam_config.xml
+
+-dumpFrame=FREQ
+    Dumps frames to a file when frameID % FREQ == 0 
+
+-startStop=FREQ | -pauseResume=FREQ
+    {Stops and starts | [pauses and resumes} the streams when frameID % FREQ == 0 
+
+-noDisplay
+    offscreen streaming. Does not post buffers to display.
+    Default is onscreen.
+    
+-singlethread
+    Uses single thread to setup and start all streams.
+    Default is multithreaded where each stream is setup using its own thread.
+
+-printfps=TIME
+    Prints FPS and state report of all streams every TIME seconds
+
+-checkbuf=ENABLE
+    Enables checking of buffer states and printing them as part of the FPS report.
+    Default is disabled 
+
+-showStats=ENABLE
+    Prints performance stats related to API operations
+    Default is disabled
+
+-c2d=ENABLE
+    Creates extra set of offscreen buffers and coverts using C2D prior to posting to display foramt
+    Default is disabled
+    
+-cache
+    Uses cached buffers. Only valid for offscreen operation (i.e. noDiaply)
+    Default is disabled
+
+-csc=ENABLE
+    Creates extra set of offscreen buffers and converts using CSC library prior to posting to display foramt
+    Default is disabled
+
+-di=MODE
+    Enable De-Interlacing mode for interlaced content
+    Default is disabled
+
+-nomenu|-nonInteractive
+    Does not setup or show menu.
+    NOTE: Specify this if launching the test app in background
+
+-fatalErrorRecover
+    Enable test app to try and recovery stream in cases of fatal errors.
+    Stops and starts the stream again.
+    Default is enabled
+
+-checkdualcsi
+    Enables Dual CSI pattern checker where the left half of the image must match the right half.
+    Default is disabled
+
+-retry
+    Retries a few times if the ais_server is still in process of detecting streams.
+
+-seconds=TIME
+    Exit app after TIME seconds
+
+-gpioNumber=GPIO
+    Specify GPIO to be used as toggle
+    Default is disabled
+
+-gpioMode=MODE
+    Specify action of GPIO toggled
+    Default is disabled
+
+-allocator=ALLOCATOR
+    Specify buffer allocator.
+    For QNX, this can be used to select between pmem v1 or v2 handle used for QCarCam buffers
+
+-hwTimestampBasedFps
+    Print FPS based on hardware time stamp.
+
+========
+Examples
+========
+    o Launch with xml config file (default it expects is qcarcam_config.xml)
+        "qcarcam_test"
+
+    o to specify config file
+        "qcarcam_test -config=test_config.xml"
+
+    o to pause/resume or stop/start after "x" frames:
+        "qcarcam_test -pauseResume=100"
+        "qcarcam_test -startStop=100"
+
+    o to dump frame after "x" frames:
+        "qcarcam_test -dumpFrame=100"
+
+    o to launch in background without menu:
+        "qcarcam_test -nomenu &"
+
+==================
+FPS Report Example
+==================
+​
+-----------FPS Report - 2.0 sec--------------
+| sid | cid | bid |  state (time)| fps  | rel  |
+|  0  |  0  |  0  | ok           | 28.5 | 28.3 |
+|  0  |  0  |  1  | ok           | 28.5 | 28.3 |
+|  1  |  1  |  0  | ok           | 28.5 | 28.3 |
+|  1  |  2  |  1  | ok           | 28.5 | 28.3 |
+-----------------------------------------------
+
+sid
+    Specifies session id - refers to input_device in XML
+​
+cid
+    Specifies camera id - refers to input in XML
+
+bid
+    Specifies bufferlist id - refers to stream in XML
+
+​state (time)
+    OK - Stream receiving frames and is OK. time will be printed if transition occured
+        since the last report. Time will be since first frame after transition.
+    
+    START - Stream was started but have not received first frame yet. Time since start command returned.
+    STOP - Stream is Stopped
+    PAUSE - Stream is Paused
+    
+    ERROR - Stream got an error event and is in error state
+    FREEZE - Stream did not get new frames for >1 second. Time will be since the last frame we received.
+
+fps
+    Rate of frames recieved from QCarCam
+​
+Rel
+    Rate of frames released to QCarCam      

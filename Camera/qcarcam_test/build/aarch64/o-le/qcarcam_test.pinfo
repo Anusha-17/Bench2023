@@ -1,0 +1,10 @@
+STATE=Stable Release
+INSTALLDIR=aarch64le/bin/camera_qcx/qcarcam_test/
+INSTALLNAME=qcarcam_test
+NAME=qcarcam_test
+USER=gnaveen
+HOST=desk049
+DATE=2023/09/06-12:09:13-IST
+VERSION=QNX_SDP710
+TAGID=apps
+DESCRIPTION=QCarCam test application

@@ -1,0 +1,607 @@
+Archive member included to satisfy reference by file (symbol)
+
+/home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/install/aarch64le/lib/camera_qcx/libcamera_metadata.a(camera_metadata.o)
+                              test_util_qnx.o (calculate_camera_metadata_size)
+
+Discarded input sections
+
+ .group         0x0000000000000000        0xc qcarcam_rvc.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+LOAD /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crti.o
+LOAD /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/host/linux/x86_64/usr/lib/gcc/aarch64-unknown-nto-qnx7.1.0/8.3.0//crtbegin.o
+LOAD qcarcam_rvc.o
+LOAD test_util.o
+LOAD test_util_qnx.o
+LOAD test_util_standalone.o
+LOAD /home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/install/aarch64le/lib/camera_qcx/libqcxclient.so
+LOAD /home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/install/aarch64le/lib/camera_qcx/libqcxosal.so
+LOAD /home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/install/aarch64le/lib/camera_qcx/libcamera_metadata.a
+LOAD /home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/install/aarch64le/lib/libOSAbstraction.so
+LOAD /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/usr/lib/libscreen.so
+LOAD /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/usr/lib/libxml2.so
+LOAD /home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/install/aarch64le/lib/libpmem_client.so
+LOAD /home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/install/aarch64le/lib/libfdt_utils.so
+LOAD /home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/install/aarch64le/lib/libgpio_client.so
+LOAD /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/libslog2.so
+LOAD /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/usr/lib/libc++.so
+LOAD /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/libm.so
+LOAD /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/libc.so
+LOAD /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/libcS.a
+LOAD /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/libgcc_s.so
+LOAD /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/host/linux/x86_64/usr/lib/gcc/aarch64-unknown-nto-qnx7.1.0/8.3.0//libgcc_eh.a
+LOAD /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/host/linux/x86_64/usr/lib/gcc/aarch64-unknown-nto-qnx7.1.0/8.3.0//crtend.o
+LOAD /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crtn.o
+                [!provide]                        PROVIDE (__executable_start = SEGMENT_START ("text-segment", 0x0))
+                0x0000000000000238                . = (SEGMENT_START ("text-segment", 0x0) + SIZEOF_HEADERS)
+
+.interp         0x0000000000000238       0x17
+ *(.interp)
+ .interp        0x0000000000000238       0x17 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+
+.note.gnu.build-id
+                0x0000000000000250       0x20
+ *(.note.gnu.build-id)
+ .note.gnu.build-id
+                0x0000000000000250       0x20 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+
+.note           0x0000000000000270       0x1c
+ .note          0x0000000000000270       0x1c /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crtn.o
+
+.hash
+ *(.hash)
+
+.gnu.hash       0x0000000000000290       0x44
+ *(.gnu.hash)
+ .gnu.hash      0x0000000000000290       0x44 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+
+.dynsym         0x00000000000002d8      0xe28
+ *(.dynsym)
+ .dynsym        0x00000000000002d8      0xe28 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+
+.dynstr         0x0000000000001100      0x91a
+ *(.dynstr)
+ .dynstr        0x0000000000001100      0x91a /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+
+.gnu.version    0x0000000000001a1a      0x12e
+ *(.gnu.version)
+ .gnu.version   0x0000000000001a1a      0x12e /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+
+.gnu.version_d  0x0000000000001b48        0x0
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x0000000000001b48        0x0 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+
+.gnu.version_r  0x0000000000001b48       0x20
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x0000000000001b48       0x20 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+
+.rela.dyn       0x0000000000001b68     0x2730
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ .rela.data.rel.ro
+                0x0000000000001b68        0x0 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+ .rela.data.rel.local
+                0x0000000000001b68     0x2130 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+ .rela.data.rel.ro.local
+                0x0000000000003c98      0x468 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ .rela.got      0x0000000000004100      0x150 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ .rela.bss      0x0000000000004250        0x0 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+ *(.rela.ifunc)
+ .rela.ifunc    0x0000000000004250        0x0 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+ .rela.fini_array
+                0x0000000000004250       0x18 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+ .rela.init_array
+                0x0000000000004268       0x30 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+
+.rela.plt       0x0000000000004298      0xc18
+ *(.rela.plt)
+ .rela.plt      0x0000000000004298      0xc18 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+                [!provide]                        PROVIDE (__rela_iplt_start = .)
+ *(.rela.iplt)
+                [!provide]                        PROVIDE (__rela_iplt_end = .)
+
+.init
+ *(SORT_NONE(.init))
+
+.plt            0x0000000000004eb0      0x830
+ *(.plt)
+ .plt           0x0000000000004eb0      0x830 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+ *(.iplt)
+
+.text           0x00000000000056e0     0xf7e0
+                0x00000000000056e0                _btext = .
+ *(.text.unlikely .text.*_unlikely .text.unlikely.*)
+ *(.text.exit .text.exit.*)
+ *(.text.startup .text.startup.*)
+ .text.startup  0x00000000000056e0      0x860 qcarcam_rvc.o
+                0x00000000000056e0                main
+ *(.text.hot .text.hot.*)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x0000000000005f40       0x94 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+                0x0000000000005f40                _start
+ .text          0x0000000000005fd4        0x0 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crti.o
+ *fill*         0x0000000000005fd4        0x4 00000000
+ .text          0x0000000000005fd8       0xfc /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/host/linux/x86_64/usr/lib/gcc/aarch64-unknown-nto-qnx7.1.0/8.3.0//crtbegin.o
+ .text          0x00000000000060d4     0x2000 qcarcam_rvc.o
+                0x00000000000063ac                qcarcam_test_get_time(unsigned long*)
+                0x0000000000008024                display_menu()
+                0x0000000000008060                process_cmds(char)
+ .text._ZN20qcarcam_test_input_tD2Ev
+                0x00000000000080d4       0x60 qcarcam_rvc.o
+                0x00000000000080d4                qcarcam_test_input_t::~qcarcam_test_input_t()
+                0x00000000000080d4                qcarcam_test_input_t::~qcarcam_test_input_t()
+ .text          0x0000000000008134     0x2380 test_util.o
+                0x0000000000008134                test_util_di_sw_weave_30fps(test_util_sw_di_t*)
+                0x000000000000824c                test_util_parse_xml_config_file_v2(char const*, test_util_xml_input_t*, unsigned int, test_util_global_config_t*)
+                0x000000000000a434                test_util_parse_xml_config_file(char const*, test_util_xml_input_t*, unsigned int)
+                0x000000000000a43c                test_util_get_time(unsigned long long*)
+ .text          0x000000000000a4b4     0x4b48 test_util_qnx.o
+                0x000000000000ac28                QCarCamSetupUBWCPlanes(QCarCamPlane_t*, QCarCamUBWCTileInfo const*)
+                0x000000000000ad68                test_util_register_pm_resource()
+                0x000000000000b1b0                test_util_init(test_util_ctxt_t**, test_util_ctxt_params_t*)
+                0x000000000000b400                test_util_init_window(test_util_ctxt_t*, test_util_window_t**)
+                0x000000000000b448                test_util_init_window_buffers(test_util_ctxt_t*, test_util_window_t*, QCarCamBufferList_t*)
+                0x000000000000c4d4                test_util_post_window_buffer(test_util_ctxt_t*, test_util_window_t*, unsigned int, std::__1::list<unsigned int, std::__1::allocator<unsigned int> >*, QCarCamInterlaceField_e)
+                0x000000000000c884                test_util_dump_window_buffer(test_util_ctxt_t*, test_util_window_t*, unsigned int, char const*)
+                0x000000000000ca94                test_util_get_buf_ptr(test_util_window_t*, test_util_buf_ptr_t*)
+                0x000000000000cbbc                test_util_allocate_input_buffers(test_util_window_t*, QCarCamBufferList_t*, unsigned int)
+                0x000000000000ced8                test_util_free_input_buffers(test_util_window_t*, QCarCamBufferList_t*)
+                0x000000000000d0b0                test_util_allocate_metadata_buffers(test_util_window_t*, QCarCamBufferList_t*, unsigned int, unsigned int)
+                0x000000000000d424                test_util_initialize_metadata_buffers(test_util_window_t*, test_util_metadata_tag_t*, unsigned int)
+                0x000000000000d668                test_util_append_metadata_tag(test_util_window_t*, test_util_metadata_tag_t*)
+                0x000000000000d9ac                test_util_free_metadata_buffers(test_util_window_t*, QCarCamBufferList_t*)
+                0x000000000000db84                test_util_read_input_data(test_util_window_t*, char const*, int, unsigned long)
+                0x000000000000df0c                test_util_deinit_window_buffer(test_util_ctxt_t*, test_util_window_t*)
+                0x000000000000e038                test_util_release_pm_resource()
+                0x000000000000e0c0                test_util_deinit_window(test_util_ctxt_t*, test_util_window_t*)
+                0x000000000000e100                test_util_deinit(test_util_ctxt_t*)
+                0x000000000000e210                test_util_create_c2d_surface(test_util_ctxt_t*, test_util_window_t*, unsigned int)
+                0x000000000000e218                test_util_get_qcarcam_format(test_util_color_fmt_t)
+                0x000000000000e240                test_util_get_c2d_surface_id(test_util_ctxt_t*, test_util_window_t*, unsigned int, unsigned int*)
+                0x000000000000e268                test_util_set_window_param(test_util_ctxt_t*, test_util_window_t*, test_util_window_param_t*)
+                0x000000000000e88c                test_util_set_diag(test_util_ctxt_t*, test_util_window_t*, test_util_diag_t*)
+                0x000000000000e890                test_util_gpio_interrupt_config(unsigned int*, int, test_util_trigger_type_t)
+                0x000000000000eb64                test_util_interrupt_attach(test_util_intr_thrd_args_t*)
+                0x000000000000ec54                test_util_interrupt_wait_and_unmask(unsigned int, int)
+                0x000000000000ed78                test_util_get_param(test_util_window_t*, test_util_params_t, int*)
+                0x000000000000ee0c                test_util_set_param(test_util_window_t*, test_util_params_t, int)
+                0x000000000000efec                test_util_set_power_callback(QCarCamRet_e (*)(test_util_pm_event_t, void*), void*)
+ .text          0x000000000000effc        0x0 test_util_standalone.o
+ .text          0x000000000000effc     0x5ec4 /home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/install/aarch64le/lib/camera_qcx/libcamera_metadata.a(camera_metadata.o)
+                0x000000000000f014                camera_metadata_enum_snprint
+                0x0000000000011704                camera_metadata_enum_value
+                0x0000000000013dbc                get_camera_metadata_alignment
+                0x0000000000013dc4                free_camera_metadata
+                0x0000000000013dc8                calculate_camera_metadata_size
+                0x0000000000013dd4                get_camera_metadata_size
+                0x0000000000013de8                get_camera_metadata_compact_size
+                0x0000000000013e10                get_camera_metadata_entry_count
+                0x0000000000013e18                get_camera_metadata_entry_capacity
+                0x0000000000013e20                get_camera_metadata_data_count
+                0x0000000000013e28                get_camera_metadata_data_capacity
+                0x0000000000013e30                calculate_camera_metadata_entry_data_size
+                0x0000000000013e68                get_camera_metadata_entry
+                0x0000000000013ef8                get_camera_metadata_ro_entry
+                0x0000000000013efc                find_camera_metadata_entry
+                0x0000000000013ff4                find_camera_metadata_ro_entry
+                0x0000000000013ff8                get_camera_metadata_section_name
+                0x0000000000014038                get_camera_metadata_tag_name
+                0x000000000001409c                get_camera_metadata_tag_type
+                0x0000000000014104                validate_camera_metadata_structure
+                0x000000000001453c                allocate_copy_camera_metadata_checked
+                0x00000000000145a0                place_camera_metadata
+                0x0000000000014630                allocate_camera_metadata
+                0x0000000000014674                copy_camera_metadata
+                0x0000000000014748                append_camera_metadata
+                0x00000000000148b8                clone_camera_metadata
+                0x0000000000014940                sort_camera_metadata
+                0x00000000000149d8                delete_camera_metadata_entry
+                0x0000000000014b10                update_camera_metadata_entry
+                0x0000000000014cfc                add_camera_metadata_entry
+                0x0000000000014e70                set_camera_metadata_vendor_tag_ops
+                0x0000000000014eb0                set_camera_metadata_vendor_ops
+ .text          0x0000000000014ec0        0x0 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/host/linux/x86_64/usr/lib/gcc/aarch64-unknown-nto-qnx7.1.0/8.3.0//crtend.o
+ .text          0x0000000000014ec0        0x0 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crtn.o
+ *(.gnu.warning)
+
+.fini
+ *(SORT_NONE(.fini))
+                [!provide]                        PROVIDE (__etext = .)
+                [!provide]                        PROVIDE (_etext = .)
+                [!provide]                        PROVIDE (etext = .)
+
+.rodata         0x0000000000014ec0     0x548a
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x0000000000014ec0       0x28 qcarcam_rvc.o
+ .rodata.str1.1
+                0x0000000000014ee8      0xbf2 qcarcam_rvc.o
+ *fill*         0x0000000000015ada        0x2 
+ .rodata.cst4   0x0000000000015adc        0x4 test_util.o
+ .rodata.str1.1
+                0x0000000000015ae0      0xad4 test_util.o
+                                        0xb77 (size before relaxing)
+ .rodata        0x00000000000165b4      0x173 test_util_qnx.o
+ .rodata.str1.1
+                0x0000000000016727     0x15a3 test_util_qnx.o
+                                       0x15a5 (size before relaxing)
+ *fill*         0x0000000000017cca        0x6 
+ .rodata        0x0000000000017cd0      0x29d /home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/install/aarch64le/lib/camera_qcx/libcamera_metadata.a(camera_metadata.o)
+                0x0000000000017e18                camera_metadata_type_size
+ .rodata.str1.1
+                0x0000000000017f6d     0x23dd /home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/install/aarch64le/lib/camera_qcx/libcamera_metadata.a(camera_metadata.o)
+                                       0x24b4 (size before relaxing)
+
+.rodata1
+ *(.rodata1)
+
+.eh_frame_hdr   0x000000000001a34c      0x2cc
+ *(.eh_frame_hdr)
+ .eh_frame_hdr  0x000000000001a34c      0x2cc /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/host/linux/x86_64/usr/lib/gcc/aarch64-unknown-nto-qnx7.1.0/8.3.0//crtbegin.o
+                0x000000000001a34c                __GNU_EH_FRAME_HDR
+ *(.eh_frame_entry .eh_frame_entry.*)
+
+.eh_frame       0x000000000001a618      0xe34
+ *(.eh_frame)
+ .eh_frame      0x000000000001a618       0x80 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/host/linux/x86_64/usr/lib/gcc/aarch64-unknown-nto-qnx7.1.0/8.3.0//crtbegin.o
+ .eh_frame      0x000000000001a698      0x260 qcarcam_rvc.o
+                                        0x278 (size before relaxing)
+ .eh_frame      0x000000000001a8f8       0xb8 test_util.o
+                                         0xd0 (size before relaxing)
+ .eh_frame      0x000000000001a9b0      0x630 test_util_qnx.o
+                                        0x640 (size before relaxing)
+ .eh_frame      0x000000000001afe0      0x468 /home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/install/aarch64le/lib/camera_qcx/libcamera_metadata.a(camera_metadata.o)
+                                        0x480 (size before relaxing)
+ .eh_frame      0x000000000001b448        0x4 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/host/linux/x86_64/usr/lib/gcc/aarch64-unknown-nto-qnx7.1.0/8.3.0//crtend.o
+ *(.eh_frame.*)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges*)
+                0x000000000002b5d0                . = DATA_SEGMENT_ALIGN (CONSTANT (MAXPAGESIZE), CONSTANT (COMMONPAGESIZE))
+
+.eh_frame
+ *(.eh_frame)
+ *(.eh_frame.*)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges*)
+
+.tdata          0x000000000002b5d0        0x0
+                [!provide]                        PROVIDE (__tdata_start = .)
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array  0x000000000002b5d0        0x0
+                0x000000000002b5d0                PROVIDE (__preinit_array_start = .)
+ *(.preinit_array)
+                0x000000000002b5d0                PROVIDE (__preinit_array_end = .)
+
+.init_array     0x000000000002b5d0       0x10
+                0x000000000002b5d0                PROVIDE (__init_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
+ *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
+ .init_array    0x000000000002b5d0        0x8 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/host/linux/x86_64/usr/lib/gcc/aarch64-unknown-nto-qnx7.1.0/8.3.0//crtbegin.o
+ .init_array    0x000000000002b5d8        0x8 qcarcam_rvc.o
+                0x000000000002b5e0                PROVIDE (__init_array_end = .)
+
+.fini_array     0x000000000002b5e0        0x8
+                0x000000000002b5e0                PROVIDE (__fini_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
+ *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
+ .fini_array    0x000000000002b5e0        0x8 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/host/linux/x86_64/usr/lib/gcc/aarch64-unknown-nto-qnx7.1.0/8.3.0//crtbegin.o
+                0x000000000002b5e8                PROVIDE (__fini_array_end = .)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+
+.jcr
+ *(.jcr)
+
+.data.rel.ro    0x000000000002b5e8      0x2f0
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ .data.rel.ro.local
+                0x000000000002b5e8      0x2c0 test_util.o
+ .data.rel.ro.local
+                0x000000000002b8a8       0x30 /home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/install/aarch64le/lib/camera_qcx/libcamera_metadata.a(camera_metadata.o)
+ *(.data.rel.ro .data.rel.ro.* .gnu.linkonce.d.rel.ro.*)
+ .data.rel.ro   0x000000000002b8d8        0x0 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+
+.dynamic        0x000000000002b8d8      0x290
+ *(.dynamic)
+ .dynamic       0x000000000002b8d8      0x290 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+                0x000000000002b8d8                _DYNAMIC
+
+.got            0x000000000002bb68      0x498
+ *(.got.plt)
+ .got.plt       0x000000000002bb68      0x420 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+ *(.igot.plt)
+ *(.got)
+ .got           0x000000000002bf88       0x78 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+                0x000000000002bf88                _GLOBAL_OFFSET_TABLE_
+ *(.igot)
+                0x000000000002c000                . = DATA_SEGMENT_RELRO_END (., 0x0)
+
+.data           0x000000000002c000     0x1500
+                [!provide]                        PROVIDE (__data_start = .)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x000000000002c000        0x0 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+ .data          0x000000000002c000        0x0 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crti.o
+ .data          0x000000000002c000        0x0 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/host/linux/x86_64/usr/lib/gcc/aarch64-unknown-nto-qnx7.1.0/8.3.0//crtbegin.o
+ .data.rel.local
+                0x000000000002c000        0x8 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/host/linux/x86_64/usr/lib/gcc/aarch64-unknown-nto-qnx7.1.0/8.3.0//crtbegin.o
+                0x000000000002c000                __dso_handle
+ .data          0x000000000002c008        0x4 qcarcam_rvc.o
+ .data          0x000000000002c00c        0x0 test_util.o
+ .data          0x000000000002c00c        0x0 test_util_qnx.o
+ .data          0x000000000002c00c        0x0 test_util_standalone.o
+ .data          0x000000000002c00c       0xf0 /home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/install/aarch64le/lib/camera_qcx/libcamera_metadata.a(camera_metadata.o)
+                0x000000000002c00c                camera_metadata_section_bounds
+ *fill*         0x000000000002c0fc        0x4 
+ .data.rel.local
+                0x000000000002c100     0x1400 /home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/install/aarch64le/lib/camera_qcx/libcamera_metadata.a(camera_metadata.o)
+                0x000000000002c100                camera_metadata_section_names
+                0x000000000002c1f0                tag_info
+                0x000000000002c2e0                camera_metadata_type_names
+ .data          0x000000000002d500        0x0 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/host/linux/x86_64/usr/lib/gcc/aarch64-unknown-nto-qnx7.1.0/8.3.0//crtend.o
+ .data          0x000000000002d500        0x0 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crtn.o
+
+.tm_clone_table
+                0x000000000002d500        0x0
+ .tm_clone_table
+                0x000000000002d500        0x0 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/host/linux/x86_64/usr/lib/gcc/aarch64-unknown-nto-qnx7.1.0/8.3.0//crtbegin.o
+ .tm_clone_table
+                0x000000000002d500        0x0 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/host/linux/x86_64/usr/lib/gcc/aarch64-unknown-nto-qnx7.1.0/8.3.0//crtend.o
+
+.data1
+ *(.data1)
+                0x000000000002d500                _edata = .
+                [!provide]                        PROVIDE (edata = .)
+                0x000000000002d500                . = .
+                0x000000000002d500                __bss_start = .
+                0x000000000002d500                __bss_start__ = .
+
+.bss            0x000000000002d500      0x3c0
+ *(.dynbss)
+ .dynbss        0x000000000002d500        0x0 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x000000000002d500        0x0 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+ .bss           0x000000000002d500        0x0 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crti.o
+ .bss           0x000000000002d500       0x38 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/host/linux/x86_64/usr/lib/gcc/aarch64-unknown-nto-qnx7.1.0/8.3.0//crtbegin.o
+ .bss           0x000000000002d538      0x330 qcarcam_rvc.o
+ .bss           0x000000000002d868        0x0 test_util.o
+ .bss           0x000000000002d868       0x50 test_util_qnx.o
+                0x000000000002d89c                _gpio_header
+ .bss           0x000000000002d8b8        0x0 test_util_standalone.o
+ .bss           0x000000000002d8b8        0x8 /home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/install/aarch64le/lib/camera_qcx/libcamera_metadata.a(camera_metadata.o)
+ .bss           0x000000000002d8c0        0x0 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/host/linux/x86_64/usr/lib/gcc/aarch64-unknown-nto-qnx7.1.0/8.3.0//crtend.o
+ .bss           0x000000000002d8c0        0x0 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crtn.o
+ *(COMMON)
+                0x000000000002d8c0                . = ALIGN ((. != 0x0)?0x8:0x1)
+                0x000000000002d8c0                _bss_end__ = .
+                0x000000000002d8c0                __bss_end__ = .
+                0x000000000002d8c0                . = ALIGN (0x8)
+                0x000000000002d8c0                . = SEGMENT_START ("ldata-segment", .)
+                0x000000000002d8c0                . = ALIGN (0x8)
+                0x000000000002d8c0                __end__ = .
+                0x000000000002d8c0                _end = .
+                [!provide]                        PROVIDE (end = .)
+                0x000000000002d8c0                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x34
+ *(.comment)
+ .comment       0x0000000000000000       0x34 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/host/linux/x86_64/usr/lib/gcc/aarch64-unknown-nto-qnx7.1.0/8.3.0//crtbegin.o
+                                         0x35 (size before relaxing)
+ .comment       0x0000000000000034       0x35 qcarcam_rvc.o
+ .comment       0x0000000000000034       0x35 test_util.o
+ .comment       0x0000000000000034       0x35 test_util_qnx.o
+ .comment       0x0000000000000034       0x35 test_util_standalone.o
+ .comment       0x0000000000000034       0x35 /home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/install/aarch64le/lib/camera_qcx/libcamera_metadata.a(camera_metadata.o)
+ .comment       0x0000000000000034       0x35 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/host/linux/x86_64/usr/lib/gcc/aarch64-unknown-nto-qnx7.1.0/8.3.0//crtend.o
+
+.ident          0x0000000000000000      0x138
+ .ident         0x0000000000000000       0x68 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+ .ident         0x0000000000000068       0x68 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crti.o
+ .ident         0x00000000000000d0       0x68 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crtn.o
+
+.GCC.command.line
+                0x0000000000000000     0x1975
+ .GCC.command.line
+                0x0000000000000000      0xe8c qcarcam_rvc.o
+                                        0xedf (size before relaxing)
+ .GCC.command.line
+                0x0000000000000e8c       0xca test_util.o
+                                        0xee8 (size before relaxing)
+ .GCC.command.line
+                0x0000000000000f56       0xd6 test_util_qnx.o
+                                        0xef4 (size before relaxing)
+ .GCC.command.line
+                0x000000000000102c       0xe0 test_util_standalone.o
+                                        0xefe (size before relaxing)
+ .GCC.command.line
+                0x000000000000110c      0x869 /home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/install/aarch64le/lib/camera_qcx/libcamera_metadata.a(camera_metadata.o)
+                                        0xa76 (size before relaxing)
+
+.gnu.build.attributes
+ *(.gnu.build.attributes .gnu.build.attributes.*)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x120
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x30 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+ .debug_aranges
+                0x0000000000000030       0x60 qcarcam_rvc.o
+ .debug_aranges
+                0x0000000000000090       0x30 test_util.o
+ .debug_aranges
+                0x00000000000000c0       0x30 test_util_qnx.o
+ .debug_aranges
+                0x00000000000000f0       0x30 /home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/install/aarch64le/lib/camera_qcx/libcamera_metadata.a(camera_metadata.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000    0x22ce1
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000       0x2e /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+ .debug_info    0x000000000000002e     0x80bc qcarcam_rvc.o
+ .debug_info    0x00000000000080ea     0x7dbf test_util.o
+ .debug_info    0x000000000000fea9     0xad0b test_util_qnx.o
+ .debug_info    0x000000000001abb4     0x812d /home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/install/aarch64le/lib/camera_qcx/libcamera_metadata.a(camera_metadata.o)
+
+.debug_abbrev   0x0000000000000000     0x22ff
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000       0x14 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+ .debug_abbrev  0x0000000000000014      0xb6c qcarcam_rvc.o
+ .debug_abbrev  0x0000000000000b80      0x67c test_util.o
+ .debug_abbrev  0x00000000000011fc      0xb06 test_util_qnx.o
+ .debug_abbrev  0x0000000000001d02      0x5fd /home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/install/aarch64le/lib/camera_qcx/libcamera_metadata.a(camera_metadata.o)
+
+.debug_line     0x0000000000000000     0x9686
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x0000000000000000       0x9c /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+ .debug_line    0x000000000000009c     0x1923 qcarcam_rvc.o
+ .debug_line    0x00000000000019bf     0x12a5 test_util.o
+ .debug_line    0x0000000000002c64     0x2fa0 test_util_qnx.o
+ .debug_line    0x0000000000005c04        0x0 test_util_standalone.o
+ .debug_line    0x0000000000005c04     0x3a82 /home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/install/aarch64le/lib/camera_qcx/libcamera_metadata.a(camera_metadata.o)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str      0x0000000000000000    0x163fe
+ *(.debug_str)
+ .debug_str     0x0000000000000000       0x96 /home/gnaveen/NEW_SA8295/QNX_TOOLS/prebuilt_HYP710/target/qnx7/aarch64le/lib/crt1.o
+ .debug_str     0x0000000000000096     0x6fb9 qcarcam_rvc.o
+                                       0x759a (size before relaxing)
+ .debug_str     0x000000000000704f     0x5299 test_util.o
+                                       0x731b (size before relaxing)
+ .debug_str     0x000000000000c2e8     0x4e5f test_util_qnx.o
+                                       0xbab6 (size before relaxing)
+ .debug_str     0x0000000000011147       0xb6 test_util_standalone.o
+                                        0x235 (size before relaxing)
+ .debug_str     0x00000000000111fd     0x5201 /home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/install/aarch64le/lib/camera_qcx/libcamera_metadata.a(camera_metadata.o)
+                                       0x8a73 (size before relaxing)
+
+.debug_loc      0x0000000000000000    0x1cdee
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000     0x2a3d qcarcam_rvc.o
+ .debug_loc     0x0000000000002a3d     0x30a9 test_util.o
+ .debug_loc     0x0000000000005ae6     0x4bda test_util_qnx.o
+ .debug_loc     0x000000000000a6c0    0x1272e /home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/install/aarch64le/lib/camera_qcx/libcamera_metadata.a(camera_metadata.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000     0x2da0
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000      0x960 qcarcam_rvc.o
+ .debug_ranges  0x0000000000000960     0x1370 test_util.o
+ .debug_ranges  0x0000000000001cd0      0x760 test_util_qnx.o
+ .debug_ranges  0x0000000000002430      0x970 /home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/install/aarch64le/lib/camera_qcx/libcamera_metadata.a(camera_metadata.o)
+
+.debug_macro
+ *(.debug_macro)
+
+.debug_addr
+ *(.debug_addr)
+
+.ARM.attributes
+ *(.ARM.attributes)
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+ *(.gnu.lto_*)
+OUTPUT(/home/gnaveen/NEW_SA8295/sa8295p-hqx-4-2-4-1_hlos_dev_qnx-r00008.2/apps/qnx_ap/AMSS/multimedia/qcamera/camera_qcx/test/qcarcam_rvc/build/aarch64/o-le/qcarcam_rvc elf64-littleaarch64)

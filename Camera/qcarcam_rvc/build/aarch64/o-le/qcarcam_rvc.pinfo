@@ -1,0 +1,10 @@
+STATE=Stable Release
+INSTALLDIR=aarch64le/bin/camera_qcx/qcarcam_rvc/
+INSTALLNAME=qcarcam_rvc
+NAME=qcarcam_rvc
+USER=gnaveen
+HOST=desk049
+DATE=2023/09/06-12:09:12-IST
+VERSION=QNX_SDP710
+TAGID=apps
+DESCRIPTION=QCarCam RVC test application
