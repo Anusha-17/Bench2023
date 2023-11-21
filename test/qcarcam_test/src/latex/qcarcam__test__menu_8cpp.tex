@@ -1,0 +1,693 @@
+\hypertarget{qcarcam__test__menu_8cpp}{}\doxysection{qcarcam\+\_\+test\+\_\+menu.\+cpp File Reference}
+\label{qcarcam__test__menu_8cpp}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+{\ttfamily \#include \char`\"{}qcarcam\+\_\+test.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for qcarcam\+\_\+test\+\_\+menu.\+cpp\+:
+% FIG 0
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structqcarcam__test__menu__t}{qcarcam\+\_\+test\+\_\+menu\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226}{qcarcam\+\_\+test\+\_\+menu\+\_\+option\+\_\+t}} \{ \newline
+\mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a053c0e35c529ba81ac2b3a919788d07e}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+FIRST\+\_\+\+ITEM}} = 1
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226ab018a94dbe62468f892f0c29c000571f}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+OPEN}} = QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+FIRST\+\_\+\+ITEM
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a2841561ed15e8798f15023d5860254c2}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+CLOSE}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a602887cac7269973d3b84ed1a522a694}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+STOP}}
+, \newline
+\mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a91d396e1e69fc32186d3b925eea6418a}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+START}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a4ab291e3800b681d72d8237f7c3e1f84}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+PAUSE}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a7798d3c1f239bbf2f1a34b2e10cf0f78}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+RESUME}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a9f42213f3398eff8b9421efa547028d4}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+STOP\+\_\+\+ALL}}
+, \newline
+\mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a1f69ed69f551f10101537564d8b5d56a}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+START\+\_\+\+ALL}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a35e26bd1cd36a43d640242c723fba465}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+PAUSE\+\_\+\+ALL}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226aa85ad1475b147c6e7e45e66bd130b984}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+RESUME\+\_\+\+ALL}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a86aeb8fcdbd4dcf84db097b0d8f5d318}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+ENABLE\+\_\+\+CALLBACK}}
+, \newline
+\mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a4a25eda26841b584e95bd6661eef5e96}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+DISABLE\+\_\+\+CALLBACK}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226aeca2a37e0f89e873b5669069317f6406}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SET\+\_\+\+FRAMERATE}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a8b1b87ea9c3bb5e8bb98c1b4682ac92f}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SET\+\_\+\+EXPOSURE}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a01b501d98284ad354f262c9b86e5b808}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SET\+\_\+\+SENSORMODE}}
+, \newline
+\mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a785970dc417ef2311e9e6ef07aeb3c0c}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+GET\+\_\+\+SENSORMODE}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a585de2718202b8060dc1b048ca00ad74}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SET\+\_\+\+COLOR\+\_\+\+PARAM}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226af8762135a86134c92db307faae3289f6}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+GET\+\_\+\+COLOR\+\_\+\+PARAM}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226ae629da98f90e2032a9c7bf182935b75d}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SET\+\_\+\+GAMMA\+\_\+\+PARAM}}
+, \newline
+\mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226abb571546aab1943723224166024c6b26}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+GET\+\_\+\+GAMMA\+\_\+\+PARAM}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226aef36434aed1dcacd8c782eb1fa524e25}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SET\+\_\+\+METADATA\+\_\+\+TAG}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a14499eb6f7af9af5d0361b453c4d97db}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+GET\+\_\+\+METADATA\+\_\+\+TAG}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226ab93c6d0a93f7e75a0c7350af796efdb1}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+DUMP\+\_\+\+NEXT\+\_\+\+FRAME}}
+, \newline
+\mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a9396957900619fc2825c6dea2d09df75}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+CHECK\+\_\+\+BUFFERS}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a8e3337db956fa905647429a3859ab563}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SET\+\_\+\+VENDOR\+\_\+\+PARAM}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a1f6a2ed748313e59472d5a27f80bf352}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+GET\+\_\+\+VENDOR\+\_\+\+PARAM}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226ad651931598bdd9b0c1179087e051db85}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SET\+\_\+\+BRIGHTNESS}}
+, \newline
+\mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a229ceda62a16e57abadb21eb1bbd6bf0}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+GET\+\_\+\+BRIGHTNESS}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226afbddcb40730cb060cd42323e1a2f0bb5}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SET\+\_\+\+CONTRAST}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a7a9953a3ac031156384842c82386cc8d}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+GET\+\_\+\+CONTRAST}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226aca8ca5ba4796df55ef3da290f2ff7ee5}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SET\+\_\+\+MIRRORING}}
+, \newline
+\mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226af9331a11b1beaca444dc983b5a901a3a}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+GET\+\_\+\+MIRRORING}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a798dff9468f0e54960c383f99b518cf8}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SUBSCRIBE\+\_\+\+CHANGE\+\_\+\+EVENT}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a5913996df4e6977705fbe7f8bd5b55d2}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+UNSUBSCRIBE\+\_\+\+CHANGE\+\_\+\+EVENT}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a06bd1cb065421028f5b0dc6b14940b55}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SUBSCRIBE\+\_\+\+SOF\+\_\+\+EVENT}}
+, \newline
+\mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a41cc1bd8f84c3b7c5f892ba7a27ebe57}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+UNSUBSCRIBE\+\_\+\+SOF\+\_\+\+EVENT}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226ae381a639e37c95d0a4133b6f64292c7e}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+MASTER}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226aebfe73eac77434e0fdf03fdd5d24862d}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+GET\+\_\+\+SYSTEM\+\_\+\+DIAGNOSTICS}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a9d6e130b1e02bd680725c0c6e0d1e632}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+GET\+\_\+\+COLORSPACE}}
+, \newline
+\mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a9b1da1bb90f973ef63a54dcb66da3296}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SET\+\_\+\+ANTIBANDING\+\_\+\+MODE}}
+, \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a81b3117bfb3a82b10fa20957f295941f}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+MAX}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{qcarcam__test__menu_8cpp_a8354698a26421dca0b4e77d38059d7c6}{display\+\_\+valid\+\_\+session\+\_\+ids}} ()
+\item 
+static void \mbox{\hyperlink{qcarcam__test__menu_8cpp_aaa9897b45f9e549958e87ac7bc3945b8}{display\+\_\+valid\+\_\+closed\+\_\+session\+\_\+ids}} ()
+\item 
+static void \mbox{\hyperlink{qcarcam__test__menu_8cpp_af5d57f6ea55f3ee312e0608f655e47c9}{display\+\_\+valid\+\_\+bufferlist\+\_\+ids}} (\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$input\+\_\+ctxt)
+\item 
+static int \mbox{\hyperlink{qcarcam__test__menu_8cpp_ad42b00ee7ecfb328fac81814e4c295ff}{get\+\_\+closed\+\_\+input\+\_\+session\+\_\+id}} ()
+\item 
+static int \mbox{\hyperlink{qcarcam__test__menu_8cpp_abd31b667623c554e12d1bc0b993353f9}{get\+\_\+input\+\_\+session\+\_\+id}} ()
+\item 
+static int \mbox{\hyperlink{qcarcam__test__menu_8cpp_a7d987a813a5657d7b0f6718f887743ba}{get\+\_\+input\+\_\+bufferlist\+\_\+id}} (\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$input\+\_\+ctxt)
+\item 
+static void \mbox{\hyperlink{qcarcam__test__menu_8cpp_af05a4a74fc485b79b4e6fdab9128b166}{get\+\_\+input\+\_\+sensormode}} (uint32\+\_\+t $\ast$sensormode\+\_\+index)
+\item 
+static void \mbox{\hyperlink{qcarcam__test__menu_8cpp_a9b1803f05996920059ed78b03cc7be6d}{get\+\_\+input\+\_\+hdr\+\_\+exposure}} (QCar\+Cam\+Exposure\+Config\+\_\+t $\ast$exposure\+\_\+config)
+\item 
+static void \mbox{\hyperlink{qcarcam__test__menu_8cpp_ab9ea2f8504ccea663b635d763b437bda}{get\+\_\+input\+\_\+framerate}} (QCar\+Cam\+Frame\+Drop\+Config\+\_\+t $\ast$frame\+\_\+rate\+\_\+config)
+\item 
+static int \mbox{\hyperlink{qcarcam__test__menu_8cpp_ab8f98cb77b31c3f36c4f22cf694aeaea}{get\+\_\+input\+\_\+set\+\_\+flag}} ()
+\item 
+static void \mbox{\hyperlink{qcarcam__test__menu_8cpp_a87dd9167318b18c2205ffec6b447ba07}{get\+\_\+metadata\+\_\+data}} (test\+\_\+util\+\_\+metadata\+\_\+tag\+\_\+t $\ast$p\+Tag)
+\item 
+static void \mbox{\hyperlink{qcarcam__test__menu_8cpp_a5779cb92e3d232f3cf3b502872a24449}{get\+\_\+metadata\+\_\+tag}} (test\+\_\+util\+\_\+metadata\+\_\+tag\+\_\+t $\ast$p\+Tag)
+\item 
+static void \mbox{\hyperlink{qcarcam__test__menu_8cpp_ad1300adf7f5bf496591091de6c24d965}{qcarcam\+\_\+test\+\_\+set\+\_\+master}} (\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$input\+\_\+ctxt, unsigned int flag)
+\item 
+static int \mbox{\hyperlink{qcarcam__test__menu_8cpp_af2803d95661f8f6df600a0d2f42c3ff6}{qcarcam\+\_\+test\+\_\+subscribe\+\_\+input\+\_\+params\+\_\+change}} (\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$input\+\_\+ctxt, uint64\+\_\+t change\+\_\+events)
+\item 
+static int \mbox{\hyperlink{qcarcam__test__menu_8cpp_ab54417f6a22f7f6634bdb6ce31c544b2}{qcarcam\+\_\+test\+\_\+unsubscribe\+\_\+input\+\_\+params\+\_\+change}} (\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$input\+\_\+ctxt, uint64\+\_\+t change\+\_\+events)
+\item 
+static int \mbox{\hyperlink{qcarcam__test__menu_8cpp_a4a1a921131b3981e5196c531d30876db}{qcarcam\+\_\+test\+\_\+subscribe\+\_\+\+SOF\+\_\+event}} (\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$input\+\_\+ctxt)
+\item 
+static int \mbox{\hyperlink{qcarcam__test__menu_8cpp_affe4880f6957df14e10fc4a9d6f62bad}{qcarcam\+\_\+test\+\_\+unsubscribe\+\_\+\+SOF\+\_\+event}} (\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$input\+\_\+ctxt)
+\item 
+static void \mbox{\hyperlink{qcarcam__test__menu_8cpp_ae2fc613c7ca7af17e271a6829a70957b}{display\+\_\+sensormode\+\_\+settings}} (uint32\+\_\+t param)
+\item 
+static void \mbox{\hyperlink{qcarcam__test__menu_8cpp_a60cb508df00fafdfc791c6dc9eb8a945}{display\+\_\+color\+\_\+space\+\_\+settings}} (uint32\+\_\+t param)
+\item 
+void \mbox{\hyperlink{qcarcam__test__menu_8cpp_a65c493e4917b50c983f9efee5b278f1c}{display\+\_\+menu}} (void)
+\item 
+static \mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$ \mbox{\hyperlink{qcarcam__test__menu_8cpp_a0c5b5176dd85ec189dc8fad5417b8f26}{get\+\_\+input\+\_\+ctxt}} (int session\+\_\+id)
+\item 
+void \mbox{\hyperlink{qcarcam__test__menu_8cpp_a0ededb5a649ab952fbc1ab085f8db0f0}{parse\+\_\+diagnostics}} (QCar\+Cam\+Diag\+Info $\ast$diagnostic\+Info)
+\item 
+static void \mbox{\hyperlink{qcarcam__test__menu_8cpp_ac8ea3de86b3a9882081ac5c744c4991d}{process\+\_\+cmds}} (uint32\+\_\+t option)
+\item 
+void \mbox{\hyperlink{qcarcam__test__menu_8cpp_a5fad88ee564007c3dca72a3c881e84c0}{qcarcam\+\_\+test\+\_\+menu}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structqcarcam__test__menu__t}{qcarcam\+\_\+test\+\_\+menu\+\_\+t}} \mbox{\hyperlink{qcarcam__test__menu_8cpp_af6fe063d07cc0b6b58bb10e4f9bfa58b}{g\+\_\+qcarcam\+\_\+menu}} \mbox{[}\mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a81b3117bfb3a82b10fa20957f295941f}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+MAX}}\mbox{]}
+\item 
+\mbox{\hyperlink{structqcarcam__test__ctxt__t}{qcarcam\+\_\+test\+\_\+ctxt\+\_\+t}} \mbox{\hyperlink{qcarcam__test__menu_8cpp_a24903b86d71af2829ca146fed5b00d35}{g\+Ctxt}}
+\begin{DoxyCompactList}\small\item\em STATICS. \end{DoxyCompactList}\item 
+volatile int \mbox{\hyperlink{qcarcam__test__menu_8cpp_aee8537645ceeae25abdab2df500380f8}{g\+\_\+aborted}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!qcarcam\_test\_menu\_option\_t@{qcarcam\_test\_menu\_option\_t}}
+\index{qcarcam\_test\_menu\_option\_t@{qcarcam\_test\_menu\_option\_t}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_test\_menu\_option\_t}{qcarcam\_test\_menu\_option\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226}{qcarcam\+\_\+test\+\_\+menu\+\_\+option\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_FIRST\_ITEM@{QCARCAM\_TEST\_MENU\_FIRST\_ITEM}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_FIRST\_ITEM@{QCARCAM\_TEST\_MENU\_FIRST\_ITEM}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a053c0e35c529ba81ac2b3a919788d07e}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a053c0e35c529ba81ac2b3a919788d07e}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+FIRST\+\_\+\+ITEM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_OPEN@{QCARCAM\_TEST\_MENU\_STREAM\_OPEN}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_OPEN@{QCARCAM\_TEST\_MENU\_STREAM\_OPEN}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226ab018a94dbe62468f892f0c29c000571f}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226ab018a94dbe62468f892f0c29c000571f}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+OPEN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_CLOSE@{QCARCAM\_TEST\_MENU\_STREAM\_CLOSE}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_CLOSE@{QCARCAM\_TEST\_MENU\_STREAM\_CLOSE}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a2841561ed15e8798f15023d5860254c2}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a2841561ed15e8798f15023d5860254c2}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+CLOSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_STOP@{QCARCAM\_TEST\_MENU\_STREAM\_STOP}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_STOP@{QCARCAM\_TEST\_MENU\_STREAM\_STOP}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a602887cac7269973d3b84ed1a522a694}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a602887cac7269973d3b84ed1a522a694}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+STOP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_START@{QCARCAM\_TEST\_MENU\_STREAM\_START}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_START@{QCARCAM\_TEST\_MENU\_STREAM\_START}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a91d396e1e69fc32186d3b925eea6418a}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a91d396e1e69fc32186d3b925eea6418a}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+START&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_PAUSE@{QCARCAM\_TEST\_MENU\_STREAM\_PAUSE}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_PAUSE@{QCARCAM\_TEST\_MENU\_STREAM\_PAUSE}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a4ab291e3800b681d72d8237f7c3e1f84}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a4ab291e3800b681d72d8237f7c3e1f84}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+PAUSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_RESUME@{QCARCAM\_TEST\_MENU\_STREAM\_RESUME}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_RESUME@{QCARCAM\_TEST\_MENU\_STREAM\_RESUME}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a7798d3c1f239bbf2f1a34b2e10cf0f78}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a7798d3c1f239bbf2f1a34b2e10cf0f78}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+RESUME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_STOP\_ALL@{QCARCAM\_TEST\_MENU\_STREAM\_STOP\_ALL}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_STOP\_ALL@{QCARCAM\_TEST\_MENU\_STREAM\_STOP\_ALL}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a9f42213f3398eff8b9421efa547028d4}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a9f42213f3398eff8b9421efa547028d4}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+STOP\+\_\+\+ALL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_START\_ALL@{QCARCAM\_TEST\_MENU\_STREAM\_START\_ALL}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_START\_ALL@{QCARCAM\_TEST\_MENU\_STREAM\_START\_ALL}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a1f69ed69f551f10101537564d8b5d56a}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a1f69ed69f551f10101537564d8b5d56a}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+START\+\_\+\+ALL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_PAUSE\_ALL@{QCARCAM\_TEST\_MENU\_STREAM\_PAUSE\_ALL}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_PAUSE\_ALL@{QCARCAM\_TEST\_MENU\_STREAM\_PAUSE\_ALL}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a35e26bd1cd36a43d640242c723fba465}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a35e26bd1cd36a43d640242c723fba465}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+PAUSE\+\_\+\+ALL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_RESUME\_ALL@{QCARCAM\_TEST\_MENU\_STREAM\_RESUME\_ALL}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_RESUME\_ALL@{QCARCAM\_TEST\_MENU\_STREAM\_RESUME\_ALL}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226aa85ad1475b147c6e7e45e66bd130b984}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226aa85ad1475b147c6e7e45e66bd130b984}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+RESUME\+\_\+\+ALL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_ENABLE\_CALLBACK@{QCARCAM\_TEST\_MENU\_STREAM\_ENABLE\_CALLBACK}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_ENABLE\_CALLBACK@{QCARCAM\_TEST\_MENU\_STREAM\_ENABLE\_CALLBACK}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a86aeb8fcdbd4dcf84db097b0d8f5d318}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a86aeb8fcdbd4dcf84db097b0d8f5d318}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+ENABLE\+\_\+\+CALLBACK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_DISABLE\_CALLBACK@{QCARCAM\_TEST\_MENU\_STREAM\_DISABLE\_CALLBACK}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_DISABLE\_CALLBACK@{QCARCAM\_TEST\_MENU\_STREAM\_DISABLE\_CALLBACK}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a4a25eda26841b584e95bd6661eef5e96}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a4a25eda26841b584e95bd6661eef5e96}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+DISABLE\+\_\+\+CALLBACK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_SET\_FRAMERATE@{QCARCAM\_TEST\_MENU\_STREAM\_SET\_FRAMERATE}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_SET\_FRAMERATE@{QCARCAM\_TEST\_MENU\_STREAM\_SET\_FRAMERATE}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226aeca2a37e0f89e873b5669069317f6406}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226aeca2a37e0f89e873b5669069317f6406}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SET\+\_\+\+FRAMERATE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_SET\_EXPOSURE@{QCARCAM\_TEST\_MENU\_STREAM\_SET\_EXPOSURE}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_SET\_EXPOSURE@{QCARCAM\_TEST\_MENU\_STREAM\_SET\_EXPOSURE}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a8b1b87ea9c3bb5e8bb98c1b4682ac92f}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a8b1b87ea9c3bb5e8bb98c1b4682ac92f}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SET\+\_\+\+EXPOSURE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_SET\_SENSORMODE@{QCARCAM\_TEST\_MENU\_STREAM\_SET\_SENSORMODE}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_SET\_SENSORMODE@{QCARCAM\_TEST\_MENU\_STREAM\_SET\_SENSORMODE}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a01b501d98284ad354f262c9b86e5b808}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a01b501d98284ad354f262c9b86e5b808}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SET\+\_\+\+SENSORMODE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_GET\_SENSORMODE@{QCARCAM\_TEST\_MENU\_STREAM\_GET\_SENSORMODE}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_GET\_SENSORMODE@{QCARCAM\_TEST\_MENU\_STREAM\_GET\_SENSORMODE}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a785970dc417ef2311e9e6ef07aeb3c0c}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a785970dc417ef2311e9e6ef07aeb3c0c}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+GET\+\_\+\+SENSORMODE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_SET\_COLOR\_PARAM@{QCARCAM\_TEST\_MENU\_STREAM\_SET\_COLOR\_PARAM}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_SET\_COLOR\_PARAM@{QCARCAM\_TEST\_MENU\_STREAM\_SET\_COLOR\_PARAM}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a585de2718202b8060dc1b048ca00ad74}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a585de2718202b8060dc1b048ca00ad74}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SET\+\_\+\+COLOR\+\_\+\+PARAM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_GET\_COLOR\_PARAM@{QCARCAM\_TEST\_MENU\_STREAM\_GET\_COLOR\_PARAM}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_GET\_COLOR\_PARAM@{QCARCAM\_TEST\_MENU\_STREAM\_GET\_COLOR\_PARAM}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226af8762135a86134c92db307faae3289f6}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226af8762135a86134c92db307faae3289f6}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+GET\+\_\+\+COLOR\+\_\+\+PARAM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_SET\_GAMMA\_PARAM@{QCARCAM\_TEST\_MENU\_STREAM\_SET\_GAMMA\_PARAM}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_SET\_GAMMA\_PARAM@{QCARCAM\_TEST\_MENU\_STREAM\_SET\_GAMMA\_PARAM}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226ae629da98f90e2032a9c7bf182935b75d}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226ae629da98f90e2032a9c7bf182935b75d}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SET\+\_\+\+GAMMA\+\_\+\+PARAM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_GET\_GAMMA\_PARAM@{QCARCAM\_TEST\_MENU\_STREAM\_GET\_GAMMA\_PARAM}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_GET\_GAMMA\_PARAM@{QCARCAM\_TEST\_MENU\_STREAM\_GET\_GAMMA\_PARAM}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226abb571546aab1943723224166024c6b26}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226abb571546aab1943723224166024c6b26}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+GET\+\_\+\+GAMMA\+\_\+\+PARAM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_SET\_METADATA\_TAG@{QCARCAM\_TEST\_MENU\_STREAM\_SET\_METADATA\_TAG}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_SET\_METADATA\_TAG@{QCARCAM\_TEST\_MENU\_STREAM\_SET\_METADATA\_TAG}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226aef36434aed1dcacd8c782eb1fa524e25}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226aef36434aed1dcacd8c782eb1fa524e25}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SET\+\_\+\+METADATA\+\_\+\+TAG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_GET\_METADATA\_TAG@{QCARCAM\_TEST\_MENU\_STREAM\_GET\_METADATA\_TAG}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_GET\_METADATA\_TAG@{QCARCAM\_TEST\_MENU\_STREAM\_GET\_METADATA\_TAG}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a14499eb6f7af9af5d0361b453c4d97db}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a14499eb6f7af9af5d0361b453c4d97db}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+GET\+\_\+\+METADATA\+\_\+\+TAG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_DUMP\_NEXT\_FRAME@{QCARCAM\_TEST\_MENU\_DUMP\_NEXT\_FRAME}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_DUMP\_NEXT\_FRAME@{QCARCAM\_TEST\_MENU\_DUMP\_NEXT\_FRAME}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226ab93c6d0a93f7e75a0c7350af796efdb1}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226ab93c6d0a93f7e75a0c7350af796efdb1}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+DUMP\+\_\+\+NEXT\+\_\+\+FRAME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_CHECK\_BUFFERS@{QCARCAM\_TEST\_MENU\_CHECK\_BUFFERS}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_CHECK\_BUFFERS@{QCARCAM\_TEST\_MENU\_CHECK\_BUFFERS}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a9396957900619fc2825c6dea2d09df75}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a9396957900619fc2825c6dea2d09df75}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+CHECK\+\_\+\+BUFFERS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_SET\_VENDOR\_PARAM@{QCARCAM\_TEST\_MENU\_STREAM\_SET\_VENDOR\_PARAM}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_SET\_VENDOR\_PARAM@{QCARCAM\_TEST\_MENU\_STREAM\_SET\_VENDOR\_PARAM}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a8e3337db956fa905647429a3859ab563}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a8e3337db956fa905647429a3859ab563}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SET\+\_\+\+VENDOR\+\_\+\+PARAM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_GET\_VENDOR\_PARAM@{QCARCAM\_TEST\_MENU\_STREAM\_GET\_VENDOR\_PARAM}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_GET\_VENDOR\_PARAM@{QCARCAM\_TEST\_MENU\_STREAM\_GET\_VENDOR\_PARAM}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a1f6a2ed748313e59472d5a27f80bf352}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a1f6a2ed748313e59472d5a27f80bf352}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+GET\+\_\+\+VENDOR\+\_\+\+PARAM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_SET\_BRIGHTNESS@{QCARCAM\_TEST\_MENU\_STREAM\_SET\_BRIGHTNESS}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_SET\_BRIGHTNESS@{QCARCAM\_TEST\_MENU\_STREAM\_SET\_BRIGHTNESS}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226ad651931598bdd9b0c1179087e051db85}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226ad651931598bdd9b0c1179087e051db85}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SET\+\_\+\+BRIGHTNESS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_GET\_BRIGHTNESS@{QCARCAM\_TEST\_MENU\_STREAM\_GET\_BRIGHTNESS}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_GET\_BRIGHTNESS@{QCARCAM\_TEST\_MENU\_STREAM\_GET\_BRIGHTNESS}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a229ceda62a16e57abadb21eb1bbd6bf0}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a229ceda62a16e57abadb21eb1bbd6bf0}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+GET\+\_\+\+BRIGHTNESS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_SET\_CONTRAST@{QCARCAM\_TEST\_MENU\_STREAM\_SET\_CONTRAST}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_SET\_CONTRAST@{QCARCAM\_TEST\_MENU\_STREAM\_SET\_CONTRAST}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226afbddcb40730cb060cd42323e1a2f0bb5}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226afbddcb40730cb060cd42323e1a2f0bb5}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SET\+\_\+\+CONTRAST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_GET\_CONTRAST@{QCARCAM\_TEST\_MENU\_STREAM\_GET\_CONTRAST}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_GET\_CONTRAST@{QCARCAM\_TEST\_MENU\_STREAM\_GET\_CONTRAST}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a7a9953a3ac031156384842c82386cc8d}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a7a9953a3ac031156384842c82386cc8d}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+GET\+\_\+\+CONTRAST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_SET\_MIRRORING@{QCARCAM\_TEST\_MENU\_STREAM\_SET\_MIRRORING}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_SET\_MIRRORING@{QCARCAM\_TEST\_MENU\_STREAM\_SET\_MIRRORING}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226aca8ca5ba4796df55ef3da290f2ff7ee5}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226aca8ca5ba4796df55ef3da290f2ff7ee5}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SET\+\_\+\+MIRRORING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_GET\_MIRRORING@{QCARCAM\_TEST\_MENU\_STREAM\_GET\_MIRRORING}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_GET\_MIRRORING@{QCARCAM\_TEST\_MENU\_STREAM\_GET\_MIRRORING}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226af9331a11b1beaca444dc983b5a901a3a}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226af9331a11b1beaca444dc983b5a901a3a}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+GET\+\_\+\+MIRRORING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_SUBSCRIBE\_CHANGE\_EVENT@{QCARCAM\_TEST\_MENU\_STREAM\_SUBSCRIBE\_CHANGE\_EVENT}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_SUBSCRIBE\_CHANGE\_EVENT@{QCARCAM\_TEST\_MENU\_STREAM\_SUBSCRIBE\_CHANGE\_EVENT}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a798dff9468f0e54960c383f99b518cf8}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a798dff9468f0e54960c383f99b518cf8}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SUBSCRIBE\+\_\+\+CHANGE\+\_\+\+EVENT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_UNSUBSCRIBE\_CHANGE\_EVENT@{QCARCAM\_TEST\_MENU\_STREAM\_UNSUBSCRIBE\_CHANGE\_EVENT}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_UNSUBSCRIBE\_CHANGE\_EVENT@{QCARCAM\_TEST\_MENU\_STREAM\_UNSUBSCRIBE\_CHANGE\_EVENT}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a5913996df4e6977705fbe7f8bd5b55d2}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a5913996df4e6977705fbe7f8bd5b55d2}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+UNSUBSCRIBE\+\_\+\+CHANGE\+\_\+\+EVENT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_SUBSCRIBE\_SOF\_EVENT@{QCARCAM\_TEST\_MENU\_STREAM\_SUBSCRIBE\_SOF\_EVENT}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_SUBSCRIBE\_SOF\_EVENT@{QCARCAM\_TEST\_MENU\_STREAM\_SUBSCRIBE\_SOF\_EVENT}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a06bd1cb065421028f5b0dc6b14940b55}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a06bd1cb065421028f5b0dc6b14940b55}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SUBSCRIBE\+\_\+\+SOF\+\_\+\+EVENT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_UNSUBSCRIBE\_SOF\_EVENT@{QCARCAM\_TEST\_MENU\_STREAM\_UNSUBSCRIBE\_SOF\_EVENT}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_UNSUBSCRIBE\_SOF\_EVENT@{QCARCAM\_TEST\_MENU\_STREAM\_UNSUBSCRIBE\_SOF\_EVENT}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a41cc1bd8f84c3b7c5f892ba7a27ebe57}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a41cc1bd8f84c3b7c5f892ba7a27ebe57}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+UNSUBSCRIBE\+\_\+\+SOF\+\_\+\+EVENT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_MASTER@{QCARCAM\_TEST\_MENU\_MASTER}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_MASTER@{QCARCAM\_TEST\_MENU\_MASTER}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226ae381a639e37c95d0a4133b6f64292c7e}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226ae381a639e37c95d0a4133b6f64292c7e}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+MASTER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_GET\_SYSTEM\_DIAGNOSTICS@{QCARCAM\_TEST\_MENU\_GET\_SYSTEM\_DIAGNOSTICS}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_GET\_SYSTEM\_DIAGNOSTICS@{QCARCAM\_TEST\_MENU\_GET\_SYSTEM\_DIAGNOSTICS}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226aebfe73eac77434e0fdf03fdd5d24862d}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226aebfe73eac77434e0fdf03fdd5d24862d}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+GET\+\_\+\+SYSTEM\+\_\+\+DIAGNOSTICS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_GET\_COLORSPACE@{QCARCAM\_TEST\_MENU\_STREAM\_GET\_COLORSPACE}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_GET\_COLORSPACE@{QCARCAM\_TEST\_MENU\_STREAM\_GET\_COLORSPACE}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a9d6e130b1e02bd680725c0c6e0d1e632}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a9d6e130b1e02bd680725c0c6e0d1e632}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+GET\+\_\+\+COLORSPACE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_STREAM\_SET\_ANTIBANDING\_MODE@{QCARCAM\_TEST\_MENU\_STREAM\_SET\_ANTIBANDING\_MODE}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_STREAM\_SET\_ANTIBANDING\_MODE@{QCARCAM\_TEST\_MENU\_STREAM\_SET\_ANTIBANDING\_MODE}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a9b1da1bb90f973ef63a54dcb66da3296}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a9b1da1bb90f973ef63a54dcb66da3296}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+STREAM\+\_\+\+SET\+\_\+\+ANTIBANDING\+\_\+\+MODE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_MENU\_MAX@{QCARCAM\_TEST\_MENU\_MAX}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!QCARCAM\_TEST\_MENU\_MAX@{QCARCAM\_TEST\_MENU\_MAX}}}\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a81b3117bfb3a82b10fa20957f295941f}\label{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a81b3117bfb3a82b10fa20957f295941f}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+MAX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 13 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a60cb508df00fafdfc791c6dc9eb8a945}\label{qcarcam__test__menu_8cpp_a60cb508df00fafdfc791c6dc9eb8a945}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!display\_color\_space\_settings@{display\_color\_space\_settings}}
+\index{display\_color\_space\_settings@{display\_color\_space\_settings}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{display\_color\_space\_settings()}{display\_color\_space\_settings()}}
+{\footnotesize\ttfamily static void display\+\_\+color\+\_\+space\+\_\+settings (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 519 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a65c493e4917b50c983f9efee5b278f1c}\label{qcarcam__test__menu_8cpp_a65c493e4917b50c983f9efee5b278f1c}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!display\_menu@{display\_menu}}
+\index{display\_menu@{display\_menu}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{display\_menu()}{display\_menu()}}
+{\footnotesize\ttfamily void display\+\_\+menu (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 525 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_ae2fc613c7ca7af17e271a6829a70957b}\label{qcarcam__test__menu_8cpp_ae2fc613c7ca7af17e271a6829a70957b}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!display\_sensormode\_settings@{display\_sensormode\_settings}}
+\index{display\_sensormode\_settings@{display\_sensormode\_settings}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{display\_sensormode\_settings()}{display\_sensormode\_settings()}}
+{\footnotesize\ttfamily static void display\+\_\+sensormode\+\_\+settings (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 514 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_af5d57f6ea55f3ee312e0608f655e47c9}\label{qcarcam__test__menu_8cpp_af5d57f6ea55f3ee312e0608f655e47c9}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!display\_valid\_bufferlist\_ids@{display\_valid\_bufferlist\_ids}}
+\index{display\_valid\_bufferlist\_ids@{display\_valid\_bufferlist\_ids}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{display\_valid\_bufferlist\_ids()}{display\_valid\_bufferlist\_ids()}}
+{\footnotesize\ttfamily static void display\+\_\+valid\+\_\+bufferlist\+\_\+ids (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$}]{input\+\_\+ctxt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 159 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_aaa9897b45f9e549958e87ac7bc3945b8}\label{qcarcam__test__menu_8cpp_aaa9897b45f9e549958e87ac7bc3945b8}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!display\_valid\_closed\_session\_ids@{display\_valid\_closed\_session\_ids}}
+\index{display\_valid\_closed\_session\_ids@{display\_valid\_closed\_session\_ids}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{display\_valid\_closed\_session\_ids()}{display\_valid\_closed\_session\_ids()}}
+{\footnotesize\ttfamily static void display\+\_\+valid\+\_\+closed\+\_\+session\+\_\+ids (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 139 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a8354698a26421dca0b4e77d38059d7c6}\label{qcarcam__test__menu_8cpp_a8354698a26421dca0b4e77d38059d7c6}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!display\_valid\_session\_ids@{display\_valid\_session\_ids}}
+\index{display\_valid\_session\_ids@{display\_valid\_session\_ids}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{display\_valid\_session\_ids()}{display\_valid\_session\_ids()}}
+{\footnotesize\ttfamily static void display\+\_\+valid\+\_\+session\+\_\+ids (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 119 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_ad42b00ee7ecfb328fac81814e4c295ff}\label{qcarcam__test__menu_8cpp_ad42b00ee7ecfb328fac81814e4c295ff}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!get\_closed\_input\_session\_id@{get\_closed\_input\_session\_id}}
+\index{get\_closed\_input\_session\_id@{get\_closed\_input\_session\_id}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_closed\_input\_session\_id()}{get\_closed\_input\_session\_id()}}
+{\footnotesize\ttfamily static int get\+\_\+closed\+\_\+input\+\_\+session\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns user entered stream idx 
+
+Definition at line 178 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 7
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a7d987a813a5657d7b0f6718f887743ba}\label{qcarcam__test__menu_8cpp_a7d987a813a5657d7b0f6718f887743ba}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!get\_input\_bufferlist\_id@{get\_input\_bufferlist\_id}}
+\index{get\_input\_bufferlist\_id@{get\_input\_bufferlist\_id}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_input\_bufferlist\_id()}{get\_input\_bufferlist\_id()}}
+{\footnotesize\ttfamily static int get\+\_\+input\+\_\+bufferlist\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$}]{input\+\_\+ctxt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 216 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 9
+Here is the caller graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a0c5b5176dd85ec189dc8fad5417b8f26}\label{qcarcam__test__menu_8cpp_a0c5b5176dd85ec189dc8fad5417b8f26}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!get\_input\_ctxt@{get\_input\_ctxt}}
+\index{get\_input\_ctxt@{get\_input\_ctxt}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_input\_ctxt()}{get\_input\_ctxt()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}}$\ast$ get\+\_\+input\+\_\+ctxt (\begin{DoxyParamCaption}\item[{int}]{session\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 554 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_ab9ea2f8504ccea663b635d763b437bda}\label{qcarcam__test__menu_8cpp_ab9ea2f8504ccea663b635d763b437bda}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!get\_input\_framerate@{get\_input\_framerate}}
+\index{get\_input\_framerate@{get\_input\_framerate}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_input\_framerate()}{get\_input\_framerate()}}
+{\footnotesize\ttfamily static void get\+\_\+input\+\_\+framerate (\begin{DoxyParamCaption}\item[{QCar\+Cam\+Frame\+Drop\+Config\+\_\+t $\ast$}]{frame\+\_\+rate\+\_\+config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 276 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 12
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a9b1803f05996920059ed78b03cc7be6d}\label{qcarcam__test__menu_8cpp_a9b1803f05996920059ed78b03cc7be6d}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!get\_input\_hdr\_exposure@{get\_input\_hdr\_exposure}}
+\index{get\_input\_hdr\_exposure@{get\_input\_hdr\_exposure}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_input\_hdr\_exposure()}{get\_input\_hdr\_exposure()}}
+{\footnotesize\ttfamily static void get\+\_\+input\+\_\+hdr\+\_\+exposure (\begin{DoxyParamCaption}\item[{QCar\+Cam\+Exposure\+Config\+\_\+t $\ast$}]{exposure\+\_\+config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 249 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 13
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_af05a4a74fc485b79b4e6fdab9128b166}\label{qcarcam__test__menu_8cpp_af05a4a74fc485b79b4e6fdab9128b166}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!get\_input\_sensormode@{get\_input\_sensormode}}
+\index{get\_input\_sensormode@{get\_input\_sensormode}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_input\_sensormode()}{get\_input\_sensormode()}}
+{\footnotesize\ttfamily static void get\+\_\+input\+\_\+sensormode (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{sensormode\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 234 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 14
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_abd31b667623c554e12d1bc0b993353f9}\label{qcarcam__test__menu_8cpp_abd31b667623c554e12d1bc0b993353f9}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!get\_input\_session\_id@{get\_input\_session\_id}}
+\index{get\_input\_session\_id@{get\_input\_session\_id}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_input\_session\_id()}{get\_input\_session\_id()}}
+{\footnotesize\ttfamily static int get\+\_\+input\+\_\+session\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns user entered stream idx 
+
+Definition at line 198 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 15
+Here is the caller graph for this function\+:
+% FIG 16
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_ab8f98cb77b31c3f36c4f22cf694aeaea}\label{qcarcam__test__menu_8cpp_ab8f98cb77b31c3f36c4f22cf694aeaea}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!get\_input\_set\_flag@{get\_input\_set\_flag}}
+\index{get\_input\_set\_flag@{get\_input\_set\_flag}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_input\_set\_flag()}{get\_input\_set\_flag()}}
+{\footnotesize\ttfamily static int get\+\_\+input\+\_\+set\+\_\+flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 301 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 17
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a87dd9167318b18c2205ffec6b447ba07}\label{qcarcam__test__menu_8cpp_a87dd9167318b18c2205ffec6b447ba07}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!get\_metadata\_data@{get\_metadata\_data}}
+\index{get\_metadata\_data@{get\_metadata\_data}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_metadata\_data()}{get\_metadata\_data()}}
+{\footnotesize\ttfamily static void get\+\_\+metadata\+\_\+data (\begin{DoxyParamCaption}\item[{test\+\_\+util\+\_\+metadata\+\_\+tag\+\_\+t $\ast$}]{p\+Tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 314 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 18
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a5779cb92e3d232f3cf3b502872a24449}\label{qcarcam__test__menu_8cpp_a5779cb92e3d232f3cf3b502872a24449}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!get\_metadata\_tag@{get\_metadata\_tag}}
+\index{get\_metadata\_tag@{get\_metadata\_tag}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_metadata\_tag()}{get\_metadata\_tag()}}
+{\footnotesize\ttfamily static void get\+\_\+metadata\+\_\+tag (\begin{DoxyParamCaption}\item[{test\+\_\+util\+\_\+metadata\+\_\+tag\+\_\+t $\ast$}]{p\+Tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 329 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 19
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a0ededb5a649ab952fbc1ab085f8db0f0}\label{qcarcam__test__menu_8cpp_a0ededb5a649ab952fbc1ab085f8db0f0}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!parse\_diagnostics@{parse\_diagnostics}}
+\index{parse\_diagnostics@{parse\_diagnostics}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{parse\_diagnostics()}{parse\_diagnostics()}}
+{\footnotesize\ttfamily void parse\+\_\+diagnostics (\begin{DoxyParamCaption}\item[{QCar\+Cam\+Diag\+Info $\ast$}]{diagnostic\+Info }\end{DoxyParamCaption})}
+
+
+
+Definition at line 566 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 20
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_ac8ea3de86b3a9882081ac5c744c4991d}\label{qcarcam__test__menu_8cpp_ac8ea3de86b3a9882081ac5c744c4991d}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!process\_cmds@{process\_cmds}}
+\index{process\_cmds@{process\_cmds}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{process\_cmds()}{process\_cmds()}}
+{\footnotesize\ttfamily static void process\+\_\+cmds (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{option }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 670 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 21
+Here is the caller graph for this function\+:
+% FIG 22
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a5fad88ee564007c3dca72a3c881e84c0}\label{qcarcam__test__menu_8cpp_a5fad88ee564007c3dca72a3c881e84c0}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!qcarcam\_test\_menu@{qcarcam\_test\_menu}}
+\index{qcarcam\_test\_menu@{qcarcam\_test\_menu}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_test\_menu()}{qcarcam\_test\_menu()}}
+{\footnotesize\ttfamily void qcarcam\+\_\+test\+\_\+menu (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1655 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 23
+Here is the caller graph for this function\+:
+% FIG 24
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_ad1300adf7f5bf496591091de6c24d965}\label{qcarcam__test__menu_8cpp_ad1300adf7f5bf496591091de6c24d965}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!qcarcam\_test\_set\_master@{qcarcam\_test\_set\_master}}
+\index{qcarcam\_test\_set\_master@{qcarcam\_test\_set\_master}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_test\_set\_master()}{qcarcam\_test\_set\_master()}}
+{\footnotesize\ttfamily static void qcarcam\+\_\+test\+\_\+set\+\_\+master (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$}]{input\+\_\+ctxt,  }\item[{unsigned int}]{flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+API to set/release a client as master
+
+
+\begin{DoxyParams}{Parameters}
+{\em qcarcam\+\_\+test\+\_\+input\+\_\+t$\ast$} & input\+\_\+ctxt \\
+\hline
+{\em unsigned} & int flag to set(1)/release(0) master \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 374 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 25
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_af2803d95661f8f6df600a0d2f42c3ff6}\label{qcarcam__test__menu_8cpp_af2803d95661f8f6df600a0d2f42c3ff6}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!qcarcam\_test\_subscribe\_input\_params\_change@{qcarcam\_test\_subscribe\_input\_params\_change}}
+\index{qcarcam\_test\_subscribe\_input\_params\_change@{qcarcam\_test\_subscribe\_input\_params\_change}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_test\_subscribe\_input\_params\_change()}{qcarcam\_test\_subscribe\_input\_params\_change()}}
+{\footnotesize\ttfamily static int qcarcam\+\_\+test\+\_\+subscribe\+\_\+input\+\_\+params\+\_\+change (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$}]{input\+\_\+ctxt,  }\item[{uint64\+\_\+t}]{change\+\_\+events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+API to subscribe for events to get notifications
+
+
+\begin{DoxyParams}{Parameters}
+{\em qcarcam\+\_\+test\+\_\+input\+\_\+t$\ast$} & input\+\_\+ctxt \\
+\hline
+{\em change\+\_\+events} & Bitmask of events \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 409 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 26
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a4a1a921131b3981e5196c531d30876db}\label{qcarcam__test__menu_8cpp_a4a1a921131b3981e5196c531d30876db}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!qcarcam\_test\_subscribe\_SOF\_event@{qcarcam\_test\_subscribe\_SOF\_event}}
+\index{qcarcam\_test\_subscribe\_SOF\_event@{qcarcam\_test\_subscribe\_SOF\_event}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_test\_subscribe\_SOF\_event()}{qcarcam\_test\_subscribe\_SOF\_event()}}
+{\footnotesize\ttfamily static int qcarcam\+\_\+test\+\_\+subscribe\+\_\+\+SOF\+\_\+event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$}]{input\+\_\+ctxt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+API to subscribe for SOF event notification
+
+
+\begin{DoxyParams}{Parameters}
+{\em qcarcam\+\_\+test\+\_\+input\+\_\+t$\ast$} & input\+\_\+ctxt \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 454 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 27
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_ab54417f6a22f7f6634bdb6ce31c544b2}\label{qcarcam__test__menu_8cpp_ab54417f6a22f7f6634bdb6ce31c544b2}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!qcarcam\_test\_unsubscribe\_input\_params\_change@{qcarcam\_test\_unsubscribe\_input\_params\_change}}
+\index{qcarcam\_test\_unsubscribe\_input\_params\_change@{qcarcam\_test\_unsubscribe\_input\_params\_change}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_test\_unsubscribe\_input\_params\_change()}{qcarcam\_test\_unsubscribe\_input\_params\_change()}}
+{\footnotesize\ttfamily static int qcarcam\+\_\+test\+\_\+unsubscribe\+\_\+input\+\_\+params\+\_\+change (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$}]{input\+\_\+ctxt,  }\item[{uint64\+\_\+t}]{change\+\_\+events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+API to unsubscribe for events to get notifications
+
+
+\begin{DoxyParams}{Parameters}
+{\em qcarcam\+\_\+test\+\_\+input\+\_\+t$\ast$} & input\+\_\+ctxt \\
+\hline
+{\em change\+\_\+events} & Bitmask of events \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 432 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 28
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_affe4880f6957df14e10fc4a9d6f62bad}\label{qcarcam__test__menu_8cpp_affe4880f6957df14e10fc4a9d6f62bad}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!qcarcam\_test\_unsubscribe\_SOF\_event@{qcarcam\_test\_unsubscribe\_SOF\_event}}
+\index{qcarcam\_test\_unsubscribe\_SOF\_event@{qcarcam\_test\_unsubscribe\_SOF\_event}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_test\_unsubscribe\_SOF\_event()}{qcarcam\_test\_unsubscribe\_SOF\_event()}}
+{\footnotesize\ttfamily static int qcarcam\+\_\+test\+\_\+unsubscribe\+\_\+\+SOF\+\_\+event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$}]{input\+\_\+ctxt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+API to unsubscribe for SOF event notification
+
+
+\begin{DoxyParams}{Parameters}
+{\em qcarcam\+\_\+test\+\_\+input\+\_\+t$\ast$} & input\+\_\+ctxt \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 487 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 29
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_aee8537645ceeae25abdab2df500380f8}\label{qcarcam__test__menu_8cpp_aee8537645ceeae25abdab2df500380f8}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!g\_aborted@{g\_aborted}}
+\index{g\_aborted@{g\_aborted}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_aborted}{g\_aborted}}
+{\footnotesize\ttfamily volatile int g\+\_\+aborted\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line 46 of file qcarcam\+\_\+test.\+cpp.
+
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_af6fe063d07cc0b6b58bb10e4f9bfa58b}\label{qcarcam__test__menu_8cpp_af6fe063d07cc0b6b58bb10e4f9bfa58b}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!g\_qcarcam\_menu@{g\_qcarcam\_menu}}
+\index{g\_qcarcam\_menu@{g\_qcarcam\_menu}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_qcarcam\_menu}{g\_qcarcam\_menu}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structqcarcam__test__menu__t}{qcarcam\+\_\+test\+\_\+menu\+\_\+t}} g\+\_\+qcarcam\+\_\+menu\mbox{[}\mbox{\hyperlink{qcarcam__test__menu_8cpp_a3fc51b3ac505300e81eacc57967b7226a81b3117bfb3a82b10fa20957f295941f}{QCARCAM\+\_\+\+TEST\+\_\+\+MENU\+\_\+\+MAX}}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 65 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+\mbox{\Hypertarget{qcarcam__test__menu_8cpp_a24903b86d71af2829ca146fed5b00d35}\label{qcarcam__test__menu_8cpp_a24903b86d71af2829ca146fed5b00d35}} 
+\index{qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}!gCtxt@{gCtxt}}
+\index{gCtxt@{gCtxt}!qcarcam\_test\_menu.cpp@{qcarcam\_test\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{gCtxt}{gCtxt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structqcarcam__test__ctxt__t}{qcarcam\+\_\+test\+\_\+ctxt\+\_\+t}} g\+Ctxt\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+STATICS. 
+
+STATICS. 
+
+Definition at line 45 of file qcarcam\+\_\+test.\+cpp.
+

@@ -1,0 +1,844 @@
+\hypertarget{structqcarcam__test__input__t}{}\doxysection{qcarcam\+\_\+test\+\_\+input\+\_\+t Struct Reference}
+\label{structqcarcam__test__input__t}\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+
+
+{\ttfamily \#include $<$qcarcam\+\_\+test.\+h$>$}
+
+
+
+Collaboration diagram for qcarcam\+\_\+test\+\_\+input\+\_\+t\+:
+% FIG 0
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+QCXThread\+\_\+t \mbox{\hyperlink{structqcarcam__test__input__t_ace816953c7a69dfc00095e567a306a69}{thread\+\_\+handle}}
+\item 
+QCXThread\+\_\+t \mbox{\hyperlink{structqcarcam__test__input__t_ac95bb244af2204d70aae45c840cabb31}{process\+\_\+cb\+\_\+event\+\_\+handle}}
+\item 
+\mbox{\hyperlink{structCameraSignal}{Camera\+Signal}} $\ast$ \mbox{\hyperlink{structqcarcam__test__input__t_ad7a853cee4b811f98f49b87115235d4a}{m\+\_\+event\+Handler\+Signal}}
+\item 
+QCXThread\+\_\+t \mbox{\hyperlink{structqcarcam__test__input__t_a511fa05da2388d3fc1b00f2486410eac}{injection\+\_\+handle}}
+\item 
+\mbox{\hyperlink{structCameraSignal}{Camera\+Signal}} $\ast$ \mbox{\hyperlink{structqcarcam__test__input__t_abd7e7405815604698a1d6703c469134f}{m\+\_\+injection\+Handler\+Signal}}
+\item 
+unsigned int \mbox{\hyperlink{structqcarcam__test__input__t_ab6ad5632eb821a75563337eaec0b5aa7}{idx}}
+\item 
+unsigned int \mbox{\hyperlink{structqcarcam__test__input__t_afa51da4fa058fd7eccb39ab40bc5d555}{query\+\_\+inputs\+\_\+idx}}
+\item 
+pthread\+\_\+mutex\+\_\+t \mbox{\hyperlink{structqcarcam__test__input__t_a3d5d1bf63dd38e5c6da9c42007ce3322}{mutex}}
+\item 
+\mbox{\hyperlink{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edb}{qcarcamtest\+\_\+state\+\_\+t}} \mbox{\hyperlink{structqcarcam__test__input__t_a73891e70e0e2b1758e445f301a17c435}{state}}
+\item 
+bool \mbox{\hyperlink{structqcarcam__test__input__t_aa47a0652b69623c2f82bd94d5ca00aba}{is\+\_\+fatal\+\_\+error}}
+\item 
+bool \mbox{\hyperlink{structqcarcam__test__input__t_ac9c8e0f290789224c063c00de6eebf51}{is\+\_\+reserved}}
+\item 
+unsigned int \mbox{\hyperlink{structqcarcam__test__input__t_a87f13536a7713b51b86472bb58c2d00f}{session\+Id}}
+\item 
+QCar\+Cam\+Hndl\+\_\+t \mbox{\hyperlink{structqcarcam__test__input__t_a52fed44fef5e8a62885ecbb63d37b4b9}{qcarcam\+\_\+hndl}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structqcarcam__test__input__t_a52153a8877783410b240cb3db57490b5}{num\+\_\+inputs}}
+\item 
+QCar\+Cam\+Input\+Stream\+\_\+t \mbox{\hyperlink{structqcarcam__test__input__t_a45712b0d4f76b756b609fe01756f6a9a}{input\+\_\+param}} \mbox{[}QCARCAM\+\_\+\+MAX\+\_\+\+INPUT\+\_\+\+STREAMS\mbox{]}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structqcarcam__test__input__t_a40cd5ae608f81522006ff291506514c1}{num\+\_\+stream\+\_\+instance}}
+\item 
+\mbox{\hyperlink{structqcarcam__buffers__param__t}{qcarcam\+\_\+buffers\+\_\+param\+\_\+t}} \mbox{\hyperlink{structqcarcam__test__input__t_a6a8daad1bd9998431de81cf8275f0eee}{buffers\+\_\+param}} \mbox{[}QCARCAM\+\_\+\+MAX\+\_\+\+BUFF\+\_\+\+INSTANCES\mbox{]}\mbox{[}\mbox{\hyperlink{qcarcam__test_8h_a4789795e527abd450ff77a799e6195e3ab7ad67b30b233906dc19725dc63d0dbb}{QCARCAM\+\_\+\+TEST\+\_\+\+BUFFERS\+\_\+\+MAX}}\mbox{]}
+\item 
+QCar\+Cam\+Buffer\+List\+\_\+t \mbox{\hyperlink{structqcarcam__test__input__t_a911be6dcd0aca9773d4c9168b07b144e}{p\+\_\+buffers\+\_\+output}} \mbox{[}QCARCAM\+\_\+\+MAX\+\_\+\+BUFF\+\_\+\+INSTANCES\mbox{]}
+\item 
+QCar\+Cam\+Buffer\+List\+\_\+t \mbox{\hyperlink{structqcarcam__test__input__t_a7fffefdea30d356bb5c68044bcbca3bf}{p\+\_\+buffers\+\_\+disp}} \mbox{[}QCARCAM\+\_\+\+MAX\+\_\+\+BUFF\+\_\+\+INSTANCES\mbox{]}
+\item 
+QCar\+Cam\+Buffer\+List\+\_\+t \mbox{\hyperlink{structqcarcam__test__input__t_a8132785fe7cae617871d41492886d84c}{p\+\_\+buffers\+\_\+input}}
+\item 
+QCar\+Cam\+Buffer\+List\+\_\+t \mbox{\hyperlink{structqcarcam__test__input__t_aec3cf1d2983c7d4f976217c4bad0c8e3}{meta\+\_\+buffer\+List}}
+\item 
+unsigned int \mbox{\hyperlink{structqcarcam__test__input__t_a0d1440accdefb3fa800b25d1df5d9471}{input\+\_\+meta\+\_\+idx}}
+\item 
+bool \mbox{\hyperlink{structqcarcam__test__input__t_a624c4df0f5464e6438e8e6c30774f8d6}{is\+\_\+submit\+\_\+metadata}}
+\item 
+QCar\+Cam\+Buffer\+List\+\_\+t \mbox{\hyperlink{structqcarcam__test__input__t_a377105c5c1554227f1871d0c7f1dcb17}{meta\+\_\+output\+\_\+buffer\+List}}
+\item 
+unsigned long long int \mbox{\hyperlink{structqcarcam__test__input__t_a63491f3982d8f8735409406bb0051568}{frame\+\_\+timeout}}
+\item 
+int \mbox{\hyperlink{structqcarcam__test__input__t_ae958e0e2f0e35e593d791a5d2f60c2bb}{use\+\_\+event\+\_\+callback}}
+\item 
+QCar\+Cam\+Opmode\+\_\+e \mbox{\hyperlink{structqcarcam__test__input__t_acc9b1da2f9e7ddef7d05e7f3e9118506}{op\+\_\+mode}}
+\item 
+unsigned int \mbox{\hyperlink{structqcarcam__test__input__t_aabde2d46541617d86738a5a2ace51bda}{num\+\_\+isp\+\_\+instances}}
+\item 
+QCar\+Cam\+Isp\+Usecase\+Config\+\_\+t \mbox{\hyperlink{structqcarcam__test__input__t_aa1e23333f1fa2acc9ca7512870581374}{isp\+\_\+config}} \mbox{[}QCARCAM\+\_\+\+MAX\+\_\+\+ISP\+\_\+\+INSTANCES\mbox{]}
+\item 
+bool \mbox{\hyperlink{structqcarcam__test__input__t_a8a3381ed78dbbae297974b0bafabc913}{recovery}}
+\item 
+bool \mbox{\hyperlink{structqcarcam__test__input__t_a994a7831fc5e6e92d202825430517019}{request\+\_\+mode}}
+\item 
+test\+\_\+util\+\_\+ctxt\+\_\+t $\ast$ \mbox{\hyperlink{structqcarcam__test__input__t_ab0fd722a0a01535a0fbfc5d33432cbb2}{test\+\_\+util\+\_\+ctxt}}
+\item 
+test\+\_\+util\+\_\+window\+\_\+t $\ast$ \mbox{\hyperlink{structqcarcam__test__input__t_a9dc22308732cbc177a27b9ca1b1cafbc}{qcarcam\+\_\+window}} \mbox{[}QCARCAM\+\_\+\+MAX\+\_\+\+BUFF\+\_\+\+INSTANCES\mbox{]}
+\item 
+test\+\_\+util\+\_\+window\+\_\+t $\ast$ \mbox{\hyperlink{structqcarcam__test__input__t_a4f628f8b0c64034f5da592c70e7d6655}{display\+\_\+window}} \mbox{[}QCARCAM\+\_\+\+MAX\+\_\+\+BUFF\+\_\+\+INSTANCES\mbox{]}
+\item 
+test\+\_\+util\+\_\+window\+\_\+t $\ast$ \mbox{\hyperlink{structqcarcam__test__input__t_ad63450c144e51d3df4c80d3e4e1fb370}{injection\+\_\+window}}
+\item 
+test\+\_\+util\+\_\+window\+\_\+t $\ast$ \mbox{\hyperlink{structqcarcam__test__input__t_a6b060cbf9ea7b6603466a42848c85019}{metabuffer\+\_\+window}}
+\item 
+test\+\_\+util\+\_\+window\+\_\+t $\ast$ \mbox{\hyperlink{structqcarcam__test__input__t_a8f612022d02168567ad3eed03b670d30}{metabuffer\+\_\+window\+\_\+output}}
+\item 
+test\+\_\+util\+\_\+window\+\_\+param\+\_\+t \mbox{\hyperlink{structqcarcam__test__input__t_a72cf7f199515b7c8821ea157100e9a61}{window\+\_\+params}} \mbox{[}QCARCAM\+\_\+\+MAX\+\_\+\+BUFF\+\_\+\+INSTANCES\mbox{]}
+\item 
+bool \mbox{\hyperlink{structqcarcam__test__input__t_a9a58fc32322818249e3acaa475f1705c}{is\+\_\+first\+\_\+start}}
+\item 
+bool \mbox{\hyperlink{structqcarcam__test__input__t_af2ae34515b5f0bd2f0d3c1ef185fd9aa}{is\+\_\+injection}}
+\item 
+test\+\_\+util\+\_\+injection\+\_\+param\+\_\+t \mbox{\hyperlink{structqcarcam__test__input__t_a6a33c6bd8679494bc4af06a9e1513898}{injection\+Params}}
+\item 
+\mbox{\hyperlink{structqcarcam__test__injection__settings__t}{qcarcam\+\_\+test\+\_\+injection\+\_\+settings\+\_\+t}} \mbox{\hyperlink{structqcarcam__test__input__t_a94589ea65cd2da30dfd32b709f624938}{injection\+Settings}}
+\item 
+\mbox{\hyperlink{structqcarcam__test__submitrequest__settings__t}{qcarcam\+\_\+test\+\_\+submitrequest\+\_\+settings\+\_\+t}} \mbox{\hyperlink{structqcarcam__test__input__t_a2076cec4469602b2566b7fbec1254856}{submitrequest\+Settings}}
+\item 
+unsigned long long \mbox{\hyperlink{structqcarcam__test__input__t_a44581ea57e5dc9d3715b30dbd56fb903}{t\+\_\+start}}
+\item 
+unsigned long long \mbox{\hyperlink{structqcarcam__test__input__t_afb44c3dc5f4f02548f7117b1eea34d71}{t\+\_\+start\+\_\+success}}
+\item 
+unsigned long long \mbox{\hyperlink{structqcarcam__test__input__t_a56cb9d2e9f1b051fc520ea22e83cab9f}{t\+\_\+before}}
+\item 
+unsigned long long \mbox{\hyperlink{structqcarcam__test__input__t_af99c17b622df5f76eeef9ab32acc9fef}{t\+\_\+after}}
+\item 
+test\+\_\+util\+\_\+diag\+\_\+t \mbox{\hyperlink{structqcarcam__test__input__t_a16f553b272541de349fd52b2af593d3b}{diag}}
+\item 
+float \mbox{\hyperlink{structqcarcam__test__input__t_af2b0d64c6c0bb17b15a26b027b7eff6b}{exp\+\_\+time}}
+\item 
+float \mbox{\hyperlink{structqcarcam__test__input__t_a9c0d475732133c70fe0425d01013a776}{gain}}
+\item 
+int \mbox{\hyperlink{structqcarcam__test__input__t_a4f0e4758fc42cccb1035f059ef82f1bc}{manual\+\_\+exposure}}
+\item 
+QCar\+Cam\+Frame\+Drop\+Config\+\_\+t \mbox{\hyperlink{structqcarcam__test__input__t_a9e83365fdf3463dec6fbc80da37ddf04}{frame\+Drop\+Config}}
+\item 
+unsigned int \mbox{\hyperlink{structqcarcam__test__input__t_a5343e851e8adb67851ba9f80a661bf41}{num\+\_\+batch\+\_\+frames}}
+\item 
+unsigned int \mbox{\hyperlink{structqcarcam__test__input__t_ac6e18314932adbb0859ce43bf1745fbf}{detect\+\_\+first\+\_\+phase\+\_\+timer}}
+\item 
+unsigned int \mbox{\hyperlink{structqcarcam__test__input__t_a844ed9262ab6bf6ef4de8fa237fe5856}{frame\+\_\+increment}}
+\item 
+bool \mbox{\hyperlink{structqcarcam__test__input__t_a1cf301a478e2e11763b670c81cc1b942}{skip\+\_\+post\+\_\+display}}
+\item 
+QCar\+Cam\+Interlace\+Field\+\_\+e \mbox{\hyperlink{structqcarcam__test__input__t_a4cc1211adf2b562d75cf002d98f41907}{field\+\_\+type\+\_\+previous}}
+\item 
+bool \mbox{\hyperlink{structqcarcam__test__input__t_a552690e4d01c3af59cd9d03a7167f283}{signal\+\_\+lost}}
+\item 
+int \mbox{\hyperlink{structqcarcam__test__input__t_a1ae681fb9918415ac1e8123882f4aefb}{fatal\+\_\+err\+\_\+cnt}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structqcarcam__test__input__t_a0f212f8ec92e1dab9cf6c60d7c92228d}{subscribe\+\_\+parameter\+\_\+change}}
+\item 
+bool \mbox{\hyperlink{structqcarcam__test__input__t_af064ea107b04927e0b3e2afb3cfaa5af}{is\+\_\+master}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structqcarcam__test__input__t_a9d9546e19eab3e18c7c72ab89c7642ef}{delay\+\_\+time}}
+\item 
+\mbox{\hyperlink{structqcarcam__test__buf__timer}{qcarcam\+\_\+test\+\_\+buf\+\_\+timer}} \mbox{\hyperlink{structqcarcam__test__input__t_a358edb947b64cdbb32e866645ecf52ae}{buf\+\_\+timer}} \mbox{[}QCARCAM\+\_\+\+MAX\+\_\+\+NUM\+\_\+\+BUFFERS\mbox{]}
+\item 
+std\+::list$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{structqcarcam__test__input__t_a57e592e127b15fd8a9a7bb217dc86610}{usr\+\_\+process\+\_\+buf\+\_\+idx}}
+\item 
+int \mbox{\hyperlink{structqcarcam__test__input__t_a5633ebaaa4906e8930d7b98dbf25a5f7}{usr\+\_\+process\+\_\+frame\+Cnt}}
+\item 
+QCXThread\+\_\+t \mbox{\hyperlink{structqcarcam__test__input__t_aa68dbb03b1b803be295f0e066480c9e9}{usr\+\_\+process\+\_\+thread\+\_\+handle}}
+\item 
+std\+::queue$<$ \mbox{\hyperlink{structqcarcam__event__msg__t}{qcarcam\+\_\+event\+\_\+msg\+\_\+t}} $>$ \mbox{\hyperlink{structqcarcam__test__input__t_ae57dca124657d89429292c554bfcc8e3}{eventqueue}}
+\item 
+pthread\+\_\+mutex\+\_\+t \mbox{\hyperlink{structqcarcam__test__input__t_ad652af5d4ec16bb914b34e8fcb6515de}{queue\+\_\+mutex}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 221 of file qcarcam\+\_\+test.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structqcarcam__test__input__t_a358edb947b64cdbb32e866645ecf52ae}\label{structqcarcam__test__input__t_a358edb947b64cdbb32e866645ecf52ae}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!buf\_timer@{buf\_timer}}
+\index{buf\_timer@{buf\_timer}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{buf\_timer}{buf\_timer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structqcarcam__test__buf__timer}{qcarcam\+\_\+test\+\_\+buf\+\_\+timer}} qcarcam\+\_\+test\+\_\+input\+\_\+t\+::buf\+\_\+timer\mbox{[}QCARCAM\+\_\+\+MAX\+\_\+\+NUM\+\_\+\+BUFFERS\mbox{]}}
+
+
+
+Definition at line 316 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a6a8daad1bd9998431de81cf8275f0eee}\label{structqcarcam__test__input__t_a6a8daad1bd9998431de81cf8275f0eee}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!buffers\_param@{buffers\_param}}
+\index{buffers\_param@{buffers\_param}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{buffers\_param}{buffers\_param}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structqcarcam__buffers__param__t}{qcarcam\+\_\+buffers\+\_\+param\+\_\+t}} qcarcam\+\_\+test\+\_\+input\+\_\+t\+::buffers\+\_\+param\mbox{[}QCARCAM\+\_\+\+MAX\+\_\+\+BUFF\+\_\+\+INSTANCES\mbox{]}\mbox{[}\mbox{\hyperlink{qcarcam__test_8h_a4789795e527abd450ff77a799e6195e3ab7ad67b30b233906dc19725dc63d0dbb}{QCARCAM\+\_\+\+TEST\+\_\+\+BUFFERS\+\_\+\+MAX}}\mbox{]}}
+
+
+
+Definition at line 244 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a9d9546e19eab3e18c7c72ab89c7642ef}\label{structqcarcam__test__input__t_a9d9546e19eab3e18c7c72ab89c7642ef}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!delay\_time@{delay\_time}}
+\index{delay\_time@{delay\_time}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{delay\_time}{delay\_time}}
+{\footnotesize\ttfamily uint32\+\_\+t qcarcam\+\_\+test\+\_\+input\+\_\+t\+::delay\+\_\+time}
+
+
+
+Definition at line 315 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_ac6e18314932adbb0859ce43bf1745fbf}\label{structqcarcam__test__input__t_ac6e18314932adbb0859ce43bf1745fbf}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!detect\_first\_phase\_timer@{detect\_first\_phase\_timer}}
+\index{detect\_first\_phase\_timer@{detect\_first\_phase\_timer}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{detect\_first\_phase\_timer}{detect\_first\_phase\_timer}}
+{\footnotesize\ttfamily unsigned int qcarcam\+\_\+test\+\_\+input\+\_\+t\+::detect\+\_\+first\+\_\+phase\+\_\+timer}
+
+
+
+Definition at line 295 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a16f553b272541de349fd52b2af593d3b}\label{structqcarcam__test__input__t_a16f553b272541de349fd52b2af593d3b}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!diag@{diag}}
+\index{diag@{diag}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{diag}{diag}}
+{\footnotesize\ttfamily test\+\_\+util\+\_\+diag\+\_\+t qcarcam\+\_\+test\+\_\+input\+\_\+t\+::diag}
+
+
+
+Definition at line 285 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a4f628f8b0c64034f5da592c70e7d6655}\label{structqcarcam__test__input__t_a4f628f8b0c64034f5da592c70e7d6655}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!display\_window@{display\_window}}
+\index{display\_window@{display\_window}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{display\_window}{display\_window}}
+{\footnotesize\ttfamily test\+\_\+util\+\_\+window\+\_\+t$\ast$ qcarcam\+\_\+test\+\_\+input\+\_\+t\+::display\+\_\+window\mbox{[}QCARCAM\+\_\+\+MAX\+\_\+\+BUFF\+\_\+\+INSTANCES\mbox{]}}
+
+
+
+Definition at line 269 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_ae57dca124657d89429292c554bfcc8e3}\label{structqcarcam__test__input__t_ae57dca124657d89429292c554bfcc8e3}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!eventqueue@{eventqueue}}
+\index{eventqueue@{eventqueue}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{eventqueue}{eventqueue}}
+{\footnotesize\ttfamily std\+::queue$<$\mbox{\hyperlink{structqcarcam__event__msg__t}{qcarcam\+\_\+event\+\_\+msg\+\_\+t}}$>$ qcarcam\+\_\+test\+\_\+input\+\_\+t\+::eventqueue}
+
+
+
+Definition at line 321 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_af2b0d64c6c0bb17b15a26b027b7eff6b}\label{structqcarcam__test__input__t_af2b0d64c6c0bb17b15a26b027b7eff6b}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!exp\_time@{exp\_time}}
+\index{exp\_time@{exp\_time}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{exp\_time}{exp\_time}}
+{\footnotesize\ttfamily float qcarcam\+\_\+test\+\_\+input\+\_\+t\+::exp\+\_\+time}
+
+
+
+Definition at line 288 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a1ae681fb9918415ac1e8123882f4aefb}\label{structqcarcam__test__input__t_a1ae681fb9918415ac1e8123882f4aefb}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!fatal\_err\_cnt@{fatal\_err\_cnt}}
+\index{fatal\_err\_cnt@{fatal\_err\_cnt}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{fatal\_err\_cnt}{fatal\_err\_cnt}}
+{\footnotesize\ttfamily int qcarcam\+\_\+test\+\_\+input\+\_\+t\+::fatal\+\_\+err\+\_\+cnt}
+
+
+
+Definition at line 302 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a4cc1211adf2b562d75cf002d98f41907}\label{structqcarcam__test__input__t_a4cc1211adf2b562d75cf002d98f41907}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!field\_type\_previous@{field\_type\_previous}}
+\index{field\_type\_previous@{field\_type\_previous}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{field\_type\_previous}{field\_type\_previous}}
+{\footnotesize\ttfamily QCar\+Cam\+Interlace\+Field\+\_\+e qcarcam\+\_\+test\+\_\+input\+\_\+t\+::field\+\_\+type\+\_\+previous}
+
+
+
+Definition at line 299 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a844ed9262ab6bf6ef4de8fa237fe5856}\label{structqcarcam__test__input__t_a844ed9262ab6bf6ef4de8fa237fe5856}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!frame\_increment@{frame\_increment}}
+\index{frame\_increment@{frame\_increment}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{frame\_increment}{frame\_increment}}
+{\footnotesize\ttfamily unsigned int qcarcam\+\_\+test\+\_\+input\+\_\+t\+::frame\+\_\+increment}
+
+
+
+Definition at line 296 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a63491f3982d8f8735409406bb0051568}\label{structqcarcam__test__input__t_a63491f3982d8f8735409406bb0051568}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!frame\_timeout@{frame\_timeout}}
+\index{frame\_timeout@{frame\_timeout}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{frame\_timeout}{frame\_timeout}}
+{\footnotesize\ttfamily unsigned long long int qcarcam\+\_\+test\+\_\+input\+\_\+t\+::frame\+\_\+timeout}
+
+
+
+Definition at line 256 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a9e83365fdf3463dec6fbc80da37ddf04}\label{structqcarcam__test__input__t_a9e83365fdf3463dec6fbc80da37ddf04}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!frameDropConfig@{frameDropConfig}}
+\index{frameDropConfig@{frameDropConfig}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{frameDropConfig}{frameDropConfig}}
+{\footnotesize\ttfamily QCar\+Cam\+Frame\+Drop\+Config\+\_\+t qcarcam\+\_\+test\+\_\+input\+\_\+t\+::frame\+Drop\+Config}
+
+
+
+Definition at line 293 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a9c0d475732133c70fe0425d01013a776}\label{structqcarcam__test__input__t_a9c0d475732133c70fe0425d01013a776}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!gain@{gain}}
+\index{gain@{gain}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{gain}{gain}}
+{\footnotesize\ttfamily float qcarcam\+\_\+test\+\_\+input\+\_\+t\+::gain}
+
+
+
+Definition at line 289 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_ab6ad5632eb821a75563337eaec0b5aa7}\label{structqcarcam__test__input__t_ab6ad5632eb821a75563337eaec0b5aa7}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!idx@{idx}}
+\index{idx@{idx}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{idx}{idx}}
+{\footnotesize\ttfamily unsigned int qcarcam\+\_\+test\+\_\+input\+\_\+t\+::idx}
+
+
+
+Definition at line 229 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a511fa05da2388d3fc1b00f2486410eac}\label{structqcarcam__test__input__t_a511fa05da2388d3fc1b00f2486410eac}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!injection\_handle@{injection\_handle}}
+\index{injection\_handle@{injection\_handle}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{injection\_handle}{injection\_handle}}
+{\footnotesize\ttfamily QCXThread\+\_\+t qcarcam\+\_\+test\+\_\+input\+\_\+t\+::injection\+\_\+handle}
+
+
+
+Definition at line 226 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_ad63450c144e51d3df4c80d3e4e1fb370}\label{structqcarcam__test__input__t_ad63450c144e51d3df4c80d3e4e1fb370}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!injection\_window@{injection\_window}}
+\index{injection\_window@{injection\_window}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{injection\_window}{injection\_window}}
+{\footnotesize\ttfamily test\+\_\+util\+\_\+window\+\_\+t$\ast$ qcarcam\+\_\+test\+\_\+input\+\_\+t\+::injection\+\_\+window}
+
+
+
+Definition at line 270 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a6a33c6bd8679494bc4af06a9e1513898}\label{structqcarcam__test__input__t_a6a33c6bd8679494bc4af06a9e1513898}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!injectionParams@{injectionParams}}
+\index{injectionParams@{injectionParams}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{injectionParams}{injectionParams}}
+{\footnotesize\ttfamily test\+\_\+util\+\_\+injection\+\_\+param\+\_\+t qcarcam\+\_\+test\+\_\+input\+\_\+t\+::injection\+Params}
+
+
+
+Definition at line 278 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a94589ea65cd2da30dfd32b709f624938}\label{structqcarcam__test__input__t_a94589ea65cd2da30dfd32b709f624938}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!injectionSettings@{injectionSettings}}
+\index{injectionSettings@{injectionSettings}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{injectionSettings}{injectionSettings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structqcarcam__test__injection__settings__t}{qcarcam\+\_\+test\+\_\+injection\+\_\+settings\+\_\+t}} qcarcam\+\_\+test\+\_\+input\+\_\+t\+::injection\+Settings}
+
+
+
+Definition at line 279 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a0d1440accdefb3fa800b25d1df5d9471}\label{structqcarcam__test__input__t_a0d1440accdefb3fa800b25d1df5d9471}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!input\_meta\_idx@{input\_meta\_idx}}
+\index{input\_meta\_idx@{input\_meta\_idx}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{input\_meta\_idx}{input\_meta\_idx}}
+{\footnotesize\ttfamily unsigned int qcarcam\+\_\+test\+\_\+input\+\_\+t\+::input\+\_\+meta\+\_\+idx}
+
+
+
+Definition at line 251 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a45712b0d4f76b756b609fe01756f6a9a}\label{structqcarcam__test__input__t_a45712b0d4f76b756b609fe01756f6a9a}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!input\_param@{input\_param}}
+\index{input\_param@{input\_param}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{input\_param}{input\_param}}
+{\footnotesize\ttfamily QCar\+Cam\+Input\+Stream\+\_\+t qcarcam\+\_\+test\+\_\+input\+\_\+t\+::input\+\_\+param\mbox{[}QCARCAM\+\_\+\+MAX\+\_\+\+INPUT\+\_\+\+STREAMS\mbox{]}}
+
+
+
+Definition at line 241 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_aa47a0652b69623c2f82bd94d5ca00aba}\label{structqcarcam__test__input__t_aa47a0652b69623c2f82bd94d5ca00aba}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!is\_fatal\_error@{is\_fatal\_error}}
+\index{is\_fatal\_error@{is\_fatal\_error}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{is\_fatal\_error}{is\_fatal\_error}}
+{\footnotesize\ttfamily bool qcarcam\+\_\+test\+\_\+input\+\_\+t\+::is\+\_\+fatal\+\_\+error}
+
+
+
+Definition at line 234 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a9a58fc32322818249e3acaa475f1705c}\label{structqcarcam__test__input__t_a9a58fc32322818249e3acaa475f1705c}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!is\_first\_start@{is\_first\_start}}
+\index{is\_first\_start@{is\_first\_start}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{is\_first\_start}{is\_first\_start}}
+{\footnotesize\ttfamily bool qcarcam\+\_\+test\+\_\+input\+\_\+t\+::is\+\_\+first\+\_\+start}
+
+
+
+Definition at line 276 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_af2ae34515b5f0bd2f0d3c1ef185fd9aa}\label{structqcarcam__test__input__t_af2ae34515b5f0bd2f0d3c1ef185fd9aa}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!is\_injection@{is\_injection}}
+\index{is\_injection@{is\_injection}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{is\_injection}{is\_injection}}
+{\footnotesize\ttfamily bool qcarcam\+\_\+test\+\_\+input\+\_\+t\+::is\+\_\+injection}
+
+
+
+Definition at line 277 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_af064ea107b04927e0b3e2afb3cfaa5af}\label{structqcarcam__test__input__t_af064ea107b04927e0b3e2afb3cfaa5af}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!is\_master@{is\_master}}
+\index{is\_master@{is\_master}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{is\_master}{is\_master}}
+{\footnotesize\ttfamily bool qcarcam\+\_\+test\+\_\+input\+\_\+t\+::is\+\_\+master}
+
+
+
+Definition at line 312 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_ac9c8e0f290789224c063c00de6eebf51}\label{structqcarcam__test__input__t_ac9c8e0f290789224c063c00de6eebf51}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!is\_reserved@{is\_reserved}}
+\index{is\_reserved@{is\_reserved}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{is\_reserved}{is\_reserved}}
+{\footnotesize\ttfamily bool qcarcam\+\_\+test\+\_\+input\+\_\+t\+::is\+\_\+reserved}
+
+
+
+Definition at line 235 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a624c4df0f5464e6438e8e6c30774f8d6}\label{structqcarcam__test__input__t_a624c4df0f5464e6438e8e6c30774f8d6}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!is\_submit\_metadata@{is\_submit\_metadata}}
+\index{is\_submit\_metadata@{is\_submit\_metadata}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{is\_submit\_metadata}{is\_submit\_metadata}}
+{\footnotesize\ttfamily bool qcarcam\+\_\+test\+\_\+input\+\_\+t\+::is\+\_\+submit\+\_\+metadata}
+
+
+
+Definition at line 252 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_aa1e23333f1fa2acc9ca7512870581374}\label{structqcarcam__test__input__t_aa1e23333f1fa2acc9ca7512870581374}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!isp\_config@{isp\_config}}
+\index{isp\_config@{isp\_config}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{isp\_config}{isp\_config}}
+{\footnotesize\ttfamily QCar\+Cam\+Isp\+Usecase\+Config\+\_\+t qcarcam\+\_\+test\+\_\+input\+\_\+t\+::isp\+\_\+config\mbox{[}QCARCAM\+\_\+\+MAX\+\_\+\+ISP\+\_\+\+INSTANCES\mbox{]}}
+
+
+
+Definition at line 261 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_ad7a853cee4b811f98f49b87115235d4a}\label{structqcarcam__test__input__t_ad7a853cee4b811f98f49b87115235d4a}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!m\_eventHandlerSignal@{m\_eventHandlerSignal}}
+\index{m\_eventHandlerSignal@{m\_eventHandlerSignal}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{m\_eventHandlerSignal}{m\_eventHandlerSignal}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCameraSignal}{Camera\+Signal}}$\ast$ qcarcam\+\_\+test\+\_\+input\+\_\+t\+::m\+\_\+event\+Handler\+Signal}
+
+
+
+Definition at line 225 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_abd7e7405815604698a1d6703c469134f}\label{structqcarcam__test__input__t_abd7e7405815604698a1d6703c469134f}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!m\_injectionHandlerSignal@{m\_injectionHandlerSignal}}
+\index{m\_injectionHandlerSignal@{m\_injectionHandlerSignal}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{m\_injectionHandlerSignal}{m\_injectionHandlerSignal}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCameraSignal}{Camera\+Signal}}$\ast$ qcarcam\+\_\+test\+\_\+input\+\_\+t\+::m\+\_\+injection\+Handler\+Signal}
+
+
+
+Definition at line 227 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a4f0e4758fc42cccb1035f059ef82f1bc}\label{structqcarcam__test__input__t_a4f0e4758fc42cccb1035f059ef82f1bc}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!manual\_exposure@{manual\_exposure}}
+\index{manual\_exposure@{manual\_exposure}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{manual\_exposure}{manual\_exposure}}
+{\footnotesize\ttfamily int qcarcam\+\_\+test\+\_\+input\+\_\+t\+::manual\+\_\+exposure}
+
+
+
+Definition at line 290 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_aec3cf1d2983c7d4f976217c4bad0c8e3}\label{structqcarcam__test__input__t_aec3cf1d2983c7d4f976217c4bad0c8e3}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!meta\_bufferList@{meta\_bufferList}}
+\index{meta\_bufferList@{meta\_bufferList}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{meta\_bufferList}{meta\_bufferList}}
+{\footnotesize\ttfamily QCar\+Cam\+Buffer\+List\+\_\+t qcarcam\+\_\+test\+\_\+input\+\_\+t\+::meta\+\_\+buffer\+List}
+
+
+
+Definition at line 250 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a377105c5c1554227f1871d0c7f1dcb17}\label{structqcarcam__test__input__t_a377105c5c1554227f1871d0c7f1dcb17}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!meta\_output\_bufferList@{meta\_output\_bufferList}}
+\index{meta\_output\_bufferList@{meta\_output\_bufferList}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{meta\_output\_bufferList}{meta\_output\_bufferList}}
+{\footnotesize\ttfamily QCar\+Cam\+Buffer\+List\+\_\+t qcarcam\+\_\+test\+\_\+input\+\_\+t\+::meta\+\_\+output\+\_\+buffer\+List}
+
+
+
+Definition at line 254 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a6b060cbf9ea7b6603466a42848c85019}\label{structqcarcam__test__input__t_a6b060cbf9ea7b6603466a42848c85019}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!metabuffer\_window@{metabuffer\_window}}
+\index{metabuffer\_window@{metabuffer\_window}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{metabuffer\_window}{metabuffer\_window}}
+{\footnotesize\ttfamily test\+\_\+util\+\_\+window\+\_\+t$\ast$ qcarcam\+\_\+test\+\_\+input\+\_\+t\+::metabuffer\+\_\+window}
+
+
+
+Definition at line 271 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a8f612022d02168567ad3eed03b670d30}\label{structqcarcam__test__input__t_a8f612022d02168567ad3eed03b670d30}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!metabuffer\_window\_output@{metabuffer\_window\_output}}
+\index{metabuffer\_window\_output@{metabuffer\_window\_output}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{metabuffer\_window\_output}{metabuffer\_window\_output}}
+{\footnotesize\ttfamily test\+\_\+util\+\_\+window\+\_\+t$\ast$ qcarcam\+\_\+test\+\_\+input\+\_\+t\+::metabuffer\+\_\+window\+\_\+output}
+
+
+
+Definition at line 272 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a3d5d1bf63dd38e5c6da9c42007ce3322}\label{structqcarcam__test__input__t_a3d5d1bf63dd38e5c6da9c42007ce3322}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!mutex@{mutex}}
+\index{mutex@{mutex}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{mutex}{mutex}}
+{\footnotesize\ttfamily pthread\+\_\+mutex\+\_\+t qcarcam\+\_\+test\+\_\+input\+\_\+t\+::mutex}
+
+
+
+Definition at line 232 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a5343e851e8adb67851ba9f80a661bf41}\label{structqcarcam__test__input__t_a5343e851e8adb67851ba9f80a661bf41}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!num\_batch\_frames@{num\_batch\_frames}}
+\index{num\_batch\_frames@{num\_batch\_frames}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{num\_batch\_frames}{num\_batch\_frames}}
+{\footnotesize\ttfamily unsigned int qcarcam\+\_\+test\+\_\+input\+\_\+t\+::num\+\_\+batch\+\_\+frames}
+
+
+
+Definition at line 294 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a52153a8877783410b240cb3db57490b5}\label{structqcarcam__test__input__t_a52153a8877783410b240cb3db57490b5}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!num\_inputs@{num\_inputs}}
+\index{num\_inputs@{num\_inputs}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{num\_inputs}{num\_inputs}}
+{\footnotesize\ttfamily uint32\+\_\+t qcarcam\+\_\+test\+\_\+input\+\_\+t\+::num\+\_\+inputs}
+
+
+
+Definition at line 240 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_aabde2d46541617d86738a5a2ace51bda}\label{structqcarcam__test__input__t_aabde2d46541617d86738a5a2ace51bda}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!num\_isp\_instances@{num\_isp\_instances}}
+\index{num\_isp\_instances@{num\_isp\_instances}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{num\_isp\_instances}{num\_isp\_instances}}
+{\footnotesize\ttfamily unsigned int qcarcam\+\_\+test\+\_\+input\+\_\+t\+::num\+\_\+isp\+\_\+instances}
+
+
+
+Definition at line 260 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a40cd5ae608f81522006ff291506514c1}\label{structqcarcam__test__input__t_a40cd5ae608f81522006ff291506514c1}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!num\_stream\_instance@{num\_stream\_instance}}
+\index{num\_stream\_instance@{num\_stream\_instance}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{num\_stream\_instance}{num\_stream\_instance}}
+{\footnotesize\ttfamily uint32\+\_\+t qcarcam\+\_\+test\+\_\+input\+\_\+t\+::num\+\_\+stream\+\_\+instance}
+
+
+
+Definition at line 243 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_acc9b1da2f9e7ddef7d05e7f3e9118506}\label{structqcarcam__test__input__t_acc9b1da2f9e7ddef7d05e7f3e9118506}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!op\_mode@{op\_mode}}
+\index{op\_mode@{op\_mode}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{op\_mode}{op\_mode}}
+{\footnotesize\ttfamily QCar\+Cam\+Opmode\+\_\+e qcarcam\+\_\+test\+\_\+input\+\_\+t\+::op\+\_\+mode}
+
+
+
+Definition at line 258 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a7fffefdea30d356bb5c68044bcbca3bf}\label{structqcarcam__test__input__t_a7fffefdea30d356bb5c68044bcbca3bf}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!p\_buffers\_disp@{p\_buffers\_disp}}
+\index{p\_buffers\_disp@{p\_buffers\_disp}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{p\_buffers\_disp}{p\_buffers\_disp}}
+{\footnotesize\ttfamily QCar\+Cam\+Buffer\+List\+\_\+t qcarcam\+\_\+test\+\_\+input\+\_\+t\+::p\+\_\+buffers\+\_\+disp\mbox{[}QCARCAM\+\_\+\+MAX\+\_\+\+BUFF\+\_\+\+INSTANCES\mbox{]}}
+
+
+
+Definition at line 247 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a8132785fe7cae617871d41492886d84c}\label{structqcarcam__test__input__t_a8132785fe7cae617871d41492886d84c}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!p\_buffers\_input@{p\_buffers\_input}}
+\index{p\_buffers\_input@{p\_buffers\_input}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{p\_buffers\_input}{p\_buffers\_input}}
+{\footnotesize\ttfamily QCar\+Cam\+Buffer\+List\+\_\+t qcarcam\+\_\+test\+\_\+input\+\_\+t\+::p\+\_\+buffers\+\_\+input}
+
+
+
+Definition at line 248 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a911be6dcd0aca9773d4c9168b07b144e}\label{structqcarcam__test__input__t_a911be6dcd0aca9773d4c9168b07b144e}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!p\_buffers\_output@{p\_buffers\_output}}
+\index{p\_buffers\_output@{p\_buffers\_output}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{p\_buffers\_output}{p\_buffers\_output}}
+{\footnotesize\ttfamily QCar\+Cam\+Buffer\+List\+\_\+t qcarcam\+\_\+test\+\_\+input\+\_\+t\+::p\+\_\+buffers\+\_\+output\mbox{[}QCARCAM\+\_\+\+MAX\+\_\+\+BUFF\+\_\+\+INSTANCES\mbox{]}}
+
+
+
+Definition at line 246 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_ac95bb244af2204d70aae45c840cabb31}\label{structqcarcam__test__input__t_ac95bb244af2204d70aae45c840cabb31}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!process\_cb\_event\_handle@{process\_cb\_event\_handle}}
+\index{process\_cb\_event\_handle@{process\_cb\_event\_handle}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{process\_cb\_event\_handle}{process\_cb\_event\_handle}}
+{\footnotesize\ttfamily QCXThread\+\_\+t qcarcam\+\_\+test\+\_\+input\+\_\+t\+::process\+\_\+cb\+\_\+event\+\_\+handle}
+
+
+
+Definition at line 224 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a52fed44fef5e8a62885ecbb63d37b4b9}\label{structqcarcam__test__input__t_a52fed44fef5e8a62885ecbb63d37b4b9}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!qcarcam\_hndl@{qcarcam\_hndl}}
+\index{qcarcam\_hndl@{qcarcam\_hndl}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_hndl}{qcarcam\_hndl}}
+{\footnotesize\ttfamily QCar\+Cam\+Hndl\+\_\+t qcarcam\+\_\+test\+\_\+input\+\_\+t\+::qcarcam\+\_\+hndl}
+
+
+
+Definition at line 239 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a9dc22308732cbc177a27b9ca1b1cafbc}\label{structqcarcam__test__input__t_a9dc22308732cbc177a27b9ca1b1cafbc}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!qcarcam\_window@{qcarcam\_window}}
+\index{qcarcam\_window@{qcarcam\_window}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_window}{qcarcam\_window}}
+{\footnotesize\ttfamily test\+\_\+util\+\_\+window\+\_\+t$\ast$ qcarcam\+\_\+test\+\_\+input\+\_\+t\+::qcarcam\+\_\+window\mbox{[}QCARCAM\+\_\+\+MAX\+\_\+\+BUFF\+\_\+\+INSTANCES\mbox{]}}
+
+
+
+Definition at line 268 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_afa51da4fa058fd7eccb39ab40bc5d555}\label{structqcarcam__test__input__t_afa51da4fa058fd7eccb39ab40bc5d555}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!query\_inputs\_idx@{query\_inputs\_idx}}
+\index{query\_inputs\_idx@{query\_inputs\_idx}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{query\_inputs\_idx}{query\_inputs\_idx}}
+{\footnotesize\ttfamily unsigned int qcarcam\+\_\+test\+\_\+input\+\_\+t\+::query\+\_\+inputs\+\_\+idx}
+
+
+
+Definition at line 230 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_ad652af5d4ec16bb914b34e8fcb6515de}\label{structqcarcam__test__input__t_ad652af5d4ec16bb914b34e8fcb6515de}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!queue\_mutex@{queue\_mutex}}
+\index{queue\_mutex@{queue\_mutex}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{queue\_mutex}{queue\_mutex}}
+{\footnotesize\ttfamily pthread\+\_\+mutex\+\_\+t qcarcam\+\_\+test\+\_\+input\+\_\+t\+::queue\+\_\+mutex}
+
+
+
+Definition at line 322 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a8a3381ed78dbbae297974b0bafabc913}\label{structqcarcam__test__input__t_a8a3381ed78dbbae297974b0bafabc913}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!recovery@{recovery}}
+\index{recovery@{recovery}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{recovery}{recovery}}
+{\footnotesize\ttfamily bool qcarcam\+\_\+test\+\_\+input\+\_\+t\+::recovery}
+
+
+
+Definition at line 263 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a994a7831fc5e6e92d202825430517019}\label{structqcarcam__test__input__t_a994a7831fc5e6e92d202825430517019}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!request\_mode@{request\_mode}}
+\index{request\_mode@{request\_mode}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{request\_mode}{request\_mode}}
+{\footnotesize\ttfamily bool qcarcam\+\_\+test\+\_\+input\+\_\+t\+::request\+\_\+mode}
+
+
+
+Definition at line 264 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a87f13536a7713b51b86472bb58c2d00f}\label{structqcarcam__test__input__t_a87f13536a7713b51b86472bb58c2d00f}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!sessionId@{sessionId}}
+\index{sessionId@{sessionId}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{sessionId}{sessionId}}
+{\footnotesize\ttfamily unsigned int qcarcam\+\_\+test\+\_\+input\+\_\+t\+::session\+Id}
+
+
+
+Definition at line 238 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a552690e4d01c3af59cd9d03a7167f283}\label{structqcarcam__test__input__t_a552690e4d01c3af59cd9d03a7167f283}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!signal\_lost@{signal\_lost}}
+\index{signal\_lost@{signal\_lost}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{signal\_lost}{signal\_lost}}
+{\footnotesize\ttfamily bool qcarcam\+\_\+test\+\_\+input\+\_\+t\+::signal\+\_\+lost}
+
+
+
+Definition at line 301 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a1cf301a478e2e11763b670c81cc1b942}\label{structqcarcam__test__input__t_a1cf301a478e2e11763b670c81cc1b942}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!skip\_post\_display@{skip\_post\_display}}
+\index{skip\_post\_display@{skip\_post\_display}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{skip\_post\_display}{skip\_post\_display}}
+{\footnotesize\ttfamily bool qcarcam\+\_\+test\+\_\+input\+\_\+t\+::skip\+\_\+post\+\_\+display}
+
+
+
+Definition at line 298 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a73891e70e0e2b1758e445f301a17c435}\label{structqcarcam__test__input__t_a73891e70e0e2b1758e445f301a17c435}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!state@{state}}
+\index{state@{state}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edb}{qcarcamtest\+\_\+state\+\_\+t}} qcarcam\+\_\+test\+\_\+input\+\_\+t\+::state}
+
+
+
+Definition at line 233 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a2076cec4469602b2566b7fbec1254856}\label{structqcarcam__test__input__t_a2076cec4469602b2566b7fbec1254856}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!submitrequestSettings@{submitrequestSettings}}
+\index{submitrequestSettings@{submitrequestSettings}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{submitrequestSettings}{submitrequestSettings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structqcarcam__test__submitrequest__settings__t}{qcarcam\+\_\+test\+\_\+submitrequest\+\_\+settings\+\_\+t}} qcarcam\+\_\+test\+\_\+input\+\_\+t\+::submitrequest\+Settings}
+
+
+
+Definition at line 280 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a0f212f8ec92e1dab9cf6c60d7c92228d}\label{structqcarcam__test__input__t_a0f212f8ec92e1dab9cf6c60d7c92228d}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!subscribe\_parameter\_change@{subscribe\_parameter\_change}}
+\index{subscribe\_parameter\_change@{subscribe\_parameter\_change}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{subscribe\_parameter\_change}{subscribe\_parameter\_change}}
+{\footnotesize\ttfamily uint64\+\_\+t qcarcam\+\_\+test\+\_\+input\+\_\+t\+::subscribe\+\_\+parameter\+\_\+change}
+
+
+
+Definition at line 311 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_af99c17b622df5f76eeef9ab32acc9fef}\label{structqcarcam__test__input__t_af99c17b622df5f76eeef9ab32acc9fef}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!t\_after@{t\_after}}
+\index{t\_after@{t\_after}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{t\_after}{t\_after}}
+{\footnotesize\ttfamily unsigned long long qcarcam\+\_\+test\+\_\+input\+\_\+t\+::t\+\_\+after}
+
+
+
+Definition at line 284 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a56cb9d2e9f1b051fc520ea22e83cab9f}\label{structqcarcam__test__input__t_a56cb9d2e9f1b051fc520ea22e83cab9f}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!t\_before@{t\_before}}
+\index{t\_before@{t\_before}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{t\_before}{t\_before}}
+{\footnotesize\ttfamily unsigned long long qcarcam\+\_\+test\+\_\+input\+\_\+t\+::t\+\_\+before}
+
+
+
+Definition at line 283 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a44581ea57e5dc9d3715b30dbd56fb903}\label{structqcarcam__test__input__t_a44581ea57e5dc9d3715b30dbd56fb903}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!t\_start@{t\_start}}
+\index{t\_start@{t\_start}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{t\_start}{t\_start}}
+{\footnotesize\ttfamily unsigned long long qcarcam\+\_\+test\+\_\+input\+\_\+t\+::t\+\_\+start}
+
+
+
+Definition at line 281 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_afb44c3dc5f4f02548f7117b1eea34d71}\label{structqcarcam__test__input__t_afb44c3dc5f4f02548f7117b1eea34d71}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!t\_start\_success@{t\_start\_success}}
+\index{t\_start\_success@{t\_start\_success}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{t\_start\_success}{t\_start\_success}}
+{\footnotesize\ttfamily unsigned long long qcarcam\+\_\+test\+\_\+input\+\_\+t\+::t\+\_\+start\+\_\+success}
+
+
+
+Definition at line 282 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_ab0fd722a0a01535a0fbfc5d33432cbb2}\label{structqcarcam__test__input__t_ab0fd722a0a01535a0fbfc5d33432cbb2}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!test\_util\_ctxt@{test\_util\_ctxt}}
+\index{test\_util\_ctxt@{test\_util\_ctxt}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{test\_util\_ctxt}{test\_util\_ctxt}}
+{\footnotesize\ttfamily test\+\_\+util\+\_\+ctxt\+\_\+t$\ast$ qcarcam\+\_\+test\+\_\+input\+\_\+t\+::test\+\_\+util\+\_\+ctxt}
+
+
+
+Definition at line 267 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_ace816953c7a69dfc00095e567a306a69}\label{structqcarcam__test__input__t_ace816953c7a69dfc00095e567a306a69}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!thread\_handle@{thread\_handle}}
+\index{thread\_handle@{thread\_handle}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{thread\_handle}{thread\_handle}}
+{\footnotesize\ttfamily QCXThread\+\_\+t qcarcam\+\_\+test\+\_\+input\+\_\+t\+::thread\+\_\+handle}
+
+
+
+Definition at line 223 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_ae958e0e2f0e35e593d791a5d2f60c2bb}\label{structqcarcam__test__input__t_ae958e0e2f0e35e593d791a5d2f60c2bb}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!use\_event\_callback@{use\_event\_callback}}
+\index{use\_event\_callback@{use\_event\_callback}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{use\_event\_callback}{use\_event\_callback}}
+{\footnotesize\ttfamily int qcarcam\+\_\+test\+\_\+input\+\_\+t\+::use\+\_\+event\+\_\+callback}
+
+
+
+Definition at line 257 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a57e592e127b15fd8a9a7bb217dc86610}\label{structqcarcam__test__input__t_a57e592e127b15fd8a9a7bb217dc86610}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!usr\_process\_buf\_idx@{usr\_process\_buf\_idx}}
+\index{usr\_process\_buf\_idx@{usr\_process\_buf\_idx}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{usr\_process\_buf\_idx}{usr\_process\_buf\_idx}}
+{\footnotesize\ttfamily std\+::list$<$uint32\+\_\+t$>$ qcarcam\+\_\+test\+\_\+input\+\_\+t\+::usr\+\_\+process\+\_\+buf\+\_\+idx}
+
+
+
+Definition at line 318 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a5633ebaaa4906e8930d7b98dbf25a5f7}\label{structqcarcam__test__input__t_a5633ebaaa4906e8930d7b98dbf25a5f7}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!usr\_process\_frameCnt@{usr\_process\_frameCnt}}
+\index{usr\_process\_frameCnt@{usr\_process\_frameCnt}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{usr\_process\_frameCnt}{usr\_process\_frameCnt}}
+{\footnotesize\ttfamily int qcarcam\+\_\+test\+\_\+input\+\_\+t\+::usr\+\_\+process\+\_\+frame\+Cnt}
+
+
+
+Definition at line 319 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_aa68dbb03b1b803be295f0e066480c9e9}\label{structqcarcam__test__input__t_aa68dbb03b1b803be295f0e066480c9e9}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!usr\_process\_thread\_handle@{usr\_process\_thread\_handle}}
+\index{usr\_process\_thread\_handle@{usr\_process\_thread\_handle}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{usr\_process\_thread\_handle}{usr\_process\_thread\_handle}}
+{\footnotesize\ttfamily QCXThread\+\_\+t qcarcam\+\_\+test\+\_\+input\+\_\+t\+::usr\+\_\+process\+\_\+thread\+\_\+handle}
+
+
+
+Definition at line 320 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{structqcarcam__test__input__t_a72cf7f199515b7c8821ea157100e9a61}\label{structqcarcam__test__input__t_a72cf7f199515b7c8821ea157100e9a61}} 
+\index{qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}!window\_params@{window\_params}}
+\index{window\_params@{window\_params}!qcarcam\_test\_input\_t@{qcarcam\_test\_input\_t}}
+\doxysubsubsection{\texorpdfstring{window\_params}{window\_params}}
+{\footnotesize\ttfamily test\+\_\+util\+\_\+window\+\_\+param\+\_\+t qcarcam\+\_\+test\+\_\+input\+\_\+t\+::window\+\_\+params\mbox{[}QCARCAM\+\_\+\+MAX\+\_\+\+BUFF\+\_\+\+INSTANCES\mbox{]}}
+
+
+
+Definition at line 273 of file qcarcam\+\_\+test.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{qcarcam__test_8h}{qcarcam\+\_\+test.\+h}}\end{DoxyCompactItemize}

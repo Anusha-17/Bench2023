@@ -1,0 +1,633 @@
+\hypertarget{qcarcam__test_8h}{}\doxysection{qcarcam\+\_\+test/src/qcarcam\+\_\+test.h File Reference}
+\label{qcarcam__test_8h}\index{qcarcam\_test/src/qcarcam\_test.h@{qcarcam\_test/src/qcarcam\_test.h}}
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include $<$sys/select.\+h$>$}\newline
+{\ttfamily \#include $<$termios.\+h$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include \char`\"{}c2d2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}qcarcam.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}test\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}qcarcam\+\_\+diag\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}camera\+\_\+metadata.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}camera\+\_\+metadata\+\_\+hidden.\+h\char`\"{}}\newline
+Include dependency graph for qcarcam\+\_\+test.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structqcarcam__buffers__param__t}{qcarcam\+\_\+buffers\+\_\+param\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structtimer__usr__data}{timer\+\_\+usr\+\_\+data}}
+\item 
+struct \mbox{\hyperlink{structqcarcam__test__buf__timer}{qcarcam\+\_\+test\+\_\+buf\+\_\+timer}}
+\item 
+struct \mbox{\hyperlink{structqcarcam__event__msg__t}{qcarcam\+\_\+event\+\_\+msg\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structqcarcam__test__injection__settings__t}{qcarcam\+\_\+test\+\_\+injection\+\_\+settings\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structqcarcam__test__frame__request__t}{qcarcam\+\_\+test\+\_\+frame\+\_\+request\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structqcarcam__test__submitrequest__settings__t}{qcarcam\+\_\+test\+\_\+submitrequest\+\_\+settings\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structQCarCamTestInputEnumerator__t}{QCar\+Cam\+Test\+Input\+Enumerator\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structCameraSignal}{Camera\+Signal}}
+\item 
+struct \mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structqcarcam__test__ctxt__t}{qcarcam\+\_\+test\+\_\+ctxt\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{qcarcam__test_8h_a0fde3f6eb459935eab0f7e300add93be}{NUM\+\_\+\+MAX\+\_\+\+CAMERAS}}~28
+\item 
+\#define \mbox{\hyperlink{qcarcam__test_8h_a13fa38086e45c65ccb717b13229828ab}{NUM\+\_\+\+MAX\+\_\+\+DISP\+\_\+\+BUFS}}~3
+\item 
+\#define \mbox{\hyperlink{qcarcam__test_8h_ac6c945471a705cbe0abb5116c394657b}{PAUSE\+\_\+\+RESUME\+\_\+\+USLEEP}}~1000000
+\item 
+\#define \mbox{\hyperlink{qcarcam__test_8h_a24ba5b59e7d3872820fd00c8fb969cb5}{START\+\_\+\+STOP\+\_\+\+USLEEP}}~1000000
+\item 
+\#define \mbox{\hyperlink{qcarcam__test_8h_add8748cc914fba36f976df98fa79f65a}{QCARCAMTEST\+\_\+\+SOF\+\_\+\+FREEZE\+\_\+\+TIMEOUT}}~1.\+0f
+\item 
+\#define \mbox{\hyperlink{qcarcam__test_8h_aadcaf1aa6fc9d4508c587cec7ced3370}{QCARCAM\+\_\+\+TEST\+\_\+\+DEFAULT\+\_\+\+GET\+\_\+\+FRAME\+\_\+\+TIMEOUT}}~500000000
+\item 
+\#define \mbox{\hyperlink{qcarcam__test_8h_a0091840e42814edf84d50876bbb0332f}{DEFAULT\+\_\+\+PRINT\+\_\+\+DELAY\+\_\+\+SEC}}~10
+\item 
+\#define \mbox{\hyperlink{qcarcam__test_8h_a7055a73af95bc24a3f79af0c155724b0}{SIGNAL\+\_\+\+CHECK\+\_\+\+DELAY}}~33333;
+\item 
+\#define \mbox{\hyperlink{qcarcam__test_8h_ade567d4c6c9c12f0521cecf66e38b27f}{CSI\+\_\+\+ERR\+\_\+\+CHECK\+\_\+\+DELAY}}~100000;
+\item 
+\#define \mbox{\hyperlink{qcarcam__test_8h_a64496d890506bdbc5e0778140dd887db}{NS\+\_\+\+TO\+\_\+\+MS}}~0.\+000001F
+\item 
+\#define \mbox{\hyperlink{qcarcam__test_8h_aa64c8d82553aba637db969d25fe1771f}{QCARCAM\+\_\+\+TEST\+\_\+\+INPUT\+\_\+\+INJECTION}}~11
+\item 
+\#define \mbox{\hyperlink{qcarcam__test_8h_aeca034f67218340ecb2261a22c2f3dcd}{BUFSIZE}}~10
+\item 
+\#define \mbox{\hyperlink{qcarcam__test_8h_ae6eabb3c3c67e59a932417d7dad7d148}{SIGWAIT\+\_\+\+TIMEOUT\+\_\+\+MS}}~100
+\item 
+\#define \mbox{\hyperlink{qcarcam__test_8h_a874312376a3e1fb01431e5f5b578367e}{TIMER\+\_\+\+THREAD\+\_\+\+USLEEP}}~1000000
+\item 
+\#define \mbox{\hyperlink{qcarcam__test_8h_aab49f443d7e4e75bce605d26ed2475df}{USR\+\_\+\+PROCESS\+\_\+\+THREAD\+\_\+\+USLEEP}}~1000
+\item 
+\#define \mbox{\hyperlink{qcarcam__test_8h_a650c25a39dd2d8fc2048e1e5b5446198}{USR\+\_\+\+PROCESS\+\_\+\+WAIT\+\_\+\+USLEEP}}~1000
+\item 
+\#define \mbox{\hyperlink{qcarcam__test_8h_a1c02356ec83d3e54767d5a70033dff83}{SET\+\_\+\+BIT}}(num,  nbit)~((num) $\vert$=  (0x1$<$$<$(nbit)))
+\item 
+\#define \mbox{\hyperlink{qcarcam__test_8h_addd6e8aa0d6ca5573543adc7a884e1c3}{CHECK\+\_\+\+BIT}}(num,  nbit)~((num) \& (0x1$<$$<$(nbit)))
+\item 
+\#define \mbox{\hyperlink{qcarcam__test_8h_a802a5774a268f5d993473f3d8207f670}{QCARCAMTEST\+\_\+\+BUFFER\+\_\+\+STALE\+\_\+\+BIT}}~4
+\item 
+\#define \mbox{\hyperlink{qcarcam__test_8h_a62a441e94f545e8d026e62604cba5556}{CAM\+\_\+\+SIGNAL\+\_\+\+WAIT\+\_\+\+NO\+\_\+\+TIMEOUT}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{qcarcam__test_8h_ab3dfd9751f77e1d8e4286b8b3be00710}{OS\+\_\+\+GET\+\_\+\+ABSTIME}}(timeout,  a\+\_\+milli\+Seconds)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{qcarcam__test_8h_a1d0ad2977a8f16b35f9e0b3e5eec196d}{qcarcam\+\_\+test\+\_\+buffer\+\_\+state\+\_\+t}} \{ \newline
+\mbox{\hyperlink{qcarcam__test_8h_a1d0ad2977a8f16b35f9e0b3e5eec196da4d461bb555df2d5baa3ac18b0abab8d4}{QCARCAMTEST\+\_\+\+BUFFER\+\_\+\+STATE\+\_\+\+INIT}}
+, \mbox{\hyperlink{qcarcam__test_8h_a1d0ad2977a8f16b35f9e0b3e5eec196da3a0a4ee47ec6f4c7caf4b12d39b73c65}{QCARCAMTEST\+\_\+\+BUFFER\+\_\+\+STATE\+\_\+\+QCARCAM}}
+, \mbox{\hyperlink{qcarcam__test_8h_a1d0ad2977a8f16b35f9e0b3e5eec196dadced1a99ab7000bf165f7f302a30f0c0}{QCARCAMTEST\+\_\+\+BUFFER\+\_\+\+STATE\+\_\+\+GET\+\_\+\+FRAME}}
+, \mbox{\hyperlink{qcarcam__test_8h_a1d0ad2977a8f16b35f9e0b3e5eec196da3c244f389662b9842217ace9b2a79f92}{QCARCAMTEST\+\_\+\+BUFFER\+\_\+\+STATE\+\_\+\+USR\+\_\+\+PROCESS}}
+, \newline
+\mbox{\hyperlink{qcarcam__test_8h_a1d0ad2977a8f16b35f9e0b3e5eec196da62d3e66868fbec2e7faee96311dfe742}{QCARCAMTEST\+\_\+\+BUFFER\+\_\+\+STATE\+\_\+\+USR\+\_\+\+PROCESS\+\_\+\+DONE}}
+, \mbox{\hyperlink{qcarcam__test_8h_a1d0ad2977a8f16b35f9e0b3e5eec196dafafb0a4bf4cec960023d7f054962c9ee}{QCARCAMTEST\+\_\+\+BUFFER\+\_\+\+STATE\+\_\+\+POST\+\_\+\+DISPLAY}}
+, \mbox{\hyperlink{qcarcam__test_8h_a1d0ad2977a8f16b35f9e0b3e5eec196daa4b79881fa269ff46daf6005ad8943e1}{QCARCAMTEST\+\_\+\+BUFFER\+\_\+\+STATE\+\_\+\+MAX}} = 0x7\+FFFFFF
+ \}
+\item 
+enum \mbox{\hyperlink{qcarcam__test_8h_a4789795e527abd450ff77a799e6195e3}{qcarcam\+\_\+test\+\_\+buffers\+\_\+t}} \{ \mbox{\hyperlink{qcarcam__test_8h_a4789795e527abd450ff77a799e6195e3aecb7b7e00ee09567067a69281fc9ec1e}{QCARCAM\+\_\+\+TEST\+\_\+\+BUFFERS\+\_\+\+OUTPUT}} = 0
+, \mbox{\hyperlink{qcarcam__test_8h_a4789795e527abd450ff77a799e6195e3a3146f61f4b891b9f4e4cd0c21e7ecf72}{QCARCAM\+\_\+\+TEST\+\_\+\+BUFFERS\+\_\+\+DISPLAY}}
+, \mbox{\hyperlink{qcarcam__test_8h_a4789795e527abd450ff77a799e6195e3a547048f28532a139402ee90e011381e0}{QCARCAM\+\_\+\+TEST\+\_\+\+BUFFERS\+\_\+\+INPUT}}
+, \mbox{\hyperlink{qcarcam__test_8h_a4789795e527abd450ff77a799e6195e3ab7ad67b30b233906dc19725dc63d0dbb}{QCARCAM\+\_\+\+TEST\+\_\+\+BUFFERS\+\_\+\+MAX}}
+ \}
+\item 
+enum \mbox{\hyperlink{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edb}{qcarcamtest\+\_\+state\+\_\+t}} \{ \newline
+\mbox{\hyperlink{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edba400370bb00a2df6f7fa81aa8751024f8}{QCARCAMTEST\+\_\+\+STATE\+\_\+\+INVALID}} = 0
+, \mbox{\hyperlink{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edbaac5eaa19209442c5e668f76e6ecdc096}{QCARCAMTEST\+\_\+\+STATE\+\_\+\+INIT}}
+, \mbox{\hyperlink{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edbad00f5e0bbd4184dab2637d3080250864}{QCARCAMTEST\+\_\+\+STATE\+\_\+\+OPEN}}
+, \mbox{\hyperlink{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edba37cd96fc8389824a2b09f421c6f2adf4}{QCARCAMTEST\+\_\+\+STATE\+\_\+\+START}}
+, \newline
+\mbox{\hyperlink{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edba091f75c47cd205bc20ff3dac3cadc11b}{QCARCAMTEST\+\_\+\+STATE\+\_\+\+STOP}}
+, \mbox{\hyperlink{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edba95faeee7c09142bdc7e9d5060b02171b}{QCARCAMTEST\+\_\+\+STATE\+\_\+\+PAUSE}}
+, \mbox{\hyperlink{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edba889e7985e660377bafa8589a2f628d71}{QCARCAMTEST\+\_\+\+STATE\+\_\+\+PAUSE\+\_\+\+STOP\+\_\+\+PENDING}}
+, \mbox{\hyperlink{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edba4a92f241b873920beb32141a70739194}{QCARCAMTEST\+\_\+\+STATE\+\_\+\+ERROR}}
+, \newline
+\mbox{\hyperlink{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edbae938eb8b26a8ba80306bea081337c351}{QCARCAMTEST\+\_\+\+STATE\+\_\+\+CLOSED}}
+, \mbox{\hyperlink{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edba0727d3617cbd9163a9e62530f66fd994}{QCARCAMTEST\+\_\+\+STATE\+\_\+\+SUSPEND}}
+, \mbox{\hyperlink{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edbaab24467bd3638f1799af7da90fd6f0cf}{QCARCAMTEST\+\_\+\+STATE\+\_\+\+RECOVERY}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{qcarcam__test_8h_a65227182bf5eedafcb7472ab75ff9001}{qcarcam\+\_\+input\+\_\+open}} (\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$input\+\_\+ctxt)
+\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{qcarcam__test_8h_a08b23af4883ee1ac540f406eddbe9f8a}{qcarcam\+\_\+input\+\_\+close}} (\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$input\+\_\+ctxt)
+\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{qcarcam__test_8h_a618ce40fb6f604b475d7bfc027f76db1}{qcarcam\+\_\+input\+\_\+start}} (\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$input\+\_\+ctxt)
+\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{qcarcam__test_8h_afbd790e052c2ac6e127950ace2074189}{qcarcam\+\_\+input\+\_\+stop}} (\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$input\+\_\+ctxt)
+\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{qcarcam__test_8h_a6f81953cb32cca41fd71de50ba8bcb69}{qcarcam\+\_\+input\+\_\+pause}} (\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$input\+\_\+ctxt)
+\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{qcarcam__test_8h_a771495f4ddec4db0f276b9f766b70802}{qcarcam\+\_\+input\+\_\+resume}} (\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$input\+\_\+ctxt)
+\item 
+void \mbox{\hyperlink{qcarcam__test_8h_a5fad88ee564007c3dca72a3c881e84c0}{qcarcam\+\_\+test\+\_\+menu}} (void)
+\item 
+void \mbox{\hyperlink{qcarcam__test_8h_a1302b3a0cdfaee0c0010ed5275c8023d}{abort\+\_\+test}} (void)
+\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{qcarcam__test_8h_a7f4d5cb3936ed2c24cd92bd0e1964242}{qcarcam\+\_\+test\+\_\+event\+\_\+cb}} (const QCar\+Cam\+Hndl\+\_\+t hndl, const uint32\+\_\+t event\+Id, const QCar\+Cam\+Event\+Payload\+\_\+t $\ast$p\+Payload, void $\ast$p\+Private\+Data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{qcarcam__test_8h_aeca034f67218340ecb2261a22c2f3dcd}\label{qcarcam__test_8h_aeca034f67218340ecb2261a22c2f3dcd}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!BUFSIZE@{BUFSIZE}}
+\index{BUFSIZE@{BUFSIZE}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{BUFSIZE}{BUFSIZE}}
+{\footnotesize\ttfamily \#define BUFSIZE~10}
+
+
+
+Definition at line 61 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{qcarcam__test_8h_a62a441e94f545e8d026e62604cba5556}\label{qcarcam__test_8h_a62a441e94f545e8d026e62604cba5556}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!CAM\_SIGNAL\_WAIT\_NO\_TIMEOUT@{CAM\_SIGNAL\_WAIT\_NO\_TIMEOUT}}
+\index{CAM\_SIGNAL\_WAIT\_NO\_TIMEOUT@{CAM\_SIGNAL\_WAIT\_NO\_TIMEOUT}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{CAM\_SIGNAL\_WAIT\_NO\_TIMEOUT}{CAM\_SIGNAL\_WAIT\_NO\_TIMEOUT}}
+{\footnotesize\ttfamily \#define CAM\+\_\+\+SIGNAL\+\_\+\+WAIT\+\_\+\+NO\+\_\+\+TIMEOUT~0x\+FFFFFFFF}
+
+
+
+Definition at line 198 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{qcarcam__test_8h_addd6e8aa0d6ca5573543adc7a884e1c3}\label{qcarcam__test_8h_addd6e8aa0d6ca5573543adc7a884e1c3}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!CHECK\_BIT@{CHECK\_BIT}}
+\index{CHECK\_BIT@{CHECK\_BIT}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{CHECK\_BIT}{CHECK\_BIT}}
+{\footnotesize\ttfamily \#define CHECK\+\_\+\+BIT(\begin{DoxyParamCaption}\item[{}]{num,  }\item[{}]{nbit }\end{DoxyParamCaption})~((num) \& (0x1$<$$<$(nbit)))}
+
+
+
+Definition at line 77 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{qcarcam__test_8h_ade567d4c6c9c12f0521cecf66e38b27f}\label{qcarcam__test_8h_ade567d4c6c9c12f0521cecf66e38b27f}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!CSI\_ERR\_CHECK\_DELAY@{CSI\_ERR\_CHECK\_DELAY}}
+\index{CSI\_ERR\_CHECK\_DELAY@{CSI\_ERR\_CHECK\_DELAY}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{CSI\_ERR\_CHECK\_DELAY}{CSI\_ERR\_CHECK\_DELAY}}
+{\footnotesize\ttfamily \#define CSI\+\_\+\+ERR\+\_\+\+CHECK\+\_\+\+DELAY~100000;}
+
+
+
+Definition at line 57 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{qcarcam__test_8h_a0091840e42814edf84d50876bbb0332f}\label{qcarcam__test_8h_a0091840e42814edf84d50876bbb0332f}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!DEFAULT\_PRINT\_DELAY\_SEC@{DEFAULT\_PRINT\_DELAY\_SEC}}
+\index{DEFAULT\_PRINT\_DELAY\_SEC@{DEFAULT\_PRINT\_DELAY\_SEC}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_PRINT\_DELAY\_SEC}{DEFAULT\_PRINT\_DELAY\_SEC}}
+{\footnotesize\ttfamily \#define DEFAULT\+\_\+\+PRINT\+\_\+\+DELAY\+\_\+\+SEC~10}
+
+
+
+Definition at line 55 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{qcarcam__test_8h_a64496d890506bdbc5e0778140dd887db}\label{qcarcam__test_8h_a64496d890506bdbc5e0778140dd887db}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!NS\_TO\_MS@{NS\_TO\_MS}}
+\index{NS\_TO\_MS@{NS\_TO\_MS}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{NS\_TO\_MS}{NS\_TO\_MS}}
+{\footnotesize\ttfamily \#define NS\+\_\+\+TO\+\_\+\+MS~0.\+000001F}
+
+
+
+Definition at line 58 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{qcarcam__test_8h_a0fde3f6eb459935eab0f7e300add93be}\label{qcarcam__test_8h_a0fde3f6eb459935eab0f7e300add93be}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!NUM\_MAX\_CAMERAS@{NUM\_MAX\_CAMERAS}}
+\index{NUM\_MAX\_CAMERAS@{NUM\_MAX\_CAMERAS}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{NUM\_MAX\_CAMERAS}{NUM\_MAX\_CAMERAS}}
+{\footnotesize\ttfamily \#define NUM\+\_\+\+MAX\+\_\+\+CAMERAS~28}
+
+
+
+Definition at line 44 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{qcarcam__test_8h_a13fa38086e45c65ccb717b13229828ab}\label{qcarcam__test_8h_a13fa38086e45c65ccb717b13229828ab}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!NUM\_MAX\_DISP\_BUFS@{NUM\_MAX\_DISP\_BUFS}}
+\index{NUM\_MAX\_DISP\_BUFS@{NUM\_MAX\_DISP\_BUFS}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{NUM\_MAX\_DISP\_BUFS}{NUM\_MAX\_DISP\_BUFS}}
+{\footnotesize\ttfamily \#define NUM\+\_\+\+MAX\+\_\+\+DISP\+\_\+\+BUFS~3}
+
+
+
+Definition at line 45 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{qcarcam__test_8h_ab3dfd9751f77e1d8e4286b8b3be00710}\label{qcarcam__test_8h_ab3dfd9751f77e1d8e4286b8b3be00710}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!OS\_GET\_ABSTIME@{OS\_GET\_ABSTIME}}
+\index{OS\_GET\_ABSTIME@{OS\_GET\_ABSTIME}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{OS\_GET\_ABSTIME}{OS\_GET\_ABSTIME}}
+{\footnotesize\ttfamily \#define OS\+\_\+\+GET\+\_\+\+ABSTIME(\begin{DoxyParamCaption}\item[{}]{timeout,  }\item[{}]{a\+\_\+milli\+Seconds }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    clock\_gettime(CLOCK\_MONOTONIC, \&timeout);             \(\backslash\)}
+\DoxyCodeLine{    timeout.tv\_sec += (a\_milliSeconds / 1000);            \(\backslash\)}
+\DoxyCodeLine{    timeout.tv\_nsec += (a\_milliSeconds \% 1000) * 1000000; \(\backslash\)}
+\DoxyCodeLine{    if (timeout.tv\_nsec >= 1000000000) \{                  \(\backslash\)}
+\DoxyCodeLine{        timeout.tv\_nsec -\/= 1000000000;                    \(\backslash\)}
+\DoxyCodeLine{        timeout.tv\_sec++;                                 \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Definition at line 200 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{qcarcam__test_8h_ac6c945471a705cbe0abb5116c394657b}\label{qcarcam__test_8h_ac6c945471a705cbe0abb5116c394657b}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!PAUSE\_RESUME\_USLEEP@{PAUSE\_RESUME\_USLEEP}}
+\index{PAUSE\_RESUME\_USLEEP@{PAUSE\_RESUME\_USLEEP}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{PAUSE\_RESUME\_USLEEP}{PAUSE\_RESUME\_USLEEP}}
+{\footnotesize\ttfamily \#define PAUSE\+\_\+\+RESUME\+\_\+\+USLEEP~1000000}
+
+
+
+Definition at line 48 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{qcarcam__test_8h_aadcaf1aa6fc9d4508c587cec7ced3370}\label{qcarcam__test_8h_aadcaf1aa6fc9d4508c587cec7ced3370}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAM\_TEST\_DEFAULT\_GET\_FRAME\_TIMEOUT@{QCARCAM\_TEST\_DEFAULT\_GET\_FRAME\_TIMEOUT}}
+\index{QCARCAM\_TEST\_DEFAULT\_GET\_FRAME\_TIMEOUT@{QCARCAM\_TEST\_DEFAULT\_GET\_FRAME\_TIMEOUT}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{QCARCAM\_TEST\_DEFAULT\_GET\_FRAME\_TIMEOUT}{QCARCAM\_TEST\_DEFAULT\_GET\_FRAME\_TIMEOUT}}
+{\footnotesize\ttfamily \#define QCARCAM\+\_\+\+TEST\+\_\+\+DEFAULT\+\_\+\+GET\+\_\+\+FRAME\+\_\+\+TIMEOUT~500000000}
+
+
+
+Definition at line 54 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{qcarcam__test_8h_aa64c8d82553aba637db969d25fe1771f}\label{qcarcam__test_8h_aa64c8d82553aba637db969d25fe1771f}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAM\_TEST\_INPUT\_INJECTION@{QCARCAM\_TEST\_INPUT\_INJECTION}}
+\index{QCARCAM\_TEST\_INPUT\_INJECTION@{QCARCAM\_TEST\_INPUT\_INJECTION}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{QCARCAM\_TEST\_INPUT\_INJECTION}{QCARCAM\_TEST\_INPUT\_INJECTION}}
+{\footnotesize\ttfamily \#define QCARCAM\+\_\+\+TEST\+\_\+\+INPUT\+\_\+\+INJECTION~11}
+
+
+
+Definition at line 60 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{qcarcam__test_8h_a802a5774a268f5d993473f3d8207f670}\label{qcarcam__test_8h_a802a5774a268f5d993473f3d8207f670}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAMTEST\_BUFFER\_STALE\_BIT@{QCARCAMTEST\_BUFFER\_STALE\_BIT}}
+\index{QCARCAMTEST\_BUFFER\_STALE\_BIT@{QCARCAMTEST\_BUFFER\_STALE\_BIT}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{QCARCAMTEST\_BUFFER\_STALE\_BIT}{QCARCAMTEST\_BUFFER\_STALE\_BIT}}
+{\footnotesize\ttfamily \#define QCARCAMTEST\+\_\+\+BUFFER\+\_\+\+STALE\+\_\+\+BIT~4}
+
+
+
+Definition at line 79 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{qcarcam__test_8h_add8748cc914fba36f976df98fa79f65a}\label{qcarcam__test_8h_add8748cc914fba36f976df98fa79f65a}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAMTEST\_SOF\_FREEZE\_TIMEOUT@{QCARCAMTEST\_SOF\_FREEZE\_TIMEOUT}}
+\index{QCARCAMTEST\_SOF\_FREEZE\_TIMEOUT@{QCARCAMTEST\_SOF\_FREEZE\_TIMEOUT}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{QCARCAMTEST\_SOF\_FREEZE\_TIMEOUT}{QCARCAMTEST\_SOF\_FREEZE\_TIMEOUT}}
+{\footnotesize\ttfamily \#define QCARCAMTEST\+\_\+\+SOF\+\_\+\+FREEZE\+\_\+\+TIMEOUT~1.\+0f}
+
+
+
+Definition at line 52 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{qcarcam__test_8h_a1c02356ec83d3e54767d5a70033dff83}\label{qcarcam__test_8h_a1c02356ec83d3e54767d5a70033dff83}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!SET\_BIT@{SET\_BIT}}
+\index{SET\_BIT@{SET\_BIT}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{SET\_BIT}{SET\_BIT}}
+{\footnotesize\ttfamily \#define SET\+\_\+\+BIT(\begin{DoxyParamCaption}\item[{}]{num,  }\item[{}]{nbit }\end{DoxyParamCaption})~((num) $\vert$=  (0x1$<$$<$(nbit)))}
+
+
+
+Definition at line 76 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{qcarcam__test_8h_a7055a73af95bc24a3f79af0c155724b0}\label{qcarcam__test_8h_a7055a73af95bc24a3f79af0c155724b0}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!SIGNAL\_CHECK\_DELAY@{SIGNAL\_CHECK\_DELAY}}
+\index{SIGNAL\_CHECK\_DELAY@{SIGNAL\_CHECK\_DELAY}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{SIGNAL\_CHECK\_DELAY}{SIGNAL\_CHECK\_DELAY}}
+{\footnotesize\ttfamily \#define SIGNAL\+\_\+\+CHECK\+\_\+\+DELAY~33333;}
+
+
+
+Definition at line 56 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{qcarcam__test_8h_ae6eabb3c3c67e59a932417d7dad7d148}\label{qcarcam__test_8h_ae6eabb3c3c67e59a932417d7dad7d148}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!SIGWAIT\_TIMEOUT\_MS@{SIGWAIT\_TIMEOUT\_MS}}
+\index{SIGWAIT\_TIMEOUT\_MS@{SIGWAIT\_TIMEOUT\_MS}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{SIGWAIT\_TIMEOUT\_MS}{SIGWAIT\_TIMEOUT\_MS}}
+{\footnotesize\ttfamily \#define SIGWAIT\+\_\+\+TIMEOUT\+\_\+\+MS~100}
+
+
+
+Definition at line 63 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{qcarcam__test_8h_a24ba5b59e7d3872820fd00c8fb969cb5}\label{qcarcam__test_8h_a24ba5b59e7d3872820fd00c8fb969cb5}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!START\_STOP\_USLEEP@{START\_STOP\_USLEEP}}
+\index{START\_STOP\_USLEEP@{START\_STOP\_USLEEP}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{START\_STOP\_USLEEP}{START\_STOP\_USLEEP}}
+{\footnotesize\ttfamily \#define START\+\_\+\+STOP\+\_\+\+USLEEP~1000000}
+
+
+
+Definition at line 49 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{qcarcam__test_8h_a874312376a3e1fb01431e5f5b578367e}\label{qcarcam__test_8h_a874312376a3e1fb01431e5f5b578367e}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!TIMER\_THREAD\_USLEEP@{TIMER\_THREAD\_USLEEP}}
+\index{TIMER\_THREAD\_USLEEP@{TIMER\_THREAD\_USLEEP}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_THREAD\_USLEEP}{TIMER\_THREAD\_USLEEP}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+THREAD\+\_\+\+USLEEP~1000000}
+
+
+
+Definition at line 64 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{qcarcam__test_8h_aab49f443d7e4e75bce605d26ed2475df}\label{qcarcam__test_8h_aab49f443d7e4e75bce605d26ed2475df}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!USR\_PROCESS\_THREAD\_USLEEP@{USR\_PROCESS\_THREAD\_USLEEP}}
+\index{USR\_PROCESS\_THREAD\_USLEEP@{USR\_PROCESS\_THREAD\_USLEEP}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{USR\_PROCESS\_THREAD\_USLEEP}{USR\_PROCESS\_THREAD\_USLEEP}}
+{\footnotesize\ttfamily \#define USR\+\_\+\+PROCESS\+\_\+\+THREAD\+\_\+\+USLEEP~1000}
+
+
+
+Definition at line 66 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{qcarcam__test_8h_a650c25a39dd2d8fc2048e1e5b5446198}\label{qcarcam__test_8h_a650c25a39dd2d8fc2048e1e5b5446198}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!USR\_PROCESS\_WAIT\_USLEEP@{USR\_PROCESS\_WAIT\_USLEEP}}
+\index{USR\_PROCESS\_WAIT\_USLEEP@{USR\_PROCESS\_WAIT\_USLEEP}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{USR\_PROCESS\_WAIT\_USLEEP}{USR\_PROCESS\_WAIT\_USLEEP}}
+{\footnotesize\ttfamily \#define USR\+\_\+\+PROCESS\+\_\+\+WAIT\+\_\+\+USLEEP~1000}
+
+
+
+Definition at line 67 of file qcarcam\+\_\+test.\+h.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{qcarcam__test_8h_a1d0ad2977a8f16b35f9e0b3e5eec196d}\label{qcarcam__test_8h_a1d0ad2977a8f16b35f9e0b3e5eec196d}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!qcarcam\_test\_buffer\_state\_t@{qcarcam\_test\_buffer\_state\_t}}
+\index{qcarcam\_test\_buffer\_state\_t@{qcarcam\_test\_buffer\_state\_t}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_test\_buffer\_state\_t}{qcarcam\_test\_buffer\_state\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{qcarcam__test_8h_a1d0ad2977a8f16b35f9e0b3e5eec196d}{qcarcam\+\_\+test\+\_\+buffer\+\_\+state\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAMTEST\_BUFFER\_STATE\_INIT@{QCARCAMTEST\_BUFFER\_STATE\_INIT}!qcarcam\_test.h@{qcarcam\_test.h}}\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAMTEST\_BUFFER\_STATE\_INIT@{QCARCAMTEST\_BUFFER\_STATE\_INIT}}}\mbox{\Hypertarget{qcarcam__test_8h_a1d0ad2977a8f16b35f9e0b3e5eec196da4d461bb555df2d5baa3ac18b0abab8d4}\label{qcarcam__test_8h_a1d0ad2977a8f16b35f9e0b3e5eec196da4d461bb555df2d5baa3ac18b0abab8d4}} 
+QCARCAMTEST\+\_\+\+BUFFER\+\_\+\+STATE\+\_\+\+INIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAMTEST\_BUFFER\_STATE\_QCARCAM@{QCARCAMTEST\_BUFFER\_STATE\_QCARCAM}!qcarcam\_test.h@{qcarcam\_test.h}}\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAMTEST\_BUFFER\_STATE\_QCARCAM@{QCARCAMTEST\_BUFFER\_STATE\_QCARCAM}}}\mbox{\Hypertarget{qcarcam__test_8h_a1d0ad2977a8f16b35f9e0b3e5eec196da3a0a4ee47ec6f4c7caf4b12d39b73c65}\label{qcarcam__test_8h_a1d0ad2977a8f16b35f9e0b3e5eec196da3a0a4ee47ec6f4c7caf4b12d39b73c65}} 
+QCARCAMTEST\+\_\+\+BUFFER\+\_\+\+STATE\+\_\+\+QCARCAM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAMTEST\_BUFFER\_STATE\_GET\_FRAME@{QCARCAMTEST\_BUFFER\_STATE\_GET\_FRAME}!qcarcam\_test.h@{qcarcam\_test.h}}\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAMTEST\_BUFFER\_STATE\_GET\_FRAME@{QCARCAMTEST\_BUFFER\_STATE\_GET\_FRAME}}}\mbox{\Hypertarget{qcarcam__test_8h_a1d0ad2977a8f16b35f9e0b3e5eec196dadced1a99ab7000bf165f7f302a30f0c0}\label{qcarcam__test_8h_a1d0ad2977a8f16b35f9e0b3e5eec196dadced1a99ab7000bf165f7f302a30f0c0}} 
+QCARCAMTEST\+\_\+\+BUFFER\+\_\+\+STATE\+\_\+\+GET\+\_\+\+FRAME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAMTEST\_BUFFER\_STATE\_USR\_PROCESS@{QCARCAMTEST\_BUFFER\_STATE\_USR\_PROCESS}!qcarcam\_test.h@{qcarcam\_test.h}}\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAMTEST\_BUFFER\_STATE\_USR\_PROCESS@{QCARCAMTEST\_BUFFER\_STATE\_USR\_PROCESS}}}\mbox{\Hypertarget{qcarcam__test_8h_a1d0ad2977a8f16b35f9e0b3e5eec196da3c244f389662b9842217ace9b2a79f92}\label{qcarcam__test_8h_a1d0ad2977a8f16b35f9e0b3e5eec196da3c244f389662b9842217ace9b2a79f92}} 
+QCARCAMTEST\+\_\+\+BUFFER\+\_\+\+STATE\+\_\+\+USR\+\_\+\+PROCESS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAMTEST\_BUFFER\_STATE\_USR\_PROCESS\_DONE@{QCARCAMTEST\_BUFFER\_STATE\_USR\_PROCESS\_DONE}!qcarcam\_test.h@{qcarcam\_test.h}}\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAMTEST\_BUFFER\_STATE\_USR\_PROCESS\_DONE@{QCARCAMTEST\_BUFFER\_STATE\_USR\_PROCESS\_DONE}}}\mbox{\Hypertarget{qcarcam__test_8h_a1d0ad2977a8f16b35f9e0b3e5eec196da62d3e66868fbec2e7faee96311dfe742}\label{qcarcam__test_8h_a1d0ad2977a8f16b35f9e0b3e5eec196da62d3e66868fbec2e7faee96311dfe742}} 
+QCARCAMTEST\+\_\+\+BUFFER\+\_\+\+STATE\+\_\+\+USR\+\_\+\+PROCESS\+\_\+\+DONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAMTEST\_BUFFER\_STATE\_POST\_DISPLAY@{QCARCAMTEST\_BUFFER\_STATE\_POST\_DISPLAY}!qcarcam\_test.h@{qcarcam\_test.h}}\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAMTEST\_BUFFER\_STATE\_POST\_DISPLAY@{QCARCAMTEST\_BUFFER\_STATE\_POST\_DISPLAY}}}\mbox{\Hypertarget{qcarcam__test_8h_a1d0ad2977a8f16b35f9e0b3e5eec196dafafb0a4bf4cec960023d7f054962c9ee}\label{qcarcam__test_8h_a1d0ad2977a8f16b35f9e0b3e5eec196dafafb0a4bf4cec960023d7f054962c9ee}} 
+QCARCAMTEST\+\_\+\+BUFFER\+\_\+\+STATE\+\_\+\+POST\+\_\+\+DISPLAY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAMTEST\_BUFFER\_STATE\_MAX@{QCARCAMTEST\_BUFFER\_STATE\_MAX}!qcarcam\_test.h@{qcarcam\_test.h}}\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAMTEST\_BUFFER\_STATE\_MAX@{QCARCAMTEST\_BUFFER\_STATE\_MAX}}}\mbox{\Hypertarget{qcarcam__test_8h_a1d0ad2977a8f16b35f9e0b3e5eec196daa4b79881fa269ff46daf6005ad8943e1}\label{qcarcam__test_8h_a1d0ad2977a8f16b35f9e0b3e5eec196daa4b79881fa269ff46daf6005ad8943e1}} 
+QCARCAMTEST\+\_\+\+BUFFER\+\_\+\+STATE\+\_\+\+MAX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 81 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{qcarcam__test_8h_a4789795e527abd450ff77a799e6195e3}\label{qcarcam__test_8h_a4789795e527abd450ff77a799e6195e3}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!qcarcam\_test\_buffers\_t@{qcarcam\_test\_buffers\_t}}
+\index{qcarcam\_test\_buffers\_t@{qcarcam\_test\_buffers\_t}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_test\_buffers\_t}{qcarcam\_test\_buffers\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{qcarcam__test_8h_a4789795e527abd450ff77a799e6195e3}{qcarcam\+\_\+test\+\_\+buffers\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_BUFFERS\_OUTPUT@{QCARCAM\_TEST\_BUFFERS\_OUTPUT}!qcarcam\_test.h@{qcarcam\_test.h}}\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAM\_TEST\_BUFFERS\_OUTPUT@{QCARCAM\_TEST\_BUFFERS\_OUTPUT}}}\mbox{\Hypertarget{qcarcam__test_8h_a4789795e527abd450ff77a799e6195e3aecb7b7e00ee09567067a69281fc9ec1e}\label{qcarcam__test_8h_a4789795e527abd450ff77a799e6195e3aecb7b7e00ee09567067a69281fc9ec1e}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+BUFFERS\+\_\+\+OUTPUT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_BUFFERS\_DISPLAY@{QCARCAM\_TEST\_BUFFERS\_DISPLAY}!qcarcam\_test.h@{qcarcam\_test.h}}\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAM\_TEST\_BUFFERS\_DISPLAY@{QCARCAM\_TEST\_BUFFERS\_DISPLAY}}}\mbox{\Hypertarget{qcarcam__test_8h_a4789795e527abd450ff77a799e6195e3a3146f61f4b891b9f4e4cd0c21e7ecf72}\label{qcarcam__test_8h_a4789795e527abd450ff77a799e6195e3a3146f61f4b891b9f4e4cd0c21e7ecf72}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+BUFFERS\+\_\+\+DISPLAY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_BUFFERS\_INPUT@{QCARCAM\_TEST\_BUFFERS\_INPUT}!qcarcam\_test.h@{qcarcam\_test.h}}\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAM\_TEST\_BUFFERS\_INPUT@{QCARCAM\_TEST\_BUFFERS\_INPUT}}}\mbox{\Hypertarget{qcarcam__test_8h_a4789795e527abd450ff77a799e6195e3a547048f28532a139402ee90e011381e0}\label{qcarcam__test_8h_a4789795e527abd450ff77a799e6195e3a547048f28532a139402ee90e011381e0}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+BUFFERS\+\_\+\+INPUT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAM\_TEST\_BUFFERS\_MAX@{QCARCAM\_TEST\_BUFFERS\_MAX}!qcarcam\_test.h@{qcarcam\_test.h}}\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAM\_TEST\_BUFFERS\_MAX@{QCARCAM\_TEST\_BUFFERS\_MAX}}}\mbox{\Hypertarget{qcarcam__test_8h_a4789795e527abd450ff77a799e6195e3ab7ad67b30b233906dc19725dc63d0dbb}\label{qcarcam__test_8h_a4789795e527abd450ff77a799e6195e3ab7ad67b30b233906dc19725dc63d0dbb}} 
+QCARCAM\+\_\+\+TEST\+\_\+\+BUFFERS\+\_\+\+MAX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 92 of file qcarcam\+\_\+test.\+h.
+
+\mbox{\Hypertarget{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edb}\label{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edb}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!qcarcamtest\_state\_t@{qcarcamtest\_state\_t}}
+\index{qcarcamtest\_state\_t@{qcarcamtest\_state\_t}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{qcarcamtest\_state\_t}{qcarcamtest\_state\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edb}{qcarcamtest\+\_\+state\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAMTEST\_STATE\_INVALID@{QCARCAMTEST\_STATE\_INVALID}!qcarcam\_test.h@{qcarcam\_test.h}}\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAMTEST\_STATE\_INVALID@{QCARCAMTEST\_STATE\_INVALID}}}\mbox{\Hypertarget{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edba400370bb00a2df6f7fa81aa8751024f8}\label{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edba400370bb00a2df6f7fa81aa8751024f8}} 
+QCARCAMTEST\+\_\+\+STATE\+\_\+\+INVALID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAMTEST\_STATE\_INIT@{QCARCAMTEST\_STATE\_INIT}!qcarcam\_test.h@{qcarcam\_test.h}}\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAMTEST\_STATE\_INIT@{QCARCAMTEST\_STATE\_INIT}}}\mbox{\Hypertarget{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edbaac5eaa19209442c5e668f76e6ecdc096}\label{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edbaac5eaa19209442c5e668f76e6ecdc096}} 
+QCARCAMTEST\+\_\+\+STATE\+\_\+\+INIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAMTEST\_STATE\_OPEN@{QCARCAMTEST\_STATE\_OPEN}!qcarcam\_test.h@{qcarcam\_test.h}}\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAMTEST\_STATE\_OPEN@{QCARCAMTEST\_STATE\_OPEN}}}\mbox{\Hypertarget{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edbad00f5e0bbd4184dab2637d3080250864}\label{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edbad00f5e0bbd4184dab2637d3080250864}} 
+QCARCAMTEST\+\_\+\+STATE\+\_\+\+OPEN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAMTEST\_STATE\_START@{QCARCAMTEST\_STATE\_START}!qcarcam\_test.h@{qcarcam\_test.h}}\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAMTEST\_STATE\_START@{QCARCAMTEST\_STATE\_START}}}\mbox{\Hypertarget{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edba37cd96fc8389824a2b09f421c6f2adf4}\label{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edba37cd96fc8389824a2b09f421c6f2adf4}} 
+QCARCAMTEST\+\_\+\+STATE\+\_\+\+START&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAMTEST\_STATE\_STOP@{QCARCAMTEST\_STATE\_STOP}!qcarcam\_test.h@{qcarcam\_test.h}}\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAMTEST\_STATE\_STOP@{QCARCAMTEST\_STATE\_STOP}}}\mbox{\Hypertarget{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edba091f75c47cd205bc20ff3dac3cadc11b}\label{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edba091f75c47cd205bc20ff3dac3cadc11b}} 
+QCARCAMTEST\+\_\+\+STATE\+\_\+\+STOP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAMTEST\_STATE\_PAUSE@{QCARCAMTEST\_STATE\_PAUSE}!qcarcam\_test.h@{qcarcam\_test.h}}\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAMTEST\_STATE\_PAUSE@{QCARCAMTEST\_STATE\_PAUSE}}}\mbox{\Hypertarget{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edba95faeee7c09142bdc7e9d5060b02171b}\label{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edba95faeee7c09142bdc7e9d5060b02171b}} 
+QCARCAMTEST\+\_\+\+STATE\+\_\+\+PAUSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAMTEST\_STATE\_PAUSE\_STOP\_PENDING@{QCARCAMTEST\_STATE\_PAUSE\_STOP\_PENDING}!qcarcam\_test.h@{qcarcam\_test.h}}\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAMTEST\_STATE\_PAUSE\_STOP\_PENDING@{QCARCAMTEST\_STATE\_PAUSE\_STOP\_PENDING}}}\mbox{\Hypertarget{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edba889e7985e660377bafa8589a2f628d71}\label{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edba889e7985e660377bafa8589a2f628d71}} 
+QCARCAMTEST\+\_\+\+STATE\+\_\+\+PAUSE\+\_\+\+STOP\+\_\+\+PENDING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAMTEST\_STATE\_ERROR@{QCARCAMTEST\_STATE\_ERROR}!qcarcam\_test.h@{qcarcam\_test.h}}\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAMTEST\_STATE\_ERROR@{QCARCAMTEST\_STATE\_ERROR}}}\mbox{\Hypertarget{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edba4a92f241b873920beb32141a70739194}\label{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edba4a92f241b873920beb32141a70739194}} 
+QCARCAMTEST\+\_\+\+STATE\+\_\+\+ERROR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAMTEST\_STATE\_CLOSED@{QCARCAMTEST\_STATE\_CLOSED}!qcarcam\_test.h@{qcarcam\_test.h}}\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAMTEST\_STATE\_CLOSED@{QCARCAMTEST\_STATE\_CLOSED}}}\mbox{\Hypertarget{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edbae938eb8b26a8ba80306bea081337c351}\label{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edbae938eb8b26a8ba80306bea081337c351}} 
+QCARCAMTEST\+\_\+\+STATE\+\_\+\+CLOSED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAMTEST\_STATE\_SUSPEND@{QCARCAMTEST\_STATE\_SUSPEND}!qcarcam\_test.h@{qcarcam\_test.h}}\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAMTEST\_STATE\_SUSPEND@{QCARCAMTEST\_STATE\_SUSPEND}}}\mbox{\Hypertarget{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edba0727d3617cbd9163a9e62530f66fd994}\label{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edba0727d3617cbd9163a9e62530f66fd994}} 
+QCARCAMTEST\+\_\+\+STATE\+\_\+\+SUSPEND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QCARCAMTEST\_STATE\_RECOVERY@{QCARCAMTEST\_STATE\_RECOVERY}!qcarcam\_test.h@{qcarcam\_test.h}}\index{qcarcam\_test.h@{qcarcam\_test.h}!QCARCAMTEST\_STATE\_RECOVERY@{QCARCAMTEST\_STATE\_RECOVERY}}}\mbox{\Hypertarget{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edbaab24467bd3638f1799af7da90fd6f0cf}\label{qcarcam__test_8h_ab43472c254840cc421ddf9429ed37edbaab24467bd3638f1799af7da90fd6f0cf}} 
+QCARCAMTEST\+\_\+\+STATE\+\_\+\+RECOVERY&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 130 of file qcarcam\+\_\+test.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{qcarcam__test_8h_a1302b3a0cdfaee0c0010ed5275c8023d}\label{qcarcam__test_8h_a1302b3a0cdfaee0c0010ed5275c8023d}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!abort\_test@{abort\_test}}
+\index{abort\_test@{abort\_test}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{abort\_test()}{abort\_test()}}
+{\footnotesize\ttfamily void abort\+\_\+test (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 976 of file qcarcam\+\_\+test.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{qcarcam__test_8h_a08b23af4883ee1ac540f406eddbe9f8a}\label{qcarcam__test_8h_a08b23af4883ee1ac540f406eddbe9f8a}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!qcarcam\_input\_close@{qcarcam\_input\_close}}
+\index{qcarcam\_input\_close@{qcarcam\_input\_close}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_input\_close()}{qcarcam\_input\_close()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e qcarcam\+\_\+input\+\_\+close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$}]{input\+\_\+ctxt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 469 of file qcarcam\+\_\+test.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{qcarcam__test_8h_a65227182bf5eedafcb7472ab75ff9001}\label{qcarcam__test_8h_a65227182bf5eedafcb7472ab75ff9001}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!qcarcam\_input\_open@{qcarcam\_input\_open}}
+\index{qcarcam\_input\_open@{qcarcam\_input\_open}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_input\_open()}{qcarcam\_input\_open()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e qcarcam\+\_\+input\+\_\+open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$}]{input\+\_\+ctxt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 305 of file qcarcam\+\_\+test.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{qcarcam__test_8h_a6f81953cb32cca41fd71de50ba8bcb69}\label{qcarcam__test_8h_a6f81953cb32cca41fd71de50ba8bcb69}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!qcarcam\_input\_pause@{qcarcam\_input\_pause}}
+\index{qcarcam\_input\_pause@{qcarcam\_input\_pause}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_input\_pause()}{qcarcam\_input\_pause()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e qcarcam\+\_\+input\+\_\+pause (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$}]{input\+\_\+ctxt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 609 of file qcarcam\+\_\+test.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{qcarcam__test_8h_a771495f4ddec4db0f276b9f766b70802}\label{qcarcam__test_8h_a771495f4ddec4db0f276b9f766b70802}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!qcarcam\_input\_resume@{qcarcam\_input\_resume}}
+\index{qcarcam\_input\_resume@{qcarcam\_input\_resume}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_input\_resume()}{qcarcam\_input\_resume()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e qcarcam\+\_\+input\+\_\+resume (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$}]{input\+\_\+ctxt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 635 of file qcarcam\+\_\+test.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 7
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{qcarcam__test_8h_a618ce40fb6f604b475d7bfc027f76db1}\label{qcarcam__test_8h_a618ce40fb6f604b475d7bfc027f76db1}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!qcarcam\_input\_start@{qcarcam\_input\_start}}
+\index{qcarcam\_input\_start@{qcarcam\_input\_start}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_input\_start()}{qcarcam\_input\_start()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e qcarcam\+\_\+input\+\_\+start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$}]{input\+\_\+ctxt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 494 of file qcarcam\+\_\+test.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 9
+Here is the caller graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{qcarcam__test_8h_afbd790e052c2ac6e127950ace2074189}\label{qcarcam__test_8h_afbd790e052c2ac6e127950ace2074189}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!qcarcam\_input\_stop@{qcarcam\_input\_stop}}
+\index{qcarcam\_input\_stop@{qcarcam\_input\_stop}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_input\_stop()}{qcarcam\_input\_stop()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e qcarcam\+\_\+input\+\_\+stop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$}]{input\+\_\+ctxt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 574 of file qcarcam\+\_\+test.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{qcarcam__test_8h_a7f4d5cb3936ed2c24cd92bd0e1964242}\label{qcarcam__test_8h_a7f4d5cb3936ed2c24cd92bd0e1964242}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!qcarcam\_test\_event\_cb@{qcarcam\_test\_event\_cb}}
+\index{qcarcam\_test\_event\_cb@{qcarcam\_test\_event\_cb}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_test\_event\_cb()}{qcarcam\_test\_event\_cb()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e qcarcam\+\_\+test\+\_\+event\+\_\+cb (\begin{DoxyParamCaption}\item[{const QCar\+Cam\+Hndl\+\_\+t}]{hndl,  }\item[{const uint32\+\_\+t}]{event\+Id,  }\item[{const QCar\+Cam\+Event\+Payload\+\_\+t $\ast$}]{p\+Payload,  }\item[{void $\ast$}]{p\+Private\+Data }\end{DoxyParamCaption})}
+
+Qcarcam event callback function 
+\begin{DoxyParams}{Parameters}
+{\em hndl} & \\
+\hline
+{\em event\+\_\+id} & \\
+\hline
+{\em p\+\_\+payload} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1739 of file qcarcam\+\_\+test.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 12
+Here is the caller graph for this function\+:
+% FIG 13
+\mbox{\Hypertarget{qcarcam__test_8h_a5fad88ee564007c3dca72a3c881e84c0}\label{qcarcam__test_8h_a5fad88ee564007c3dca72a3c881e84c0}} 
+\index{qcarcam\_test.h@{qcarcam\_test.h}!qcarcam\_test\_menu@{qcarcam\_test\_menu}}
+\index{qcarcam\_test\_menu@{qcarcam\_test\_menu}!qcarcam\_test.h@{qcarcam\_test.h}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_test\_menu()}{qcarcam\_test\_menu()}}
+{\footnotesize\ttfamily void qcarcam\+\_\+test\+\_\+menu (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1655 of file qcarcam\+\_\+test\+\_\+menu.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 14
+Here is the caller graph for this function\+:
+% FIG 15

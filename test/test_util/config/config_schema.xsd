@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2017-2022 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+ -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="qcarcam_inputs">
+    <xs:annotation>
+      <xs:documentation>Defines streams as input_device elements</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="input_device"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="input_device">
+    <xs:annotation>
+      <xs:documentation>Each stream must define its properties, display settings, output settings.</xs:documentation>
+      <xs:documentation>Optionally it can set injection, exposure settings or isp_settings.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="properties"/>
+          <xs:annotation>
+              <xs:documentation>Each properties must define inputid, srcid and inputmode.</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="qcarcam_id"/>
+              <xs:element ref="src_id"/>
+              <xs:element ref="input_mode"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="stream">
+          <xs:annotation>
+            <xs:documentation>Each stream must define its display settings, output settings.</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:attribute ref="bufferlist_id" type="xs:integer" default="0"/>
+              <xs:element ref="display_setting"/>
+              <xs:element ref="output_setting"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="display_setting">
+          <xs:complexType>
+            <xs:attribute name="display_id" use="required" type="xs:integer">
+              <xs:annotation>
+                <xs:documentation>Display Id [0-main, 1-secondary, ...]</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="offscreen" type="xs:integer" default="0">
+              <xs:annotation>
+                <xs:documentation>Stream is offscreen (not displayed)</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="nbufs" type="xs:integer" default="5">
+              <xs:annotation>
+                <xs:documentation>Number of buffers to display should post processing be required.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="src_height" type="xs:decimal" default="1.0">
+              <xs:annotation>
+                <xs:documentation>Source region height that will be displayed [normalized to 1.0f]</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="src_width" type="xs:decimal" default="1.0">
+              <xs:annotation>
+                <xs:documentation>Source region width that will be displayed [normalized to 1.0f]</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="src_x" type="xs:decimal" default="0.0">
+              <xs:annotation>
+                <xs:documentation>Source region x offset that will be displayed [normalized to 1.0f]</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="src_y" type="xs:decimal" default="0.0">
+              <xs:annotation>
+                <xs:documentation>Source region y offset that will be displayed [normalized to 1.0f]</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="window_width" type="xs:decimal" default="1.0">
+              <xs:annotation>
+                <xs:documentation>Display window width [normalized to 1.0f of display width]</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="window_height" type="xs:decimal" default="1.0">
+              <xs:annotation>
+                <xs:documentation>Display window height [normalized to 1.0f of display height]</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="window_pos_x" type="xs:decimal" default="0.0">
+              <xs:annotation>
+                <xs:documentation>Display window x position [normalized to 1.0f of display width]</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="window_pos_y" type="xs:decimal" default="0.0">
+              <xs:annotation>
+                <xs:documentation>Display window y position [normalized to 1.0f of display height]</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="zorder" type="xs:integer">
+              <xs:annotation>
+                <xs:documentation>Z order of display window</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="format" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Display window format ["uyvy", "nv12", "rgb565", "rgba8888", "rgb888"]</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="output_setting">
+          <xs:complexType>
+            <xs:attribute name="nbufs"  type="xs:integer" default="5">
+              <xs:annotation>
+                <xs:documentation>Number of qcarcam output buffers</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="width"  type="xs:integer" default="-1">
+              <xs:annotation>
+                <xs:documentation>Width of buffers [-1 will use queried width from qcarcam]</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="height" type="xs:integer" default="-1">
+              <xs:annotation>
+                <xs:documentation>Height of buffers [-1 will use queried height from qcarcam]</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="stride" type="xs:integer" default="-1">
+              <xs:annotation>
+                <xs:documentation>Override stride of buffer [-1 will use calculated value based on width/fmt]</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="format" type="xs:integer" default="-1">
+              <xs:annotation>
+                <xs:documentation>Override QCarCamColorFmt_e of output buffer [-1 will use queried format from qcarcam]</xs:documentation>
+                <xs:documentation>Value can be QCarCamColorFmt_e string or value</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="buffer_flags" type="xs:integer" default="-1">
+              <xs:annotation>
+                <xs:documentation>Override QCarCam buffer flags (for example to specify lossy UBWC)</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="framedrop_mode" type="xs:integer" default="0">
+              <xs:annotation>
+                <xs:documentation>Enable framedrop mode</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="framedrop_period" type="xs:integer" default="0">
+              <xs:annotation>
+                <xs:documentation>Number of bits in period</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="framedrop_pattern" type="xs:integer" default="0">
+              <xs:annotation>
+                <xs:documentation>Framedrop pattern based on period</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="crop_width" type="xs:integer" default="0">
+              <xs:annotation>
+                <xs:documentation>Crop width in pixels</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="crop_height" type="xs:integer" default="0">
+              <xs:annotation>
+                <xs:documentation>Crop height in pixels</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="crop_x" type="xs:integer" default="0">
+              <xs:annotation>
+                <xs:documentation>Crop x in pixels</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="crop_y" type="xs:integer" default="0">
+              <xs:annotation>
+                <xs:documentation>Crop y in pixels</xs:documentation>
+              </xs:annotation>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" ref="inject_setting"/>
+        <xs:element minOccurs="0" ref="exposure_setting"/>
+        <xs:element minOccurs="0" maxOccurs="4" ref="isp_setting"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="properties">
+    <xs:complexType>
+      <xs:attribute name="input_id" use="required" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>Stream id (uint32_t)</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="event_callback" type="xs:integer" default="1">
+        <xs:annotation>
+          <xs:documentation>Define whether to use event callbacks [1] or poll for frames [0].</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="frame_timeout" type="xs:integer" default="-1">
+        <xs:annotation>
+          <xs:documentation>Define timeout in ns to wait for frame [-1 is infinite].</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="op_mode" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>Operation mode of stream (qcarcam_opmode_type)</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="isp_usecase" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>ISP usecase of the stream (QCarCamIspUsecaseConfig_type)</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="subscribe_parameter_change" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>Events that are subscribed for change notification</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="recovery" type="xs:integer" default="0">
+        <xs:annotation>
+          <xs:documentation>Enable recovery for the stream [1:enable, 0:disable]</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="inject_setting">
+    <xs:complexType>
+      <xs:attribute name="pattern" use="required" type="xs:integer"/>
+        <xs:annotation>
+          <xs:documentation>Colour pattern</xs:documentation>
+        </xs:annotation>
+      <xs:attribute name="bitdepth" use="required" type="xs:integer"/>
+        <xs:annotation>
+          <xs:documentation>Colour bit depth</xs:documentation>
+        </xs:annotation>
+      <xs:attribute name="pack" use="required" type="xs:integer"/>
+        <xs:annotation>
+          <xs:documentation>Packing type</xs:documentation>
+        </xs:annotation>
+      <xs:attribute name="width" use="required" type="xs:integer"/>
+        <xs:annotation>
+          <xs:documentation>Injected image width</xs:documentation>
+        </xs:annotation>
+      <xs:attribute name="height" use="required" type="xs:integer"/>
+        <xs:annotation>
+          <xs:documentation>Injected image height</xs:documentation>
+        </xs:annotation>
+      <xs:attribute name="stride" use="required" type="xs:integer"/>
+        <xs:annotation>
+          <xs:documentation>Injected image stride</xs:documentation>
+        </xs:annotation>
+      <xs:attribute name="nbufs" type="xs:integer" default="1"/>
+        <xs:annotation>
+          <xs:documentation>Number of buffers for injection</xs:documentation>
+        </xs:annotation>
+      <xs:attribute name="filename" type="xs:string" default="bayer_input.raw"/>
+        <xs:annotation>
+          <xs:documentation>File name for injection data</xs:documentation>
+        </xs:annotation>
+      <xs:attribute name="nframes" type="xs:integer" default="1"/>
+        <xs:annotation>
+          <xs:documentation>Number of frames in injection sequence</xs:documentation>
+        </xs:annotation>
+      <xs:attribute name="repeat" type="xs:integer" default="-1"/>
+        <xs:annotation>
+          <xs:documentation>Number of repetions for injection sequence</xs:documentation>
+        </xs:annotation>
+      <xs:attribute name="framerate" type="xs:integer" default="30"/>
+        <xs:annotation>
+          <xs:documentation>Frame rate for injection</xs:documentation>
+        </xs:annotation>
+      <xs:attribute name="singlebuf" type="xs:integer" default="0"/>
+        <xs:annotation>
+          <xs:documentation>Specifies if multiple injection contexts are using the same input buffer</xs:documentation>
+        </xs:annotation>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exposure_setting">
+    <xs:complexType>
+      <xs:attribute name="exp_time" type="xs:decimal" default="31.147"/>
+      <xs:attribute name="gain" type="xs:decimal" default="1.5"/>
+      <xs:attribute name="enable_manual" type="xs:integer" default="0"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isp_setting">
+    <xs:element name="isp_instance">
+      <xs:complexType>
+        <xs:attribute name="id" use="required" type="xs:integer"/>
+        <xs:attribute name="camera_id" use="required" type="xs:integer"/>
+        <xs:attribute name="use_case" use="required" type="xs:integer">
+          <xs:annotation>
+            <xs:documentation>ISP use case, [0:SHDR_BPS_IPE_AEC_AWB, 1:BPS_IPE_AEC_AWB]</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:complexType>
+    </xs:element>
+      <xs:element name="metadata_tag">
+       <xs:annotation>
+         <xs:documentation>Metadata tag list</xs:documentation>
+       </xs:annotation>
+      <xs:complexType>
+        <xs:attribute name="tag" use="required" type="xs:string"/>
+        <xs:attribute name="data" use="required" type="xs:integer"/>
+        </xs:attribute>
+      </xs:complexType>
+    </xs:element>
+  </xs:element>
+</xs:schema>

@@ -38,7 +38,4 @@ int main()
  return 0;
 }
 
-#include<iostream>
-#include<boost/property_tree_/ptree.hpp>
-using boost::property_tree::ptree;
-#include<boost/pro
+

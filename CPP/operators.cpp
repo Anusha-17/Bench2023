@@ -4,7 +4,7 @@ int main()
 {
 	int x = 10;
 	/*Assignment Operators*/
-	x += 5;
+	x += 5;       // equivalent to x = x + y
 	cout << "Sum = " << x << endl;
 	x -= 5;
 	cout << "Sub = " << x << endl;

@@ -1,0 +1,95 @@
+\hypertarget{test__util__debug_8h}{}\doxysection{test\+\_\+util/inc/test\+\_\+util\+\_\+debug.h File Reference}
+\label{test__util__debug_8h}\index{test\_util/inc/test\_util\_debug.h@{test\_util/inc/test\_util\_debug.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}qcxlog.\+h\char`\"{}}\newline
+Include dependency graph for test\+\_\+util\+\_\+debug.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{test__util__debug_8h_ad7765aea8f8a2b67665eef74b3c948e8}{DEFAULT\+\_\+\+DUMP\+\_\+\+LOCATION}}~\char`\"{}/tmp/\char`\"{}
+\item 
+\#define \mbox{\hyperlink{test__util__debug_8h_ab97eee5cf352a2e2a681be4ef02b97d4}{QCARCAM\+\_\+\+PERFMSG}}(cond,  \+\_\+fmt\+\_\+, ...)
+\item 
+\#define \mbox{\hyperlink{test__util__debug_8h_ac0b7e1477a45e9dee0711e3d07c061ed}{QCARCAM\+\_\+\+DBGMSG}}(\+\_\+fmt\+\_\+, ...)~        QCX\+\_\+\+LOG(TEST\+\_\+\+APPLICATION, DEBUG,  \+\_\+fmt\+\_\+, \#\#\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+);
+\item 
+\#define \mbox{\hyperlink{test__util__debug_8h_abc842450cfd79f85c07220949fc0e9c9}{QCARCAM\+\_\+\+INFOMSG}}(\+\_\+fmt\+\_\+, ...)~        QCX\+\_\+\+LOG(TEST\+\_\+\+APPLICATION, HIGH,  \+\_\+fmt\+\_\+, \#\#\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+);
+\item 
+\#define \mbox{\hyperlink{test__util__debug_8h_ad2889a42c62dc455079e6dfe71358134}{QCARCAM\+\_\+\+ERRORMSG}}(\+\_\+fmt\+\_\+, ...)~        QCX\+\_\+\+LOG(TEST\+\_\+\+APPLICATION, ERROR,  \+\_\+fmt\+\_\+, \#\#\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+);
+\item 
+\#define \mbox{\hyperlink{test__util__debug_8h_aa913f4fc86ee3b2d0f99587d639a0c80}{QCARCAM\+\_\+\+ALWZMSG}}(\+\_\+fmt\+\_\+, ...)~        QCX\+\_\+\+LOG(TEST\+\_\+\+APPLICATION, ALWAYS,  \+\_\+fmt\+\_\+, \#\#\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+);
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{test__util__debug_8h_ad7765aea8f8a2b67665eef74b3c948e8}\label{test__util__debug_8h_ad7765aea8f8a2b67665eef74b3c948e8}} 
+\index{test\_util\_debug.h@{test\_util\_debug.h}!DEFAULT\_DUMP\_LOCATION@{DEFAULT\_DUMP\_LOCATION}}
+\index{DEFAULT\_DUMP\_LOCATION@{DEFAULT\_DUMP\_LOCATION}!test\_util\_debug.h@{test\_util\_debug.h}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_DUMP\_LOCATION}{DEFAULT\_DUMP\_LOCATION}}
+{\footnotesize\ttfamily \#define DEFAULT\+\_\+\+DUMP\+\_\+\+LOCATION~\char`\"{}/tmp/\char`\"{}}
+
+
+
+Definition at line 23 of file test\+\_\+util\+\_\+debug.\+h.
+
+\mbox{\Hypertarget{test__util__debug_8h_aa913f4fc86ee3b2d0f99587d639a0c80}\label{test__util__debug_8h_aa913f4fc86ee3b2d0f99587d639a0c80}} 
+\index{test\_util\_debug.h@{test\_util\_debug.h}!QCARCAM\_ALWZMSG@{QCARCAM\_ALWZMSG}}
+\index{QCARCAM\_ALWZMSG@{QCARCAM\_ALWZMSG}!test\_util\_debug.h@{test\_util\_debug.h}}
+\doxysubsubsection{\texorpdfstring{QCARCAM\_ALWZMSG}{QCARCAM\_ALWZMSG}}
+{\footnotesize\ttfamily \#define QCARCAM\+\_\+\+ALWZMSG(\begin{DoxyParamCaption}\item[{}]{\+\_\+fmt\+\_\+,  }\item[{}]{... }\end{DoxyParamCaption})~        QCX\+\_\+\+LOG(TEST\+\_\+\+APPLICATION, ALWAYS,  \+\_\+fmt\+\_\+, \#\#\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+);}
+
+
+
+Definition at line 42 of file test\+\_\+util\+\_\+debug.\+h.
+
+\mbox{\Hypertarget{test__util__debug_8h_ac0b7e1477a45e9dee0711e3d07c061ed}\label{test__util__debug_8h_ac0b7e1477a45e9dee0711e3d07c061ed}} 
+\index{test\_util\_debug.h@{test\_util\_debug.h}!QCARCAM\_DBGMSG@{QCARCAM\_DBGMSG}}
+\index{QCARCAM\_DBGMSG@{QCARCAM\_DBGMSG}!test\_util\_debug.h@{test\_util\_debug.h}}
+\doxysubsubsection{\texorpdfstring{QCARCAM\_DBGMSG}{QCARCAM\_DBGMSG}}
+{\footnotesize\ttfamily \#define QCARCAM\+\_\+\+DBGMSG(\begin{DoxyParamCaption}\item[{}]{\+\_\+fmt\+\_\+,  }\item[{}]{... }\end{DoxyParamCaption})~        QCX\+\_\+\+LOG(TEST\+\_\+\+APPLICATION, DEBUG,  \+\_\+fmt\+\_\+, \#\#\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+);}
+
+
+
+Definition at line 33 of file test\+\_\+util\+\_\+debug.\+h.
+
+\mbox{\Hypertarget{test__util__debug_8h_ad2889a42c62dc455079e6dfe71358134}\label{test__util__debug_8h_ad2889a42c62dc455079e6dfe71358134}} 
+\index{test\_util\_debug.h@{test\_util\_debug.h}!QCARCAM\_ERRORMSG@{QCARCAM\_ERRORMSG}}
+\index{QCARCAM\_ERRORMSG@{QCARCAM\_ERRORMSG}!test\_util\_debug.h@{test\_util\_debug.h}}
+\doxysubsubsection{\texorpdfstring{QCARCAM\_ERRORMSG}{QCARCAM\_ERRORMSG}}
+{\footnotesize\ttfamily \#define QCARCAM\+\_\+\+ERRORMSG(\begin{DoxyParamCaption}\item[{}]{\+\_\+fmt\+\_\+,  }\item[{}]{... }\end{DoxyParamCaption})~        QCX\+\_\+\+LOG(TEST\+\_\+\+APPLICATION, ERROR,  \+\_\+fmt\+\_\+, \#\#\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+);}
+
+
+
+Definition at line 39 of file test\+\_\+util\+\_\+debug.\+h.
+
+\mbox{\Hypertarget{test__util__debug_8h_abc842450cfd79f85c07220949fc0e9c9}\label{test__util__debug_8h_abc842450cfd79f85c07220949fc0e9c9}} 
+\index{test\_util\_debug.h@{test\_util\_debug.h}!QCARCAM\_INFOMSG@{QCARCAM\_INFOMSG}}
+\index{QCARCAM\_INFOMSG@{QCARCAM\_INFOMSG}!test\_util\_debug.h@{test\_util\_debug.h}}
+\doxysubsubsection{\texorpdfstring{QCARCAM\_INFOMSG}{QCARCAM\_INFOMSG}}
+{\footnotesize\ttfamily \#define QCARCAM\+\_\+\+INFOMSG(\begin{DoxyParamCaption}\item[{}]{\+\_\+fmt\+\_\+,  }\item[{}]{... }\end{DoxyParamCaption})~        QCX\+\_\+\+LOG(TEST\+\_\+\+APPLICATION, HIGH,  \+\_\+fmt\+\_\+, \#\#\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+);}
+
+
+
+Definition at line 36 of file test\+\_\+util\+\_\+debug.\+h.
+
+\mbox{\Hypertarget{test__util__debug_8h_ab97eee5cf352a2e2a681be4ef02b97d4}\label{test__util__debug_8h_ab97eee5cf352a2e2a681be4ef02b97d4}} 
+\index{test\_util\_debug.h@{test\_util\_debug.h}!QCARCAM\_PERFMSG@{QCARCAM\_PERFMSG}}
+\index{QCARCAM\_PERFMSG@{QCARCAM\_PERFMSG}!test\_util\_debug.h@{test\_util\_debug.h}}
+\doxysubsubsection{\texorpdfstring{QCARCAM\_PERFMSG}{QCARCAM\_PERFMSG}}
+{\footnotesize\ttfamily \#define QCARCAM\+\_\+\+PERFMSG(\begin{DoxyParamCaption}\item[{}]{cond,  }\item[{}]{\+\_\+fmt\+\_\+,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{    if(cond)\{ \(\backslash\)}
+\DoxyCodeLine{        QCX\_LOG(TEST\_APPLICATION, HIGH,  \_fmt\_, \#\#\_\_VA\_ARGS\_\_); \(\backslash\)}
+\DoxyCodeLine{    \} \(\backslash\)}
+\DoxyCodeLine{\} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+
+
+Definition at line 26 of file test\+\_\+util\+\_\+debug.\+h.
+

@@ -1,0 +1,123 @@
+\hypertarget{structCCIDbgrCtxt__t}{}\doxysection{CCIDbgr\+Ctxt\+\_\+t Struct Reference}
+\label{structCCIDbgrCtxt__t}\index{CCIDbgrCtxt\_t@{CCIDbgrCtxt\_t}}
+
+
+CCIDbgr stucture send from the client with client ID, serverand message information for CCI read/write.  
+
+
+
+
+{\ttfamily \#include $<$qcx\+\_\+ccidbgr.\+h$>$}
+
+
+
+Collaboration diagram for CCIDbgr\+Ctxt\+\_\+t\+:
+% FIG 0
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structCCIDbgrCtxt__t_af4299ce3d884a282c483db0781088eff}{client\+Id}}
+\item 
+QCXIPCHdl\+\_\+t \mbox{\hyperlink{structCCIDbgrCtxt__t_a9cf026519643afa6ce0a2cf0b602a8d7}{client\+Ipc\+Hndl}}
+\item 
+QCXIPCHdl\+\_\+t \mbox{\hyperlink{structCCIDbgrCtxt__t_ac26d240a6f0c429dd19e2a4e83438632}{server\+Ipc\+Hndl}}
+\item 
+\mbox{\hyperlink{structCCIDbgrConfig__t}{CCIDbgr\+Config\+\_\+t}} \mbox{\hyperlink{structCCIDbgrCtxt__t_aa4e0fe12810a015e67e5fe7c2d013072}{ccidbgr\+Config}}
+\item 
+\mbox{\hyperlink{structClientProcInfo__t}{Client\+Proc\+Info\+\_\+t}} \mbox{\hyperlink{structCCIDbgrCtxt__t_a368910c8c204ce99811095f5d34dc301}{client\+Info}}
+\item 
+CCIDbgr\+Msg\+\_\+t \mbox{\hyperlink{structCCIDbgrCtxt__t_a9bc1c803e66273b03ed48e718a5dcf33}{msg}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structCCIDbgrCtxt__t_aad69b0c77a60603ed6baa0beb71ed53b}{idx}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+CCIDbgr stucture send from the client with client ID, serverand message information for CCI read/write. 
+
+Definition at line 97 of file qcx\+\_\+ccidbgr.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structCCIDbgrCtxt__t_aa4e0fe12810a015e67e5fe7c2d013072}\label{structCCIDbgrCtxt__t_aa4e0fe12810a015e67e5fe7c2d013072}} 
+\index{CCIDbgrCtxt\_t@{CCIDbgrCtxt\_t}!ccidbgrConfig@{ccidbgrConfig}}
+\index{ccidbgrConfig@{ccidbgrConfig}!CCIDbgrCtxt\_t@{CCIDbgrCtxt\_t}}
+\doxysubsubsection{\texorpdfstring{ccidbgrConfig}{ccidbgrConfig}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCCIDbgrConfig__t}{CCIDbgr\+Config\+\_\+t}} CCIDbgr\+Ctxt\+\_\+t\+::ccidbgr\+Config}
+
+Configuration for opertaion ~\newline
+ 
+
+Definition at line 102 of file qcx\+\_\+ccidbgr.\+h.
+
+\mbox{\Hypertarget{structCCIDbgrCtxt__t_af4299ce3d884a282c483db0781088eff}\label{structCCIDbgrCtxt__t_af4299ce3d884a282c483db0781088eff}} 
+\index{CCIDbgrCtxt\_t@{CCIDbgrCtxt\_t}!clientId@{clientId}}
+\index{clientId@{clientId}!CCIDbgrCtxt\_t@{CCIDbgrCtxt\_t}}
+\doxysubsubsection{\texorpdfstring{clientId}{clientId}}
+{\footnotesize\ttfamily uint32\+\_\+t CCIDbgr\+Ctxt\+\_\+t\+::client\+Id}
+
+Client Id for IPC ~\newline
+ 
+
+Definition at line 99 of file qcx\+\_\+ccidbgr.\+h.
+
+\mbox{\Hypertarget{structCCIDbgrCtxt__t_a368910c8c204ce99811095f5d34dc301}\label{structCCIDbgrCtxt__t_a368910c8c204ce99811095f5d34dc301}} 
+\index{CCIDbgrCtxt\_t@{CCIDbgrCtxt\_t}!clientInfo@{clientInfo}}
+\index{clientInfo@{clientInfo}!CCIDbgrCtxt\_t@{CCIDbgrCtxt\_t}}
+\doxysubsubsection{\texorpdfstring{clientInfo}{clientInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structClientProcInfo__t}{Client\+Proc\+Info\+\_\+t}} CCIDbgr\+Ctxt\+\_\+t\+::client\+Info}
+
+Client PID info ~\newline
+ 
+
+Definition at line 103 of file qcx\+\_\+ccidbgr.\+h.
+
+\mbox{\Hypertarget{structCCIDbgrCtxt__t_a9cf026519643afa6ce0a2cf0b602a8d7}\label{structCCIDbgrCtxt__t_a9cf026519643afa6ce0a2cf0b602a8d7}} 
+\index{CCIDbgrCtxt\_t@{CCIDbgrCtxt\_t}!clientIpcHndl@{clientIpcHndl}}
+\index{clientIpcHndl@{clientIpcHndl}!CCIDbgrCtxt\_t@{CCIDbgrCtxt\_t}}
+\doxysubsubsection{\texorpdfstring{clientIpcHndl}{clientIpcHndl}}
+{\footnotesize\ttfamily QCXIPCHdl\+\_\+t CCIDbgr\+Ctxt\+\_\+t\+::client\+Ipc\+Hndl}
+
+Client IPC handle ~\newline
+ 
+
+Definition at line 100 of file qcx\+\_\+ccidbgr.\+h.
+
+\mbox{\Hypertarget{structCCIDbgrCtxt__t_aad69b0c77a60603ed6baa0beb71ed53b}\label{structCCIDbgrCtxt__t_aad69b0c77a60603ed6baa0beb71ed53b}} 
+\index{CCIDbgrCtxt\_t@{CCIDbgrCtxt\_t}!idx@{idx}}
+\index{idx@{idx}!CCIDbgrCtxt\_t@{CCIDbgrCtxt\_t}}
+\doxysubsubsection{\texorpdfstring{idx}{idx}}
+{\footnotesize\ttfamily uint32\+\_\+t CCIDbgr\+Ctxt\+\_\+t\+::idx}
+
+idx for command line parameter 
+
+Definition at line 105 of file qcx\+\_\+ccidbgr.\+h.
+
+\mbox{\Hypertarget{structCCIDbgrCtxt__t_a9bc1c803e66273b03ed48e718a5dcf33}\label{structCCIDbgrCtxt__t_a9bc1c803e66273b03ed48e718a5dcf33}} 
+\index{CCIDbgrCtxt\_t@{CCIDbgrCtxt\_t}!msg@{msg}}
+\index{msg@{msg}!CCIDbgrCtxt\_t@{CCIDbgrCtxt\_t}}
+\doxysubsubsection{\texorpdfstring{msg}{msg}}
+{\footnotesize\ttfamily CCIDbgr\+Msg\+\_\+t CCIDbgr\+Ctxt\+\_\+t\+::msg}
+
+Message to send to server ~\newline
+ 
+
+Definition at line 104 of file qcx\+\_\+ccidbgr.\+h.
+
+\mbox{\Hypertarget{structCCIDbgrCtxt__t_ac26d240a6f0c429dd19e2a4e83438632}\label{structCCIDbgrCtxt__t_ac26d240a6f0c429dd19e2a4e83438632}} 
+\index{CCIDbgrCtxt\_t@{CCIDbgrCtxt\_t}!serverIpcHndl@{serverIpcHndl}}
+\index{serverIpcHndl@{serverIpcHndl}!CCIDbgrCtxt\_t@{CCIDbgrCtxt\_t}}
+\doxysubsubsection{\texorpdfstring{serverIpcHndl}{serverIpcHndl}}
+{\footnotesize\ttfamily QCXIPCHdl\+\_\+t CCIDbgr\+Ctxt\+\_\+t\+::server\+Ipc\+Hndl}
+
+Server IPC handle ~\newline
+ 
+
+Definition at line 101 of file qcx\+\_\+ccidbgr.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+ccidbgr/src/\mbox{\hyperlink{qcx__ccidbgr_8h}{qcx\+\_\+ccidbgr.\+h}}\end{DoxyCompactItemize}

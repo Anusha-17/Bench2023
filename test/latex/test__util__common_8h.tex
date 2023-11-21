@@ -1,0 +1,728 @@
+\hypertarget{test__util__common_8h}{}\doxysection{test\+\_\+util/inc/test\+\_\+util\+\_\+common.h File Reference}
+\label{test__util__common_8h}\index{test\_util/inc/test\_util\_common.h@{test\_util/inc/test\_util\_common.h}}
+{\ttfamily \#include \char`\"{}qcarcam.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}qcxutils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}qcxosal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}qcxmetadata.\+h\char`\"{}}\newline
+Include dependency graph for test\+\_\+util\+\_\+common.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtest__util__buf__ptr__t}{test\+\_\+util\+\_\+buf\+\_\+ptr\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structtest__util__ctxt__params__t}{test\+\_\+util\+\_\+ctxt\+\_\+params\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structtest__util__intr__thrd__args__t}{test\+\_\+util\+\_\+intr\+\_\+thrd\+\_\+args\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structtest__util__metadata__tag__t}{test\+\_\+util\+\_\+metadata\+\_\+tag\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structtest__util__window__param__t}{test\+\_\+util\+\_\+window\+\_\+param\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Window properties Parameters used to identify and define properties given to windows to be displayed. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtest__util__diag__t}{test\+\_\+util\+\_\+diag\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structtest__util__injection__param__t}{test\+\_\+util\+\_\+injection\+\_\+param\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structtest__util__output__param__t}{test\+\_\+util\+\_\+output\+\_\+param\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structtest__util__properties__t}{test\+\_\+util\+\_\+properties\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structtest__util__exp__properties__t}{test\+\_\+util\+\_\+exp\+\_\+properties\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structtest__util__isp__param__t}{test\+\_\+util\+\_\+isp\+\_\+param\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structtest__util__stream__input__t}{test\+\_\+util\+\_\+stream\+\_\+input\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structtest__util__xml__input__t}{test\+\_\+util\+\_\+xml\+\_\+input\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em XML inputs Defines general parameters for each input that are parsed from XML config files. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{test__util__common_8h_a48c6c9bbe723739fc6ea59ba73428575}{ais\+\_\+log\+\_\+kpi}}(x)
+\item 
+\#define \mbox{\hyperlink{test__util__common_8h_ab4a70fedc36a221d172d93c6f2c24cdb}{QCARCAM\+\_\+\+THRD\+\_\+\+PRIO}}~QCXThread\+Normal\+Priority
+\item 
+\#define \mbox{\hyperlink{test__util__common_8h_a4b152c043f2748a0537c491919b784e5}{QCARCAM\+\_\+\+THRD\+\_\+\+PRIO\+\_\+\+HIGHREALTIME}}~QCXThread\+Realtime\+Priority
+\item 
+\#define \mbox{\hyperlink{test__util__common_8h_a2943290a8d3d349622631ab24ccb9cbf}{QCARCAM\+\_\+\+MAX\+\_\+\+BUFF\+\_\+\+INSTANCES}}~24
+\item 
+\#define \mbox{\hyperlink{test__util__common_8h_a11aaebe071c878b830bcf9082a1c3e1e}{QCARCAM\+\_\+\+MAX\+\_\+\+STREAM\+\_\+\+INSTANCES}}~\mbox{\hyperlink{test__util__common_8h_a2943290a8d3d349622631ab24ccb9cbf}{QCARCAM\+\_\+\+MAX\+\_\+\+BUFF\+\_\+\+INSTANCES}}
+\item 
+\#define \mbox{\hyperlink{test__util__common_8h_a20e5719927777c497d27ff96ee28ff44}{QCARCAM\+\_\+\+MAX\+\_\+\+BUFF\+\_\+\+PER\+\_\+\+STREAM}}~QCARCAM\+\_\+\+MAX\+\_\+\+NUM\+\_\+\+BUFFERS
+\item 
+\#define \mbox{\hyperlink{test__util__common_8h_a142709f6401efd0d19ee3cc2f92d3e6e}{MAX\+\_\+\+METADATA\+\_\+\+TAG\+\_\+\+NUM}}~100
+\item 
+\#define \mbox{\hyperlink{test__util__common_8h_a7c22fe25d205277352cda4036701d112}{MAX\+\_\+\+METADATA\+\_\+\+TAG\+\_\+\+DATA}}~65536
+\item 
+\#define \mbox{\hyperlink{test__util__common_8h_a0dca3f9c99b53de73cd95714ca476ce5}{DEINTERLACE\+\_\+\+FIELD\+\_\+\+HEIGHT}}~240
+\item 
+\#define \mbox{\hyperlink{test__util__common_8h_a8908877cbc63ad913a28dad84a6bd938}{DEINTERLACE\+\_\+\+ODD\+\_\+\+HEADER\+\_\+\+HEIGHT}}~13
+\item 
+\#define \mbox{\hyperlink{test__util__common_8h_a735b45fb5bae51da707b53b40fe38475}{DEINTERLACE\+\_\+\+ODD\+\_\+\+HEIGHT}}~(\mbox{\hyperlink{test__util__common_8h_a0dca3f9c99b53de73cd95714ca476ce5}{DEINTERLACE\+\_\+\+FIELD\+\_\+\+HEIGHT}} + \mbox{\hyperlink{test__util__common_8h_a8908877cbc63ad913a28dad84a6bd938}{DEINTERLACE\+\_\+\+ODD\+\_\+\+HEADER\+\_\+\+HEIGHT}})
+\item 
+\#define \mbox{\hyperlink{test__util__common_8h_a87e2745ccd36e4991ba795a9d856e892}{DEINTERLACE\+\_\+\+EVEN\+\_\+\+HEADER\+\_\+\+HEIGHT}}~14
+\item 
+\#define \mbox{\hyperlink{test__util__common_8h_a52f6c08f16e66453dc81ba0df4a02405}{DEINTERLACE\+\_\+\+EVEN\+\_\+\+HEIGHT}}~(\mbox{\hyperlink{test__util__common_8h_a0dca3f9c99b53de73cd95714ca476ce5}{DEINTERLACE\+\_\+\+FIELD\+\_\+\+HEIGHT}} + \mbox{\hyperlink{test__util__common_8h_a87e2745ccd36e4991ba795a9d856e892}{DEINTERLACE\+\_\+\+EVEN\+\_\+\+HEADER\+\_\+\+HEIGHT}})
+\item 
+\#define \mbox{\hyperlink{test__util__common_8h_a5a15641e06b8330ec93f675896197070}{QCX\+\_\+\+TEST\+\_\+\+BMETRICS\+\_\+\+LOG\+\_\+\+START}}()~;
+\item 
+\#define \mbox{\hyperlink{test__util__common_8h_adb5513c8028b5fb0f1b37cc80729ec4e}{QCX\+\_\+\+TEST\+\_\+\+BMETRICS\+\_\+\+LOG\+\_\+\+READY}}()~;
+\item 
+\#define \mbox{\hyperlink{test__util__common_8h_a78a1dfa6c32b1046f409d6acc1ea8ca2}{QCX\+\_\+\+TEST\+\_\+\+BMETRICS\+\_\+\+LOG0}}(msg)~;
+\item 
+\#define \mbox{\hyperlink{test__util__common_8h_a55452168e6dd2b21d6cdf7d41222a84e}{QCX\+\_\+\+TEST\+\_\+\+BMETRICS\+\_\+\+LOG}}(fmt, ...)~;
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef QCar\+Cam\+Ret\+\_\+e($\ast$ \mbox{\hyperlink{test__util__common_8h_a872af104265ca70132fbc2ff0431f69d}{power\+\_\+event\+\_\+callable}}) (\mbox{\hyperlink{test__util__common_8h_a63eff98ab4198791efcb8971273b91cd}{test\+\_\+util\+\_\+pm\+\_\+event\+\_\+t}} event, void $\ast$usr\+\_\+data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{test__util__common_8h_a93d2e84e8e17f71aef08d3ef3cd8f040}{testutil\+\_\+deinterlace\+\_\+t}} \{ \mbox{\hyperlink{test__util__common_8h_a93d2e84e8e17f71aef08d3ef3cd8f040af02d6ab8524635723215cd5e67de246d}{TESTUTIL\+\_\+\+DEINTERLACE\+\_\+\+NONE}} = 0
+, \mbox{\hyperlink{test__util__common_8h_a93d2e84e8e17f71aef08d3ef3cd8f040a65ffcfa6737f6d6ff66233906d2eec31}{TESTUTIL\+\_\+\+DEINTERLACE\+\_\+\+SW\+\_\+\+WEAVE}}
+, \mbox{\hyperlink{test__util__common_8h_a93d2e84e8e17f71aef08d3ef3cd8f040a4456165e9f1558c294c0053146e62b07}{TESTUTIL\+\_\+\+DEINTERLACE\+\_\+\+SW\+\_\+\+BOB}}
+ \}
+\item 
+enum \{ \mbox{\hyperlink{test__util__common_8h_a06fc87d81c62e9abb8790b6e5713c55bacc13dcac7ad9bf50f87c5f8acc3bb76b}{TEST\+\_\+\+CUR\+\_\+\+BUFFER}} = 0
+, \mbox{\hyperlink{test__util__common_8h_a06fc87d81c62e9abb8790b6e5713c55ba405b6715093a8855bbcf40f353e4db17}{TEST\+\_\+\+PREV\+\_\+\+BUFFER}} = 1
+, \mbox{\hyperlink{test__util__common_8h_a06fc87d81c62e9abb8790b6e5713c55ba395a04a6fba2bf6c4bca31944643e9f3}{TEST\+\_\+\+DISPLAY\+\_\+\+BUFFER\+\_\+\+NUM}} = 2
+ \}
+\item 
+enum \mbox{\hyperlink{test__util__common_8h_a5bbae85bb77b0d9aa3d5b0ecd8a44f66}{test\+\_\+util\+\_\+trigger\+\_\+type\+\_\+t}} \{ \newline
+\mbox{\hyperlink{test__util__common_8h_a5bbae85bb77b0d9aa3d5b0ecd8a44f66aa5a43b2f20a5fba89b4335b7d36d47ea}{TESTUTIL\+\_\+\+GPIO\+\_\+\+INTERRUPT\+\_\+\+TRIGGER\+\_\+\+DISABLE}} = 0
+, \mbox{\hyperlink{test__util__common_8h_a5bbae85bb77b0d9aa3d5b0ecd8a44f66a324c672454e9b12e716e1ce0bcd6dc2f}{TESTUTIL\+\_\+\+GPIO\+\_\+\+INTERRUPT\+\_\+\+TRIGGER\+\_\+\+HIGH}} = 1
+, \mbox{\hyperlink{test__util__common_8h_a5bbae85bb77b0d9aa3d5b0ecd8a44f66a38f509a122ca2a7dce80256db15ed204}{TESTUTIL\+\_\+\+GPIO\+\_\+\+INTERRUPT\+\_\+\+TRIGGER\+\_\+\+LOW}} = 2
+, \mbox{\hyperlink{test__util__common_8h_a5bbae85bb77b0d9aa3d5b0ecd8a44f66a9d44581c826d72c4b8d90ef2b636cbe2}{TESTUTIL\+\_\+\+GPIO\+\_\+\+INTERRUPT\+\_\+\+TRIGGER\+\_\+\+RISING}} = 3
+, \newline
+\mbox{\hyperlink{test__util__common_8h_a5bbae85bb77b0d9aa3d5b0ecd8a44f66a213ea120d1d74cf32829d139749fb7bb}{TESTUTIL\+\_\+\+GPIO\+\_\+\+INTERRUPT\+\_\+\+TRIGGER\+\_\+\+FALLING}} = 4
+, \mbox{\hyperlink{test__util__common_8h_a5bbae85bb77b0d9aa3d5b0ecd8a44f66a2e54ccd146a9023733a198bdd5b119de}{TESTUTIL\+\_\+\+GPIO\+\_\+\+INTERRUPT\+\_\+\+TRIGGER\+\_\+\+EDGE}} = 5
+ \}
+\begin{DoxyCompactList}\small\item\em Trigger types. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{test__util__common_8h_a647b017e5e0aae03fe6443dfe9af9a17}{test\+\_\+util\+\_\+gpio\+\_\+interrupt\+\_\+mode\+\_\+t}} \{ \mbox{\hyperlink{test__util__common_8h_a647b017e5e0aae03fe6443dfe9af9a17aecd9341520b3d47ee676dab514c0fdd6}{TESTUTIL\+\_\+\+GPIO\+\_\+\+MODE\+\_\+\+VISIBILITY}}
+, \mbox{\hyperlink{test__util__common_8h_a647b017e5e0aae03fe6443dfe9af9a17acbfcb79b8e839e628ff1755332c3acdc}{TESTUTIL\+\_\+\+GPIO\+\_\+\+MODE\+\_\+\+PLAYPAUSE}}
+, \mbox{\hyperlink{test__util__common_8h_a647b017e5e0aae03fe6443dfe9af9a17a8aee50a6122603fcacd1b33d25d0a0c4}{TESTUTIL\+\_\+\+GPIO\+\_\+\+MODE\+\_\+\+STARTSTOP}}
+ \}
+\begin{DoxyCompactList}\small\item\em GPIO interrupt mode types. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{test__util__common_8h_a19c6716f36e6e167985c3e1657e6d620}{test\+\_\+util\+\_\+visibility\+\_\+t}} \{ \mbox{\hyperlink{test__util__common_8h_a19c6716f36e6e167985c3e1657e6d620a28f92c3bf92974e8abcb5b39374beb13}{TESTUTIL\+\_\+\+HIDE}} = 0
+, \mbox{\hyperlink{test__util__common_8h_a19c6716f36e6e167985c3e1657e6d620af85d3a5cc5844e67e5728460527671da}{TESTUTIL\+\_\+\+VISIBLE}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Visiblity types. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169d}{test\+\_\+util\+\_\+color\+\_\+fmt\+\_\+t}} \{ \newline
+\mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169dab6ba6e16f00dfc7dbd29854346891db9}{TESTUTIL\+\_\+\+FMT\+\_\+\+MIPIRAW\+\_\+8}}
+, \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169dadca9b6c91e1b4d16fb59c75518ab87c1}{TESTUTIL\+\_\+\+FMT\+\_\+\+MIPIRAW\+\_\+10}}
+, \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169da8834edc31f04e57daefcd6d18bf8636d}{TESTUTIL\+\_\+\+FMT\+\_\+\+MIPIRAW\+\_\+12}}
+, \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169dacf6f6b24e68c9e5cc11d136f0fea3c96}{TESTUTIL\+\_\+\+FMT\+\_\+\+MIPIRAW\+\_\+14}}
+, \newline
+\mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169da47a9ac0fa5ec20bc3ed17553185b1b8a}{TESTUTIL\+\_\+\+FMT\+\_\+\+RGB\+\_\+565}}
+, \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169daa0e4943ce80e8f0c921f4dd11628d059}{TESTUTIL\+\_\+\+FMT\+\_\+\+RGB\+\_\+888}}
+, \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169da63f0215c8ad9ab8f9204c00693ba969a}{TESTUTIL\+\_\+\+FMT\+\_\+\+RGBX\+\_\+8888}}
+, \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169daeec486664b31c60e865c8eb884943c19}{TESTUTIL\+\_\+\+FMT\+\_\+\+R8\+\_\+\+G8\+\_\+\+B8}}
+, \newline
+\mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169da34aa642f860c91613209b6515ac36c8b}{TESTUTIL\+\_\+\+FMT\+\_\+\+UYVY\+\_\+8}}
+, \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169dae21563bfe0dc3dba85b2b5541a8e7564}{TESTUTIL\+\_\+\+FMT\+\_\+\+NV12}}
+, \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169dae72113ff3b94da194e2022139cc596d3}{TESTUTIL\+\_\+\+FMT\+\_\+\+NV21}}
+, \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169da6cc0413af9d3e2f3d934bf445b3d1aab}{TESTUTIL\+\_\+\+FMT\+\_\+\+UYVY\+\_\+10}}
+, \newline
+\mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169da18b895530fb2cc77dd6deafed41e6025}{TESTUTIL\+\_\+\+FMT\+\_\+\+YU12}}
+, \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169da04ad520dbc35e6e38d7f4b1b73dea3d0}{TESTUTIL\+\_\+\+FMT\+\_\+\+BGRX1010102}}
+, \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169da1c3e93b646ab6ebb521a82e37c22e529}{TESTUTIL\+\_\+\+FMT\+\_\+\+RGBX1010102}}
+, \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169da448a8711be73ccf2f2eb34f5211b4bbf}{TESTUTIL\+\_\+\+FMT\+\_\+\+BGRX8888}}
+, \newline
+\mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169da828d04822395870bfd7808f3995b9c72}{TESTUTIL\+\_\+\+FMT\+\_\+\+P010}}
+, \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169daf151ae7a40181454d6cdc872a28609c5}{TESTUTIL\+\_\+\+FMT\+\_\+\+P01208}}
+, \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169da967f9e2e24cc78689266a14117e68296}{TESTUTIL\+\_\+\+FMT\+\_\+\+P01210}}
+, \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169dabcdbf40538694fd2c31a740a56fa2574}{TESTUTIL\+\_\+\+FMT\+\_\+\+P010\+\_\+\+LSB}}
+, \newline
+\mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169dabb310128adcf0c50c7aa196495350c75}{TESTUTIL\+\_\+\+FMT\+\_\+\+P01208\+\_\+\+LSB}}
+, \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169dac79b5e79c5dd280b761eaf91bef5e561}{TESTUTIL\+\_\+\+FMT\+\_\+\+P01210\+\_\+\+LSB}}
+, \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169daf6ed75e7755c9c86458f0575b86da655}{TESTUTIL\+\_\+\+FMT\+\_\+\+PLAIN\+\_\+8}}
+, \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169dab5ed0859d2311ace2fd89f4a51a0f53b}{TESTUTIL\+\_\+\+FMT\+\_\+\+PLAIN\+\_\+10}}
+, \newline
+\mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169dacf4df1958ee1beb42451419c428a4594}{TESTUTIL\+\_\+\+FMT\+\_\+\+PLAIN\+\_\+12}}
+, \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169dabf7a11b97c023771236c18d6453861ac}{TESTUTIL\+\_\+\+FMT\+\_\+\+PLAIN\+\_\+14}}
+, \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169da7ae06b032ad0c11b0a35e42ad210c751}{TESTUTIL\+\_\+\+FMT\+\_\+\+PLAIN\+\_\+16}}
+, \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169da1fd417423ca2d69a10cd8fb2caed4fe9}{TESTUTIL\+\_\+\+FMT\+\_\+\+UYVY422\+\_\+10\+BITS}}
+, \newline
+\mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169da41df345c586d9e434e0ab84afe8147de}{TESTUTIL\+\_\+\+FMT\+\_\+\+UBWC\+\_\+\+NV12}}
+, \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169da33789a13cf97536af9008bbf43a32bfc}{TESTUTIL\+\_\+\+FMT\+\_\+\+UBWC\+\_\+\+TP10}}
+, \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169da1287e3e5e66c6dde9c7af4183b57cfbc}{TESTUTIL\+\_\+\+FMT\+\_\+\+MAX}} = 0x7\+FFFFFFF
+ \}
+\begin{DoxyCompactList}\small\item\em Color formats. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2}{test\+\_\+util\+\_\+params\+\_\+t}} \{ \newline
+\mbox{\hyperlink{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a484f3a21715f3b9b4a21afb7ccb351c4}{TEST\+\_\+\+UTIL\+\_\+\+DISPLAY\+\_\+\+ID}}
+, \mbox{\hyperlink{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a9187d5ef310ddc39cf328ae347549217}{TEST\+\_\+\+UTIL\+\_\+\+PIPELINE\+\_\+\+ID}}
+, \mbox{\hyperlink{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a6860f79d4727dc2db0e601a54001eb61}{TEST\+\_\+\+UTIL\+\_\+\+WINDOW\+\_\+\+SIZE}}
+, \mbox{\hyperlink{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a1603eea6f9c098326d058713caf8c140}{TEST\+\_\+\+UTIL\+\_\+\+WINDOW\+\_\+\+POS}}
+, \newline
+\mbox{\hyperlink{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2aa60029317354f8e4d0758f419bc44c94}{TEST\+\_\+\+UTIL\+\_\+\+WINDOW\+\_\+\+SOURCE\+\_\+\+SIZE}}
+, \mbox{\hyperlink{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a891025b809da3ff5e959f33b6aac7de2}{TEST\+\_\+\+UTIL\+\_\+\+WINDOW\+\_\+\+SOURCE\+\_\+\+POS}}
+, \mbox{\hyperlink{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2ae5905e9726d34c4d88c27db02cb24e9a}{TEST\+\_\+\+UTIL\+\_\+\+ZORDER}}
+, \mbox{\hyperlink{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a1617bb8c8fe8b567735c74783aa1a179}{TEST\+\_\+\+UTIL\+\_\+\+VISIBILITY}}
+, \newline
+\mbox{\hyperlink{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a14fa05ac585cc39b38bd1bfc81317da5}{TEST\+\_\+\+UTIL\+\_\+\+BUFFER\+\_\+\+SIZE}}
+, \mbox{\hyperlink{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a9c5a02deac9d8eb08cd5969a5c15350c}{TEST\+\_\+\+UTIL\+\_\+\+IS\+\_\+\+DISPLAYABLE}}
+, \mbox{\hyperlink{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a262e814d10830f99fb2419efaeb98c1d}{TEST\+\_\+\+UTIL\+\_\+\+FORMAT}}
+, \mbox{\hyperlink{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a33c582706ac349f27a26de405a7eecdb}{TEST\+\_\+\+UTIL\+\_\+\+N\+\_\+\+BUFFER\+\_\+\+DISPLAY}}
+, \newline
+\mbox{\hyperlink{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a944a565651be96e625ce1bb1ecb2266e}{TEST\+\_\+\+UTIL\+\_\+\+COLOR\+\_\+\+SPACE}}
+ \}
+\item 
+enum \mbox{\hyperlink{test__util__common_8h_a63eff98ab4198791efcb8971273b91cd}{test\+\_\+util\+\_\+pm\+\_\+event\+\_\+t}} \{ \mbox{\hyperlink{test__util__common_8h_a63eff98ab4198791efcb8971273b91cdaa78e09870964cbd51a8763ce1afea858}{TEST\+\_\+\+UTIL\+\_\+\+PM\+\_\+\+SUSPEND}}
+, \mbox{\hyperlink{test__util__common_8h_a63eff98ab4198791efcb8971273b91cda349f206c2ae0d63cdce61da708ccd277}{TEST\+\_\+\+UTIL\+\_\+\+PM\+\_\+\+RESUME}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{test__util__common_8h_a48c6c9bbe723739fc6ea59ba73428575}\label{test__util__common_8h_a48c6c9bbe723739fc6ea59ba73428575}} 
+\index{test\_util\_common.h@{test\_util\_common.h}!ais\_log\_kpi@{ais\_log\_kpi}}
+\index{ais\_log\_kpi@{ais\_log\_kpi}!test\_util\_common.h@{test\_util\_common.h}}
+\doxysubsubsection{\texorpdfstring{ais\_log\_kpi}{ais\_log\_kpi}}
+{\footnotesize\ttfamily \#define ais\+\_\+log\+\_\+kpi(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line 23 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{test__util__common_8h_a87e2745ccd36e4991ba795a9d856e892}\label{test__util__common_8h_a87e2745ccd36e4991ba795a9d856e892}} 
+\index{test\_util\_common.h@{test\_util\_common.h}!DEINTERLACE\_EVEN\_HEADER\_HEIGHT@{DEINTERLACE\_EVEN\_HEADER\_HEIGHT}}
+\index{DEINTERLACE\_EVEN\_HEADER\_HEIGHT@{DEINTERLACE\_EVEN\_HEADER\_HEIGHT}!test\_util\_common.h@{test\_util\_common.h}}
+\doxysubsubsection{\texorpdfstring{DEINTERLACE\_EVEN\_HEADER\_HEIGHT}{DEINTERLACE\_EVEN\_HEADER\_HEIGHT}}
+{\footnotesize\ttfamily \#define DEINTERLACE\+\_\+\+EVEN\+\_\+\+HEADER\+\_\+\+HEIGHT~14}
+
+
+
+Definition at line 41 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{test__util__common_8h_a52f6c08f16e66453dc81ba0df4a02405}\label{test__util__common_8h_a52f6c08f16e66453dc81ba0df4a02405}} 
+\index{test\_util\_common.h@{test\_util\_common.h}!DEINTERLACE\_EVEN\_HEIGHT@{DEINTERLACE\_EVEN\_HEIGHT}}
+\index{DEINTERLACE\_EVEN\_HEIGHT@{DEINTERLACE\_EVEN\_HEIGHT}!test\_util\_common.h@{test\_util\_common.h}}
+\doxysubsubsection{\texorpdfstring{DEINTERLACE\_EVEN\_HEIGHT}{DEINTERLACE\_EVEN\_HEIGHT}}
+{\footnotesize\ttfamily \#define DEINTERLACE\+\_\+\+EVEN\+\_\+\+HEIGHT~(\mbox{\hyperlink{test__util__common_8h_a0dca3f9c99b53de73cd95714ca476ce5}{DEINTERLACE\+\_\+\+FIELD\+\_\+\+HEIGHT}} + \mbox{\hyperlink{test__util__common_8h_a87e2745ccd36e4991ba795a9d856e892}{DEINTERLACE\+\_\+\+EVEN\+\_\+\+HEADER\+\_\+\+HEIGHT}})}
+
+
+
+Definition at line 42 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{test__util__common_8h_a0dca3f9c99b53de73cd95714ca476ce5}\label{test__util__common_8h_a0dca3f9c99b53de73cd95714ca476ce5}} 
+\index{test\_util\_common.h@{test\_util\_common.h}!DEINTERLACE\_FIELD\_HEIGHT@{DEINTERLACE\_FIELD\_HEIGHT}}
+\index{DEINTERLACE\_FIELD\_HEIGHT@{DEINTERLACE\_FIELD\_HEIGHT}!test\_util\_common.h@{test\_util\_common.h}}
+\doxysubsubsection{\texorpdfstring{DEINTERLACE\_FIELD\_HEIGHT}{DEINTERLACE\_FIELD\_HEIGHT}}
+{\footnotesize\ttfamily \#define DEINTERLACE\+\_\+\+FIELD\+\_\+\+HEIGHT~240}
+
+
+
+Definition at line 38 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{test__util__common_8h_a8908877cbc63ad913a28dad84a6bd938}\label{test__util__common_8h_a8908877cbc63ad913a28dad84a6bd938}} 
+\index{test\_util\_common.h@{test\_util\_common.h}!DEINTERLACE\_ODD\_HEADER\_HEIGHT@{DEINTERLACE\_ODD\_HEADER\_HEIGHT}}
+\index{DEINTERLACE\_ODD\_HEADER\_HEIGHT@{DEINTERLACE\_ODD\_HEADER\_HEIGHT}!test\_util\_common.h@{test\_util\_common.h}}
+\doxysubsubsection{\texorpdfstring{DEINTERLACE\_ODD\_HEADER\_HEIGHT}{DEINTERLACE\_ODD\_HEADER\_HEIGHT}}
+{\footnotesize\ttfamily \#define DEINTERLACE\+\_\+\+ODD\+\_\+\+HEADER\+\_\+\+HEIGHT~13}
+
+
+
+Definition at line 39 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{test__util__common_8h_a735b45fb5bae51da707b53b40fe38475}\label{test__util__common_8h_a735b45fb5bae51da707b53b40fe38475}} 
+\index{test\_util\_common.h@{test\_util\_common.h}!DEINTERLACE\_ODD\_HEIGHT@{DEINTERLACE\_ODD\_HEIGHT}}
+\index{DEINTERLACE\_ODD\_HEIGHT@{DEINTERLACE\_ODD\_HEIGHT}!test\_util\_common.h@{test\_util\_common.h}}
+\doxysubsubsection{\texorpdfstring{DEINTERLACE\_ODD\_HEIGHT}{DEINTERLACE\_ODD\_HEIGHT}}
+{\footnotesize\ttfamily \#define DEINTERLACE\+\_\+\+ODD\+\_\+\+HEIGHT~(\mbox{\hyperlink{test__util__common_8h_a0dca3f9c99b53de73cd95714ca476ce5}{DEINTERLACE\+\_\+\+FIELD\+\_\+\+HEIGHT}} + \mbox{\hyperlink{test__util__common_8h_a8908877cbc63ad913a28dad84a6bd938}{DEINTERLACE\+\_\+\+ODD\+\_\+\+HEADER\+\_\+\+HEIGHT}})}
+
+
+
+Definition at line 40 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{test__util__common_8h_a7c22fe25d205277352cda4036701d112}\label{test__util__common_8h_a7c22fe25d205277352cda4036701d112}} 
+\index{test\_util\_common.h@{test\_util\_common.h}!MAX\_METADATA\_TAG\_DATA@{MAX\_METADATA\_TAG\_DATA}}
+\index{MAX\_METADATA\_TAG\_DATA@{MAX\_METADATA\_TAG\_DATA}!test\_util\_common.h@{test\_util\_common.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_METADATA\_TAG\_DATA}{MAX\_METADATA\_TAG\_DATA}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+METADATA\+\_\+\+TAG\+\_\+\+DATA~65536}
+
+
+
+Definition at line 36 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{test__util__common_8h_a142709f6401efd0d19ee3cc2f92d3e6e}\label{test__util__common_8h_a142709f6401efd0d19ee3cc2f92d3e6e}} 
+\index{test\_util\_common.h@{test\_util\_common.h}!MAX\_METADATA\_TAG\_NUM@{MAX\_METADATA\_TAG\_NUM}}
+\index{MAX\_METADATA\_TAG\_NUM@{MAX\_METADATA\_TAG\_NUM}!test\_util\_common.h@{test\_util\_common.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_METADATA\_TAG\_NUM}{MAX\_METADATA\_TAG\_NUM}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+METADATA\+\_\+\+TAG\+\_\+\+NUM~100}
+
+
+
+Definition at line 35 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{test__util__common_8h_a2943290a8d3d349622631ab24ccb9cbf}\label{test__util__common_8h_a2943290a8d3d349622631ab24ccb9cbf}} 
+\index{test\_util\_common.h@{test\_util\_common.h}!QCARCAM\_MAX\_BUFF\_INSTANCES@{QCARCAM\_MAX\_BUFF\_INSTANCES}}
+\index{QCARCAM\_MAX\_BUFF\_INSTANCES@{QCARCAM\_MAX\_BUFF\_INSTANCES}!test\_util\_common.h@{test\_util\_common.h}}
+\doxysubsubsection{\texorpdfstring{QCARCAM\_MAX\_BUFF\_INSTANCES}{QCARCAM\_MAX\_BUFF\_INSTANCES}}
+{\footnotesize\ttfamily \#define QCARCAM\+\_\+\+MAX\+\_\+\+BUFF\+\_\+\+INSTANCES~24}
+
+
+
+Definition at line 26 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{test__util__common_8h_a20e5719927777c497d27ff96ee28ff44}\label{test__util__common_8h_a20e5719927777c497d27ff96ee28ff44}} 
+\index{test\_util\_common.h@{test\_util\_common.h}!QCARCAM\_MAX\_BUFF\_PER\_STREAM@{QCARCAM\_MAX\_BUFF\_PER\_STREAM}}
+\index{QCARCAM\_MAX\_BUFF\_PER\_STREAM@{QCARCAM\_MAX\_BUFF\_PER\_STREAM}!test\_util\_common.h@{test\_util\_common.h}}
+\doxysubsubsection{\texorpdfstring{QCARCAM\_MAX\_BUFF\_PER\_STREAM}{QCARCAM\_MAX\_BUFF\_PER\_STREAM}}
+{\footnotesize\ttfamily \#define QCARCAM\+\_\+\+MAX\+\_\+\+BUFF\+\_\+\+PER\+\_\+\+STREAM~QCARCAM\+\_\+\+MAX\+\_\+\+NUM\+\_\+\+BUFFERS}
+
+
+
+Definition at line 28 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{test__util__common_8h_a11aaebe071c878b830bcf9082a1c3e1e}\label{test__util__common_8h_a11aaebe071c878b830bcf9082a1c3e1e}} 
+\index{test\_util\_common.h@{test\_util\_common.h}!QCARCAM\_MAX\_STREAM\_INSTANCES@{QCARCAM\_MAX\_STREAM\_INSTANCES}}
+\index{QCARCAM\_MAX\_STREAM\_INSTANCES@{QCARCAM\_MAX\_STREAM\_INSTANCES}!test\_util\_common.h@{test\_util\_common.h}}
+\doxysubsubsection{\texorpdfstring{QCARCAM\_MAX\_STREAM\_INSTANCES}{QCARCAM\_MAX\_STREAM\_INSTANCES}}
+{\footnotesize\ttfamily \#define QCARCAM\+\_\+\+MAX\+\_\+\+STREAM\+\_\+\+INSTANCES~\mbox{\hyperlink{test__util__common_8h_a2943290a8d3d349622631ab24ccb9cbf}{QCARCAM\+\_\+\+MAX\+\_\+\+BUFF\+\_\+\+INSTANCES}}}
+
+
+
+Definition at line 27 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{test__util__common_8h_ab4a70fedc36a221d172d93c6f2c24cdb}\label{test__util__common_8h_ab4a70fedc36a221d172d93c6f2c24cdb}} 
+\index{test\_util\_common.h@{test\_util\_common.h}!QCARCAM\_THRD\_PRIO@{QCARCAM\_THRD\_PRIO}}
+\index{QCARCAM\_THRD\_PRIO@{QCARCAM\_THRD\_PRIO}!test\_util\_common.h@{test\_util\_common.h}}
+\doxysubsubsection{\texorpdfstring{QCARCAM\_THRD\_PRIO}{QCARCAM\_THRD\_PRIO}}
+{\footnotesize\ttfamily \#define QCARCAM\+\_\+\+THRD\+\_\+\+PRIO~QCXThread\+Normal\+Priority}
+
+
+
+Definition at line 24 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{test__util__common_8h_a4b152c043f2748a0537c491919b784e5}\label{test__util__common_8h_a4b152c043f2748a0537c491919b784e5}} 
+\index{test\_util\_common.h@{test\_util\_common.h}!QCARCAM\_THRD\_PRIO\_HIGHREALTIME@{QCARCAM\_THRD\_PRIO\_HIGHREALTIME}}
+\index{QCARCAM\_THRD\_PRIO\_HIGHREALTIME@{QCARCAM\_THRD\_PRIO\_HIGHREALTIME}!test\_util\_common.h@{test\_util\_common.h}}
+\doxysubsubsection{\texorpdfstring{QCARCAM\_THRD\_PRIO\_HIGHREALTIME}{QCARCAM\_THRD\_PRIO\_HIGHREALTIME}}
+{\footnotesize\ttfamily \#define QCARCAM\+\_\+\+THRD\+\_\+\+PRIO\+\_\+\+HIGHREALTIME~QCXThread\+Realtime\+Priority}
+
+
+
+Definition at line 25 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{test__util__common_8h_a55452168e6dd2b21d6cdf7d41222a84e}\label{test__util__common_8h_a55452168e6dd2b21d6cdf7d41222a84e}} 
+\index{test\_util\_common.h@{test\_util\_common.h}!QCX\_TEST\_BMETRICS\_LOG@{QCX\_TEST\_BMETRICS\_LOG}}
+\index{QCX\_TEST\_BMETRICS\_LOG@{QCX\_TEST\_BMETRICS\_LOG}!test\_util\_common.h@{test\_util\_common.h}}
+\doxysubsubsection{\texorpdfstring{QCX\_TEST\_BMETRICS\_LOG}{QCX\_TEST\_BMETRICS\_LOG}}
+{\footnotesize\ttfamily \#define QCX\+\_\+\+TEST\+\_\+\+BMETRICS\+\_\+\+LOG(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~;}
+
+
+
+Definition at line 140 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{test__util__common_8h_a78a1dfa6c32b1046f409d6acc1ea8ca2}\label{test__util__common_8h_a78a1dfa6c32b1046f409d6acc1ea8ca2}} 
+\index{test\_util\_common.h@{test\_util\_common.h}!QCX\_TEST\_BMETRICS\_LOG0@{QCX\_TEST\_BMETRICS\_LOG0}}
+\index{QCX\_TEST\_BMETRICS\_LOG0@{QCX\_TEST\_BMETRICS\_LOG0}!test\_util\_common.h@{test\_util\_common.h}}
+\doxysubsubsection{\texorpdfstring{QCX\_TEST\_BMETRICS\_LOG0}{QCX\_TEST\_BMETRICS\_LOG0}}
+{\footnotesize\ttfamily \#define QCX\+\_\+\+TEST\+\_\+\+BMETRICS\+\_\+\+LOG0(\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})~;}
+
+
+
+Definition at line 139 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{test__util__common_8h_adb5513c8028b5fb0f1b37cc80729ec4e}\label{test__util__common_8h_adb5513c8028b5fb0f1b37cc80729ec4e}} 
+\index{test\_util\_common.h@{test\_util\_common.h}!QCX\_TEST\_BMETRICS\_LOG\_READY@{QCX\_TEST\_BMETRICS\_LOG\_READY}}
+\index{QCX\_TEST\_BMETRICS\_LOG\_READY@{QCX\_TEST\_BMETRICS\_LOG\_READY}!test\_util\_common.h@{test\_util\_common.h}}
+\doxysubsubsection{\texorpdfstring{QCX\_TEST\_BMETRICS\_LOG\_READY}{QCX\_TEST\_BMETRICS\_LOG\_READY}}
+{\footnotesize\ttfamily \#define QCX\+\_\+\+TEST\+\_\+\+BMETRICS\+\_\+\+LOG\+\_\+\+READY(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~;}
+
+
+
+Definition at line 138 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{test__util__common_8h_a5a15641e06b8330ec93f675896197070}\label{test__util__common_8h_a5a15641e06b8330ec93f675896197070}} 
+\index{test\_util\_common.h@{test\_util\_common.h}!QCX\_TEST\_BMETRICS\_LOG\_START@{QCX\_TEST\_BMETRICS\_LOG\_START}}
+\index{QCX\_TEST\_BMETRICS\_LOG\_START@{QCX\_TEST\_BMETRICS\_LOG\_START}!test\_util\_common.h@{test\_util\_common.h}}
+\doxysubsubsection{\texorpdfstring{QCX\_TEST\_BMETRICS\_LOG\_START}{QCX\_TEST\_BMETRICS\_LOG\_START}}
+{\footnotesize\ttfamily \#define QCX\+\_\+\+TEST\+\_\+\+BMETRICS\+\_\+\+LOG\+\_\+\+START(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~;}
+
+
+
+Definition at line 137 of file test\+\_\+util\+\_\+common.\+h.
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{test__util__common_8h_a872af104265ca70132fbc2ff0431f69d}\label{test__util__common_8h_a872af104265ca70132fbc2ff0431f69d}} 
+\index{test\_util\_common.h@{test\_util\_common.h}!power\_event\_callable@{power\_event\_callable}}
+\index{power\_event\_callable@{power\_event\_callable}!test\_util\_common.h@{test\_util\_common.h}}
+\doxysubsubsection{\texorpdfstring{power\_event\_callable}{power\_event\_callable}}
+{\footnotesize\ttfamily typedef QCar\+Cam\+Ret\+\_\+e($\ast$ power\+\_\+event\+\_\+callable) (\mbox{\hyperlink{test__util__common_8h_a63eff98ab4198791efcb8971273b91cd}{test\+\_\+util\+\_\+pm\+\_\+event\+\_\+t}} event, void $\ast$usr\+\_\+data)}
+
+
+
+Definition at line 404 of file test\+\_\+util\+\_\+common.\+h.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{test__util__common_8h_a06fc87d81c62e9abb8790b6e5713c55b}\label{test__util__common_8h_a06fc87d81c62e9abb8790b6e5713c55b}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEST\_CUR\_BUFFER@{TEST\_CUR\_BUFFER}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TEST\_CUR\_BUFFER@{TEST\_CUR\_BUFFER}}}\mbox{\Hypertarget{test__util__common_8h_a06fc87d81c62e9abb8790b6e5713c55bacc13dcac7ad9bf50f87c5f8acc3bb76b}\label{test__util__common_8h_a06fc87d81c62e9abb8790b6e5713c55bacc13dcac7ad9bf50f87c5f8acc3bb76b}} 
+TEST\+\_\+\+CUR\+\_\+\+BUFFER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEST\_PREV\_BUFFER@{TEST\_PREV\_BUFFER}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TEST\_PREV\_BUFFER@{TEST\_PREV\_BUFFER}}}\mbox{\Hypertarget{test__util__common_8h_a06fc87d81c62e9abb8790b6e5713c55ba405b6715093a8855bbcf40f353e4db17}\label{test__util__common_8h_a06fc87d81c62e9abb8790b6e5713c55ba405b6715093a8855bbcf40f353e4db17}} 
+TEST\+\_\+\+PREV\+\_\+\+BUFFER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEST\_DISPLAY\_BUFFER\_NUM@{TEST\_DISPLAY\_BUFFER\_NUM}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TEST\_DISPLAY\_BUFFER\_NUM@{TEST\_DISPLAY\_BUFFER\_NUM}}}\mbox{\Hypertarget{test__util__common_8h_a06fc87d81c62e9abb8790b6e5713c55ba395a04a6fba2bf6c4bca31944643e9f3}\label{test__util__common_8h_a06fc87d81c62e9abb8790b6e5713c55ba395a04a6fba2bf6c4bca31944643e9f3}} 
+TEST\+\_\+\+DISPLAY\+\_\+\+BUFFER\+\_\+\+NUM&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 151 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169d}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169d}} 
+\index{test\_util\_common.h@{test\_util\_common.h}!test\_util\_color\_fmt\_t@{test\_util\_color\_fmt\_t}}
+\index{test\_util\_color\_fmt\_t@{test\_util\_color\_fmt\_t}!test\_util\_common.h@{test\_util\_common.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_color\_fmt\_t}{test\_util\_color\_fmt\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169d}{test\+\_\+util\+\_\+color\+\_\+fmt\+\_\+t}}}
+
+
+
+Color formats. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_MIPIRAW\_8@{TESTUTIL\_FMT\_MIPIRAW\_8}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_MIPIRAW\_8@{TESTUTIL\_FMT\_MIPIRAW\_8}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169dab6ba6e16f00dfc7dbd29854346891db9}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169dab6ba6e16f00dfc7dbd29854346891db9}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+MIPIRAW\+\_\+8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_MIPIRAW\_10@{TESTUTIL\_FMT\_MIPIRAW\_10}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_MIPIRAW\_10@{TESTUTIL\_FMT\_MIPIRAW\_10}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169dadca9b6c91e1b4d16fb59c75518ab87c1}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169dadca9b6c91e1b4d16fb59c75518ab87c1}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+MIPIRAW\+\_\+10&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_MIPIRAW\_12@{TESTUTIL\_FMT\_MIPIRAW\_12}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_MIPIRAW\_12@{TESTUTIL\_FMT\_MIPIRAW\_12}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169da8834edc31f04e57daefcd6d18bf8636d}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169da8834edc31f04e57daefcd6d18bf8636d}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+MIPIRAW\+\_\+12&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_MIPIRAW\_14@{TESTUTIL\_FMT\_MIPIRAW\_14}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_MIPIRAW\_14@{TESTUTIL\_FMT\_MIPIRAW\_14}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169dacf6f6b24e68c9e5cc11d136f0fea3c96}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169dacf6f6b24e68c9e5cc11d136f0fea3c96}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+MIPIRAW\+\_\+14&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_RGB\_565@{TESTUTIL\_FMT\_RGB\_565}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_RGB\_565@{TESTUTIL\_FMT\_RGB\_565}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169da47a9ac0fa5ec20bc3ed17553185b1b8a}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169da47a9ac0fa5ec20bc3ed17553185b1b8a}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+RGB\+\_\+565&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_RGB\_888@{TESTUTIL\_FMT\_RGB\_888}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_RGB\_888@{TESTUTIL\_FMT\_RGB\_888}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169daa0e4943ce80e8f0c921f4dd11628d059}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169daa0e4943ce80e8f0c921f4dd11628d059}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+RGB\+\_\+888&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_RGBX\_8888@{TESTUTIL\_FMT\_RGBX\_8888}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_RGBX\_8888@{TESTUTIL\_FMT\_RGBX\_8888}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169da63f0215c8ad9ab8f9204c00693ba969a}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169da63f0215c8ad9ab8f9204c00693ba969a}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+RGBX\+\_\+8888&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_R8\_G8\_B8@{TESTUTIL\_FMT\_R8\_G8\_B8}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_R8\_G8\_B8@{TESTUTIL\_FMT\_R8\_G8\_B8}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169daeec486664b31c60e865c8eb884943c19}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169daeec486664b31c60e865c8eb884943c19}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+R8\+\_\+\+G8\+\_\+\+B8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_UYVY\_8@{TESTUTIL\_FMT\_UYVY\_8}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_UYVY\_8@{TESTUTIL\_FMT\_UYVY\_8}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169da34aa642f860c91613209b6515ac36c8b}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169da34aa642f860c91613209b6515ac36c8b}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+UYVY\+\_\+8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_NV12@{TESTUTIL\_FMT\_NV12}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_NV12@{TESTUTIL\_FMT\_NV12}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169dae21563bfe0dc3dba85b2b5541a8e7564}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169dae21563bfe0dc3dba85b2b5541a8e7564}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+NV12&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_NV21@{TESTUTIL\_FMT\_NV21}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_NV21@{TESTUTIL\_FMT\_NV21}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169dae72113ff3b94da194e2022139cc596d3}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169dae72113ff3b94da194e2022139cc596d3}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+NV21&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_UYVY\_10@{TESTUTIL\_FMT\_UYVY\_10}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_UYVY\_10@{TESTUTIL\_FMT\_UYVY\_10}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169da6cc0413af9d3e2f3d934bf445b3d1aab}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169da6cc0413af9d3e2f3d934bf445b3d1aab}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+UYVY\+\_\+10&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_YU12@{TESTUTIL\_FMT\_YU12}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_YU12@{TESTUTIL\_FMT\_YU12}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169da18b895530fb2cc77dd6deafed41e6025}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169da18b895530fb2cc77dd6deafed41e6025}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+YU12&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_BGRX1010102@{TESTUTIL\_FMT\_BGRX1010102}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_BGRX1010102@{TESTUTIL\_FMT\_BGRX1010102}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169da04ad520dbc35e6e38d7f4b1b73dea3d0}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169da04ad520dbc35e6e38d7f4b1b73dea3d0}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+BGRX1010102&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_RGBX1010102@{TESTUTIL\_FMT\_RGBX1010102}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_RGBX1010102@{TESTUTIL\_FMT\_RGBX1010102}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169da1c3e93b646ab6ebb521a82e37c22e529}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169da1c3e93b646ab6ebb521a82e37c22e529}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+RGBX1010102&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_BGRX8888@{TESTUTIL\_FMT\_BGRX8888}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_BGRX8888@{TESTUTIL\_FMT\_BGRX8888}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169da448a8711be73ccf2f2eb34f5211b4bbf}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169da448a8711be73ccf2f2eb34f5211b4bbf}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+BGRX8888&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_P010@{TESTUTIL\_FMT\_P010}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_P010@{TESTUTIL\_FMT\_P010}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169da828d04822395870bfd7808f3995b9c72}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169da828d04822395870bfd7808f3995b9c72}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+P010&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_P01208@{TESTUTIL\_FMT\_P01208}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_P01208@{TESTUTIL\_FMT\_P01208}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169daf151ae7a40181454d6cdc872a28609c5}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169daf151ae7a40181454d6cdc872a28609c5}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+P01208&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_P01210@{TESTUTIL\_FMT\_P01210}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_P01210@{TESTUTIL\_FMT\_P01210}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169da967f9e2e24cc78689266a14117e68296}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169da967f9e2e24cc78689266a14117e68296}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+P01210&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_P010\_LSB@{TESTUTIL\_FMT\_P010\_LSB}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_P010\_LSB@{TESTUTIL\_FMT\_P010\_LSB}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169dabcdbf40538694fd2c31a740a56fa2574}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169dabcdbf40538694fd2c31a740a56fa2574}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+P010\+\_\+\+LSB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_P01208\_LSB@{TESTUTIL\_FMT\_P01208\_LSB}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_P01208\_LSB@{TESTUTIL\_FMT\_P01208\_LSB}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169dabb310128adcf0c50c7aa196495350c75}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169dabb310128adcf0c50c7aa196495350c75}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+P01208\+\_\+\+LSB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_P01210\_LSB@{TESTUTIL\_FMT\_P01210\_LSB}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_P01210\_LSB@{TESTUTIL\_FMT\_P01210\_LSB}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169dac79b5e79c5dd280b761eaf91bef5e561}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169dac79b5e79c5dd280b761eaf91bef5e561}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+P01210\+\_\+\+LSB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_PLAIN\_8@{TESTUTIL\_FMT\_PLAIN\_8}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_PLAIN\_8@{TESTUTIL\_FMT\_PLAIN\_8}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169daf6ed75e7755c9c86458f0575b86da655}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169daf6ed75e7755c9c86458f0575b86da655}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+PLAIN\+\_\+8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_PLAIN\_10@{TESTUTIL\_FMT\_PLAIN\_10}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_PLAIN\_10@{TESTUTIL\_FMT\_PLAIN\_10}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169dab5ed0859d2311ace2fd89f4a51a0f53b}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169dab5ed0859d2311ace2fd89f4a51a0f53b}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+PLAIN\+\_\+10&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_PLAIN\_12@{TESTUTIL\_FMT\_PLAIN\_12}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_PLAIN\_12@{TESTUTIL\_FMT\_PLAIN\_12}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169dacf4df1958ee1beb42451419c428a4594}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169dacf4df1958ee1beb42451419c428a4594}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+PLAIN\+\_\+12&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_PLAIN\_14@{TESTUTIL\_FMT\_PLAIN\_14}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_PLAIN\_14@{TESTUTIL\_FMT\_PLAIN\_14}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169dabf7a11b97c023771236c18d6453861ac}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169dabf7a11b97c023771236c18d6453861ac}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+PLAIN\+\_\+14&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_PLAIN\_16@{TESTUTIL\_FMT\_PLAIN\_16}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_PLAIN\_16@{TESTUTIL\_FMT\_PLAIN\_16}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169da7ae06b032ad0c11b0a35e42ad210c751}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169da7ae06b032ad0c11b0a35e42ad210c751}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+PLAIN\+\_\+16&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_UYVY422\_10BITS@{TESTUTIL\_FMT\_UYVY422\_10BITS}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_UYVY422\_10BITS@{TESTUTIL\_FMT\_UYVY422\_10BITS}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169da1fd417423ca2d69a10cd8fb2caed4fe9}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169da1fd417423ca2d69a10cd8fb2caed4fe9}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+UYVY422\+\_\+10\+BITS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_UBWC\_NV12@{TESTUTIL\_FMT\_UBWC\_NV12}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_UBWC\_NV12@{TESTUTIL\_FMT\_UBWC\_NV12}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169da41df345c586d9e434e0ab84afe8147de}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169da41df345c586d9e434e0ab84afe8147de}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+UBWC\+\_\+\+NV12&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_UBWC\_TP10@{TESTUTIL\_FMT\_UBWC\_TP10}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_UBWC\_TP10@{TESTUTIL\_FMT\_UBWC\_TP10}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169da33789a13cf97536af9008bbf43a32bfc}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169da33789a13cf97536af9008bbf43a32bfc}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+UBWC\+\_\+\+TP10&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_FMT\_MAX@{TESTUTIL\_FMT\_MAX}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_FMT\_MAX@{TESTUTIL\_FMT\_MAX}}}\mbox{\Hypertarget{test__util__common_8h_a5712e6a46bef25478ef45eada070169da1287e3e5e66c6dde9c7af4183b57cfbc}\label{test__util__common_8h_a5712e6a46bef25478ef45eada070169da1287e3e5e66c6dde9c7af4183b57cfbc}} 
+TESTUTIL\+\_\+\+FMT\+\_\+\+MAX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 185 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{test__util__common_8h_a647b017e5e0aae03fe6443dfe9af9a17}\label{test__util__common_8h_a647b017e5e0aae03fe6443dfe9af9a17}} 
+\index{test\_util\_common.h@{test\_util\_common.h}!test\_util\_gpio\_interrupt\_mode\_t@{test\_util\_gpio\_interrupt\_mode\_t}}
+\index{test\_util\_gpio\_interrupt\_mode\_t@{test\_util\_gpio\_interrupt\_mode\_t}!test\_util\_common.h@{test\_util\_common.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_gpio\_interrupt\_mode\_t}{test\_util\_gpio\_interrupt\_mode\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{test__util__common_8h_a647b017e5e0aae03fe6443dfe9af9a17}{test\+\_\+util\+\_\+gpio\+\_\+interrupt\+\_\+mode\+\_\+t}}}
+
+
+
+GPIO interrupt mode types. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_GPIO\_MODE\_VISIBILITY@{TESTUTIL\_GPIO\_MODE\_VISIBILITY}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_GPIO\_MODE\_VISIBILITY@{TESTUTIL\_GPIO\_MODE\_VISIBILITY}}}\mbox{\Hypertarget{test__util__common_8h_a647b017e5e0aae03fe6443dfe9af9a17aecd9341520b3d47ee676dab514c0fdd6}\label{test__util__common_8h_a647b017e5e0aae03fe6443dfe9af9a17aecd9341520b3d47ee676dab514c0fdd6}} 
+TESTUTIL\+\_\+\+GPIO\+\_\+\+MODE\+\_\+\+VISIBILITY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_GPIO\_MODE\_PLAYPAUSE@{TESTUTIL\_GPIO\_MODE\_PLAYPAUSE}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_GPIO\_MODE\_PLAYPAUSE@{TESTUTIL\_GPIO\_MODE\_PLAYPAUSE}}}\mbox{\Hypertarget{test__util__common_8h_a647b017e5e0aae03fe6443dfe9af9a17acbfcb79b8e839e628ff1755332c3acdc}\label{test__util__common_8h_a647b017e5e0aae03fe6443dfe9af9a17acbfcb79b8e839e628ff1755332c3acdc}} 
+TESTUTIL\+\_\+\+GPIO\+\_\+\+MODE\+\_\+\+PLAYPAUSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_GPIO\_MODE\_STARTSTOP@{TESTUTIL\_GPIO\_MODE\_STARTSTOP}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_GPIO\_MODE\_STARTSTOP@{TESTUTIL\_GPIO\_MODE\_STARTSTOP}}}\mbox{\Hypertarget{test__util__common_8h_a647b017e5e0aae03fe6443dfe9af9a17a8aee50a6122603fcacd1b33d25d0a0c4}\label{test__util__common_8h_a647b017e5e0aae03fe6443dfe9af9a17a8aee50a6122603fcacd1b33d25d0a0c4}} 
+TESTUTIL\+\_\+\+GPIO\+\_\+\+MODE\+\_\+\+STARTSTOP&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 170 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2}\label{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2}} 
+\index{test\_util\_common.h@{test\_util\_common.h}!test\_util\_params\_t@{test\_util\_params\_t}}
+\index{test\_util\_params\_t@{test\_util\_params\_t}!test\_util\_common.h@{test\_util\_common.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_params\_t}{test\_util\_params\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2}{test\+\_\+util\+\_\+params\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEST\_UTIL\_DISPLAY\_ID@{TEST\_UTIL\_DISPLAY\_ID}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TEST\_UTIL\_DISPLAY\_ID@{TEST\_UTIL\_DISPLAY\_ID}}}\mbox{\Hypertarget{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a484f3a21715f3b9b4a21afb7ccb351c4}\label{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a484f3a21715f3b9b4a21afb7ccb351c4}} 
+TEST\+\_\+\+UTIL\+\_\+\+DISPLAY\+\_\+\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEST\_UTIL\_PIPELINE\_ID@{TEST\_UTIL\_PIPELINE\_ID}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TEST\_UTIL\_PIPELINE\_ID@{TEST\_UTIL\_PIPELINE\_ID}}}\mbox{\Hypertarget{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a9187d5ef310ddc39cf328ae347549217}\label{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a9187d5ef310ddc39cf328ae347549217}} 
+TEST\+\_\+\+UTIL\+\_\+\+PIPELINE\+\_\+\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEST\_UTIL\_WINDOW\_SIZE@{TEST\_UTIL\_WINDOW\_SIZE}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TEST\_UTIL\_WINDOW\_SIZE@{TEST\_UTIL\_WINDOW\_SIZE}}}\mbox{\Hypertarget{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a6860f79d4727dc2db0e601a54001eb61}\label{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a6860f79d4727dc2db0e601a54001eb61}} 
+TEST\+\_\+\+UTIL\+\_\+\+WINDOW\+\_\+\+SIZE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEST\_UTIL\_WINDOW\_POS@{TEST\_UTIL\_WINDOW\_POS}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TEST\_UTIL\_WINDOW\_POS@{TEST\_UTIL\_WINDOW\_POS}}}\mbox{\Hypertarget{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a1603eea6f9c098326d058713caf8c140}\label{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a1603eea6f9c098326d058713caf8c140}} 
+TEST\+\_\+\+UTIL\+\_\+\+WINDOW\+\_\+\+POS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEST\_UTIL\_WINDOW\_SOURCE\_SIZE@{TEST\_UTIL\_WINDOW\_SOURCE\_SIZE}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TEST\_UTIL\_WINDOW\_SOURCE\_SIZE@{TEST\_UTIL\_WINDOW\_SOURCE\_SIZE}}}\mbox{\Hypertarget{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2aa60029317354f8e4d0758f419bc44c94}\label{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2aa60029317354f8e4d0758f419bc44c94}} 
+TEST\+\_\+\+UTIL\+\_\+\+WINDOW\+\_\+\+SOURCE\+\_\+\+SIZE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEST\_UTIL\_WINDOW\_SOURCE\_POS@{TEST\_UTIL\_WINDOW\_SOURCE\_POS}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TEST\_UTIL\_WINDOW\_SOURCE\_POS@{TEST\_UTIL\_WINDOW\_SOURCE\_POS}}}\mbox{\Hypertarget{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a891025b809da3ff5e959f33b6aac7de2}\label{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a891025b809da3ff5e959f33b6aac7de2}} 
+TEST\+\_\+\+UTIL\+\_\+\+WINDOW\+\_\+\+SOURCE\+\_\+\+POS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEST\_UTIL\_ZORDER@{TEST\_UTIL\_ZORDER}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TEST\_UTIL\_ZORDER@{TEST\_UTIL\_ZORDER}}}\mbox{\Hypertarget{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2ae5905e9726d34c4d88c27db02cb24e9a}\label{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2ae5905e9726d34c4d88c27db02cb24e9a}} 
+TEST\+\_\+\+UTIL\+\_\+\+ZORDER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEST\_UTIL\_VISIBILITY@{TEST\_UTIL\_VISIBILITY}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TEST\_UTIL\_VISIBILITY@{TEST\_UTIL\_VISIBILITY}}}\mbox{\Hypertarget{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a1617bb8c8fe8b567735c74783aa1a179}\label{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a1617bb8c8fe8b567735c74783aa1a179}} 
+TEST\+\_\+\+UTIL\+\_\+\+VISIBILITY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEST\_UTIL\_BUFFER\_SIZE@{TEST\_UTIL\_BUFFER\_SIZE}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TEST\_UTIL\_BUFFER\_SIZE@{TEST\_UTIL\_BUFFER\_SIZE}}}\mbox{\Hypertarget{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a14fa05ac585cc39b38bd1bfc81317da5}\label{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a14fa05ac585cc39b38bd1bfc81317da5}} 
+TEST\+\_\+\+UTIL\+\_\+\+BUFFER\+\_\+\+SIZE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEST\_UTIL\_IS\_DISPLAYABLE@{TEST\_UTIL\_IS\_DISPLAYABLE}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TEST\_UTIL\_IS\_DISPLAYABLE@{TEST\_UTIL\_IS\_DISPLAYABLE}}}\mbox{\Hypertarget{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a9c5a02deac9d8eb08cd5969a5c15350c}\label{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a9c5a02deac9d8eb08cd5969a5c15350c}} 
+TEST\+\_\+\+UTIL\+\_\+\+IS\+\_\+\+DISPLAYABLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEST\_UTIL\_FORMAT@{TEST\_UTIL\_FORMAT}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TEST\_UTIL\_FORMAT@{TEST\_UTIL\_FORMAT}}}\mbox{\Hypertarget{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a262e814d10830f99fb2419efaeb98c1d}\label{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a262e814d10830f99fb2419efaeb98c1d}} 
+TEST\+\_\+\+UTIL\+\_\+\+FORMAT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEST\_UTIL\_N\_BUFFER\_DISPLAY@{TEST\_UTIL\_N\_BUFFER\_DISPLAY}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TEST\_UTIL\_N\_BUFFER\_DISPLAY@{TEST\_UTIL\_N\_BUFFER\_DISPLAY}}}\mbox{\Hypertarget{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a33c582706ac349f27a26de405a7eecdb}\label{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a33c582706ac349f27a26de405a7eecdb}} 
+TEST\+\_\+\+UTIL\+\_\+\+N\+\_\+\+BUFFER\+\_\+\+DISPLAY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEST\_UTIL\_COLOR\_SPACE@{TEST\_UTIL\_COLOR\_SPACE}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TEST\_UTIL\_COLOR\_SPACE@{TEST\_UTIL\_COLOR\_SPACE}}}\mbox{\Hypertarget{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a944a565651be96e625ce1bb1ecb2266e}\label{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2a944a565651be96e625ce1bb1ecb2266e}} 
+TEST\+\_\+\+UTIL\+\_\+\+COLOR\+\_\+\+SPACE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 220 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{test__util__common_8h_a63eff98ab4198791efcb8971273b91cd}\label{test__util__common_8h_a63eff98ab4198791efcb8971273b91cd}} 
+\index{test\_util\_common.h@{test\_util\_common.h}!test\_util\_pm\_event\_t@{test\_util\_pm\_event\_t}}
+\index{test\_util\_pm\_event\_t@{test\_util\_pm\_event\_t}!test\_util\_common.h@{test\_util\_common.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_pm\_event\_t}{test\_util\_pm\_event\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{test__util__common_8h_a63eff98ab4198791efcb8971273b91cd}{test\+\_\+util\+\_\+pm\+\_\+event\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEST\_UTIL\_PM\_SUSPEND@{TEST\_UTIL\_PM\_SUSPEND}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TEST\_UTIL\_PM\_SUSPEND@{TEST\_UTIL\_PM\_SUSPEND}}}\mbox{\Hypertarget{test__util__common_8h_a63eff98ab4198791efcb8971273b91cdaa78e09870964cbd51a8763ce1afea858}\label{test__util__common_8h_a63eff98ab4198791efcb8971273b91cdaa78e09870964cbd51a8763ce1afea858}} 
+TEST\+\_\+\+UTIL\+\_\+\+PM\+\_\+\+SUSPEND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEST\_UTIL\_PM\_RESUME@{TEST\_UTIL\_PM\_RESUME}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TEST\_UTIL\_PM\_RESUME@{TEST\_UTIL\_PM\_RESUME}}}\mbox{\Hypertarget{test__util__common_8h_a63eff98ab4198791efcb8971273b91cda349f206c2ae0d63cdce61da708ccd277}\label{test__util__common_8h_a63eff98ab4198791efcb8971273b91cda349f206c2ae0d63cdce61da708ccd277}} 
+TEST\+\_\+\+UTIL\+\_\+\+PM\+\_\+\+RESUME&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 237 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{test__util__common_8h_a5bbae85bb77b0d9aa3d5b0ecd8a44f66}\label{test__util__common_8h_a5bbae85bb77b0d9aa3d5b0ecd8a44f66}} 
+\index{test\_util\_common.h@{test\_util\_common.h}!test\_util\_trigger\_type\_t@{test\_util\_trigger\_type\_t}}
+\index{test\_util\_trigger\_type\_t@{test\_util\_trigger\_type\_t}!test\_util\_common.h@{test\_util\_common.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_trigger\_type\_t}{test\_util\_trigger\_type\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{test__util__common_8h_a5bbae85bb77b0d9aa3d5b0ecd8a44f66}{test\+\_\+util\+\_\+trigger\+\_\+type\+\_\+t}}}
+
+
+
+Trigger types. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_GPIO\_INTERRUPT\_TRIGGER\_DISABLE@{TESTUTIL\_GPIO\_INTERRUPT\_TRIGGER\_DISABLE}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_GPIO\_INTERRUPT\_TRIGGER\_DISABLE@{TESTUTIL\_GPIO\_INTERRUPT\_TRIGGER\_DISABLE}}}\mbox{\Hypertarget{test__util__common_8h_a5bbae85bb77b0d9aa3d5b0ecd8a44f66aa5a43b2f20a5fba89b4335b7d36d47ea}\label{test__util__common_8h_a5bbae85bb77b0d9aa3d5b0ecd8a44f66aa5a43b2f20a5fba89b4335b7d36d47ea}} 
+TESTUTIL\+\_\+\+GPIO\+\_\+\+INTERRUPT\+\_\+\+TRIGGER\+\_\+\+DISABLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_GPIO\_INTERRUPT\_TRIGGER\_HIGH@{TESTUTIL\_GPIO\_INTERRUPT\_TRIGGER\_HIGH}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_GPIO\_INTERRUPT\_TRIGGER\_HIGH@{TESTUTIL\_GPIO\_INTERRUPT\_TRIGGER\_HIGH}}}\mbox{\Hypertarget{test__util__common_8h_a5bbae85bb77b0d9aa3d5b0ecd8a44f66a324c672454e9b12e716e1ce0bcd6dc2f}\label{test__util__common_8h_a5bbae85bb77b0d9aa3d5b0ecd8a44f66a324c672454e9b12e716e1ce0bcd6dc2f}} 
+TESTUTIL\+\_\+\+GPIO\+\_\+\+INTERRUPT\+\_\+\+TRIGGER\+\_\+\+HIGH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_GPIO\_INTERRUPT\_TRIGGER\_LOW@{TESTUTIL\_GPIO\_INTERRUPT\_TRIGGER\_LOW}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_GPIO\_INTERRUPT\_TRIGGER\_LOW@{TESTUTIL\_GPIO\_INTERRUPT\_TRIGGER\_LOW}}}\mbox{\Hypertarget{test__util__common_8h_a5bbae85bb77b0d9aa3d5b0ecd8a44f66a38f509a122ca2a7dce80256db15ed204}\label{test__util__common_8h_a5bbae85bb77b0d9aa3d5b0ecd8a44f66a38f509a122ca2a7dce80256db15ed204}} 
+TESTUTIL\+\_\+\+GPIO\+\_\+\+INTERRUPT\+\_\+\+TRIGGER\+\_\+\+LOW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_GPIO\_INTERRUPT\_TRIGGER\_RISING@{TESTUTIL\_GPIO\_INTERRUPT\_TRIGGER\_RISING}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_GPIO\_INTERRUPT\_TRIGGER\_RISING@{TESTUTIL\_GPIO\_INTERRUPT\_TRIGGER\_RISING}}}\mbox{\Hypertarget{test__util__common_8h_a5bbae85bb77b0d9aa3d5b0ecd8a44f66a9d44581c826d72c4b8d90ef2b636cbe2}\label{test__util__common_8h_a5bbae85bb77b0d9aa3d5b0ecd8a44f66a9d44581c826d72c4b8d90ef2b636cbe2}} 
+TESTUTIL\+\_\+\+GPIO\+\_\+\+INTERRUPT\+\_\+\+TRIGGER\+\_\+\+RISING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_GPIO\_INTERRUPT\_TRIGGER\_FALLING@{TESTUTIL\_GPIO\_INTERRUPT\_TRIGGER\_FALLING}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_GPIO\_INTERRUPT\_TRIGGER\_FALLING@{TESTUTIL\_GPIO\_INTERRUPT\_TRIGGER\_FALLING}}}\mbox{\Hypertarget{test__util__common_8h_a5bbae85bb77b0d9aa3d5b0ecd8a44f66a213ea120d1d74cf32829d139749fb7bb}\label{test__util__common_8h_a5bbae85bb77b0d9aa3d5b0ecd8a44f66a213ea120d1d74cf32829d139749fb7bb}} 
+TESTUTIL\+\_\+\+GPIO\+\_\+\+INTERRUPT\+\_\+\+TRIGGER\+\_\+\+FALLING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_GPIO\_INTERRUPT\_TRIGGER\_EDGE@{TESTUTIL\_GPIO\_INTERRUPT\_TRIGGER\_EDGE}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_GPIO\_INTERRUPT\_TRIGGER\_EDGE@{TESTUTIL\_GPIO\_INTERRUPT\_TRIGGER\_EDGE}}}\mbox{\Hypertarget{test__util__common_8h_a5bbae85bb77b0d9aa3d5b0ecd8a44f66a2e54ccd146a9023733a198bdd5b119de}\label{test__util__common_8h_a5bbae85bb77b0d9aa3d5b0ecd8a44f66a2e54ccd146a9023733a198bdd5b119de}} 
+TESTUTIL\+\_\+\+GPIO\+\_\+\+INTERRUPT\+\_\+\+TRIGGER\+\_\+\+EDGE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 159 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{test__util__common_8h_a19c6716f36e6e167985c3e1657e6d620}\label{test__util__common_8h_a19c6716f36e6e167985c3e1657e6d620}} 
+\index{test\_util\_common.h@{test\_util\_common.h}!test\_util\_visibility\_t@{test\_util\_visibility\_t}}
+\index{test\_util\_visibility\_t@{test\_util\_visibility\_t}!test\_util\_common.h@{test\_util\_common.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_visibility\_t}{test\_util\_visibility\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{test__util__common_8h_a19c6716f36e6e167985c3e1657e6d620}{test\+\_\+util\+\_\+visibility\+\_\+t}}}
+
+
+
+Visiblity types. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_HIDE@{TESTUTIL\_HIDE}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_HIDE@{TESTUTIL\_HIDE}}}\mbox{\Hypertarget{test__util__common_8h_a19c6716f36e6e167985c3e1657e6d620a28f92c3bf92974e8abcb5b39374beb13}\label{test__util__common_8h_a19c6716f36e6e167985c3e1657e6d620a28f92c3bf92974e8abcb5b39374beb13}} 
+TESTUTIL\+\_\+\+HIDE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_VISIBLE@{TESTUTIL\_VISIBLE}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_VISIBLE@{TESTUTIL\_VISIBLE}}}\mbox{\Hypertarget{test__util__common_8h_a19c6716f36e6e167985c3e1657e6d620af85d3a5cc5844e67e5728460527671da}\label{test__util__common_8h_a19c6716f36e6e167985c3e1657e6d620af85d3a5cc5844e67e5728460527671da}} 
+TESTUTIL\+\_\+\+VISIBLE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 178 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{test__util__common_8h_a93d2e84e8e17f71aef08d3ef3cd8f040}\label{test__util__common_8h_a93d2e84e8e17f71aef08d3ef3cd8f040}} 
+\index{test\_util\_common.h@{test\_util\_common.h}!testutil\_deinterlace\_t@{testutil\_deinterlace\_t}}
+\index{testutil\_deinterlace\_t@{testutil\_deinterlace\_t}!test\_util\_common.h@{test\_util\_common.h}}
+\doxysubsubsection{\texorpdfstring{testutil\_deinterlace\_t}{testutil\_deinterlace\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{test__util__common_8h_a93d2e84e8e17f71aef08d3ef3cd8f040}{testutil\+\_\+deinterlace\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_DEINTERLACE\_NONE@{TESTUTIL\_DEINTERLACE\_NONE}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_DEINTERLACE\_NONE@{TESTUTIL\_DEINTERLACE\_NONE}}}\mbox{\Hypertarget{test__util__common_8h_a93d2e84e8e17f71aef08d3ef3cd8f040af02d6ab8524635723215cd5e67de246d}\label{test__util__common_8h_a93d2e84e8e17f71aef08d3ef3cd8f040af02d6ab8524635723215cd5e67de246d}} 
+TESTUTIL\+\_\+\+DEINTERLACE\+\_\+\+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_DEINTERLACE\_SW\_WEAVE@{TESTUTIL\_DEINTERLACE\_SW\_WEAVE}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_DEINTERLACE\_SW\_WEAVE@{TESTUTIL\_DEINTERLACE\_SW\_WEAVE}}}\mbox{\Hypertarget{test__util__common_8h_a93d2e84e8e17f71aef08d3ef3cd8f040a65ffcfa6737f6d6ff66233906d2eec31}\label{test__util__common_8h_a93d2e84e8e17f71aef08d3ef3cd8f040a65ffcfa6737f6d6ff66233906d2eec31}} 
+TESTUTIL\+\_\+\+DEINTERLACE\+\_\+\+SW\+\_\+\+WEAVE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TESTUTIL\_DEINTERLACE\_SW\_BOB@{TESTUTIL\_DEINTERLACE\_SW\_BOB}!test\_util\_common.h@{test\_util\_common.h}}\index{test\_util\_common.h@{test\_util\_common.h}!TESTUTIL\_DEINTERLACE\_SW\_BOB@{TESTUTIL\_DEINTERLACE\_SW\_BOB}}}\mbox{\Hypertarget{test__util__common_8h_a93d2e84e8e17f71aef08d3ef3cd8f040a4456165e9f1558c294c0053146e62b07}\label{test__util__common_8h_a93d2e84e8e17f71aef08d3ef3cd8f040a4456165e9f1558c294c0053146e62b07}} 
+TESTUTIL\+\_\+\+DEINTERLACE\+\_\+\+SW\+\_\+\+BOB&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 144 of file test\+\_\+util\+\_\+common.\+h.
+

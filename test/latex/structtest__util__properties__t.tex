@@ -1,0 +1,180 @@
+\hypertarget{structtest__util__properties__t}{}\doxysection{test\+\_\+util\+\_\+properties\+\_\+t Struct Reference}
+\label{structtest__util__properties__t}\index{test\_util\_properties\_t@{test\_util\_properties\_t}}
+
+
+{\ttfamily \#include $<$test\+\_\+util\+\_\+common.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structtest__util__properties__t_ac3a19ad555d466aa19f7762a6083ddae}{num\+\_\+inputs}}
+\begin{DoxyCompactList}\small\item\em Num of cameras supported. \end{DoxyCompactList}\item 
+QCar\+Cam\+Input\+Stream\+\_\+t \mbox{\hyperlink{structtest__util__properties__t_aa6faa32a3434040c2db2a1bf2f388431}{input\+\_\+param}} \mbox{[}QCARCAM\+\_\+\+MAX\+\_\+\+INPUT\+\_\+\+STREAMS\mbox{]}
+\begin{DoxyCompactList}\small\item\em Structure to hold inputid, srcid and inputmode of each camera. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structtest__util__properties__t_a39b68ce8254b65e926e586ac6b8dd4ee}{use\+\_\+event\+\_\+callback}}
+\begin{DoxyCompactList}\small\item\em Specifies if frames from input are get in a callback. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structtest__util__properties__t_a46c81a05a1aa22e9207ba2a4c04c2ea6}{frame\+\_\+timeout}}
+\begin{DoxyCompactList}\small\item\em Specifies timeout for QCar\+Cam\+Get\+Frame. \end{DoxyCompactList}\item 
+QCar\+Cam\+Opmode\+\_\+e \mbox{\hyperlink{structtest__util__properties__t_a27dff4e554b00718e3a6296dc44a0039}{op\+\_\+mode}}
+\begin{DoxyCompactList}\small\item\em Specifies operation mode. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{structtest__util__properties__t_aacf81e2380769cb904db4912be1ab862}{subscribe\+\_\+parameter\+\_\+change}}
+\begin{DoxyCompactList}\small\item\em Specifies input events/settings to listen if any change. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structtest__util__properties__t_a49b28016d90fec49f0bfe8a43026261a}{delay\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em Specifies if buffer delay, if yes, specifies delay time(ms) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structtest__util__properties__t_a4b6986bce92af5ad5af7bb6b7bcb436a}{recovery}}
+\begin{DoxyCompactList}\small\item\em Specifies if recovery logic should be active. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structtest__util__properties__t_ad94c0db0d6a80ef42c1bc2e09c59c517}{node\+\_\+name}} \mbox{[}256\mbox{]}
+\begin{DoxyCompactList}\small\item\em Node name for V4\+L2. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structtest__util__properties__t_ac11a07af1ebaed93603ef0d6f2eb6c80}{request\+\_\+mode}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 341 of file test\+\_\+util\+\_\+common.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtest__util__properties__t_a49b28016d90fec49f0bfe8a43026261a}\label{structtest__util__properties__t_a49b28016d90fec49f0bfe8a43026261a}} 
+\index{test\_util\_properties\_t@{test\_util\_properties\_t}!delay\_time@{delay\_time}}
+\index{delay\_time@{delay\_time}!test\_util\_properties\_t@{test\_util\_properties\_t}}
+\doxysubsubsection{\texorpdfstring{delay\_time}{delay\_time}}
+{\footnotesize\ttfamily uint32\+\_\+t test\+\_\+util\+\_\+properties\+\_\+t\+::delay\+\_\+time}
+
+
+
+Specifies if buffer delay, if yes, specifies delay time(ms) 
+
+
+
+Definition at line 349 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{structtest__util__properties__t_a46c81a05a1aa22e9207ba2a4c04c2ea6}\label{structtest__util__properties__t_a46c81a05a1aa22e9207ba2a4c04c2ea6}} 
+\index{test\_util\_properties\_t@{test\_util\_properties\_t}!frame\_timeout@{frame\_timeout}}
+\index{frame\_timeout@{frame\_timeout}!test\_util\_properties\_t@{test\_util\_properties\_t}}
+\doxysubsubsection{\texorpdfstring{frame\_timeout}{frame\_timeout}}
+{\footnotesize\ttfamily int test\+\_\+util\+\_\+properties\+\_\+t\+::frame\+\_\+timeout}
+
+
+
+Specifies timeout for QCar\+Cam\+Get\+Frame. 
+
+
+
+Definition at line 346 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{structtest__util__properties__t_aa6faa32a3434040c2db2a1bf2f388431}\label{structtest__util__properties__t_aa6faa32a3434040c2db2a1bf2f388431}} 
+\index{test\_util\_properties\_t@{test\_util\_properties\_t}!input\_param@{input\_param}}
+\index{input\_param@{input\_param}!test\_util\_properties\_t@{test\_util\_properties\_t}}
+\doxysubsubsection{\texorpdfstring{input\_param}{input\_param}}
+{\footnotesize\ttfamily QCar\+Cam\+Input\+Stream\+\_\+t test\+\_\+util\+\_\+properties\+\_\+t\+::input\+\_\+param\mbox{[}QCARCAM\+\_\+\+MAX\+\_\+\+INPUT\+\_\+\+STREAMS\mbox{]}}
+
+
+
+Structure to hold inputid, srcid and inputmode of each camera. 
+
+
+
+Definition at line 344 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{structtest__util__properties__t_ad94c0db0d6a80ef42c1bc2e09c59c517}\label{structtest__util__properties__t_ad94c0db0d6a80ef42c1bc2e09c59c517}} 
+\index{test\_util\_properties\_t@{test\_util\_properties\_t}!node\_name@{node\_name}}
+\index{node\_name@{node\_name}!test\_util\_properties\_t@{test\_util\_properties\_t}}
+\doxysubsubsection{\texorpdfstring{node\_name}{node\_name}}
+{\footnotesize\ttfamily char test\+\_\+util\+\_\+properties\+\_\+t\+::node\+\_\+name\mbox{[}256\mbox{]}}
+
+
+
+Node name for V4\+L2. 
+
+
+
+Definition at line 351 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{structtest__util__properties__t_ac3a19ad555d466aa19f7762a6083ddae}\label{structtest__util__properties__t_ac3a19ad555d466aa19f7762a6083ddae}} 
+\index{test\_util\_properties\_t@{test\_util\_properties\_t}!num\_inputs@{num\_inputs}}
+\index{num\_inputs@{num\_inputs}!test\_util\_properties\_t@{test\_util\_properties\_t}}
+\doxysubsubsection{\texorpdfstring{num\_inputs}{num\_inputs}}
+{\footnotesize\ttfamily uint32\+\_\+t test\+\_\+util\+\_\+properties\+\_\+t\+::num\+\_\+inputs}
+
+
+
+Num of cameras supported. 
+
+
+
+Definition at line 343 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{structtest__util__properties__t_a27dff4e554b00718e3a6296dc44a0039}\label{structtest__util__properties__t_a27dff4e554b00718e3a6296dc44a0039}} 
+\index{test\_util\_properties\_t@{test\_util\_properties\_t}!op\_mode@{op\_mode}}
+\index{op\_mode@{op\_mode}!test\_util\_properties\_t@{test\_util\_properties\_t}}
+\doxysubsubsection{\texorpdfstring{op\_mode}{op\_mode}}
+{\footnotesize\ttfamily QCar\+Cam\+Opmode\+\_\+e test\+\_\+util\+\_\+properties\+\_\+t\+::op\+\_\+mode}
+
+
+
+Specifies operation mode. 
+
+
+
+Definition at line 347 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{structtest__util__properties__t_a4b6986bce92af5ad5af7bb6b7bcb436a}\label{structtest__util__properties__t_a4b6986bce92af5ad5af7bb6b7bcb436a}} 
+\index{test\_util\_properties\_t@{test\_util\_properties\_t}!recovery@{recovery}}
+\index{recovery@{recovery}!test\_util\_properties\_t@{test\_util\_properties\_t}}
+\doxysubsubsection{\texorpdfstring{recovery}{recovery}}
+{\footnotesize\ttfamily bool test\+\_\+util\+\_\+properties\+\_\+t\+::recovery}
+
+
+
+Specifies if recovery logic should be active. 
+
+
+
+Definition at line 350 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{structtest__util__properties__t_ac11a07af1ebaed93603ef0d6f2eb6c80}\label{structtest__util__properties__t_ac11a07af1ebaed93603ef0d6f2eb6c80}} 
+\index{test\_util\_properties\_t@{test\_util\_properties\_t}!request\_mode@{request\_mode}}
+\index{request\_mode@{request\_mode}!test\_util\_properties\_t@{test\_util\_properties\_t}}
+\doxysubsubsection{\texorpdfstring{request\_mode}{request\_mode}}
+{\footnotesize\ttfamily bool test\+\_\+util\+\_\+properties\+\_\+t\+::request\+\_\+mode}
+
+
+
+Definition at line 352 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{structtest__util__properties__t_aacf81e2380769cb904db4912be1ab862}\label{structtest__util__properties__t_aacf81e2380769cb904db4912be1ab862}} 
+\index{test\_util\_properties\_t@{test\_util\_properties\_t}!subscribe\_parameter\_change@{subscribe\_parameter\_change}}
+\index{subscribe\_parameter\_change@{subscribe\_parameter\_change}!test\_util\_properties\_t@{test\_util\_properties\_t}}
+\doxysubsubsection{\texorpdfstring{subscribe\_parameter\_change}{subscribe\_parameter\_change}}
+{\footnotesize\ttfamily uint64\+\_\+t test\+\_\+util\+\_\+properties\+\_\+t\+::subscribe\+\_\+parameter\+\_\+change}
+
+
+
+Specifies input events/settings to listen if any change. 
+
+
+
+Definition at line 348 of file test\+\_\+util\+\_\+common.\+h.
+
+\mbox{\Hypertarget{structtest__util__properties__t_a39b68ce8254b65e926e586ac6b8dd4ee}\label{structtest__util__properties__t_a39b68ce8254b65e926e586ac6b8dd4ee}} 
+\index{test\_util\_properties\_t@{test\_util\_properties\_t}!use\_event\_callback@{use\_event\_callback}}
+\index{use\_event\_callback@{use\_event\_callback}!test\_util\_properties\_t@{test\_util\_properties\_t}}
+\doxysubsubsection{\texorpdfstring{use\_event\_callback}{use\_event\_callback}}
+{\footnotesize\ttfamily int test\+\_\+util\+\_\+properties\+\_\+t\+::use\+\_\+event\+\_\+callback}
+
+
+
+Specifies if frames from input are get in a callback. 
+
+
+
+Definition at line 345 of file test\+\_\+util\+\_\+common.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+test\+\_\+util/inc/\mbox{\hyperlink{test__util__common_8h}{test\+\_\+util\+\_\+common.\+h}}\end{DoxyCompactItemize}

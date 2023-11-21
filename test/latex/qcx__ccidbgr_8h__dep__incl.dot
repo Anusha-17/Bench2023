@@ -1,0 +1,9 @@
+digraph "ccidbgr/src/qcx_ccidbgr.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="ccidbgr/src/qcx_ccidbgr.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="This file declares functions for qcd_ccidbgr."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="ccidbgr/src/qcx_ccidbgr.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$qcx__ccidbgr_8c.html",tooltip="This file implements the cci application that can R/W cci devices."];
+}

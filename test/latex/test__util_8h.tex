@@ -1,0 +1,1207 @@
+\hypertarget{test__util_8h}{}\doxysection{test\+\_\+util/inc/test\+\_\+util.h File Reference}
+\label{test__util_8h}\index{test\_util/inc/test\_util.h@{test\_util/inc/test\_util.h}}
+{\ttfamily \#include \char`\"{}test\+\_\+util\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}test\+\_\+util\+\_\+debug.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$list$>$}\newline
+Include dependency graph for test\+\_\+util.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtest__util__sw__di__t}{test\+\_\+util\+\_\+sw\+\_\+di\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em information to do software deinterlace \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtest__util__global__config__t}{test\+\_\+util\+\_\+global\+\_\+config\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{test__util_8h_a66d769e8cd9eb42c7771901d735f61e0}{TESTUTIL\+\_\+\+ALIGN}}(x,  y)~(((x) + ((y)-\/1)) \& $\sim$((y)-\/1))
+\item 
+\#define \mbox{\hyperlink{test__util_8h_a3f30547973921bc2a38182a559ad26e1}{TESTUTIL\+\_\+\+ALIGN\+\_\+\+TO\+\_\+\+LOWER}}(x,  y)~((x) \& $\sim$((y)-\/1))
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} \mbox{\hyperlink{test__util_8h_a06c639c479a219a9bc0b0bfedf0c77ee}{test\+\_\+util\+\_\+ctxt\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} \mbox{\hyperlink{test__util_8h_a45781f54899f69ed365b7cde4a41b004}{test\+\_\+util\+\_\+window\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{test__util_8h_a51b3ee8caf13bc9900097aa5bfb3b548}{test\+\_\+util\+\_\+init}} (\mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} $\ast$$\ast$ctxt, \mbox{\hyperlink{structtest__util__ctxt__params__t}{test\+\_\+util\+\_\+ctxt\+\_\+params\+\_\+t}} $\ast$params)
+\begin{DoxyCompactList}\small\item\em Initialize context that is to be used to display content on the screen. \end{DoxyCompactList}\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{test__util_8h_a2271b67bf8dfe536c5bcef79bd98ad2b}{test\+\_\+util\+\_\+deinit}} (\mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} $\ast$ctxt)
+\begin{DoxyCompactList}\small\item\em Destroy context and free memory. \end{DoxyCompactList}\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{test__util_8h_aee2d77bd9c7f6ca6ffb996ce78641053}{test\+\_\+util\+\_\+init\+\_\+window}} (\mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} $\ast$ctxt, \mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$$\ast$pp\+\_\+window)
+\begin{DoxyCompactList}\small\item\em Initialize new window. \end{DoxyCompactList}\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{test__util_8h_ae5db16ddfb482f0165246f53f48b6023}{test\+\_\+util\+\_\+deinit\+\_\+window}} (\mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} $\ast$ctxt, \mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$p\+\_\+window)
+\begin{DoxyCompactList}\small\item\em Destroy window. \end{DoxyCompactList}\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{test__util_8h_a3e8749e0c6dec81335fd7e587515ff1a}{test\+\_\+util\+\_\+set\+\_\+window\+\_\+param}} (\mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} $\ast$ctxt, \mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$p\+\_\+window, \mbox{\hyperlink{structtest__util__window__param__t}{test\+\_\+util\+\_\+window\+\_\+param\+\_\+t}} $\ast$window\+\_\+params)
+\begin{DoxyCompactList}\small\item\em Send window parameters to display. \end{DoxyCompactList}\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{test__util_8h_aef2de509d298b031113f9f1738cfcc83}{test\+\_\+util\+\_\+init\+\_\+window\+\_\+buffers}} (\mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} $\ast$ctxt, \mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$p\+\_\+window, QCar\+Cam\+Buffer\+List\+\_\+t $\ast$buffers)
+\begin{DoxyCompactList}\small\item\em Initialize buffers for display. \end{DoxyCompactList}\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{test__util_8h_a14c5969b25971e2ea2fd7d0d94f00c74}{test\+\_\+util\+\_\+deinit\+\_\+window\+\_\+buffer}} (\mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} $\ast$ctxt, \mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$p\+\_\+window)
+\begin{DoxyCompactList}\small\item\em Destroy window buffers. \end{DoxyCompactList}\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{test__util_8h_a191c23327dba8ce55420c876825137a6}{test\+\_\+util\+\_\+post\+\_\+window\+\_\+buffer}} (\mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} $\ast$ctxt, \mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$o\+\_\+window, unsigned int idx, std\+::list$<$ uint32\+\_\+t $>$ $\ast$p\+\_\+rel\+\_\+buf\+\_\+idx, QCar\+Cam\+Interlace\+Field\+\_\+e field\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Send frame to display. \end{DoxyCompactList}\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{test__util_8h_adcaaa3e1cf469ccc80284c0b7cc88372}{test\+\_\+util\+\_\+dump\+\_\+window\+\_\+buffer}} (\mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} $\ast$ctxt, \mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$p\+\_\+window, unsigned int idx, const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Dump frame to a file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test__util_8h_a4606454b55c3db0b58b808055b0104a2}{test\+\_\+util\+\_\+di\+\_\+sw\+\_\+weave\+\_\+30fps}} (\mbox{\hyperlink{structtest__util__sw__di__t}{test\+\_\+util\+\_\+sw\+\_\+di\+\_\+t}} $\ast$di\+\_\+info)
+\begin{DoxyCompactList}\small\item\em Deinterlace 2 fields from souce buf into dest new frame with software weave 30fps method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test__util_8h_a3585dc4f7b2fb7b4172374ffca12f069}{test\+\_\+util\+\_\+get\+\_\+buf\+\_\+ptr}} (\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$p\+\_\+window, \mbox{\hyperlink{structtest__util__buf__ptr__t}{test\+\_\+util\+\_\+buf\+\_\+ptr\+\_\+t}} $\ast$p\+\_\+buf)
+\begin{DoxyCompactList}\small\item\em Get buffer virtual address. \end{DoxyCompactList}\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{test__util_8h_a87d3d964f7aeed4127c005491b15ca36}{test\+\_\+util\+\_\+create\+\_\+c2d\+\_\+surface}} (\mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} $\ast$ctxt, \mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$p\+\_\+window, unsigned int idx)
+\begin{DoxyCompactList}\small\item\em Create a C2D surface. \end{DoxyCompactList}\item 
+QCar\+Cam\+Color\+Fmt\+\_\+e \mbox{\hyperlink{test__util_8h_ade842593255a4e437178b6492c3665df}{test\+\_\+util\+\_\+get\+\_\+qcarcam\+\_\+format}} (\mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169d}{test\+\_\+util\+\_\+color\+\_\+fmt\+\_\+t}} fmt)
+\begin{DoxyCompactList}\small\item\em Lookup test color format and get a corresponding qcarcam color format. \end{DoxyCompactList}\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{test__util_8h_aca4be8cc7d52626c42f7941627bfcfc4}{test\+\_\+util\+\_\+get\+\_\+c2d\+\_\+surface\+\_\+id}} (\mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} $\ast$ctxt, \mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$p\+\_\+window, unsigned int idx, unsigned int $\ast$surface\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Get the ID from a C2D surface. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{test__util_8h_aa76c3d78a6f1c80d47b32e56d3daaced}{test\+\_\+util\+\_\+parse\+\_\+xml\+\_\+config\+\_\+file}} (const char $\ast$filename, \mbox{\hyperlink{structtest__util__xml__input__t}{test\+\_\+util\+\_\+xml\+\_\+input\+\_\+t}} $\ast$inputs, unsigned int max\+\_\+num\+\_\+inputs)
+\begin{DoxyCompactList}\small\item\em Parse XML config file for qcarcam\+\_\+test. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{test__util_8h_ac3040770f13fe6f2cd5ccdde2df87fde}{test\+\_\+util\+\_\+parse\+\_\+xml\+\_\+config\+\_\+file\+\_\+v2}} (const char $\ast$filename, \mbox{\hyperlink{structtest__util__xml__input__t}{test\+\_\+util\+\_\+xml\+\_\+input\+\_\+t}} $\ast$inputs, unsigned int max\+\_\+num\+\_\+inputs, \mbox{\hyperlink{structtest__util__global__config__t}{test\+\_\+util\+\_\+global\+\_\+config\+\_\+t}} $\ast$global\+\_\+config)
+\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{test__util_8h_aeb10000f4bbf7aee77a8b3fd471c5137}{test\+\_\+util\+\_\+allocate\+\_\+input\+\_\+buffers}} (\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$p\+\_\+window, QCar\+Cam\+Buffer\+List\+\_\+t $\ast$p\+\_\+buffer\+\_\+list, unsigned int size)
+\begin{DoxyCompactList}\small\item\em Allocate buffers for injection as input to qcarcam. \end{DoxyCompactList}\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{test__util_8h_a1a6d332c5320a91c343964f6ed37a2d9}{test\+\_\+util\+\_\+free\+\_\+input\+\_\+buffers}} (\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$p\+\_\+window, QCar\+Cam\+Buffer\+List\+\_\+t $\ast$p\+\_\+buffer\+\_\+list)
+\begin{DoxyCompactList}\small\item\em Free buffers allocated for injection as input to qcarcam. \end{DoxyCompactList}\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{test__util_8h_ade916f45111bbc541a8154d62de06ac0}{test\+\_\+util\+\_\+allocate\+\_\+metadata\+\_\+buffers}} (\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$p\+\_\+window, QCar\+Cam\+Buffer\+List\+\_\+t $\ast$p\+\_\+buffer\+\_\+list, unsigned int entry\+\_\+capacity, unsigned int data\+\_\+capacity)
+\begin{DoxyCompactList}\small\item\em Allocate buffers for metadata for qcarcam. \end{DoxyCompactList}\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{test__util_8h_a4a12f8d75507903ae05dae100374c95e}{test\+\_\+util\+\_\+initialize\+\_\+metadata\+\_\+buffers}} (\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$p\+\_\+window, \mbox{\hyperlink{structtest__util__metadata__tag__t}{test\+\_\+util\+\_\+metadata\+\_\+tag\+\_\+t}} $\ast$metadata\+\_\+table, unsigned int metadata\+\_\+count)
+\begin{DoxyCompactList}\small\item\em Add metadata entries to all buffers. \end{DoxyCompactList}\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{test__util_8h_adc54f297e50d2141df5ca2cdf46c31be}{test\+\_\+util\+\_\+append\+\_\+metadata\+\_\+tag}} (\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$p\+\_\+window, \mbox{\hyperlink{structtest__util__metadata__tag__t}{test\+\_\+util\+\_\+metadata\+\_\+tag\+\_\+t}} $\ast$p\+\_\+tag)
+\begin{DoxyCompactList}\small\item\em Append metadata entry to all buffers. \end{DoxyCompactList}\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{test__util_8h_a4b38478f3d2e64ee8bf6b17fd5f752ee}{test\+\_\+util\+\_\+free\+\_\+metadata\+\_\+buffers}} (\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$p\+\_\+window, QCar\+Cam\+Buffer\+List\+\_\+t $\ast$p\+\_\+buffer\+\_\+list)
+\begin{DoxyCompactList}\small\item\em Allocate buffers for meta data tag as input to qcarcam. \end{DoxyCompactList}\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{test__util_8h_a65f4cefb8e1fe5b0c16011a3b8cf2e70}{test\+\_\+util\+\_\+read\+\_\+input\+\_\+data}} (\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$p\+\_\+window, const char $\ast$filename, int nframes, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Read input data into buffer list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{test__util_8h_a06f05ebbc1d296b0a761d50b839ca67a}{test\+\_\+util\+\_\+get\+\_\+time}} (unsigned long long $\ast$p\+Time)
+\begin{DoxyCompactList}\small\item\em Get current time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test__util_8h_a6afd681c42c62a87c31efa7bb89160c7}{test\+\_\+util\+\_\+set\+\_\+diag}} (\mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} $\ast$ctxt, \mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$p\+\_\+window, \mbox{\hyperlink{structtest__util__diag__t}{test\+\_\+util\+\_\+diag\+\_\+t}} $\ast$diag)
+\begin{DoxyCompactList}\small\item\em set the diagnostic structure to \mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} \end{DoxyCompactList}\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{test__util_8h_ad29ff4eeafae47b0c070e69ddff18910}{test\+\_\+util\+\_\+gpio\+\_\+interrupt\+\_\+config}} (uint32\+\_\+t $\ast$intr, int gpio\+\_\+number, \mbox{\hyperlink{test__util__common_8h_a5bbae85bb77b0d9aa3d5b0ecd8a44f66}{test\+\_\+util\+\_\+trigger\+\_\+type\+\_\+t}} trigger)
+\begin{DoxyCompactList}\small\item\em enable IO privileges, configure the gpio and set it up for interrupts \end{DoxyCompactList}\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{test__util_8h_ac09f26a8263b94de8225bc3f6ae82a36}{test\+\_\+util\+\_\+interrupt\+\_\+attach}} (\mbox{\hyperlink{structtest__util__intr__thrd__args__t}{test\+\_\+util\+\_\+intr\+\_\+thrd\+\_\+args\+\_\+t}} $\ast$arguments)
+\begin{DoxyCompactList}\small\item\em attach the interrupt event to an interrupt id \end{DoxyCompactList}\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{test__util_8h_af877718013fba982da180c269a7da54e}{test\+\_\+util\+\_\+interrupt\+\_\+wait\+\_\+and\+\_\+unmask}} (uint32\+\_\+t irq, int interrupt\+\_\+id)
+\begin{DoxyCompactList}\small\item\em wait for a GPIO interrupt and then unmask it \end{DoxyCompactList}\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{test__util_8h_aa3ac577684b057245b7212ff9eb0d738}{test\+\_\+util\+\_\+get\+\_\+param}} (\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$p\+\_\+window, \mbox{\hyperlink{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2}{test\+\_\+util\+\_\+params\+\_\+t}} param, int $\ast$value)
+\begin{DoxyCompactList}\small\item\em get the value of the window parameter of the window \end{DoxyCompactList}\item 
+QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{test__util_8h_aba9e2319f7fac19835d5e8166283a276}{test\+\_\+util\+\_\+set\+\_\+param}} (\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$p\+\_\+window, \mbox{\hyperlink{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2}{test\+\_\+util\+\_\+params\+\_\+t}} param, int value)
+\begin{DoxyCompactList}\small\item\em set the value of the window parameter \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test__util_8h_ab5ceef9c0b8b3b2f98d22c230175770f}{test\+\_\+util\+\_\+set\+\_\+power\+\_\+callback}} (\mbox{\hyperlink{test__util__common_8h_a872af104265ca70132fbc2ff0431f69d}{power\+\_\+event\+\_\+callable}} pm\+\_\+event\+\_\+callback, void $\ast$p\+\_\+usr\+\_\+ctxt)
+\begin{DoxyCompactList}\small\item\em set power event callback \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{test__util_8h_a66d769e8cd9eb42c7771901d735f61e0}\label{test__util_8h_a66d769e8cd9eb42c7771901d735f61e0}} 
+\index{test\_util.h@{test\_util.h}!TESTUTIL\_ALIGN@{TESTUTIL\_ALIGN}}
+\index{TESTUTIL\_ALIGN@{TESTUTIL\_ALIGN}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{TESTUTIL\_ALIGN}{TESTUTIL\_ALIGN}}
+{\footnotesize\ttfamily \#define TESTUTIL\+\_\+\+ALIGN(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~(((x) + ((y)-\/1)) \& $\sim$((y)-\/1))}
+
+
+
+Definition at line 22 of file test\+\_\+util.\+h.
+
+\mbox{\Hypertarget{test__util_8h_a3f30547973921bc2a38182a559ad26e1}\label{test__util_8h_a3f30547973921bc2a38182a559ad26e1}} 
+\index{test\_util.h@{test\_util.h}!TESTUTIL\_ALIGN\_TO\_LOWER@{TESTUTIL\_ALIGN\_TO\_LOWER}}
+\index{TESTUTIL\_ALIGN\_TO\_LOWER@{TESTUTIL\_ALIGN\_TO\_LOWER}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{TESTUTIL\_ALIGN\_TO\_LOWER}{TESTUTIL\_ALIGN\_TO\_LOWER}}
+{\footnotesize\ttfamily \#define TESTUTIL\+\_\+\+ALIGN\+\_\+\+TO\+\_\+\+LOWER(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~((x) \& $\sim$((y)-\/1))}
+
+
+
+Definition at line 23 of file test\+\_\+util.\+h.
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{test__util_8h_a06c639c479a219a9bc0b0bfedf0c77ee}\label{test__util_8h_a06c639c479a219a9bc0b0bfedf0c77ee}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_ctxt\_t@{test\_util\_ctxt\_t}}
+\index{test\_util\_ctxt\_t@{test\_util\_ctxt\_t}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_ctxt\_t}{test\_util\_ctxt\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} \mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}}}
+
+
+
+Definition at line 1 of file test\+\_\+util.\+h.
+
+\mbox{\Hypertarget{test__util_8h_a45781f54899f69ed365b7cde4a41b004}\label{test__util_8h_a45781f54899f69ed365b7cde4a41b004}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_window\_t@{test\_util\_window\_t}}
+\index{test\_util\_window\_t@{test\_util\_window\_t}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_window\_t}{test\_util\_window\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} \mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}}}
+
+
+
+Definition at line 1 of file test\+\_\+util.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__util_8h_aeb10000f4bbf7aee77a8b3fd471c5137}\label{test__util_8h_aeb10000f4bbf7aee77a8b3fd471c5137}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_allocate\_input\_buffers@{test\_util\_allocate\_input\_buffers}}
+\index{test\_util\_allocate\_input\_buffers@{test\_util\_allocate\_input\_buffers}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_allocate\_input\_buffers()}{test\_util\_allocate\_input\_buffers()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e test\+\_\+util\+\_\+allocate\+\_\+input\+\_\+buffers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$}]{p\+\_\+window,  }\item[{QCar\+Cam\+Buffer\+List\+\_\+t $\ast$}]{p\+\_\+buffer\+\_\+list,  }\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+
+
+
+Allocate buffers for injection as input to qcarcam. 
+
+test\+\_\+util\+\_\+allocate\+\_\+input\+\_\+buffers
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+window} & Pointer to window \\
+\hline
+{\em p\+\_\+buffer\+\_\+list} & Pointer to buffer list \\
+\hline
+{\em size} & size to allocate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 1361 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{test__util_8h_ade916f45111bbc541a8154d62de06ac0}\label{test__util_8h_ade916f45111bbc541a8154d62de06ac0}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_allocate\_metadata\_buffers@{test\_util\_allocate\_metadata\_buffers}}
+\index{test\_util\_allocate\_metadata\_buffers@{test\_util\_allocate\_metadata\_buffers}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_allocate\_metadata\_buffers()}{test\_util\_allocate\_metadata\_buffers()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e test\+\_\+util\+\_\+allocate\+\_\+metadata\+\_\+buffers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$}]{p\+\_\+window,  }\item[{QCar\+Cam\+Buffer\+List\+\_\+t $\ast$}]{p\+\_\+buffer\+\_\+list,  }\item[{unsigned int}]{entry\+\_\+capacity,  }\item[{unsigned int}]{data\+\_\+capacity }\end{DoxyParamCaption})}
+
+
+
+Allocate buffers for metadata for qcarcam. 
+
+test\+\_\+util\+\_\+allocate\+\_\+metadata\+\_\+buffers
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+window} & Pointer to window \\
+\hline
+{\em p\+\_\+buffer\+\_\+list} & Pointer to buffer list \\
+\hline
+{\em entry\+\_\+capacity} & Max number of tag entries \\
+\hline
+{\em data\+\_\+capacity} & Max number of tag data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 1484 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{test__util_8h_adc54f297e50d2141df5ca2cdf46c31be}\label{test__util_8h_adc54f297e50d2141df5ca2cdf46c31be}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_append\_metadata\_tag@{test\_util\_append\_metadata\_tag}}
+\index{test\_util\_append\_metadata\_tag@{test\_util\_append\_metadata\_tag}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_append\_metadata\_tag()}{test\_util\_append\_metadata\_tag()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e test\+\_\+util\+\_\+append\+\_\+metadata\+\_\+tag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$}]{p\+\_\+window,  }\item[{\mbox{\hyperlink{structtest__util__metadata__tag__t}{test\+\_\+util\+\_\+metadata\+\_\+tag\+\_\+t}} $\ast$}]{p\+\_\+tag }\end{DoxyParamCaption})}
+
+
+
+Append metadata entry to all buffers. 
+
+test\+\_\+util\+\_\+append\+\_\+metadata\+\_\+tag
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+window} & Pointer to window \\
+\hline
+{\em p\+\_\+tag} & Tag entry to append\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 1618 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{test__util_8h_a87d3d964f7aeed4127c005491b15ca36}\label{test__util_8h_a87d3d964f7aeed4127c005491b15ca36}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_create\_c2d\_surface@{test\_util\_create\_c2d\_surface}}
+\index{test\_util\_create\_c2d\_surface@{test\_util\_create\_c2d\_surface}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_create\_c2d\_surface()}{test\_util\_create\_c2d\_surface()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e test\+\_\+util\+\_\+create\+\_\+c2d\+\_\+surface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} $\ast$}]{p\+\_\+ctxt,  }\item[{\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$}]{p\+\_\+window,  }\item[{unsigned int}]{idx }\end{DoxyParamCaption})}
+
+
+
+Create a C2D surface. 
+
+test\+\_\+util\+\_\+create\+\_\+c2d\+\_\+surface
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctxt} & Pointer to test\+\_\+util context \\
+\hline
+{\em p\+\_\+window} & Pointer to window \\
+\hline
+{\em idx} & Buffer index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful
+\end{DoxyReturn}
+test\+\_\+util\+\_\+create\+\_\+c2d\+\_\+surface
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctxt} & Pointer to display context \\
+\hline
+{\em user\+\_\+ctxt} & Pointer to structure containing window parameters \\
+\hline
+{\em idx} & Frame ID number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 1987 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{test__util_8h_a2271b67bf8dfe536c5bcef79bd98ad2b}\label{test__util_8h_a2271b67bf8dfe536c5bcef79bd98ad2b}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_deinit@{test\_util\_deinit}}
+\index{test\_util\_deinit@{test\_util\_deinit}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_deinit()}{test\_util\_deinit()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e test\+\_\+util\+\_\+deinit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} $\ast$}]{p\+\_\+ctxt }\end{DoxyParamCaption})}
+
+
+
+Destroy context and free memory. 
+
+test\+\_\+util\+\_\+deinit
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctxt} & Pointer to context to be destroyed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 1931 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 7
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{test__util_8h_ae5db16ddfb482f0165246f53f48b6023}\label{test__util_8h_ae5db16ddfb482f0165246f53f48b6023}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_deinit\_window@{test\_util\_deinit\_window}}
+\index{test\_util\_deinit\_window@{test\_util\_deinit\_window}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_deinit\_window()}{test\_util\_deinit\_window()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e test\+\_\+util\+\_\+deinit\+\_\+window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} $\ast$}]{p\+\_\+ctxt,  }\item[{\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$}]{p\+\_\+window }\end{DoxyParamCaption})}
+
+
+
+Destroy window. 
+
+test\+\_\+util\+\_\+deinit\+\_\+window
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctxt} & Pointer to test\+\_\+util context \\
+\hline
+{\em p\+\_\+window} & Pointer to window\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful
+\end{DoxyReturn}
+test\+\_\+util\+\_\+deinit\+\_\+window
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctxt} & Pointer to display context \\
+\hline
+{\em user\+\_\+ctxt} & Pointer to structure containing window parameters\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 1906 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{test__util_8h_a14c5969b25971e2ea2fd7d0d94f00c74}\label{test__util_8h_a14c5969b25971e2ea2fd7d0d94f00c74}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_deinit\_window\_buffer@{test\_util\_deinit\_window\_buffer}}
+\index{test\_util\_deinit\_window\_buffer@{test\_util\_deinit\_window\_buffer}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_deinit\_window\_buffer()}{test\_util\_deinit\_window\_buffer()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e test\+\_\+util\+\_\+deinit\+\_\+window\+\_\+buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} $\ast$}]{p\+\_\+ctxt,  }\item[{\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$}]{p\+\_\+window }\end{DoxyParamCaption})}
+
+
+
+Destroy window buffers. 
+
+test\+\_\+util\+\_\+deinit\+\_\+window\+\_\+buffer
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctxt} & Pointer to test\+\_\+util context \\
+\hline
+{\em p\+\_\+window} & Pointer to window\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful
+\end{DoxyReturn}
+test\+\_\+util\+\_\+deinit\+\_\+window\+\_\+buffer
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctxt} & Pointer to display context \\
+\hline
+{\em user\+\_\+ctxt} & Pointer to structure containing window parameters\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 1814 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{test__util_8h_a4606454b55c3db0b58b808055b0104a2}\label{test__util_8h_a4606454b55c3db0b58b808055b0104a2}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_di\_sw\_weave\_30fps@{test\_util\_di\_sw\_weave\_30fps}}
+\index{test\_util\_di\_sw\_weave\_30fps@{test\_util\_di\_sw\_weave\_30fps}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_di\_sw\_weave\_30fps()}{test\_util\_di\_sw\_weave\_30fps()}}
+{\footnotesize\ttfamily void test\+\_\+util\+\_\+di\+\_\+sw\+\_\+weave\+\_\+30fps (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtest__util__sw__di__t}{test\+\_\+util\+\_\+sw\+\_\+di\+\_\+t}} $\ast$}]{di\+\_\+info }\end{DoxyParamCaption})}
+
+
+
+Deinterlace 2 fields from souce buf into dest new frame with software weave 30fps method. 
+
+test\+\_\+util\+\_\+di\+\_\+sw\+\_\+weave\+\_\+30fps
+
+
+\begin{DoxyParams}{Parameters}
+{\em di\+\_\+info} & Input souce/dest buffer context \\
+\hline
+{\em test\+\_\+util\+\_\+get\+\_\+buf\+\_\+ptr\+\_\+func} & Helper func to get source/destination buffer virtual address\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void 
+\end{DoxyReturn}
+
+
+Definition at line 279 of file test\+\_\+util.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 11
+Here is the caller graph for this function\+:
+% FIG 12
+\mbox{\Hypertarget{test__util_8h_adcaaa3e1cf469ccc80284c0b7cc88372}\label{test__util_8h_adcaaa3e1cf469ccc80284c0b7cc88372}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_dump\_window\_buffer@{test\_util\_dump\_window\_buffer}}
+\index{test\_util\_dump\_window\_buffer@{test\_util\_dump\_window\_buffer}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_dump\_window\_buffer()}{test\_util\_dump\_window\_buffer()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e test\+\_\+util\+\_\+dump\+\_\+window\+\_\+buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} $\ast$}]{p\+\_\+ctxt,  }\item[{\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$}]{p\+\_\+window,  }\item[{unsigned int}]{idx,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Dump frame to a file. 
+
+test\+\_\+util\+\_\+dump\+\_\+window\+\_\+buffer
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctxt} & Pointer to test\+\_\+util context \\
+\hline
+{\em p\+\_\+window} & Pointer to window \\
+\hline
+{\em idx} & Buffer idx \\
+\hline
+{\em filename} & Char pointer to file name to be dumped\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful
+\end{DoxyReturn}
+test\+\_\+util\+\_\+dump\+\_\+window\+\_\+buffer
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctxt} & Pointer to display context \\
+\hline
+{\em user\+\_\+ctxt} & Pointer to structure containing window parameters \\
+\hline
+{\em idx} & Frame ID number \\
+\hline
+{\em filename} & Char pointer to file name to be dumped\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 1275 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 13
+\mbox{\Hypertarget{test__util_8h_a1a6d332c5320a91c343964f6ed37a2d9}\label{test__util_8h_a1a6d332c5320a91c343964f6ed37a2d9}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_free\_input\_buffers@{test\_util\_free\_input\_buffers}}
+\index{test\_util\_free\_input\_buffers@{test\_util\_free\_input\_buffers}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_free\_input\_buffers()}{test\_util\_free\_input\_buffers()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e test\+\_\+util\+\_\+free\+\_\+input\+\_\+buffers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$}]{p\+\_\+window,  }\item[{QCar\+Cam\+Buffer\+List\+\_\+t $\ast$}]{p\+\_\+buffer\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Free buffers allocated for injection as input to qcarcam. 
+
+test\+\_\+util\+\_\+free\+\_\+input\+\_\+buffers
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+window} & Pointer to window \\
+\hline
+{\em p\+\_\+buffer\+\_\+list} & Pointer to buffer list\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 1438 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 14
+\mbox{\Hypertarget{test__util_8h_a4b38478f3d2e64ee8bf6b17fd5f752ee}\label{test__util_8h_a4b38478f3d2e64ee8bf6b17fd5f752ee}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_free\_metadata\_buffers@{test\_util\_free\_metadata\_buffers}}
+\index{test\_util\_free\_metadata\_buffers@{test\_util\_free\_metadata\_buffers}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_free\_metadata\_buffers()}{test\_util\_free\_metadata\_buffers()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e test\+\_\+util\+\_\+free\+\_\+metadata\+\_\+buffers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$}]{p\+\_\+window,  }\item[{QCar\+Cam\+Buffer\+List\+\_\+t $\ast$}]{p\+\_\+buffer\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Allocate buffers for meta data tag as input to qcarcam. 
+
+test\+\_\+util\+\_\+free\+\_\+metadata\+\_\+buffers
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+window} & Pointer to window \\
+\hline
+{\em p\+\_\+buffer\+\_\+list} & Pointer to buffer list\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 1686 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+\mbox{\Hypertarget{test__util_8h_a3585dc4f7b2fb7b4172374ffca12f069}\label{test__util_8h_a3585dc4f7b2fb7b4172374ffca12f069}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_get\_buf\_ptr@{test\_util\_get\_buf\_ptr}}
+\index{test\_util\_get\_buf\_ptr@{test\_util\_get\_buf\_ptr}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_get\_buf\_ptr()}{test\_util\_get\_buf\_ptr()}}
+{\footnotesize\ttfamily void test\+\_\+util\+\_\+get\+\_\+buf\+\_\+ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$}]{p\+\_\+window,  }\item[{\mbox{\hyperlink{structtest__util__buf__ptr__t}{test\+\_\+util\+\_\+buf\+\_\+ptr\+\_\+t}} $\ast$}]{p\+\_\+buf }\end{DoxyParamCaption})}
+
+
+
+Get buffer virtual address. 
+
+test\+\_\+util\+\_\+get\+\_\+buf\+\_\+ptr
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+window} & window \\
+\hline
+{\em p\+\_\+buf} & pointer to buffer structure to be filled\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void 
+\end{DoxyReturn}
+
+
+Definition at line 1333 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 15
+\mbox{\Hypertarget{test__util_8h_aca4be8cc7d52626c42f7941627bfcfc4}\label{test__util_8h_aca4be8cc7d52626c42f7941627bfcfc4}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_get\_c2d\_surface\_id@{test\_util\_get\_c2d\_surface\_id}}
+\index{test\_util\_get\_c2d\_surface\_id@{test\_util\_get\_c2d\_surface\_id}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_get\_c2d\_surface\_id()}{test\_util\_get\_c2d\_surface\_id()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e test\+\_\+util\+\_\+get\+\_\+c2d\+\_\+surface\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} $\ast$}]{p\+\_\+ctxt,  }\item[{\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$}]{p\+\_\+window,  }\item[{unsigned int}]{idx,  }\item[{unsigned int $\ast$}]{p\+\_\+surface\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Get the ID from a C2D surface. 
+
+test\+\_\+util\+\_\+get\+\_\+c2d\+\_\+surface\+\_\+id
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctxt} & Pointer to test\+\_\+util context \\
+\hline
+{\em p\+\_\+window} & Pointer to window \\
+\hline
+{\em idx} & Buffer index \\
+\hline
+{\em surface\+\_\+id} & Pointer to C2D sruface ID number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful
+\end{DoxyReturn}
+test\+\_\+util\+\_\+get\+\_\+c2d\+\_\+surface\+\_\+id
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctxt} & Pointer to display context \\
+\hline
+{\em user\+\_\+ctxt} & Pointer to structure containing window parameters \\
+\hline
+{\em idx} & Frame ID number \\
+\hline
+{\em surface\+\_\+id} & Pointer to C2D sruface ID number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 2650 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 16
+\mbox{\Hypertarget{test__util_8h_aa3ac577684b057245b7212ff9eb0d738}\label{test__util_8h_aa3ac577684b057245b7212ff9eb0d738}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_get\_param@{test\_util\_get\_param}}
+\index{test\_util\_get\_param@{test\_util\_get\_param}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_get\_param()}{test\_util\_get\_param()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e test\+\_\+util\+\_\+get\+\_\+param (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$}]{p\+\_\+window,  }\item[{\mbox{\hyperlink{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2}{test\+\_\+util\+\_\+params\+\_\+t}}}]{param,  }\item[{int $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+get the value of the window parameter of the window 
+
+test\+\_\+util\+\_\+get\+\_\+param
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+window} & Pointer to window \\
+\hline
+{\em param} & window parameter you are trying to access \\
+\hline
+{\em value} & value of parameter will be stored here\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful
+\end{DoxyReturn}
+test\+\_\+util\+\_\+get\+\_\+param
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+\_\+ctxt} & window we want to use \\
+\hline
+{\em param} & window parameter you are trying to access \\
+\hline
+{\em value} & value of parameter will be stored here\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 3026 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+\mbox{\Hypertarget{test__util_8h_ade842593255a4e437178b6492c3665df}\label{test__util_8h_ade842593255a4e437178b6492c3665df}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_get\_qcarcam\_format@{test\_util\_get\_qcarcam\_format}}
+\index{test\_util\_get\_qcarcam\_format@{test\_util\_get\_qcarcam\_format}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_get\_qcarcam\_format()}{test\_util\_get\_qcarcam\_format()}}
+{\footnotesize\ttfamily QCar\+Cam\+Color\+Fmt\+\_\+e test\+\_\+util\+\_\+get\+\_\+qcarcam\+\_\+format (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169d}{test\+\_\+util\+\_\+color\+\_\+fmt\+\_\+t}}}]{fmt }\end{DoxyParamCaption})}
+
+
+
+Lookup test color format and get a corresponding qcarcam color format. 
+
+test\+\_\+util\+\_\+get\+\_\+qcarcam\+\_\+format
+
+
+\begin{DoxyParams}{Parameters}
+{\em fmt} & test color format to look up\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCar\+Cam\+Color\+Fmt\+\_\+e with corresponding qcarcam color format. 
+\end{DoxyReturn}
+
+
+Definition at line 2039 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+\mbox{\Hypertarget{test__util_8h_a06f05ebbc1d296b0a761d50b839ca67a}\label{test__util_8h_a06f05ebbc1d296b0a761d50b839ca67a}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_get\_time@{test\_util\_get\_time}}
+\index{test\_util\_get\_time@{test\_util\_get\_time}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_get\_time()}{test\_util\_get\_time()}}
+{\footnotesize\ttfamily int test\+\_\+util\+\_\+get\+\_\+time (\begin{DoxyParamCaption}\item[{unsigned long long $\ast$}]{p\+Time }\end{DoxyParamCaption})}
+
+
+
+Get current time. 
+
+test\+\_\+util\+\_\+get\+\_\+time
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Time} & Pointer to current time\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 956 of file test\+\_\+util.\+cpp.
+
+\mbox{\Hypertarget{test__util_8h_ad29ff4eeafae47b0c070e69ddff18910}\label{test__util_8h_ad29ff4eeafae47b0c070e69ddff18910}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_gpio\_interrupt\_config@{test\_util\_gpio\_interrupt\_config}}
+\index{test\_util\_gpio\_interrupt\_config@{test\_util\_gpio\_interrupt\_config}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_gpio\_interrupt\_config()}{test\_util\_gpio\_interrupt\_config()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e test\+\_\+util\+\_\+gpio\+\_\+interrupt\+\_\+config (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{p\+\_\+intr,  }\item[{int}]{gpio\+\_\+number,  }\item[{\mbox{\hyperlink{test__util__common_8h_a5bbae85bb77b0d9aa3d5b0ecd8a44f66}{test\+\_\+util\+\_\+trigger\+\_\+type\+\_\+t}}}]{trigger }\end{DoxyParamCaption})}
+
+
+
+enable IO privileges, configure the gpio and set it up for interrupts 
+
+test\+\_\+util\+\_\+gpio\+\_\+config
+
+
+\begin{DoxyParams}{Parameters}
+{\em intr} & Pointer for the IRQ to be stored \\
+\hline
+{\em gpio\+\_\+number} & Specific gpio that is being utilised \\
+\hline
+{\em trigger} & Instance of the signal which shall causes the interrupt\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful
+\end{DoxyReturn}
+test\+\_\+util\+\_\+gpio\+\_\+interrupt\+\_\+config
+
+
+\begin{DoxyParams}{Parameters}
+{\em intr} & Pointer for the IRQ to be stored \\
+\hline
+{\em gpio\+\_\+number} & Specific gpio that is being utilized \\
+\hline
+{\em trigger} & Instance of the signal which shall causes the interrupt\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 2916 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 17
+\mbox{\Hypertarget{test__util_8h_a51b3ee8caf13bc9900097aa5bfb3b548}\label{test__util_8h_a51b3ee8caf13bc9900097aa5bfb3b548}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_init@{test\_util\_init}}
+\index{test\_util\_init@{test\_util\_init}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_init()}{test\_util\_init()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e test\+\_\+util\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} $\ast$$\ast$}]{pp\+\_\+ctxt,  }\item[{\mbox{\hyperlink{structtest__util__ctxt__params__t}{test\+\_\+util\+\_\+ctxt\+\_\+params\+\_\+t}} $\ast$}]{p\+\_\+params }\end{DoxyParamCaption})}
+
+
+
+Initialize context that is to be used to display content on the screen. 
+
+test\+\_\+util\+\_\+init
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctxt} & Pointer to context to be initialized \\
+\hline
+{\em params} & Parameters to init ctxt\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 543 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 18
+Here is the caller graph for this function\+:
+% FIG 19
+\mbox{\Hypertarget{test__util_8h_aee2d77bd9c7f6ca6ffb996ce78641053}\label{test__util_8h_aee2d77bd9c7f6ca6ffb996ce78641053}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_init\_window@{test\_util\_init\_window}}
+\index{test\_util\_init\_window@{test\_util\_init\_window}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_init\_window()}{test\_util\_init\_window()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e test\+\_\+util\+\_\+init\+\_\+window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} $\ast$}]{p\+\_\+ctxt,  }\item[{\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$$\ast$}]{pp\+\_\+window }\end{DoxyParamCaption})}
+
+
+
+Initialize new window. 
+
+test\+\_\+util\+\_\+init\+\_\+window
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctxt} & Pointer to test\+\_\+util context \\
+\hline
+{\em pp\+\_\+window} & Pointer to new window to be initialized\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful
+\end{DoxyReturn}
+test\+\_\+util\+\_\+init\+\_\+window
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctxt} & Pointer to util context \\
+\hline
+{\em user\+\_\+ctxt} & Pointer to new window to be initialized\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 659 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 20
+\mbox{\Hypertarget{test__util_8h_aef2de509d298b031113f9f1738cfcc83}\label{test__util_8h_aef2de509d298b031113f9f1738cfcc83}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_init\_window\_buffers@{test\_util\_init\_window\_buffers}}
+\index{test\_util\_init\_window\_buffers@{test\_util\_init\_window\_buffers}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_init\_window\_buffers()}{test\_util\_init\_window\_buffers()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e test\+\_\+util\+\_\+init\+\_\+window\+\_\+buffers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} $\ast$}]{p\+\_\+ctxt,  }\item[{\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$}]{p\+\_\+window,  }\item[{QCar\+Cam\+Buffer\+List\+\_\+t $\ast$}]{p\+\_\+buffers }\end{DoxyParamCaption})}
+
+
+
+Initialize buffers for display. 
+
+test\+\_\+util\+\_\+init\+\_\+window\+\_\+buffers
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctxt} & Pointer to test\+\_\+util context \\
+\hline
+{\em p\+\_\+window} & Pointer to window \\
+\hline
+{\em buffers} & Pointer to qcarcam buffers\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful
+\end{DoxyReturn}
+test\+\_\+util\+\_\+init\+\_\+window\+\_\+buffers
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctxt} & Pointer to display context \\
+\hline
+{\em user\+\_\+ctxt} & Pointer to structure containing window parameters \\
+\hline
+{\em buffers} & Pointer to qcarcam buffers\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 792 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 21
+Here is the caller graph for this function\+:
+% FIG 22
+\mbox{\Hypertarget{test__util_8h_a4a12f8d75507903ae05dae100374c95e}\label{test__util_8h_a4a12f8d75507903ae05dae100374c95e}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_initialize\_metadata\_buffers@{test\_util\_initialize\_metadata\_buffers}}
+\index{test\_util\_initialize\_metadata\_buffers@{test\_util\_initialize\_metadata\_buffers}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_initialize\_metadata\_buffers()}{test\_util\_initialize\_metadata\_buffers()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e test\+\_\+util\+\_\+initialize\+\_\+metadata\+\_\+buffers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$}]{p\+\_\+window,  }\item[{\mbox{\hyperlink{structtest__util__metadata__tag__t}{test\+\_\+util\+\_\+metadata\+\_\+tag\+\_\+t}} $\ast$}]{metadata\+\_\+table,  }\item[{unsigned int}]{metadata\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+Add metadata entries to all buffers. 
+
+test\+\_\+util\+\_\+initialize\+\_\+metadata\+\_\+buffers
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+window} & Pointer to window \\
+\hline
+{\em metadata\+\_\+table} & Table of metadata entries \\
+\hline
+{\em metadata\+\_\+count} & number of entries from table\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 1566 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 23
+\mbox{\Hypertarget{test__util_8h_ac09f26a8263b94de8225bc3f6ae82a36}\label{test__util_8h_ac09f26a8263b94de8225bc3f6ae82a36}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_interrupt\_attach@{test\_util\_interrupt\_attach}}
+\index{test\_util\_interrupt\_attach@{test\_util\_interrupt\_attach}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_interrupt\_attach()}{test\_util\_interrupt\_attach()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e test\+\_\+util\+\_\+interrupt\+\_\+attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtest__util__intr__thrd__args__t}{test\+\_\+util\+\_\+intr\+\_\+thrd\+\_\+args\+\_\+t}} $\ast$}]{p\+\_\+args }\end{DoxyParamCaption})}
+
+
+
+attach the interrupt event to an interrupt id 
+
+test\+\_\+util\+\_\+interrupt\+\_\+attach
+
+
+\begin{DoxyParams}{Parameters}
+{\em arguments} & arguments to pass to the newly created thread\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful
+\end{DoxyReturn}
+attach the interrupt event to an interrupt id
+
+test\+\_\+util\+\_\+interrupt\+\_\+attach
+
+
+\begin{DoxyParams}{Parameters}
+{\em arguments} & arguments to pass to the newly created thread\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 2969 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 24
+Here is the caller graph for this function\+:
+% FIG 25
+\mbox{\Hypertarget{test__util_8h_af877718013fba982da180c269a7da54e}\label{test__util_8h_af877718013fba982da180c269a7da54e}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_interrupt\_wait\_and\_unmask@{test\_util\_interrupt\_wait\_and\_unmask}}
+\index{test\_util\_interrupt\_wait\_and\_unmask@{test\_util\_interrupt\_wait\_and\_unmask}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_interrupt\_wait\_and\_unmask()}{test\_util\_interrupt\_wait\_and\_unmask()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e test\+\_\+util\+\_\+interrupt\+\_\+wait\+\_\+and\+\_\+unmask (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{irq,  }\item[{int}]{interrupt\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+wait for a GPIO interrupt and then unmask it 
+
+test\+\_\+util\+\_\+interrupt\+\_\+wait\+\_\+and\+\_\+unmask
+
+
+\begin{DoxyParams}{Parameters}
+{\em irq} & IRQ to unmask \\
+\hline
+{\em interrupt\+\_\+id} & interrupt id to unmask\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 2996 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+\mbox{\Hypertarget{test__util_8h_aa76c3d78a6f1c80d47b32e56d3daaced}\label{test__util_8h_aa76c3d78a6f1c80d47b32e56d3daaced}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_parse\_xml\_config\_file@{test\_util\_parse\_xml\_config\_file}}
+\index{test\_util\_parse\_xml\_config\_file@{test\_util\_parse\_xml\_config\_file}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_parse\_xml\_config\_file()}{test\_util\_parse\_xml\_config\_file()}}
+{\footnotesize\ttfamily int test\+\_\+util\+\_\+parse\+\_\+xml\+\_\+config\+\_\+file (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{\mbox{\hyperlink{structtest__util__xml__input__t}{test\+\_\+util\+\_\+xml\+\_\+input\+\_\+t}} $\ast$}]{inputs,  }\item[{unsigned int}]{max\+\_\+num\+\_\+inputs }\end{DoxyParamCaption})}
+
+
+
+Parse XML config file for qcarcam\+\_\+test. 
+
+parse\+\_\+xml\+\_\+config\+\_\+file
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Char pointer to XML config file name \\
+\hline
+{\em inputs} & Pointer to struct to store parsed inputs parameters \\
+\hline
+{\em max\+\_\+num\+\_\+inputs} & Maximum number of inputs to be parsed from config file \\
+\hline
+{\em global\+\_\+config} & Global xml configurations\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 616 of file test\+\_\+util.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 26
+\mbox{\Hypertarget{test__util_8h_ac3040770f13fe6f2cd5ccdde2df87fde}\label{test__util_8h_ac3040770f13fe6f2cd5ccdde2df87fde}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_parse\_xml\_config\_file\_v2@{test\_util\_parse\_xml\_config\_file\_v2}}
+\index{test\_util\_parse\_xml\_config\_file\_v2@{test\_util\_parse\_xml\_config\_file\_v2}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_parse\_xml\_config\_file\_v2()}{test\_util\_parse\_xml\_config\_file\_v2()}}
+{\footnotesize\ttfamily int test\+\_\+util\+\_\+parse\+\_\+xml\+\_\+config\+\_\+file\+\_\+v2 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{\mbox{\hyperlink{structtest__util__xml__input__t}{test\+\_\+util\+\_\+xml\+\_\+input\+\_\+t}} $\ast$}]{inputs,  }\item[{unsigned int}]{max\+\_\+num\+\_\+inputs,  }\item[{\mbox{\hyperlink{structtest__util__global__config__t}{test\+\_\+util\+\_\+global\+\_\+config\+\_\+t}} $\ast$}]{global\+\_\+config }\end{DoxyParamCaption})}
+
+
+
+Definition at line 621 of file test\+\_\+util.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 27
+Here is the caller graph for this function\+:
+% FIG 28
+\mbox{\Hypertarget{test__util_8h_a191c23327dba8ce55420c876825137a6}\label{test__util_8h_a191c23327dba8ce55420c876825137a6}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_post\_window\_buffer@{test\_util\_post\_window\_buffer}}
+\index{test\_util\_post\_window\_buffer@{test\_util\_post\_window\_buffer}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_post\_window\_buffer()}{test\_util\_post\_window\_buffer()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e test\+\_\+util\+\_\+post\+\_\+window\+\_\+buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} $\ast$}]{ctxt,  }\item[{\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$}]{o\+\_\+window,  }\item[{unsigned int}]{idx,  }\item[{std\+::list$<$ uint32\+\_\+t $>$ $\ast$}]{p\+\_\+rel\+\_\+buf\+\_\+idx,  }\item[{QCar\+Cam\+Interlace\+Field\+\_\+e}]{field\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Send frame to display. 
+
+test\+\_\+util\+\_\+post\+\_\+window\+\_\+buffer
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctxt} & Pointer to test\+\_\+util context \\
+\hline
+{\em p\+\_\+window} & Pointer to window \\
+\hline
+{\em idx} & Buffer index \\
+\hline
+{\em p\+\_\+rel\+\_\+buf\+\_\+idx} & List to fill with buffers ready to release \\
+\hline
+{\em field\+\_\+type} & Field type in current frame buffer if interlaced\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 29
+\mbox{\Hypertarget{test__util_8h_a65f4cefb8e1fe5b0c16011a3b8cf2e70}\label{test__util_8h_a65f4cefb8e1fe5b0c16011a3b8cf2e70}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_read\_input\_data@{test\_util\_read\_input\_data}}
+\index{test\_util\_read\_input\_data@{test\_util\_read\_input\_data}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_read\_input\_data()}{test\_util\_read\_input\_data()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e test\+\_\+util\+\_\+read\+\_\+input\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$}]{p\+\_\+window,  }\item[{const char $\ast$}]{filename,  }\item[{int}]{nframes,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Read input data into buffer list. 
+
+test\+\_\+util\+\_\+read\+\_\+input\+\_\+data
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+window} & Pointer to window \\
+\hline
+{\em nframes} & Number of frames stored in the file \\
+\hline
+{\em filename} & Path to data file to be read \\
+\hline
+{\em size} & Size of each frame\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 1728 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 30
+\mbox{\Hypertarget{test__util_8h_a6afd681c42c62a87c31efa7bb89160c7}\label{test__util_8h_a6afd681c42c62a87c31efa7bb89160c7}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_set\_diag@{test\_util\_set\_diag}}
+\index{test\_util\_set\_diag@{test\_util\_set\_diag}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_set\_diag()}{test\_util\_set\_diag()}}
+{\footnotesize\ttfamily void test\+\_\+util\+\_\+set\+\_\+diag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} $\ast$}]{p\+\_\+ctxt,  }\item[{\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$}]{p\+\_\+window,  }\item[{\mbox{\hyperlink{structtest__util__diag__t}{test\+\_\+util\+\_\+diag\+\_\+t}} $\ast$}]{p\+\_\+diag }\end{DoxyParamCaption})}
+
+
+
+set the diagnostic structure to \mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} 
+
+test\+\_\+util\+\_\+set\+\_\+diag
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctxt} & Pointer to test\+\_\+util context \\
+\hline
+{\em p\+\_\+window} & Pointer to window \\
+\hline
+{\em diag} & diagnostic structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void
+\end{DoxyReturn}
+test\+\_\+util\+\_\+set\+\_\+diag
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctxt} & Pointer to display context \\
+\hline
+{\em user\+\_\+ctxt} & Pointer to structure containing window parameters \\
+\hline
+{\em diag} & diagnostic structure\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void 
+\end{DoxyReturn}
+
+
+Definition at line 2846 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 31
+\mbox{\Hypertarget{test__util_8h_aba9e2319f7fac19835d5e8166283a276}\label{test__util_8h_aba9e2319f7fac19835d5e8166283a276}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_set\_param@{test\_util\_set\_param}}
+\index{test\_util\_set\_param@{test\_util\_set\_param}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_set\_param()}{test\_util\_set\_param()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e test\+\_\+util\+\_\+set\+\_\+param (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$}]{p\+\_\+window,  }\item[{\mbox{\hyperlink{test__util__common_8h_aaf2e609eb5492914f1b9d9734b0c56a2}{test\+\_\+util\+\_\+params\+\_\+t}}}]{param,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+set the value of the window parameter 
+
+test\+\_\+util\+\_\+set\+\_\+param
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+window} & Pointer to window \\
+\hline
+{\em param} & window parameter you want to change \\
+\hline
+{\em value} & value you want to set the param to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful
+\end{DoxyReturn}
+test\+\_\+util\+\_\+set\+\_\+param
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+\_\+ctxt} & window we want to use \\
+\hline
+{\em param} & window parameter you want to change \\
+\hline
+{\em value} & value you want to set the param to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 3052 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 32
+Here is the caller graph for this function\+:
+% FIG 33
+\mbox{\Hypertarget{test__util_8h_ab5ceef9c0b8b3b2f98d22c230175770f}\label{test__util_8h_ab5ceef9c0b8b3b2f98d22c230175770f}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_set\_power\_callback@{test\_util\_set\_power\_callback}}
+\index{test\_util\_set\_power\_callback@{test\_util\_set\_power\_callback}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_set\_power\_callback()}{test\_util\_set\_power\_callback()}}
+{\footnotesize\ttfamily void test\+\_\+util\+\_\+set\+\_\+power\+\_\+callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{test__util__common_8h_a872af104265ca70132fbc2ff0431f69d}{power\+\_\+event\+\_\+callable}}}]{pm\+\_\+event\+\_\+callback,  }\item[{void $\ast$}]{p\+\_\+usr\+\_\+ctxt }\end{DoxyParamCaption})}
+
+
+
+set power event callback 
+
+test\+\_\+util\+\_\+set\+\_\+power\+\_\+callback
+
+\begin{DoxyReturn}{Returns}
+NULL 
+\end{DoxyReturn}
+
+
+Definition at line 3084 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 34
+\mbox{\Hypertarget{test__util_8h_a3e8749e0c6dec81335fd7e587515ff1a}\label{test__util_8h_a3e8749e0c6dec81335fd7e587515ff1a}} 
+\index{test\_util.h@{test\_util.h}!test\_util\_set\_window\_param@{test\_util\_set\_window\_param}}
+\index{test\_util\_set\_window\_param@{test\_util\_set\_window\_param}!test\_util.h@{test\_util.h}}
+\doxysubsubsection{\texorpdfstring{test\_util\_set\_window\_param()}{test\_util\_set\_window\_param()}}
+{\footnotesize\ttfamily QCar\+Cam\+Ret\+\_\+e test\+\_\+util\+\_\+set\+\_\+window\+\_\+param (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtest__util__ctxt__t}{test\+\_\+util\+\_\+ctxt\+\_\+t}} $\ast$}]{p\+\_\+ctxt,  }\item[{\mbox{\hyperlink{structtest__util__window__t}{test\+\_\+util\+\_\+window\+\_\+t}} $\ast$}]{p\+\_\+window,  }\item[{\mbox{\hyperlink{structtest__util__window__param__t}{test\+\_\+util\+\_\+window\+\_\+param\+\_\+t}} $\ast$}]{p\+\_\+window\+\_\+params }\end{DoxyParamCaption})}
+
+
+
+Send window parameters to display. 
+
+test\+\_\+util\+\_\+set\+\_\+window\+\_\+param
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctxt} & Pointer to test\+\_\+util context \\
+\hline
+{\em p\+\_\+window} & Pointer to window \\
+\hline
+{\em window\+\_\+params} & Pointer to structure with window properties\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful
+\end{DoxyReturn}
+test\+\_\+util\+\_\+set\+\_\+window\+\_\+param
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctxt} & Pointer to display context \\
+\hline
+{\em user\+\_\+ctxt} & Pointer to structure containing window parameters \\
+\hline
+{\em window\+\_\+params} & Pointer to structure with window properties\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 2671 of file test\+\_\+util\+\_\+qnx.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 35
+Here is the caller graph for this function\+:
+% FIG 36

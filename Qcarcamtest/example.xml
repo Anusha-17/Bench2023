@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Cam>
+
+<data>
+
+    <Input_ID> 1 </Input_ID>
+
+    <Buffer> 5 </Buffer>
+
+    <Display_ID> 1 </Display_ID>
+
+</data>
+
+<data>
+
+    <Input_ID> 2 </Input_ID>
+
+    <Buffer> 6 </Buffer>
+
+    <Display_ID> 2 </Display_ID>
+
+</data>
+
+<data>
+
+    <Input_ID> 3 </Input_ID>
+
+    <Buffer> 7 </Buffer>
+
+    <Display_ID> 3 </Display_ID>
+
+</data>
+
+</Cam>
+

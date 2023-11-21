@@ -1,0 +1,582 @@
+\hypertarget{qcarcam__rvc_8cpp}{}\doxysection{qcarcam\+\_\+rvc/src/qcarcam\+\_\+rvc.cpp File Reference}
+\label{qcarcam__rvc_8cpp}\index{qcarcam\_rvc/src/qcarcam\_rvc.cpp@{qcarcam\_rvc/src/qcarcam\_rvc.cpp}}
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include $<$sys/select.\+h$>$}\newline
+{\ttfamily \#include $<$sys/mman.\+h$>$}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}qcarcam.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}test\+\_\+util.\+h\char`\"{}}\newline
+Include dependency graph for qcarcam\+\_\+rvc.\+cpp\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structqcarcam__test__buffers__param__t}{qcarcam\+\_\+test\+\_\+buffers\+\_\+param\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structqcarcam__test__ctxt__t}{qcarcam\+\_\+test\+\_\+ctxt\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{qcarcam__rvc_8cpp_ade4944022e26156ff01a60a1a87ddeb0}{WAIT\+\_\+\+FOR\+\_\+\+RESOURCES}}~0
+\item 
+\#define \mbox{\hyperlink{qcarcam__rvc_8cpp_aadcaf1aa6fc9d4508c587cec7ced3370}{QCARCAM\+\_\+\+TEST\+\_\+\+DEFAULT\+\_\+\+GET\+\_\+\+FRAME\+\_\+\+TIMEOUT}}~500000000
+\item 
+\#define \mbox{\hyperlink{qcarcam__rvc_8cpp_a0fde3f6eb459935eab0f7e300add93be}{NUM\+\_\+\+MAX\+\_\+\+CAMERAS}}~1
+\item 
+\#define \mbox{\hyperlink{qcarcam__rvc_8cpp_aeca034f67218340ecb2261a22c2f3dcd}{BUFSIZE}}~32
+\item 
+\#define \mbox{\hyperlink{qcarcam__rvc_8cpp_ae6eabb3c3c67e59a932417d7dad7d148}{SIGWAIT\+\_\+\+TIMEOUT\+\_\+\+MS}}~100
+\item 
+\#define \mbox{\hyperlink{qcarcam__rvc_8cpp_a65b2d99fb927fc8e27244dd076827ced}{INPUT\+\_\+\+WIDTH}}~1920
+\item 
+\#define \mbox{\hyperlink{qcarcam__rvc_8cpp_aa3117e6d1b2a895d93755c858df7219c}{INPUT\+\_\+\+HEIGHT}}~1020
+\item 
+\#define \mbox{\hyperlink{qcarcam__rvc_8cpp_aa1b206a793cada70067ae4e6754de62b}{INPUT\+\_\+\+FORMAT}}~QCARCAM\+\_\+\+FMT\+\_\+\+UYVY\+\_\+8
+\item 
+\#define \mbox{\hyperlink{qcarcam__rvc_8cpp_a7511778480ce785f101270dc747bd25b}{INPUT\+\_\+\+NUM\+\_\+\+BUFFERS}}~4
+\item 
+\#define \mbox{\hyperlink{qcarcam__rvc_8cpp_a303d2320f3f508c228ddd4ea8afbbf74}{DISPLAY\+\_\+\+FORMAT}}~\mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169da34aa642f860c91613209b6515ac36c8b}{TESTUTIL\+\_\+\+FMT\+\_\+\+UYVY\+\_\+8}}
+\item 
+\#define \mbox{\hyperlink{qcarcam__rvc_8cpp_ab201ffed766cbccc5da0523dc760bbcc}{QCARCAM\+\_\+\+TEST\+\_\+\+ENABLE\+\_\+\+LOG\+\_\+\+PERF}}
+\item 
+\#define \mbox{\hyperlink{qcarcam__rvc_8cpp_a192b4253aeb1d7d2657bc74a41675392}{QCARCAM\+\_\+\+TEST\+\_\+\+LOG\+\_\+\+PERF}}(...)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{qcarcam__rvc_8cpp_a49eba9a5794cb489599faae181f4fc6c}{qcarcam\+\_\+test\+\_\+get\+\_\+time}} (uint64\+\_\+t $\ast$p\+Time)
+\item 
+static void \mbox{\hyperlink{qcarcam__rvc_8cpp_a47807e0d41b93714db0049c61732567e}{initialize\+\_\+qcarcam\+\_\+test\+\_\+ctxt}} (void)
+\item 
+static void \mbox{\hyperlink{qcarcam__rvc_8cpp_abb659ea4fcdda24ef85ed84745407cfc}{abort\+\_\+test}} (void)
+\item 
+static int \mbox{\hyperlink{qcarcam__rvc_8cpp_a81c21dd7212e067665f561fd60cb708d}{timer\+\_\+thread}} (void $\ast$arg)
+\item 
+static int \mbox{\hyperlink{qcarcam__rvc_8cpp_a41b09abbb47064fc2e99e992c1b8166d}{signal\+\_\+thread}} (void $\ast$arg)
+\item 
+static int \mbox{\hyperlink{qcarcam__rvc_8cpp_a1f25d391f014163f12a83cf53990f3ad}{qcarcam\+\_\+test\+\_\+get\+\_\+frame}} (\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$p\+Input\+Ctxt)
+\item 
+static int \mbox{\hyperlink{qcarcam__rvc_8cpp_a890e54ec2c2b5966688b903e60463af8}{qcarcam\+\_\+test\+\_\+post\+\_\+to\+\_\+display}} (\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$p\+Input\+Ctxt)
+\item 
+static int \mbox{\hyperlink{qcarcam__rvc_8cpp_a0cef3c8b0ec3193eb777f02a792b3d37}{qcarcam\+\_\+test\+\_\+release\+\_\+frame}} (\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$p\+Input\+Ctxt)
+\item 
+static int \mbox{\hyperlink{qcarcam__rvc_8cpp_aec784c5d12a56f33367470f1bce01bdd}{qcarcam\+\_\+test\+\_\+handle\+\_\+new\+\_\+frame}} (\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$p\+Input\+Ctxt)
+\item 
+static int \mbox{\hyperlink{qcarcam__rvc_8cpp_af672706e12362c441374d68146e82dff}{qcarcam\+\_\+test\+\_\+handle\+\_\+input\+\_\+signal}} (\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$p\+Input\+Ctxt, QCar\+Cam\+Input\+Signal\+\_\+e signal\+\_\+type)
+\item 
+static QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{qcarcam__rvc_8cpp_a6b28cd44fd84eba3d9c77e9923698172}{QCar\+Cam\+RVCSystem\+Event\+Hndlr}} (const QCar\+Cam\+Hndl\+\_\+t hndl, const uint32\+\_\+t event\+Id, const QCar\+Cam\+Event\+Payload\+\_\+t $\ast$p\+Payload, void $\ast$p\+Private\+Data)
+\item 
+static QCar\+Cam\+Ret\+\_\+e \mbox{\hyperlink{qcarcam__rvc_8cpp_a112471bf458b66abe0dd76c217754482}{qcarcam\+\_\+test\+\_\+event\+\_\+cb}} (const QCar\+Cam\+Hndl\+\_\+t hndl, const uint32\+\_\+t event\+Id, const QCar\+Cam\+Event\+Payload\+\_\+t $\ast$p\+Payload, void $\ast$p\+Private\+Data)
+\item 
+static int \mbox{\hyperlink{qcarcam__rvc_8cpp_ac15645766f6f26f8e202e60a95e7fc32}{setup\+\_\+windowing\+\_\+thread}} (void $\ast$arg)
+\item 
+static int \mbox{\hyperlink{qcarcam__rvc_8cpp_a73b378210720a237fc32a6baf6519779}{setup\+\_\+qcarcam\+\_\+thread}} (void $\ast$arg)
+\item 
+void \mbox{\hyperlink{qcarcam__rvc_8cpp_a39f5190c4bbb94c4d470854781e91105}{display\+\_\+menu}} ()
+\item 
+void \mbox{\hyperlink{qcarcam__rvc_8cpp_aff9a782a84b05bec55c26587ed39d914}{process\+\_\+cmds}} (char choice)
+\item 
+int \mbox{\hyperlink{qcarcam__rvc_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{qcarcam__rvc_8cpp_a79b41b2b6a86802ff9a3af59ff15d80b}{exit\+Seconds}} = 0
+\item 
+static \mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} \mbox{\hyperlink{qcarcam__rvc_8cpp_aafe521836ad7b746f5399a3d37139992}{g\+Rvc\+Input}} = \{\}
+\begin{DoxyCompactList}\small\item\em STATICS. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structqcarcam__test__ctxt__t}{qcarcam\+\_\+test\+\_\+ctxt\+\_\+t}} \mbox{\hyperlink{qcarcam__rvc_8cpp_a24903b86d71af2829ca146fed5b00d35}{g\+Ctxt}} = \{\}
+\item 
+static volatile int \mbox{\hyperlink{qcarcam__rvc_8cpp_aee8537645ceeae25abdab2df500380f8}{g\+\_\+aborted}} = 0
+\item 
+static const int \mbox{\hyperlink{qcarcam__rvc_8cpp_a828766169d7b905b6236ab5e847d0512}{exceptsigs}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_aeca034f67218340ecb2261a22c2f3dcd}\label{qcarcam__rvc_8cpp_aeca034f67218340ecb2261a22c2f3dcd}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!BUFSIZE@{BUFSIZE}}
+\index{BUFSIZE@{BUFSIZE}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{BUFSIZE}{BUFSIZE}}
+{\footnotesize\ttfamily \#define BUFSIZE~32}
+
+
+
+Definition at line 36 of file qcarcam\+\_\+rvc.\+cpp.
+
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_a303d2320f3f508c228ddd4ea8afbbf74}\label{qcarcam__rvc_8cpp_a303d2320f3f508c228ddd4ea8afbbf74}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!DISPLAY\_FORMAT@{DISPLAY\_FORMAT}}
+\index{DISPLAY\_FORMAT@{DISPLAY\_FORMAT}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_FORMAT}{DISPLAY\_FORMAT}}
+{\footnotesize\ttfamily \#define DISPLAY\+\_\+\+FORMAT~\mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169da34aa642f860c91613209b6515ac36c8b}{TESTUTIL\+\_\+\+FMT\+\_\+\+UYVY\+\_\+8}}}
+
+
+
+Definition at line 45 of file qcarcam\+\_\+rvc.\+cpp.
+
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_aa1b206a793cada70067ae4e6754de62b}\label{qcarcam__rvc_8cpp_aa1b206a793cada70067ae4e6754de62b}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!INPUT\_FORMAT@{INPUT\_FORMAT}}
+\index{INPUT\_FORMAT@{INPUT\_FORMAT}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{INPUT\_FORMAT}{INPUT\_FORMAT}}
+{\footnotesize\ttfamily \#define INPUT\+\_\+\+FORMAT~QCARCAM\+\_\+\+FMT\+\_\+\+UYVY\+\_\+8}
+
+
+
+Definition at line 42 of file qcarcam\+\_\+rvc.\+cpp.
+
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_aa3117e6d1b2a895d93755c858df7219c}\label{qcarcam__rvc_8cpp_aa3117e6d1b2a895d93755c858df7219c}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!INPUT\_HEIGHT@{INPUT\_HEIGHT}}
+\index{INPUT\_HEIGHT@{INPUT\_HEIGHT}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{INPUT\_HEIGHT}{INPUT\_HEIGHT}}
+{\footnotesize\ttfamily \#define INPUT\+\_\+\+HEIGHT~1020}
+
+
+
+Definition at line 41 of file qcarcam\+\_\+rvc.\+cpp.
+
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_a7511778480ce785f101270dc747bd25b}\label{qcarcam__rvc_8cpp_a7511778480ce785f101270dc747bd25b}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!INPUT\_NUM\_BUFFERS@{INPUT\_NUM\_BUFFERS}}
+\index{INPUT\_NUM\_BUFFERS@{INPUT\_NUM\_BUFFERS}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{INPUT\_NUM\_BUFFERS}{INPUT\_NUM\_BUFFERS}}
+{\footnotesize\ttfamily \#define INPUT\+\_\+\+NUM\+\_\+\+BUFFERS~4}
+
+
+
+Definition at line 43 of file qcarcam\+\_\+rvc.\+cpp.
+
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_a65b2d99fb927fc8e27244dd076827ced}\label{qcarcam__rvc_8cpp_a65b2d99fb927fc8e27244dd076827ced}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!INPUT\_WIDTH@{INPUT\_WIDTH}}
+\index{INPUT\_WIDTH@{INPUT\_WIDTH}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{INPUT\_WIDTH}{INPUT\_WIDTH}}
+{\footnotesize\ttfamily \#define INPUT\+\_\+\+WIDTH~1920}
+
+
+
+Definition at line 40 of file qcarcam\+\_\+rvc.\+cpp.
+
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_a0fde3f6eb459935eab0f7e300add93be}\label{qcarcam__rvc_8cpp_a0fde3f6eb459935eab0f7e300add93be}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!NUM\_MAX\_CAMERAS@{NUM\_MAX\_CAMERAS}}
+\index{NUM\_MAX\_CAMERAS@{NUM\_MAX\_CAMERAS}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{NUM\_MAX\_CAMERAS}{NUM\_MAX\_CAMERAS}}
+{\footnotesize\ttfamily \#define NUM\+\_\+\+MAX\+\_\+\+CAMERAS~1}
+
+
+
+Definition at line 35 of file qcarcam\+\_\+rvc.\+cpp.
+
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_aadcaf1aa6fc9d4508c587cec7ced3370}\label{qcarcam__rvc_8cpp_aadcaf1aa6fc9d4508c587cec7ced3370}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!QCARCAM\_TEST\_DEFAULT\_GET\_FRAME\_TIMEOUT@{QCARCAM\_TEST\_DEFAULT\_GET\_FRAME\_TIMEOUT}}
+\index{QCARCAM\_TEST\_DEFAULT\_GET\_FRAME\_TIMEOUT@{QCARCAM\_TEST\_DEFAULT\_GET\_FRAME\_TIMEOUT}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{QCARCAM\_TEST\_DEFAULT\_GET\_FRAME\_TIMEOUT}{QCARCAM\_TEST\_DEFAULT\_GET\_FRAME\_TIMEOUT}}
+{\footnotesize\ttfamily \#define QCARCAM\+\_\+\+TEST\+\_\+\+DEFAULT\+\_\+\+GET\+\_\+\+FRAME\+\_\+\+TIMEOUT~500000000}
+
+
+
+Definition at line 34 of file qcarcam\+\_\+rvc.\+cpp.
+
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_ab201ffed766cbccc5da0523dc760bbcc}\label{qcarcam__rvc_8cpp_ab201ffed766cbccc5da0523dc760bbcc}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!QCARCAM\_TEST\_ENABLE\_LOG\_PERF@{QCARCAM\_TEST\_ENABLE\_LOG\_PERF}}
+\index{QCARCAM\_TEST\_ENABLE\_LOG\_PERF@{QCARCAM\_TEST\_ENABLE\_LOG\_PERF}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{QCARCAM\_TEST\_ENABLE\_LOG\_PERF}{QCARCAM\_TEST\_ENABLE\_LOG\_PERF}}
+{\footnotesize\ttfamily \#define QCARCAM\+\_\+\+TEST\+\_\+\+ENABLE\+\_\+\+LOG\+\_\+\+PERF}
+
+
+
+Definition at line 48 of file qcarcam\+\_\+rvc.\+cpp.
+
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_a192b4253aeb1d7d2657bc74a41675392}\label{qcarcam__rvc_8cpp_a192b4253aeb1d7d2657bc74a41675392}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!QCARCAM\_TEST\_LOG\_PERF@{QCARCAM\_TEST\_LOG\_PERF}}
+\index{QCARCAM\_TEST\_LOG\_PERF@{QCARCAM\_TEST\_LOG\_PERF}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{QCARCAM\_TEST\_LOG\_PERF}{QCARCAM\_TEST\_LOG\_PERF}}
+{\footnotesize\ttfamily \#define QCARCAM\+\_\+\+TEST\+\_\+\+LOG\+\_\+\+PERF(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{        uint64\_t tmpTime = 0; \(\backslash\)}
+\DoxyCodeLine{        qcarcam\_test\_get\_time(\&tmpTime); \(\backslash\)}
+\DoxyCodeLine{        QCARCAM\_ALWZMSG(\textcolor{stringliteral}{"{}\%lu \%s"{}}, tmpTime-\/\mbox{\hyperlink{qcarcam__rvc_8cpp_a24903b86d71af2829ca146fed5b00d35}{gCtxt}}.\mbox{\hyperlink{structqcarcam__test__ctxt__t_a13e794c3e0010f334d67bf58900186ae}{t\_start}}, \#\#\_\_VA\_ARGS\_\_); \(\backslash\)}
+\DoxyCodeLine{    \}\textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Definition at line 50 of file qcarcam\+\_\+rvc.\+cpp.
+
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_ae6eabb3c3c67e59a932417d7dad7d148}\label{qcarcam__rvc_8cpp_ae6eabb3c3c67e59a932417d7dad7d148}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!SIGWAIT\_TIMEOUT\_MS@{SIGWAIT\_TIMEOUT\_MS}}
+\index{SIGWAIT\_TIMEOUT\_MS@{SIGWAIT\_TIMEOUT\_MS}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{SIGWAIT\_TIMEOUT\_MS}{SIGWAIT\_TIMEOUT\_MS}}
+{\footnotesize\ttfamily \#define SIGWAIT\+\_\+\+TIMEOUT\+\_\+\+MS~100}
+
+
+
+Definition at line 37 of file qcarcam\+\_\+rvc.\+cpp.
+
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_ade4944022e26156ff01a60a1a87ddeb0}\label{qcarcam__rvc_8cpp_ade4944022e26156ff01a60a1a87ddeb0}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!WAIT\_FOR\_RESOURCES@{WAIT\_FOR\_RESOURCES}}
+\index{WAIT\_FOR\_RESOURCES@{WAIT\_FOR\_RESOURCES}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{WAIT\_FOR\_RESOURCES}{WAIT\_FOR\_RESOURCES}}
+{\footnotesize\ttfamily \#define WAIT\+\_\+\+FOR\+\_\+\+RESOURCES~0}
+
+
+
+Definition at line 24 of file qcarcam\+\_\+rvc.\+cpp.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_abb659ea4fcdda24ef85ed84745407cfc}\label{qcarcam__rvc_8cpp_abb659ea4fcdda24ef85ed84745407cfc}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!abort\_test@{abort\_test}}
+\index{abort\_test@{abort\_test}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{abort\_test()}{abort\_test()}}
+{\footnotesize\ttfamily static void abort\+\_\+test (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 157 of file qcarcam\+\_\+rvc.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_a39f5190c4bbb94c4d470854781e91105}\label{qcarcam__rvc_8cpp_a39f5190c4bbb94c4d470854781e91105}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!display\_menu@{display\_menu}}
+\index{display\_menu@{display\_menu}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{display\_menu()}{display\_menu()}}
+{\footnotesize\ttfamily void display\+\_\+menu (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 746 of file qcarcam\+\_\+rvc.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_a47807e0d41b93714db0049c61732567e}\label{qcarcam__rvc_8cpp_a47807e0d41b93714db0049c61732567e}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!initialize\_qcarcam\_test\_ctxt@{initialize\_qcarcam\_test\_ctxt}}
+\index{initialize\_qcarcam\_test\_ctxt@{initialize\_qcarcam\_test\_ctxt}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{initialize\_qcarcam\_test\_ctxt()}{initialize\_qcarcam\_test\_ctxt()}}
+{\footnotesize\ttfamily static void initialize\+\_\+qcarcam\+\_\+test\+\_\+ctxt (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 150 of file qcarcam\+\_\+rvc.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{qcarcam__rvc_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!main@{main}}
+\index{main@{main}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 768 of file qcarcam\+\_\+rvc.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_aff9a782a84b05bec55c26587ed39d914}\label{qcarcam__rvc_8cpp_aff9a782a84b05bec55c26587ed39d914}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!process\_cmds@{process\_cmds}}
+\index{process\_cmds@{process\_cmds}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{process\_cmds()}{process\_cmds()}}
+{\footnotesize\ttfamily void process\+\_\+cmds (\begin{DoxyParamCaption}\item[{char}]{choice }\end{DoxyParamCaption})}
+
+
+
+Definition at line 754 of file qcarcam\+\_\+rvc.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_a112471bf458b66abe0dd76c217754482}\label{qcarcam__rvc_8cpp_a112471bf458b66abe0dd76c217754482}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!qcarcam\_test\_event\_cb@{qcarcam\_test\_event\_cb}}
+\index{qcarcam\_test\_event\_cb@{qcarcam\_test\_event\_cb}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_test\_event\_cb()}{qcarcam\_test\_event\_cb()}}
+{\footnotesize\ttfamily static QCar\+Cam\+Ret\+\_\+e qcarcam\+\_\+test\+\_\+event\+\_\+cb (\begin{DoxyParamCaption}\item[{const QCar\+Cam\+Hndl\+\_\+t}]{hndl,  }\item[{const uint32\+\_\+t}]{event\+Id,  }\item[{const QCar\+Cam\+Event\+Payload\+\_\+t $\ast$}]{p\+Payload,  }\item[{void $\ast$}]{p\+Private\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Qcarcam event callback function 
+\begin{DoxyParams}{Parameters}
+{\em hndl} & \\
+\hline
+{\em event\+\_\+id} & \\
+\hline
+{\em p\+\_\+payload} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 479 of file qcarcam\+\_\+rvc.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 8
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_a1f25d391f014163f12a83cf53990f3ad}\label{qcarcam__rvc_8cpp_a1f25d391f014163f12a83cf53990f3ad}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!qcarcam\_test\_get\_frame@{qcarcam\_test\_get\_frame}}
+\index{qcarcam\_test\_get\_frame@{qcarcam\_test\_get\_frame}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_test\_get\_frame()}{qcarcam\_test\_get\_frame()}}
+{\footnotesize\ttfamily static int qcarcam\+\_\+test\+\_\+get\+\_\+frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$}]{p\+Input\+Ctxt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Function to retrieve frame from qcarcam and increase frame\+\_\+counter 
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+ctxt} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure 
+\end{DoxyReturn}
+
+
+Definition at line 221 of file qcarcam\+\_\+rvc.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 10
+Here is the caller graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_a49eba9a5794cb489599faae181f4fc6c}\label{qcarcam__rvc_8cpp_a49eba9a5794cb489599faae181f4fc6c}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!qcarcam\_test\_get\_time@{qcarcam\_test\_get\_time}}
+\index{qcarcam\_test\_get\_time@{qcarcam\_test\_get\_time}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_test\_get\_time()}{qcarcam\_test\_get\_time()}}
+{\footnotesize\ttfamily int qcarcam\+\_\+test\+\_\+get\+\_\+time (\begin{DoxyParamCaption}\item[{uint64\+\_\+t $\ast$}]{p\+Time }\end{DoxyParamCaption})}
+
+
+
+Definition at line 134 of file qcarcam\+\_\+rvc.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 12
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_af672706e12362c441374d68146e82dff}\label{qcarcam__rvc_8cpp_af672706e12362c441374d68146e82dff}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!qcarcam\_test\_handle\_input\_signal@{qcarcam\_test\_handle\_input\_signal}}
+\index{qcarcam\_test\_handle\_input\_signal@{qcarcam\_test\_handle\_input\_signal}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_test\_handle\_input\_signal()}{qcarcam\_test\_handle\_input\_signal()}}
+{\footnotesize\ttfamily static int qcarcam\+\_\+test\+\_\+handle\+\_\+input\+\_\+signal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$}]{p\+Input\+Ctxt,  }\item[{QCar\+Cam\+Input\+Signal\+\_\+e}]{signal\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 379 of file qcarcam\+\_\+rvc.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 13
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_aec784c5d12a56f33367470f1bce01bdd}\label{qcarcam__rvc_8cpp_aec784c5d12a56f33367470f1bce01bdd}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!qcarcam\_test\_handle\_new\_frame@{qcarcam\_test\_handle\_new\_frame}}
+\index{qcarcam\_test\_handle\_new\_frame@{qcarcam\_test\_handle\_new\_frame}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_test\_handle\_new\_frame()}{qcarcam\_test\_handle\_new\_frame()}}
+{\footnotesize\ttfamily static int qcarcam\+\_\+test\+\_\+handle\+\_\+new\+\_\+frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$}]{p\+Input\+Ctxt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Function to handle routine of fetching, displaying, and releasing frames when one is available 
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+ctxt} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure 
+\end{DoxyReturn}
+
+
+Definition at line 363 of file qcarcam\+\_\+rvc.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 14
+Here is the caller graph for this function\+:
+% FIG 15
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_a890e54ec2c2b5966688b903e60463af8}\label{qcarcam__rvc_8cpp_a890e54ec2c2b5966688b903e60463af8}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!qcarcam\_test\_post\_to\_display@{qcarcam\_test\_post\_to\_display}}
+\index{qcarcam\_test\_post\_to\_display@{qcarcam\_test\_post\_to\_display}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_test\_post\_to\_display()}{qcarcam\_test\_post\_to\_display()}}
+{\footnotesize\ttfamily static int qcarcam\+\_\+test\+\_\+post\+\_\+to\+\_\+display (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$}]{p\+Input\+Ctxt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 284 of file qcarcam\+\_\+rvc.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 16
+Here is the caller graph for this function\+:
+% FIG 17
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_a0cef3c8b0ec3193eb777f02a792b3d37}\label{qcarcam__rvc_8cpp_a0cef3c8b0ec3193eb777f02a792b3d37}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!qcarcam\_test\_release\_frame@{qcarcam\_test\_release\_frame}}
+\index{qcarcam\_test\_release\_frame@{qcarcam\_test\_release\_frame}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{qcarcam\_test\_release\_frame()}{qcarcam\_test\_release\_frame()}}
+{\footnotesize\ttfamily static int qcarcam\+\_\+test\+\_\+release\+\_\+frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} $\ast$}]{p\+Input\+Ctxt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Release frame back to qcarcam 
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+ctxt} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure 
+\end{DoxyReturn}
+
+
+Definition at line 323 of file qcarcam\+\_\+rvc.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 18
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_a6b28cd44fd84eba3d9c77e9923698172}\label{qcarcam__rvc_8cpp_a6b28cd44fd84eba3d9c77e9923698172}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!QCarCamRVCSystemEventHndlr@{QCarCamRVCSystemEventHndlr}}
+\index{QCarCamRVCSystemEventHndlr@{QCarCamRVCSystemEventHndlr}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{QCarCamRVCSystemEventHndlr()}{QCarCamRVCSystemEventHndlr()}}
+{\footnotesize\ttfamily static QCar\+Cam\+Ret\+\_\+e QCar\+Cam\+RVCSystem\+Event\+Hndlr (\begin{DoxyParamCaption}\item[{const QCar\+Cam\+Hndl\+\_\+t}]{hndl,  }\item[{const uint32\+\_\+t}]{event\+Id,  }\item[{const QCar\+Cam\+Event\+Payload\+\_\+t $\ast$}]{p\+Payload,  }\item[{void $\ast$}]{p\+Private\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 445 of file qcarcam\+\_\+rvc.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 19
+Here is the caller graph for this function\+:
+% FIG 20
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_a73b378210720a237fc32a6baf6519779}\label{qcarcam__rvc_8cpp_a73b378210720a237fc32a6baf6519779}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!setup\_qcarcam\_thread@{setup\_qcarcam\_thread}}
+\index{setup\_qcarcam\_thread@{setup\_qcarcam\_thread}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{setup\_qcarcam\_thread()}{setup\_qcarcam\_thread()}}
+{\footnotesize\ttfamily static int setup\+\_\+qcarcam\+\_\+thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Thread to setup and run qcarcam APIs
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & qcarcam\+\_\+test\+\_\+input\+\_\+t$\ast$ input\+\_\+ctxt \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 614 of file qcarcam\+\_\+rvc.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 21
+Here is the caller graph for this function\+:
+% FIG 22
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_ac15645766f6f26f8e202e60a95e7fc32}\label{qcarcam__rvc_8cpp_ac15645766f6f26f8e202e60a95e7fc32}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!setup\_windowing\_thread@{setup\_windowing\_thread}}
+\index{setup\_windowing\_thread@{setup\_windowing\_thread}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{setup\_windowing\_thread()}{setup\_windowing\_thread()}}
+{\footnotesize\ttfamily static int setup\+\_\+windowing\+\_\+thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Thread to setup and run qcarcam based on test input context
+
+\begin{DoxyNote}{Note}
+For single threaded operation, this function only sets up qcarcam context. QCar\+Cam\+Start and handling of frames is not executed.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & qcarcam\+\_\+test\+\_\+input\+\_\+t$\ast$ input\+\_\+ctxt \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 538 of file qcarcam\+\_\+rvc.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 23
+Here is the caller graph for this function\+:
+% FIG 24
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_a41b09abbb47064fc2e99e992c1b8166d}\label{qcarcam__rvc_8cpp_a41b09abbb47064fc2e99e992c1b8166d}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!signal\_thread@{signal\_thread}}
+\index{signal\_thread@{signal\_thread}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{signal\_thread()}{signal\_thread()}}
+{\footnotesize\ttfamily static int signal\+\_\+thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 186 of file qcarcam\+\_\+rvc.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 25
+Here is the caller graph for this function\+:
+% FIG 26
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_a81c21dd7212e067665f561fd60cb708d}\label{qcarcam__rvc_8cpp_a81c21dd7212e067665f561fd60cb708d}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!timer\_thread@{timer\_thread}}
+\index{timer\_thread@{timer\_thread}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{timer\_thread()}{timer\_thread()}}
+{\footnotesize\ttfamily static int timer\+\_\+thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 166 of file qcarcam\+\_\+rvc.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 27
+Here is the caller graph for this function\+:
+% FIG 28
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_a828766169d7b905b6236ab5e847d0512}\label{qcarcam__rvc_8cpp_a828766169d7b905b6236ab5e847d0512}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!exceptsigs@{exceptsigs}}
+\index{exceptsigs@{exceptsigs}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{exceptsigs}{exceptsigs}}
+{\footnotesize\ttfamily const int exceptsigs\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    SIGCHLD, SIGIO, SIGURG, SIGWINCH,}
+\DoxyCodeLine{    SIGSTOP, SIGTSTP, SIGTTIN, SIGTTOU, SIGCONT,}
+\DoxyCodeLine{    -\/1,}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line 128 of file qcarcam\+\_\+rvc.\+cpp.
+
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_a79b41b2b6a86802ff9a3af59ff15d80b}\label{qcarcam__rvc_8cpp_a79b41b2b6a86802ff9a3af59ff15d80b}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!exitSeconds@{exitSeconds}}
+\index{exitSeconds@{exitSeconds}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{exitSeconds}{exitSeconds}}
+{\footnotesize\ttfamily int exit\+Seconds = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 60 of file qcarcam\+\_\+rvc.\+cpp.
+
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_aee8537645ceeae25abdab2df500380f8}\label{qcarcam__rvc_8cpp_aee8537645ceeae25abdab2df500380f8}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!g\_aborted@{g\_aborted}}
+\index{g\_aborted@{g\_aborted}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_aborted}{g\_aborted}}
+{\footnotesize\ttfamily volatile int g\+\_\+aborted = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 126 of file qcarcam\+\_\+rvc.\+cpp.
+
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_a24903b86d71af2829ca146fed5b00d35}\label{qcarcam__rvc_8cpp_a24903b86d71af2829ca146fed5b00d35}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!gCtxt@{gCtxt}}
+\index{gCtxt@{gCtxt}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{gCtxt}{gCtxt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structqcarcam__test__ctxt__t}{qcarcam\+\_\+test\+\_\+ctxt\+\_\+t}} g\+Ctxt = \{\}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 124 of file qcarcam\+\_\+rvc.\+cpp.
+
+\mbox{\Hypertarget{qcarcam__rvc_8cpp_aafe521836ad7b746f5399a3d37139992}\label{qcarcam__rvc_8cpp_aafe521836ad7b746f5399a3d37139992}} 
+\index{qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}!gRvcInput@{gRvcInput}}
+\index{gRvcInput@{gRvcInput}!qcarcam\_rvc.cpp@{qcarcam\_rvc.cpp}}
+\doxysubsubsection{\texorpdfstring{gRvcInput}{gRvcInput}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structqcarcam__test__input__t}{qcarcam\+\_\+test\+\_\+input\+\_\+t}} g\+Rvc\+Input = \{\}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+STATICS. 
+
+
+
+Definition at line 122 of file qcarcam\+\_\+rvc.\+cpp.
+

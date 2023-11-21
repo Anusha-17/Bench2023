@@ -1,0 +1,231 @@
+\hypertarget{qcx__ccidbgr_8h}{}\doxysection{ccidbgr/src/qcx\+\_\+ccidbgr.h File Reference}
+\label{qcx__ccidbgr_8h}\index{ccidbgr/src/qcx\_ccidbgr.h@{ccidbgr/src/qcx\_ccidbgr.h}}
+
+
+This file declares functions for qcd\+\_\+ccidbgr.  
+
+
+{\ttfamily \#include \char`\"{}qcxplatform.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}qcxplatformcommon.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}qcxstatus.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}qcxplatformi2c.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}qcxlog.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}qcxosal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}qcxosalipc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}qcxosalthread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}platformccidbgr.\+h\char`\"{}}\newline
+Include dependency graph for qcx\+\_\+ccidbgr.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structCCIDbgrConfig__t}{CCIDbgr\+Config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em CCIDbgr config stucture for different mode. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structClientProcInfo__t}{Client\+Proc\+Info\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em CCIDbgr PID for client. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structCCIDbgrCtxt__t}{CCIDbgr\+Ctxt\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em CCIDbgr stucture send from the client with client ID, serverand message information for CCI read/write. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{qcx__ccidbgr_8h_a5ecd90788d5ac87fa763c9d6e9051e90}{IDX\+\_\+\+CCI}}~1U      /$\ast$ CCI Id for read/write             $\ast$/
+\item 
+\#define \mbox{\hyperlink{qcx__ccidbgr_8h_a33c5a60cdc9807b64505a738654c5c73}{IDX\+\_\+\+SLAVE\+\_\+\+ADDR}}~2U      /$\ast$ Slave address                     $\ast$/
+\item 
+\#define \mbox{\hyperlink{qcx__ccidbgr_8h_aa3674a40cc0593037970efc5763ffd37}{IDX\+\_\+\+OP}}~3U      /$\ast$ Operation for read/write          $\ast$/
+\item 
+\#define \mbox{\hyperlink{qcx__ccidbgr_8h_a3b3c18fa98830994d4ce4c7e472bc214}{IDX\+\_\+\+REG}}~4U      /$\ast$ Register to read/write            $\ast$/
+\item 
+\#define \mbox{\hyperlink{qcx__ccidbgr_8h_a8a06340bbda0eb5a4acb096deb23c2eb}{IDX\+\_\+\+VAL}}
+\item 
+\#define \mbox{\hyperlink{qcx__ccidbgr_8h_a69b3b964e4460066988b73ceb6b45221}{IDX\+\_\+\+BURST\+\_\+\+READ\+\_\+\+LEN}}~4U
+\item 
+\#define \mbox{\hyperlink{qcx__ccidbgr_8h_a676b3a1a6efec2b74b6afbdc7968308d}{IDX\+\_\+\+BURST\+\_\+\+WRITE\+\_\+\+LEN}}~4U
+\item 
+\#define \mbox{\hyperlink{qcx__ccidbgr_8h_af8b592e3c14f4cd8d43effc5ae4c7295}{IDX\+\_\+\+BURST\+\_\+\+WRITE\+\_\+\+READ\+\_\+\+LEN}}~6U
+\item 
+\#define \mbox{\hyperlink{qcx__ccidbgr_8h_abaecd8caabb115c7af5985cae78ed52a}{CCIDBGR\+\_\+\+CMD\+\_\+\+SIZE}}~128U    /$\ast$ CCI debugger command size         $\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3}{CCIDbgr\+Parameter\+\_\+e}} \{ \newline
+\mbox{\hyperlink{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3aa635230a47129103649b29fdffd335f2}{CCIDBGR\+\_\+\+PARAMETER\+\_\+\+FIRST}} = 0
+, \mbox{\hyperlink{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3ae8862ae2523567398b39aa5e24c9c0d7}{CCIDBGR\+\_\+\+PARAMETER\+\_\+\+STANDALONE}} = CCIDBGR\+\_\+\+PARAMETER\+\_\+\+FIRST
+, \mbox{\hyperlink{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3abf21e3f486f209d288b715331be2a906}{CCIDBGR\+\_\+\+PARAMETER\+\_\+\+RDFRFILE}}
+, \mbox{\hyperlink{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3a346ac04a90b6e86b0885a0609a0c3392}{CCIDBGR\+\_\+\+PARAMETER\+\_\+\+SLAVEADDRCHECK}}
+, \newline
+\mbox{\hyperlink{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3ab1fd3601093fe8277c831a79c52efe40}{CCIDBGR\+\_\+\+PARAMETER\+\_\+\+CMD\+\_\+\+DELAY}}
+, \mbox{\hyperlink{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3a32855cde44a9c2399ffd2cd85a2b1255}{CCIDBGR\+\_\+\+PARAMETER\+\_\+\+HELP}}
+, \mbox{\hyperlink{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3ab1c4002b264e88a9b8e736c1736f7ba1}{CCIDBGR\+\_\+\+PARAMETER\+\_\+\+MAX}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum for CCIDbgr command line parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file declares functions for qcd\+\_\+ccidbgr. 
+
+================================================================================================
+
+\mbox{\hyperlink{qcx__ccidbgr_8h}{qcx\+\_\+ccidbgr.\+h}}
+
+Copyright (c) 2022 Qualcomm Technologies, Inc. All Rights Reserved. Confidential and Proprietary -\/ Qualcomm Technologies, Inc.
+
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{qcx__ccidbgr_8h_abaecd8caabb115c7af5985cae78ed52a}\label{qcx__ccidbgr_8h_abaecd8caabb115c7af5985cae78ed52a}} 
+\index{qcx\_ccidbgr.h@{qcx\_ccidbgr.h}!CCIDBGR\_CMD\_SIZE@{CCIDBGR\_CMD\_SIZE}}
+\index{CCIDBGR\_CMD\_SIZE@{CCIDBGR\_CMD\_SIZE}!qcx\_ccidbgr.h@{qcx\_ccidbgr.h}}
+\doxysubsubsection{\texorpdfstring{CCIDBGR\_CMD\_SIZE}{CCIDBGR\_CMD\_SIZE}}
+{\footnotesize\ttfamily \#define CCIDBGR\+\_\+\+CMD\+\_\+\+SIZE~128U    /$\ast$ CCI debugger command size         $\ast$/}
+
+
+
+Definition at line 48 of file qcx\+\_\+ccidbgr.\+h.
+
+\mbox{\Hypertarget{qcx__ccidbgr_8h_a69b3b964e4460066988b73ceb6b45221}\label{qcx__ccidbgr_8h_a69b3b964e4460066988b73ceb6b45221}} 
+\index{qcx\_ccidbgr.h@{qcx\_ccidbgr.h}!IDX\_BURST\_READ\_LEN@{IDX\_BURST\_READ\_LEN}}
+\index{IDX\_BURST\_READ\_LEN@{IDX\_BURST\_READ\_LEN}!qcx\_ccidbgr.h@{qcx\_ccidbgr.h}}
+\doxysubsubsection{\texorpdfstring{IDX\_BURST\_READ\_LEN}{IDX\_BURST\_READ\_LEN}}
+{\footnotesize\ttfamily \#define IDX\+\_\+\+BURST\+\_\+\+READ\+\_\+\+LEN~4U}
+
+
+
+Definition at line 44 of file qcx\+\_\+ccidbgr.\+h.
+
+\mbox{\Hypertarget{qcx__ccidbgr_8h_a676b3a1a6efec2b74b6afbdc7968308d}\label{qcx__ccidbgr_8h_a676b3a1a6efec2b74b6afbdc7968308d}} 
+\index{qcx\_ccidbgr.h@{qcx\_ccidbgr.h}!IDX\_BURST\_WRITE\_LEN@{IDX\_BURST\_WRITE\_LEN}}
+\index{IDX\_BURST\_WRITE\_LEN@{IDX\_BURST\_WRITE\_LEN}!qcx\_ccidbgr.h@{qcx\_ccidbgr.h}}
+\doxysubsubsection{\texorpdfstring{IDX\_BURST\_WRITE\_LEN}{IDX\_BURST\_WRITE\_LEN}}
+{\footnotesize\ttfamily \#define IDX\+\_\+\+BURST\+\_\+\+WRITE\+\_\+\+LEN~4U}
+
+
+
+Definition at line 45 of file qcx\+\_\+ccidbgr.\+h.
+
+\mbox{\Hypertarget{qcx__ccidbgr_8h_af8b592e3c14f4cd8d43effc5ae4c7295}\label{qcx__ccidbgr_8h_af8b592e3c14f4cd8d43effc5ae4c7295}} 
+\index{qcx\_ccidbgr.h@{qcx\_ccidbgr.h}!IDX\_BURST\_WRITE\_READ\_LEN@{IDX\_BURST\_WRITE\_READ\_LEN}}
+\index{IDX\_BURST\_WRITE\_READ\_LEN@{IDX\_BURST\_WRITE\_READ\_LEN}!qcx\_ccidbgr.h@{qcx\_ccidbgr.h}}
+\doxysubsubsection{\texorpdfstring{IDX\_BURST\_WRITE\_READ\_LEN}{IDX\_BURST\_WRITE\_READ\_LEN}}
+{\footnotesize\ttfamily \#define IDX\+\_\+\+BURST\+\_\+\+WRITE\+\_\+\+READ\+\_\+\+LEN~6U}
+
+
+
+Definition at line 46 of file qcx\+\_\+ccidbgr.\+h.
+
+\mbox{\Hypertarget{qcx__ccidbgr_8h_a5ecd90788d5ac87fa763c9d6e9051e90}\label{qcx__ccidbgr_8h_a5ecd90788d5ac87fa763c9d6e9051e90}} 
+\index{qcx\_ccidbgr.h@{qcx\_ccidbgr.h}!IDX\_CCI@{IDX\_CCI}}
+\index{IDX\_CCI@{IDX\_CCI}!qcx\_ccidbgr.h@{qcx\_ccidbgr.h}}
+\doxysubsubsection{\texorpdfstring{IDX\_CCI}{IDX\_CCI}}
+{\footnotesize\ttfamily \#define IDX\+\_\+\+CCI~1U      /$\ast$ CCI Id for read/write             $\ast$/}
+
+================================================================================================ \hypertarget{qcx__ccidbgr_8h_autotoc_md7}{}\doxysubsection{INCLUDE FILES FOR MODULE}\label{qcx__ccidbgr_8h_autotoc_md7}
+================================================================================================ \hypertarget{qcx__ccidbgr_8h_autotoc_md8}{}\doxysubsection{Constant and Macros}\label{qcx__ccidbgr_8h_autotoc_md8}
+
+
+Definition at line 39 of file qcx\+\_\+ccidbgr.\+h.
+
+\mbox{\Hypertarget{qcx__ccidbgr_8h_aa3674a40cc0593037970efc5763ffd37}\label{qcx__ccidbgr_8h_aa3674a40cc0593037970efc5763ffd37}} 
+\index{qcx\_ccidbgr.h@{qcx\_ccidbgr.h}!IDX\_OP@{IDX\_OP}}
+\index{IDX\_OP@{IDX\_OP}!qcx\_ccidbgr.h@{qcx\_ccidbgr.h}}
+\doxysubsubsection{\texorpdfstring{IDX\_OP}{IDX\_OP}}
+{\footnotesize\ttfamily \#define IDX\+\_\+\+OP~3U      /$\ast$ Operation for read/write          $\ast$/}
+
+
+
+Definition at line 41 of file qcx\+\_\+ccidbgr.\+h.
+
+\mbox{\Hypertarget{qcx__ccidbgr_8h_a3b3c18fa98830994d4ce4c7e472bc214}\label{qcx__ccidbgr_8h_a3b3c18fa98830994d4ce4c7e472bc214}} 
+\index{qcx\_ccidbgr.h@{qcx\_ccidbgr.h}!IDX\_REG@{IDX\_REG}}
+\index{IDX\_REG@{IDX\_REG}!qcx\_ccidbgr.h@{qcx\_ccidbgr.h}}
+\doxysubsubsection{\texorpdfstring{IDX\_REG}{IDX\_REG}}
+{\footnotesize\ttfamily \#define IDX\+\_\+\+REG~4U      /$\ast$ Register to read/write            $\ast$/}
+
+
+
+Definition at line 42 of file qcx\+\_\+ccidbgr.\+h.
+
+\mbox{\Hypertarget{qcx__ccidbgr_8h_a33c5a60cdc9807b64505a738654c5c73}\label{qcx__ccidbgr_8h_a33c5a60cdc9807b64505a738654c5c73}} 
+\index{qcx\_ccidbgr.h@{qcx\_ccidbgr.h}!IDX\_SLAVE\_ADDR@{IDX\_SLAVE\_ADDR}}
+\index{IDX\_SLAVE\_ADDR@{IDX\_SLAVE\_ADDR}!qcx\_ccidbgr.h@{qcx\_ccidbgr.h}}
+\doxysubsubsection{\texorpdfstring{IDX\_SLAVE\_ADDR}{IDX\_SLAVE\_ADDR}}
+{\footnotesize\ttfamily \#define IDX\+\_\+\+SLAVE\+\_\+\+ADDR~2U      /$\ast$ Slave address                     $\ast$/}
+
+
+
+Definition at line 40 of file qcx\+\_\+ccidbgr.\+h.
+
+\mbox{\Hypertarget{qcx__ccidbgr_8h_a8a06340bbda0eb5a4acb096deb23c2eb}\label{qcx__ccidbgr_8h_a8a06340bbda0eb5a4acb096deb23c2eb}} 
+\index{qcx\_ccidbgr.h@{qcx\_ccidbgr.h}!IDX\_VAL@{IDX\_VAL}}
+\index{IDX\_VAL@{IDX\_VAL}!qcx\_ccidbgr.h@{qcx\_ccidbgr.h}}
+\doxysubsubsection{\texorpdfstring{IDX\_VAL}{IDX\_VAL}}
+{\footnotesize\ttfamily \#define IDX\+\_\+\+VAL}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                               5U      \textcolor{comment}{/* write: value to write, }}
+\DoxyCodeLine{\textcolor{comment}{                                               read: optional no. of consecutive}}
+\DoxyCodeLine{\textcolor{comment}{                                               registers to read                 */}}
+
+\end{DoxyCode}
+
+
+Definition at line 43 of file qcx\+\_\+ccidbgr.\+h.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3}\label{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3}} 
+\index{qcx\_ccidbgr.h@{qcx\_ccidbgr.h}!CCIDbgrParameter\_e@{CCIDbgrParameter\_e}}
+\index{CCIDbgrParameter\_e@{CCIDbgrParameter\_e}!qcx\_ccidbgr.h@{qcx\_ccidbgr.h}}
+\doxysubsubsection{\texorpdfstring{CCIDbgrParameter\_e}{CCIDbgrParameter\_e}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3}{CCIDbgr\+Parameter\+\_\+e}}}
+
+
+
+Enum for CCIDbgr command line parameter. 
+
+================================================================================================ \hypertarget{qcx__ccidbgr_8h_autotoc_md9}{}\doxysubsection{Typedefs}\label{qcx__ccidbgr_8h_autotoc_md9}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CCIDBGR\_PARAMETER\_FIRST@{CCIDBGR\_PARAMETER\_FIRST}!qcx\_ccidbgr.h@{qcx\_ccidbgr.h}}\index{qcx\_ccidbgr.h@{qcx\_ccidbgr.h}!CCIDBGR\_PARAMETER\_FIRST@{CCIDBGR\_PARAMETER\_FIRST}}}\mbox{\Hypertarget{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3aa635230a47129103649b29fdffd335f2}\label{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3aa635230a47129103649b29fdffd335f2}} 
+CCIDBGR\+\_\+\+PARAMETER\+\_\+\+FIRST&Command line first parameter ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CCIDBGR\_PARAMETER\_STANDALONE@{CCIDBGR\_PARAMETER\_STANDALONE}!qcx\_ccidbgr.h@{qcx\_ccidbgr.h}}\index{qcx\_ccidbgr.h@{qcx\_ccidbgr.h}!CCIDBGR\_PARAMETER\_STANDALONE@{CCIDBGR\_PARAMETER\_STANDALONE}}}\mbox{\Hypertarget{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3ae8862ae2523567398b39aa5e24c9c0d7}\label{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3ae8862ae2523567398b39aa5e24c9c0d7}} 
+CCIDBGR\+\_\+\+PARAMETER\+\_\+\+STANDALONE&Command for cci debugger standalone ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CCIDBGR\_PARAMETER\_RDFRFILE@{CCIDBGR\_PARAMETER\_RDFRFILE}!qcx\_ccidbgr.h@{qcx\_ccidbgr.h}}\index{qcx\_ccidbgr.h@{qcx\_ccidbgr.h}!CCIDBGR\_PARAMETER\_RDFRFILE@{CCIDBGR\_PARAMETER\_RDFRFILE}}}\mbox{\Hypertarget{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3abf21e3f486f209d288b715331be2a906}\label{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3abf21e3f486f209d288b715331be2a906}} 
+CCIDBGR\+\_\+\+PARAMETER\+\_\+\+RDFRFILE&Command for read/write from file ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CCIDBGR\_PARAMETER\_SLAVEADDRCHECK@{CCIDBGR\_PARAMETER\_SLAVEADDRCHECK}!qcx\_ccidbgr.h@{qcx\_ccidbgr.h}}\index{qcx\_ccidbgr.h@{qcx\_ccidbgr.h}!CCIDBGR\_PARAMETER\_SLAVEADDRCHECK@{CCIDBGR\_PARAMETER\_SLAVEADDRCHECK}}}\mbox{\Hypertarget{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3a346ac04a90b6e86b0885a0609a0c3392}\label{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3a346ac04a90b6e86b0885a0609a0c3392}} 
+CCIDBGR\+\_\+\+PARAMETER\+\_\+\+SLAVEADDRCHECK&Command to check the active slave addr ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CCIDBGR\_PARAMETER\_CMD\_DELAY@{CCIDBGR\_PARAMETER\_CMD\_DELAY}!qcx\_ccidbgr.h@{qcx\_ccidbgr.h}}\index{qcx\_ccidbgr.h@{qcx\_ccidbgr.h}!CCIDBGR\_PARAMETER\_CMD\_DELAY@{CCIDBGR\_PARAMETER\_CMD\_DELAY}}}\mbox{\Hypertarget{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3ab1fd3601093fe8277c831a79c52efe40}\label{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3ab1fd3601093fe8277c831a79c52efe40}} 
+CCIDBGR\+\_\+\+PARAMETER\+\_\+\+CMD\+\_\+\+DELAY&Command to provide the dealy ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CCIDBGR\_PARAMETER\_HELP@{CCIDBGR\_PARAMETER\_HELP}!qcx\_ccidbgr.h@{qcx\_ccidbgr.h}}\index{qcx\_ccidbgr.h@{qcx\_ccidbgr.h}!CCIDBGR\_PARAMETER\_HELP@{CCIDBGR\_PARAMETER\_HELP}}}\mbox{\Hypertarget{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3a32855cde44a9c2399ffd2cd85a2b1255}\label{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3a32855cde44a9c2399ffd2cd85a2b1255}} 
+CCIDBGR\+\_\+\+PARAMETER\+\_\+\+HELP&Commadn to print the info for read/write \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CCIDBGR\_PARAMETER\_MAX@{CCIDBGR\_PARAMETER\_MAX}!qcx\_ccidbgr.h@{qcx\_ccidbgr.h}}\index{qcx\_ccidbgr.h@{qcx\_ccidbgr.h}!CCIDBGR\_PARAMETER\_MAX@{CCIDBGR\_PARAMETER\_MAX}}}\mbox{\Hypertarget{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3ab1c4002b264e88a9b8e736c1736f7ba1}\label{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3ab1c4002b264e88a9b8e736c1736f7ba1}} 
+CCIDBGR\+\_\+\+PARAMETER\+\_\+\+MAX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 58 of file qcx\+\_\+ccidbgr.\+h.
+

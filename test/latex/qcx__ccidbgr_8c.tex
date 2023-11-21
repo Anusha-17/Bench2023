@@ -1,0 +1,331 @@
+\hypertarget{qcx__ccidbgr_8c}{}\doxysection{ccidbgr/src/qcx\+\_\+ccidbgr.c File Reference}
+\label{qcx__ccidbgr_8c}\index{ccidbgr/src/qcx\_ccidbgr.c@{ccidbgr/src/qcx\_ccidbgr.c}}
+
+
+This file implements the cci application that can R/W cci devices.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$getopt.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}qcx\+\_\+ccidbgr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}qcxosal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}qcxstatus.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}platformccidbgr.\+h\char`\"{}}\newline
+Include dependency graph for qcx\+\_\+ccidbgr.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{qcx__ccidbgr_8c_a2f8195a793783a911a10fff067f1eacd}{CCIDbgr\+\_\+\+Rd\+Wrt\+Standalone}} (void)
+\item 
+static int \mbox{\hyperlink{qcx__ccidbgr_8c_a2a1407de761a09a4ba814112e497495b}{CCIDbgr\+\_\+\+Rd\+Wrt\+With\+QCX}} (void)
+\item 
+static int \mbox{\hyperlink{qcx__ccidbgr_8c_a466b649a0285f8f0b420cd4aff4725b1}{CCIDbgr\+\_\+\+Update\+Cmd\+Op}} (char $\ast$p\+Cmd\+Op)
+\item 
+static int \mbox{\hyperlink{qcx__ccidbgr_8c_a3d909604aaf1501382f0cb6c04a2bb9d}{CCIDbgr\+\_\+\+Parse\+Cmd}} (int arg\+Cnt, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+static int \mbox{\hyperlink{qcx__ccidbgr_8c_ab4dd09aa07e3b9f876ea58294ba4cb22}{CCIDbgr\+\_\+\+Parse\+Cmd\+Info\+Frm\+File}} (char $\ast$p\+Str, int len)
+\item 
+static int \mbox{\hyperlink{qcx__ccidbgr_8c_a670aa2d587eddd3b2d7759e1cec916fe}{CCIDbgr\+\_\+\+Cmd\+Read\+Frm\+File}} (void)
+\item 
+static int \mbox{\hyperlink{qcx__ccidbgr_8c_a6cb992bcbe38a7849972dcf12ff3fe17}{CCIDbgr\+\_\+\+Slave\+Addr\+Check}} (void)
+\item 
+static int \mbox{\hyperlink{qcx__ccidbgr_8c_aebfe96b19c3f14bc421dd83eb4fec7c6}{CCIDbgr\+\_\+\+Standalone\+Deinit}} (void)
+\item 
+static int \mbox{\hyperlink{qcx__ccidbgr_8c_ab63aa690412bd6a35b9e21d706d0ef06}{CCIDbgr\+\_\+\+Standalone\+Init}} (void)
+\item 
+static int \mbox{\hyperlink{qcx__ccidbgr_8c_a26b31ac5b6c8f6ff5952fa289e25e850}{CCIDbgr\+\_\+\+Cmd\+To\+Server}} (\mbox{\hyperlink{structCCIDbgrCtxt__t}{CCIDbgr\+Ctxt\+\_\+t}} $\ast$p\+Client\+Ctxt)
+\item 
+static int \mbox{\hyperlink{qcx__ccidbgr_8c_acd9bf146fd5ec2a466a1009a41ae6fde}{CCIDbgr\+\_\+\+Deinit}} (void)
+\item 
+static int \mbox{\hyperlink{qcx__ccidbgr_8c_a98c048fa6a37895191566e4121f95574}{CCIDbgr\+\_\+\+Channel\+Create}} (void)
+\item 
+static int \mbox{\hyperlink{qcx__ccidbgr_8c_ad4f20b2b1c9b20a63d9d503336b02b7e}{CCIDbgr\+\_\+\+Create\+Client\+Ctxt}} (void)
+\item 
+static int \mbox{\hyperlink{qcx__ccidbgr_8c_a0b2919140dfe1c3a5773a8a71113e22a}{CCIDbgr\+\_\+\+Parse\+Cmd\+Line\+Parameter}} (int arg\+Cnt, char $\ast$arg\mbox{[}$\,$\mbox{]})
+\item 
+int \mbox{\hyperlink{qcx__ccidbgr_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structCCIDbgrCtxt__t}{CCIDbgr\+Ctxt\+\_\+t}} \mbox{\hyperlink{qcx__ccidbgr_8c_aa5f52eaa380b6501afb3d57d473a7074}{g\+\_\+\+CCIDbgr\+Ctxt}} = \{0\}
+\item 
+static struct option \mbox{\hyperlink{qcx__ccidbgr_8c_a86e346bd7f3848453bfea8f9abc91fec}{cci\+Dbgr\+Parameter\+List}} \mbox{[}$\,$\mbox{]}
+\item 
+static uint8\+\_\+t \mbox{\hyperlink{qcx__ccidbgr_8c_a42f1b34e0feedf6542a50eec0b38c249}{burst\+Write\+Array}} \mbox{[}16384 $\ast$2\mbox{]}
+\item 
+static uint8\+\_\+t \mbox{\hyperlink{qcx__ccidbgr_8c_aff94e05d982c622c6e991c06066c9319}{burst\+Read\+Array}} \mbox{[}16384 $\ast$2\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file implements the cci application that can R/W cci devices. 
+
+================================================================================================
+
+\mbox{\hyperlink{qcx__ccidbgr_8c}{qcx\+\_\+ccidbgr.\+c}}
+
+Copyright (c) 2022 Qualcomm Technologies, Inc. All Rights Reserved. Confidential and Proprietary -\/ Qualcomm Technologies, Inc.
+
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{qcx__ccidbgr_8c_a98c048fa6a37895191566e4121f95574}\label{qcx__ccidbgr_8c_a98c048fa6a37895191566e4121f95574}} 
+\index{qcx\_ccidbgr.c@{qcx\_ccidbgr.c}!CCIDbgr\_ChannelCreate@{CCIDbgr\_ChannelCreate}}
+\index{CCIDbgr\_ChannelCreate@{CCIDbgr\_ChannelCreate}!qcx\_ccidbgr.c@{qcx\_ccidbgr.c}}
+\doxysubsubsection{\texorpdfstring{CCIDbgr\_ChannelCreate()}{CCIDbgr\_ChannelCreate()}}
+{\footnotesize\ttfamily static int CCIDbgr\+\_\+\+Channel\+Create (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 307 of file qcx\+\_\+ccidbgr.\+c.
+
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{qcx__ccidbgr_8c_a670aa2d587eddd3b2d7759e1cec916fe}\label{qcx__ccidbgr_8c_a670aa2d587eddd3b2d7759e1cec916fe}} 
+\index{qcx\_ccidbgr.c@{qcx\_ccidbgr.c}!CCIDbgr\_CmdReadFrmFile@{CCIDbgr\_CmdReadFrmFile}}
+\index{CCIDbgr\_CmdReadFrmFile@{CCIDbgr\_CmdReadFrmFile}!qcx\_ccidbgr.c@{qcx\_ccidbgr.c}}
+\doxysubsubsection{\texorpdfstring{CCIDbgr\_CmdReadFrmFile()}{CCIDbgr\_CmdReadFrmFile()}}
+{\footnotesize\ttfamily static int CCIDbgr\+\_\+\+Cmd\+Read\+Frm\+File (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 756 of file qcx\+\_\+ccidbgr.\+c.
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{qcx__ccidbgr_8c_a26b31ac5b6c8f6ff5952fa289e25e850}\label{qcx__ccidbgr_8c_a26b31ac5b6c8f6ff5952fa289e25e850}} 
+\index{qcx\_ccidbgr.c@{qcx\_ccidbgr.c}!CCIDbgr\_CmdToServer@{CCIDbgr\_CmdToServer}}
+\index{CCIDbgr\_CmdToServer@{CCIDbgr\_CmdToServer}!qcx\_ccidbgr.c@{qcx\_ccidbgr.c}}
+\doxysubsubsection{\texorpdfstring{CCIDbgr\_CmdToServer()}{CCIDbgr\_CmdToServer()}}
+{\footnotesize\ttfamily static int CCIDbgr\+\_\+\+Cmd\+To\+Server (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCCIDbgrCtxt__t}{CCIDbgr\+Ctxt\+\_\+t}} $\ast$}]{p\+Client\+Ctxt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 235 of file qcx\+\_\+ccidbgr.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{qcx__ccidbgr_8c_ad4f20b2b1c9b20a63d9d503336b02b7e}\label{qcx__ccidbgr_8c_ad4f20b2b1c9b20a63d9d503336b02b7e}} 
+\index{qcx\_ccidbgr.c@{qcx\_ccidbgr.c}!CCIDbgr\_CreateClientCtxt@{CCIDbgr\_CreateClientCtxt}}
+\index{CCIDbgr\_CreateClientCtxt@{CCIDbgr\_CreateClientCtxt}!qcx\_ccidbgr.c@{qcx\_ccidbgr.c}}
+\doxysubsubsection{\texorpdfstring{CCIDbgr\_CreateClientCtxt()}{CCIDbgr\_CreateClientCtxt()}}
+{\footnotesize\ttfamily static int CCIDbgr\+\_\+\+Create\+Client\+Ctxt (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 76 of file qcx\+\_\+ccidbgr.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{qcx__ccidbgr_8c_acd9bf146fd5ec2a466a1009a41ae6fde}\label{qcx__ccidbgr_8c_acd9bf146fd5ec2a466a1009a41ae6fde}} 
+\index{qcx\_ccidbgr.c@{qcx\_ccidbgr.c}!CCIDbgr\_Deinit@{CCIDbgr\_Deinit}}
+\index{CCIDbgr\_Deinit@{CCIDbgr\_Deinit}!qcx\_ccidbgr.c@{qcx\_ccidbgr.c}}
+\doxysubsubsection{\texorpdfstring{CCIDbgr\_Deinit()}{CCIDbgr\_Deinit()}}
+{\footnotesize\ttfamily static int CCIDbgr\+\_\+\+Deinit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 207 of file qcx\+\_\+ccidbgr.\+c.
+
+Here is the call graph for this function\+:
+% FIG 7
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{qcx__ccidbgr_8c_a3d909604aaf1501382f0cb6c04a2bb9d}\label{qcx__ccidbgr_8c_a3d909604aaf1501382f0cb6c04a2bb9d}} 
+\index{qcx\_ccidbgr.c@{qcx\_ccidbgr.c}!CCIDbgr\_ParseCmd@{CCIDbgr\_ParseCmd}}
+\index{CCIDbgr\_ParseCmd@{CCIDbgr\_ParseCmd}!qcx\_ccidbgr.c@{qcx\_ccidbgr.c}}
+\doxysubsubsection{\texorpdfstring{CCIDbgr\_ParseCmd()}{CCIDbgr\_ParseCmd()}}
+{\footnotesize\ttfamily static int CCIDbgr\+\_\+\+Parse\+Cmd (\begin{DoxyParamCaption}\item[{int}]{arg\+Cnt,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+$<$ Sensor lib device ID
+
+Definition at line 845 of file qcx\+\_\+ccidbgr.\+c.
+
+Here is the call graph for this function\+:
+% FIG 9
+Here is the caller graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{qcx__ccidbgr_8c_ab4dd09aa07e3b9f876ea58294ba4cb22}\label{qcx__ccidbgr_8c_ab4dd09aa07e3b9f876ea58294ba4cb22}} 
+\index{qcx\_ccidbgr.c@{qcx\_ccidbgr.c}!CCIDbgr\_ParseCmdInfoFrmFile@{CCIDbgr\_ParseCmdInfoFrmFile}}
+\index{CCIDbgr\_ParseCmdInfoFrmFile@{CCIDbgr\_ParseCmdInfoFrmFile}!qcx\_ccidbgr.c@{qcx\_ccidbgr.c}}
+\doxysubsubsection{\texorpdfstring{CCIDbgr\_ParseCmdInfoFrmFile()}{CCIDbgr\_ParseCmdInfoFrmFile()}}
+{\footnotesize\ttfamily static int CCIDbgr\+\_\+\+Parse\+Cmd\+Info\+Frm\+File (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+Str,  }\item[{int}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 624 of file qcx\+\_\+ccidbgr.\+c.
+
+Here is the call graph for this function\+:
+% FIG 11
+Here is the caller graph for this function\+:
+% FIG 12
+\mbox{\Hypertarget{qcx__ccidbgr_8c_a0b2919140dfe1c3a5773a8a71113e22a}\label{qcx__ccidbgr_8c_a0b2919140dfe1c3a5773a8a71113e22a}} 
+\index{qcx\_ccidbgr.c@{qcx\_ccidbgr.c}!CCIDbgr\_ParseCmdLineParameter@{CCIDbgr\_ParseCmdLineParameter}}
+\index{CCIDbgr\_ParseCmdLineParameter@{CCIDbgr\_ParseCmdLineParameter}!qcx\_ccidbgr.c@{qcx\_ccidbgr.c}}
+\doxysubsubsection{\texorpdfstring{CCIDbgr\_ParseCmdLineParameter()}{CCIDbgr\_ParseCmdLineParameter()}}
+{\footnotesize\ttfamily static int CCIDbgr\+\_\+\+Parse\+Cmd\+Line\+Parameter (\begin{DoxyParamCaption}\item[{int}]{arg\+Cnt,  }\item[{char $\ast$}]{arg\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 95 of file qcx\+\_\+ccidbgr.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 13
+\mbox{\Hypertarget{qcx__ccidbgr_8c_a2f8195a793783a911a10fff067f1eacd}\label{qcx__ccidbgr_8c_a2f8195a793783a911a10fff067f1eacd}} 
+\index{qcx\_ccidbgr.c@{qcx\_ccidbgr.c}!CCIDbgr\_RdWrtStandalone@{CCIDbgr\_RdWrtStandalone}}
+\index{CCIDbgr\_RdWrtStandalone@{CCIDbgr\_RdWrtStandalone}!qcx\_ccidbgr.c@{qcx\_ccidbgr.c}}
+\doxysubsubsection{\texorpdfstring{CCIDbgr\_RdWrtStandalone()}{CCIDbgr\_RdWrtStandalone()}}
+{\footnotesize\ttfamily static int CCIDbgr\+\_\+\+Rd\+Wrt\+Standalone (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+================================================================================================ \hypertarget{qcx__ccidbgr_8c_autotoc_md5}{}\doxysubsection{DEFINITIONS AND DECLARATIONS}\label{qcx__ccidbgr_8c_autotoc_md5}
+
+
+Definition at line 366 of file qcx\+\_\+ccidbgr.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 14
+\mbox{\Hypertarget{qcx__ccidbgr_8c_a2a1407de761a09a4ba814112e497495b}\label{qcx__ccidbgr_8c_a2a1407de761a09a4ba814112e497495b}} 
+\index{qcx\_ccidbgr.c@{qcx\_ccidbgr.c}!CCIDbgr\_RdWrtWithQCX@{CCIDbgr\_RdWrtWithQCX}}
+\index{CCIDbgr\_RdWrtWithQCX@{CCIDbgr\_RdWrtWithQCX}!qcx\_ccidbgr.c@{qcx\_ccidbgr.c}}
+\doxysubsubsection{\texorpdfstring{CCIDbgr\_RdWrtWithQCX()}{CCIDbgr\_RdWrtWithQCX()}}
+{\footnotesize\ttfamily static int CCIDbgr\+\_\+\+Rd\+Wrt\+With\+QCX (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 490 of file qcx\+\_\+ccidbgr.\+c.
+
+Here is the call graph for this function\+:
+% FIG 15
+Here is the caller graph for this function\+:
+% FIG 16
+\mbox{\Hypertarget{qcx__ccidbgr_8c_a6cb992bcbe38a7849972dcf12ff3fe17}\label{qcx__ccidbgr_8c_a6cb992bcbe38a7849972dcf12ff3fe17}} 
+\index{qcx\_ccidbgr.c@{qcx\_ccidbgr.c}!CCIDbgr\_SlaveAddrCheck@{CCIDbgr\_SlaveAddrCheck}}
+\index{CCIDbgr\_SlaveAddrCheck@{CCIDbgr\_SlaveAddrCheck}!qcx\_ccidbgr.c@{qcx\_ccidbgr.c}}
+\doxysubsubsection{\texorpdfstring{CCIDbgr\_SlaveAddrCheck()}{CCIDbgr\_SlaveAddrCheck()}}
+{\footnotesize\ttfamily static int CCIDbgr\+\_\+\+Slave\+Addr\+Check (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 917 of file qcx\+\_\+ccidbgr.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 17
+\mbox{\Hypertarget{qcx__ccidbgr_8c_aebfe96b19c3f14bc421dd83eb4fec7c6}\label{qcx__ccidbgr_8c_aebfe96b19c3f14bc421dd83eb4fec7c6}} 
+\index{qcx\_ccidbgr.c@{qcx\_ccidbgr.c}!CCIDbgr\_StandaloneDeinit@{CCIDbgr\_StandaloneDeinit}}
+\index{CCIDbgr\_StandaloneDeinit@{CCIDbgr\_StandaloneDeinit}!qcx\_ccidbgr.c@{qcx\_ccidbgr.c}}
+\doxysubsubsection{\texorpdfstring{CCIDbgr\_StandaloneDeinit()}{CCIDbgr\_StandaloneDeinit()}}
+{\footnotesize\ttfamily static int CCIDbgr\+\_\+\+Standalone\+Deinit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 194 of file qcx\+\_\+ccidbgr.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 18
+\mbox{\Hypertarget{qcx__ccidbgr_8c_ab63aa690412bd6a35b9e21d706d0ef06}\label{qcx__ccidbgr_8c_ab63aa690412bd6a35b9e21d706d0ef06}} 
+\index{qcx\_ccidbgr.c@{qcx\_ccidbgr.c}!CCIDbgr\_StandaloneInit@{CCIDbgr\_StandaloneInit}}
+\index{CCIDbgr\_StandaloneInit@{CCIDbgr\_StandaloneInit}!qcx\_ccidbgr.c@{qcx\_ccidbgr.c}}
+\doxysubsubsection{\texorpdfstring{CCIDbgr\_StandaloneInit()}{CCIDbgr\_StandaloneInit()}}
+{\footnotesize\ttfamily static int CCIDbgr\+\_\+\+Standalone\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 182 of file qcx\+\_\+ccidbgr.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 19
+\mbox{\Hypertarget{qcx__ccidbgr_8c_a466b649a0285f8f0b420cd4aff4725b1}\label{qcx__ccidbgr_8c_a466b649a0285f8f0b420cd4aff4725b1}} 
+\index{qcx\_ccidbgr.c@{qcx\_ccidbgr.c}!CCIDbgr\_UpdateCmdOp@{CCIDbgr\_UpdateCmdOp}}
+\index{CCIDbgr\_UpdateCmdOp@{CCIDbgr\_UpdateCmdOp}!qcx\_ccidbgr.c@{qcx\_ccidbgr.c}}
+\doxysubsubsection{\texorpdfstring{CCIDbgr\_UpdateCmdOp()}{CCIDbgr\_UpdateCmdOp()}}
+{\footnotesize\ttfamily static int CCIDbgr\+\_\+\+Update\+Cmd\+Op (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+Cmd\+Op }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 515 of file qcx\+\_\+ccidbgr.\+c.
+
+Here is the caller graph for this function\+:
+% FIG 20
+\mbox{\Hypertarget{qcx__ccidbgr_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{qcx__ccidbgr_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{qcx\_ccidbgr.c@{qcx\_ccidbgr.c}!main@{main}}
+\index{main@{main}!qcx\_ccidbgr.c@{qcx\_ccidbgr.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 924 of file qcx\+\_\+ccidbgr.\+c.
+
+Here is the call graph for this function\+:
+% FIG 21
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{qcx__ccidbgr_8c_aff94e05d982c622c6e991c06066c9319}\label{qcx__ccidbgr_8c_aff94e05d982c622c6e991c06066c9319}} 
+\index{qcx\_ccidbgr.c@{qcx\_ccidbgr.c}!burstReadArray@{burstReadArray}}
+\index{burstReadArray@{burstReadArray}!qcx\_ccidbgr.c@{qcx\_ccidbgr.c}}
+\doxysubsubsection{\texorpdfstring{burstReadArray}{burstReadArray}}
+{\footnotesize\ttfamily uint8\+\_\+t burst\+Read\+Array\mbox{[}16384 $\ast$2\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 56 of file qcx\+\_\+ccidbgr.\+c.
+
+\mbox{\Hypertarget{qcx__ccidbgr_8c_a42f1b34e0feedf6542a50eec0b38c249}\label{qcx__ccidbgr_8c_a42f1b34e0feedf6542a50eec0b38c249}} 
+\index{qcx\_ccidbgr.c@{qcx\_ccidbgr.c}!burstWriteArray@{burstWriteArray}}
+\index{burstWriteArray@{burstWriteArray}!qcx\_ccidbgr.c@{qcx\_ccidbgr.c}}
+\doxysubsubsection{\texorpdfstring{burstWriteArray}{burstWriteArray}}
+{\footnotesize\ttfamily uint8\+\_\+t burst\+Write\+Array\mbox{[}16384 $\ast$2\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 55 of file qcx\+\_\+ccidbgr.\+c.
+
+\mbox{\Hypertarget{qcx__ccidbgr_8c_a86e346bd7f3848453bfea8f9abc91fec}\label{qcx__ccidbgr_8c_a86e346bd7f3848453bfea8f9abc91fec}} 
+\index{qcx\_ccidbgr.c@{qcx\_ccidbgr.c}!cciDbgrParameterList@{cciDbgrParameterList}}
+\index{cciDbgrParameterList@{cciDbgrParameterList}!qcx\_ccidbgr.c@{qcx\_ccidbgr.c}}
+\doxysubsubsection{\texorpdfstring{cciDbgrParameterList}{cciDbgrParameterList}}
+{\footnotesize\ttfamily struct option cci\+Dbgr\+Parameter\+List\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}standalone"{}},       no\_argument,        0,  \mbox{\hyperlink{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3ae8862ae2523567398b39aa5e24c9c0d7}{CCIDBGR\_PARAMETER\_STANDALONE}} \},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}slaveaddresscheck"{}},no\_argument,        0,  \mbox{\hyperlink{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3a346ac04a90b6e86b0885a0609a0c3392}{CCIDBGR\_PARAMETER\_SLAVEADDRCHECK}} \},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}cmdreadfromfile"{}},  required\_argument,  0,  \mbox{\hyperlink{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3abf21e3f486f209d288b715331be2a906}{CCIDBGR\_PARAMETER\_RDFRFILE}} \},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}delay"{}},            required\_argument,  0,  \mbox{\hyperlink{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3ab1fd3601093fe8277c831a79c52efe40}{CCIDBGR\_PARAMETER\_CMD\_DELAY}} \},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}help"{}},             no\_argument,        0,  \mbox{\hyperlink{qcx__ccidbgr_8h_ae5a9ce6cd5c66159c25e3866ed4841b3a32855cde44a9c2399ffd2cd85a2b1255}{CCIDBGR\_PARAMETER\_HELP}} \},}
+\DoxyCodeLine{    \{ 0 \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line 43 of file qcx\+\_\+ccidbgr.\+c.
+
+\mbox{\Hypertarget{qcx__ccidbgr_8c_aa5f52eaa380b6501afb3d57d473a7074}\label{qcx__ccidbgr_8c_aa5f52eaa380b6501afb3d57d473a7074}} 
+\index{qcx\_ccidbgr.c@{qcx\_ccidbgr.c}!g\_CCIDbgrCtxt@{g\_CCIDbgrCtxt}}
+\index{g\_CCIDbgrCtxt@{g\_CCIDbgrCtxt}!qcx\_ccidbgr.c@{qcx\_ccidbgr.c}}
+\doxysubsubsection{\texorpdfstring{g\_CCIDbgrCtxt}{g\_CCIDbgrCtxt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCCIDbgrCtxt__t}{CCIDbgr\+Ctxt\+\_\+t}} g\+\_\+\+CCIDbgr\+Ctxt = \{0\}\hspace{0.3cm}{\ttfamily [static]}}
+
+================================================================================================ \hypertarget{qcx__ccidbgr_8c_autotoc_md1}{}\doxysubsection{INCLUDE FILES FOR MODULE}\label{qcx__ccidbgr_8c_autotoc_md1}
+================================================================================================ \hypertarget{qcx__ccidbgr_8c_autotoc_md2}{}\doxysubsection{Constant and Macros}\label{qcx__ccidbgr_8c_autotoc_md2}
+================================================================================================ \hypertarget{qcx__ccidbgr_8c_autotoc_md3}{}\doxysubsection{Typedefs}\label{qcx__ccidbgr_8c_autotoc_md3}
+================================================================================================ \hypertarget{qcx__ccidbgr_8c_autotoc_md4}{}\doxysubsection{Variables}\label{qcx__ccidbgr_8c_autotoc_md4}
+
+
+Definition at line 43 of file qcx\+\_\+ccidbgr.\+c.
+

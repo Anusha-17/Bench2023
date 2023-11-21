@@ -1,0 +1,5 @@
+Usage: qcarcam_rvc 
+
+QCarCam Rear View Camera test application. Sets up single RVC camera streaming early.
+
+Launch form command line "./qcarcam_rvc"

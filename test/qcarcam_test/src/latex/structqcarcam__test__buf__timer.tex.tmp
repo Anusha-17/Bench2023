@@ -1,0 +1,20 @@
+\hypertarget{structqcarcam__test__buf__timer}{}\doxysection{qcarcam\+\_\+test\+\_\+buf\+\_\+timer Struct Reference}
+\label{structqcarcam__test__buf__timer}\index{qcarcam\_test\_buf\_timer@{qcarcam\_test\_buf\_timer}}
+
+
+Collaboration diagram for qcarcam\+\_\+test\+\_\+buf\+\_\+timer\+:
+% FIG 0
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structqcarcam__test__buf__timer_ae175b284f9251e67d6a237aea287bcbf}\label{structqcarcam__test__buf__timer_ae175b284f9251e67d6a237aea287bcbf}} 
+\mbox{\hyperlink{structtimer__usr__data}{timer\+\_\+usr\+\_\+data}} {\bfseries usr\+\_\+data}
+\item 
+\mbox{\Hypertarget{structqcarcam__test__buf__timer_a1cb69500b5013cad414846afd0205056}\label{structqcarcam__test__buf__timer_a1cb69500b5013cad414846afd0205056}} 
+QCXTimer\+\_\+t {\bfseries ptimer}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+qcarcam\+\_\+test.\+h\end{DoxyCompactItemize}

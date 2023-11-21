@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2022 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+ -->
+
+<qcarcam_inputs>
+    <input_device>
+        <!-- Camera 0 ISP Usecase 2 -->
+        <properties num_inputs="1" request_mode="1">
+            <input qcarcam_id="0" src_id="0" input_mode="0"/>
+        </properties>
+        <isp_setting>
+            <isp_instance id="0" camera_id="0"  use_case="2" />
+        </isp_setting>
+        <stream bufferlist_id="0">
+            <display_setting display_id="0" format="nv12"/>
+            <output_setting nbufs="4" format="nv12"/>
+        </stream>
+        <stream bufferlist_id="1">
+            <display_setting display_id="0" format="plain16_16"/>
+            <output_setting nbufs="4" format="plain16_16"/>
+        </stream>
+    </input_device>
+</qcarcam_inputs>

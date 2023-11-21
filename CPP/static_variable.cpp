@@ -1,3 +1,4 @@
+/*
 #include<iostream>
 using namespace std;
 class static_class
@@ -17,4 +18,24 @@ int main()
 	obj1.i= 2;
 	obj2.i= 3;
 	cout << obj1.i << " " << obj2.i << endl;
+}
+*/
+
+#include<iostream>
+using namespace std;
+class A
+{
+	static int x;
+	public:
+	static int inc()
+	{
+		return ++x;
+	}
+};
+int A:: x=1;
+
+int main()
+{
+	A obj;
+	cout << "x = " << obj.inc() << endl;
 }

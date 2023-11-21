@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2017-2019 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+ -->
+
+<qcarcam_inputs>
+    <input_device>
+        <properties num_inputs="1" request_mode="1">
+            <input qcarcam_id="0" src_id="0" input_mode="0"/>
+        </properties>
+        <stream bufferlist_id="0">
+            <display_setting display_id="0"
+                window_width="0.5" window_height="0.5" window_pos_x="0" window_pos_y="0" />
+            <output_setting nbufs="5"/>
+        </stream>
+    </input_device>
+    <input_device>
+        <properties num_inputs="1" request_mode="1">
+            <input qcarcam_id="1" src_id="0" input_mode="0"/>
+        </properties>
+        <stream bufferlist_id="1">
+            <display_setting display_id="0"
+                window_width="0.5" window_height="0.5" window_pos_x="0.5" window_pos_y="0" />
+            <output_setting nbufs="5"/>
+        </stream>
+    </input_device>
+    <input_device>
+        <properties num_inputs="1" request_mode="1">
+            <input qcarcam_id="2" src_id="0" input_mode="0"/>
+        </properties>
+        <stream bufferlist_id="2">
+            <display_setting display_id="0"
+                window_width="0.5" window_height="0.5" window_pos_x="0" window_pos_y="0.5" />
+            <output_setting nbufs="5"/>
+        </stream>
+    </input_device>
+    <input_device>
+        <properties num_inputs="1" request_mode="1">
+            <input qcarcam_id="3" src_id="0" input_mode="0"/>
+        </properties>
+        <stream bufferlist_id="3">
+            <display_setting display_id="0"
+                window_width="0.5" window_height="0.5" window_pos_x="0.5" window_pos_y="0.5" />
+            <output_setting nbufs="5"/>
+        </stream>
+    </input_device>
+    <input_device>
+        <properties num_inputs="1" request_mode="1">
+            <input qcarcam_id="4" src_id="0" input_mode="0"/>
+        </properties>
+        <stream bufferlist_id="4">
+            <display_setting display_id="1"
+                window_width="0.5" window_height="0.5" window_pos_x="0" window_pos_y="0" />
+            <output_setting nbufs="5"/>
+        </stream>
+    </input_device>
+    <input_device>
+        <properties num_inputs="1" request_mode="1">
+            <input qcarcam_id="5" src_id="0" input_mode="0"/>
+        </properties>
+        <stream bufferlist_id="5">
+            <display_setting display_id="1"
+                window_width="0.5" window_height="0.5" window_pos_x="0.5" window_pos_y="0.5" />
+            <output_setting nbufs="5"/>
+        </stream>
+    </input_device>
+    <input_device>
+        <properties num_inputs="1" request_mode="1">
+            <input qcarcam_id="8" src_id="0" input_mode="0"/>
+        </properties>
+        <stream bufferlist_id="6">
+            <display_setting display_id="1"
+                window_width="0.5" window_height="0.5" window_pos_x="0" window_pos_y="0.5" />
+            <output_setting nbufs="5"/>
+        </stream>
+    </input_device>
+    <input_device>
+        <properties num_inputs="1" request_mode="1">
+            <input qcarcam_id="9" src_id="0" input_mode="0"/>
+        </properties>
+        <stream bufferlist_id="7">
+            <display_setting display_id="1"
+                window_width="0.5" window_height="0.5" window_pos_x="0.5" window_pos_y="0.5" />
+            <output_setting nbufs="5"/>
+        </stream>
+    </input_device>
+</qcarcam_inputs>

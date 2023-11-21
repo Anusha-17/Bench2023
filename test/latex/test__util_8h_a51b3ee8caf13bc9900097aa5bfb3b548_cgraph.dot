@@ -1,0 +1,12 @@
+digraph "test_util_init"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="test_util_init",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Initialize context that is to be used to display content on the screen."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="test_util_register\l_pm_resource",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$test__util__qnx_8cpp.html#ac81419a6be6cf1dfff561a692e10ae2f",tooltip="create power manager channel, register power resource"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="test_util_pm_event\l_handle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$test__util__qnx_8cpp.html#a6a11d4c9ec08f0896cdc06360adbe71d",tooltip="power manager event handle"];
+}

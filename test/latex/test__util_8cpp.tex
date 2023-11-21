@@ -1,0 +1,404 @@
+\hypertarget{test__util_8cpp}{}\doxysection{test\+\_\+util/src/test\+\_\+util.cpp File Reference}
+\label{test__util_8cpp}\index{test\_util/src/test\_util.cpp@{test\_util/src/test\_util.cpp}}
+{\ttfamily \#include \char`\"{}test\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}camera\+\_\+metadata\+\_\+tags.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$libxml/xmlmemory.\+h$>$}\newline
+{\ttfamily \#include $<$libxml/parser.\+h$>$}\newline
+Include dependency graph for test\+\_\+util.\+cpp\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structFmtMappingType}{Fmt\+Mapping\+Type}}
+\item 
+struct \mbox{\hyperlink{structMetadataMappingType}{Metadata\+Mapping\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{test__util_8cpp_a85b035ee7b2a2a291c3ea8461c8df476}{XML\+\_\+\+GET\+\_\+\+INT\+\_\+\+ATTR}}(\+\_\+var\+\_\+,  \+\_\+node\+\_\+,  \+\_\+attr\+\_\+,  \+\_\+opt\+\_\+,  \+\_\+type\+\_\+,  \+\_\+default\+\_\+)
+\item 
+\#define \mbox{\hyperlink{test__util_8cpp_a188dce36bd25aafa932f76f91cbdaa17}{XML\+\_\+\+GET\+\_\+\+FLOAT\+\_\+\+ATTR}}(\+\_\+var\+\_\+,  \+\_\+node\+\_\+,  \+\_\+attr\+\_\+,  \+\_\+opt\+\_\+,  \+\_\+default\+\_\+)
+\item 
+\#define \mbox{\hyperlink{test__util_8cpp_aae6a22e8ed7b21150f233411c9bb6049}{XML\+\_\+\+GET\+\_\+\+STRING\+\_\+\+ATTR}}(\+\_\+var\+\_\+,  \+\_\+node\+\_\+,  \+\_\+attr\+\_\+,  \+\_\+opt\+\_\+,  \+\_\+default\+\_\+)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{test__util_8cpp_adae9033c0a4d70f0f1d6c9d61d0f3f16}{parse\+\_\+isp\+\_\+metadata\+\_\+tag\+\_\+element}} (xml\+Node\+Ptr cur, \mbox{\hyperlink{structtest__util__metadata__tag__t}{test\+\_\+util\+\_\+metadata\+\_\+tag\+\_\+t}} $\ast$p\+Tag)
+\item 
+static QCar\+Cam\+Color\+Fmt\+\_\+e \mbox{\hyperlink{test__util_8cpp_ae571a7da4242322f10141e3a8e4a7583}{parse\+\_\+output\+\_\+format}} (xml\+Node\+Ptr cur)
+\item 
+static \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169d}{test\+\_\+util\+\_\+color\+\_\+fmt\+\_\+t}} \mbox{\hyperlink{test__util_8cpp_a2f1d5926feb78a375a9bd7e75e792727}{translate\+\_\+format\+\_\+string}} (char $\ast$format)
+\item 
+void \mbox{\hyperlink{test__util_8cpp_a4606454b55c3db0b58b808055b0104a2}{test\+\_\+util\+\_\+di\+\_\+sw\+\_\+weave\+\_\+30fps}} (\mbox{\hyperlink{structtest__util__sw__di__t}{test\+\_\+util\+\_\+sw\+\_\+di\+\_\+t}} $\ast$di\+\_\+info)
+\begin{DoxyCompactList}\small\item\em Deinterlace 2 fields from souce buf into dest new frame with software weave 30fps method. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{test__util_8cpp_af191fa716bf470a155954df1896c5bf0}{parse\+\_\+input\+\_\+instance\+\_\+element}} (xml\+Doc\+Ptr doc, xml\+Node\+Ptr cur, QCar\+Cam\+Input\+Stream\+\_\+t $\ast$input\+\_\+config)
+\item 
+static int \mbox{\hyperlink{test__util_8cpp_ae02ec24023326e4e5b3f6321f8bcaa25}{parse\+\_\+isp\+\_\+instance\+\_\+element}} (xml\+Doc\+Ptr doc, xml\+Node\+Ptr cur, QCar\+Cam\+Isp\+Usecase\+Config\+\_\+t $\ast$isp\+\_\+config)
+\item 
+static int \mbox{\hyperlink{test__util_8cpp_a1d46fc9f0916dae6b1ccf0ce09740d5e}{parse\+\_\+stream\+\_\+element}} (xml\+Doc\+Ptr doc, xml\+Node\+Ptr cur, \mbox{\hyperlink{structtest__util__stream__input__t}{test\+\_\+util\+\_\+stream\+\_\+input\+\_\+t}} $\ast$stream\+\_\+params, int num\+Instances)
+\item 
+static int \mbox{\hyperlink{test__util_8cpp_ab978d5f523028c027df2aead0822cee4}{parse\+\_\+input\+\_\+element}} (xml\+Doc\+Ptr doc, xml\+Node\+Ptr parent, \mbox{\hyperlink{structtest__util__xml__input__t}{test\+\_\+util\+\_\+xml\+\_\+input\+\_\+t}} $\ast$input)
+\item 
+static int \mbox{\hyperlink{test__util_8cpp_a55a2ff7ba3513e4271a911892a4fe018}{parse\+\_\+latency\+\_\+mode}} (xml\+Doc\+Ptr doc, xml\+Node\+Ptr parent, \mbox{\hyperlink{structtest__util__global__config__t}{test\+\_\+util\+\_\+global\+\_\+config\+\_\+t}} $\ast$global\+\_\+config)
+\item 
+static int \mbox{\hyperlink{test__util_8cpp_adbd24a5adf8a7eca56d2a8f35472fe59}{string2\+Tag\+ID}} (const char $\ast$psz, \mbox{\hyperlink{structtest__util__metadata__tag__t}{test\+\_\+util\+\_\+metadata\+\_\+tag\+\_\+t}} $\ast$p\+Tag)
+\item 
+int \mbox{\hyperlink{test__util_8cpp_aab74150c272950a78aa6d9628415a441}{test\+\_\+util\+\_\+parse\+\_\+xml\+\_\+config\+\_\+file}} (const char $\ast$filename, \mbox{\hyperlink{structtest__util__xml__input__t}{test\+\_\+util\+\_\+xml\+\_\+input\+\_\+t}} $\ast$xml\+\_\+inputs, unsigned int max\+\_\+num\+\_\+inputs)
+\begin{DoxyCompactList}\small\item\em Parse XML config file for qcarcam\+\_\+test. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{test__util_8cpp_a52f8debbad2906d3daf2c3bd842614a5}{test\+\_\+util\+\_\+parse\+\_\+xml\+\_\+config\+\_\+file\+\_\+v2}} (const char $\ast$filename, \mbox{\hyperlink{structtest__util__xml__input__t}{test\+\_\+util\+\_\+xml\+\_\+input\+\_\+t}} $\ast$xml\+\_\+inputs, unsigned int max\+\_\+num\+\_\+inputs, \mbox{\hyperlink{structtest__util__global__config__t}{test\+\_\+util\+\_\+global\+\_\+config\+\_\+t}} $\ast$global\+\_\+config)
+\item 
+int \mbox{\hyperlink{test__util_8cpp_a06f05ebbc1d296b0a761d50b839ca67a}{test\+\_\+util\+\_\+get\+\_\+time}} (unsigned long long $\ast$p\+Time)
+\begin{DoxyCompactList}\small\item\em Get current time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structFmtMappingType}{Fmt\+Mapping\+Type}} \mbox{\hyperlink{test__util_8cpp_a266891a36d509fafc649be1b8be2e724}{sg\+\_\+output\+Format\+Table}} \mbox{[}$\,$\mbox{]}
+\item 
+static \mbox{\hyperlink{structMetadataMappingType}{Metadata\+Mapping\+Type}} \mbox{\hyperlink{test__util_8cpp_a1a0f0c23c3932e1aa382705505d2aa21}{sg\+\_\+metadata\+Map\+Table}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{test__util_8cpp_a188dce36bd25aafa932f76f91cbdaa17}\label{test__util_8cpp_a188dce36bd25aafa932f76f91cbdaa17}} 
+\index{test\_util.cpp@{test\_util.cpp}!XML\_GET\_FLOAT\_ATTR@{XML\_GET\_FLOAT\_ATTR}}
+\index{XML\_GET\_FLOAT\_ATTR@{XML\_GET\_FLOAT\_ATTR}!test\_util.cpp@{test\_util.cpp}}
+\doxysubsubsection{\texorpdfstring{XML\_GET\_FLOAT\_ATTR}{XML\_GET\_FLOAT\_ATTR}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+GET\+\_\+\+FLOAT\+\_\+\+ATTR(\begin{DoxyParamCaption}\item[{}]{\+\_\+var\+\_\+,  }\item[{}]{\+\_\+node\+\_\+,  }\item[{}]{\+\_\+attr\+\_\+,  }\item[{}]{\+\_\+opt\+\_\+,  }\item[{}]{\+\_\+default\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{    xmlChar* \_p\_ = xmlGetProp(\_node\_, (\textcolor{keyword}{const} xmlChar *)\_attr\_); \(\backslash\)}
+\DoxyCodeLine{    if (\_p\_) \{ \(\backslash\)}
+\DoxyCodeLine{        \_var\_ = strtof((\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)\_p\_, NULL); \(\backslash\)}
+\DoxyCodeLine{        xmlFree(\_p\_); \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\_opt\_) \{\(\backslash\)}
+\DoxyCodeLine{        \_var\_ = \_default\_; \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{else}  \{ \(\backslash\)}
+\DoxyCodeLine{        QCARCAM\_ERRORMSG(\textcolor{stringliteral}{"{}could not get attribute "{}} \_attr\_); \(\backslash\)}
+\DoxyCodeLine{        return -\/1; \(\backslash\)}
+\DoxyCodeLine{    \} \(\backslash\)}
+\DoxyCodeLine{\} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Definition at line 35 of file test\+\_\+util.\+cpp.
+
+\mbox{\Hypertarget{test__util_8cpp_a85b035ee7b2a2a291c3ea8461c8df476}\label{test__util_8cpp_a85b035ee7b2a2a291c3ea8461c8df476}} 
+\index{test\_util.cpp@{test\_util.cpp}!XML\_GET\_INT\_ATTR@{XML\_GET\_INT\_ATTR}}
+\index{XML\_GET\_INT\_ATTR@{XML\_GET\_INT\_ATTR}!test\_util.cpp@{test\_util.cpp}}
+\doxysubsubsection{\texorpdfstring{XML\_GET\_INT\_ATTR}{XML\_GET\_INT\_ATTR}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+GET\+\_\+\+INT\+\_\+\+ATTR(\begin{DoxyParamCaption}\item[{}]{\+\_\+var\+\_\+,  }\item[{}]{\+\_\+node\+\_\+,  }\item[{}]{\+\_\+attr\+\_\+,  }\item[{}]{\+\_\+opt\+\_\+,  }\item[{}]{\+\_\+type\+\_\+,  }\item[{}]{\+\_\+default\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{    xmlChar* \_p\_ = xmlGetProp(\_node\_, (\textcolor{keyword}{const} xmlChar *)\_attr\_); \(\backslash\)}
+\DoxyCodeLine{    if (\_p\_) \{ \(\backslash\)}
+\DoxyCodeLine{        \_var\_ = (\_type\_)strtoul((\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)\_p\_, NULL, 0); \(\backslash\)}
+\DoxyCodeLine{        xmlFree(\_p\_); \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\_opt\_) \{\(\backslash\)}
+\DoxyCodeLine{        \_var\_ = (\_type\_)\_default\_; \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{else}  \{ \(\backslash\)}
+\DoxyCodeLine{        QCARCAM\_ERRORMSG(\textcolor{stringliteral}{"{}could not get attribute "{}} \_attr\_); \(\backslash\)}
+\DoxyCodeLine{        return -\/1; \(\backslash\)}
+\DoxyCodeLine{    \} \(\backslash\)}
+\DoxyCodeLine{\} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Definition at line 21 of file test\+\_\+util.\+cpp.
+
+\mbox{\Hypertarget{test__util_8cpp_aae6a22e8ed7b21150f233411c9bb6049}\label{test__util_8cpp_aae6a22e8ed7b21150f233411c9bb6049}} 
+\index{test\_util.cpp@{test\_util.cpp}!XML\_GET\_STRING\_ATTR@{XML\_GET\_STRING\_ATTR}}
+\index{XML\_GET\_STRING\_ATTR@{XML\_GET\_STRING\_ATTR}!test\_util.cpp@{test\_util.cpp}}
+\doxysubsubsection{\texorpdfstring{XML\_GET\_STRING\_ATTR}{XML\_GET\_STRING\_ATTR}}
+{\footnotesize\ttfamily \#define XML\+\_\+\+GET\+\_\+\+STRING\+\_\+\+ATTR(\begin{DoxyParamCaption}\item[{}]{\+\_\+var\+\_\+,  }\item[{}]{\+\_\+node\+\_\+,  }\item[{}]{\+\_\+attr\+\_\+,  }\item[{}]{\+\_\+opt\+\_\+,  }\item[{}]{\+\_\+default\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{    xmlChar* \_p\_ = xmlGetProp(\_node\_, (\textcolor{keyword}{const} xmlChar *)\_attr\_); \(\backslash\)}
+\DoxyCodeLine{    if (\_p\_) \{ \(\backslash\)}
+\DoxyCodeLine{        snprintf(\_var\_, \textcolor{keyword}{sizeof}(\_var\_), \textcolor{stringliteral}{"{}\%s"{}}, \_p\_); \(\backslash\)}
+\DoxyCodeLine{        xmlFree(\_p\_); \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\_opt\_) \{\(\backslash\)}
+\DoxyCodeLine{        snprintf(\_var\_, \textcolor{keyword}{sizeof}(\_var\_), \textcolor{stringliteral}{"{}\%s"{}}, \_default\_); \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{else}  \{ \(\backslash\)}
+\DoxyCodeLine{        QCARCAM\_ERRORMSG(\textcolor{stringliteral}{"{}could not get attribute "{}} \_attr\_); \(\backslash\)}
+\DoxyCodeLine{        return -\/1; \(\backslash\)}
+\DoxyCodeLine{    \} \(\backslash\)}
+\DoxyCodeLine{\} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Definition at line 49 of file test\+\_\+util.\+cpp.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__util_8cpp_ab978d5f523028c027df2aead0822cee4}\label{test__util_8cpp_ab978d5f523028c027df2aead0822cee4}} 
+\index{test\_util.cpp@{test\_util.cpp}!parse\_input\_element@{parse\_input\_element}}
+\index{parse\_input\_element@{parse\_input\_element}!test\_util.cpp@{test\_util.cpp}}
+\doxysubsubsection{\texorpdfstring{parse\_input\_element()}{parse\_input\_element()}}
+{\footnotesize\ttfamily static int parse\+\_\+input\+\_\+element (\begin{DoxyParamCaption}\item[{xml\+Doc\+Ptr}]{doc,  }\item[{xml\+Node\+Ptr}]{parent,  }\item[{\mbox{\hyperlink{structtest__util__xml__input__t}{test\+\_\+util\+\_\+xml\+\_\+input\+\_\+t}} $\ast$}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 393 of file test\+\_\+util.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{test__util_8cpp_af191fa716bf470a155954df1896c5bf0}\label{test__util_8cpp_af191fa716bf470a155954df1896c5bf0}} 
+\index{test\_util.cpp@{test\_util.cpp}!parse\_input\_instance\_element@{parse\_input\_instance\_element}}
+\index{parse\_input\_instance\_element@{parse\_input\_instance\_element}!test\_util.cpp@{test\_util.cpp}}
+\doxysubsubsection{\texorpdfstring{parse\_input\_instance\_element()}{parse\_input\_instance\_element()}}
+{\footnotesize\ttfamily static int parse\+\_\+input\+\_\+instance\+\_\+element (\begin{DoxyParamCaption}\item[{xml\+Doc\+Ptr}]{doc,  }\item[{xml\+Node\+Ptr}]{cur,  }\item[{QCar\+Cam\+Input\+Stream\+\_\+t $\ast$}]{input\+\_\+config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 325 of file test\+\_\+util.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{test__util_8cpp_ae02ec24023326e4e5b3f6321f8bcaa25}\label{test__util_8cpp_ae02ec24023326e4e5b3f6321f8bcaa25}} 
+\index{test\_util.cpp@{test\_util.cpp}!parse\_isp\_instance\_element@{parse\_isp\_instance\_element}}
+\index{parse\_isp\_instance\_element@{parse\_isp\_instance\_element}!test\_util.cpp@{test\_util.cpp}}
+\doxysubsubsection{\texorpdfstring{parse\_isp\_instance\_element()}{parse\_isp\_instance\_element()}}
+{\footnotesize\ttfamily static int parse\+\_\+isp\+\_\+instance\+\_\+element (\begin{DoxyParamCaption}\item[{xml\+Doc\+Ptr}]{doc,  }\item[{xml\+Node\+Ptr}]{cur,  }\item[{QCar\+Cam\+Isp\+Usecase\+Config\+\_\+t $\ast$}]{isp\+\_\+config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 334 of file test\+\_\+util.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{test__util_8cpp_adae9033c0a4d70f0f1d6c9d61d0f3f16}\label{test__util_8cpp_adae9033c0a4d70f0f1d6c9d61d0f3f16}} 
+\index{test\_util.cpp@{test\_util.cpp}!parse\_isp\_metadata\_tag\_element@{parse\_isp\_metadata\_tag\_element}}
+\index{parse\_isp\_metadata\_tag\_element@{parse\_isp\_metadata\_tag\_element}!test\_util.cpp@{test\_util.cpp}}
+\doxysubsubsection{\texorpdfstring{parse\_isp\_metadata\_tag\_element()}{parse\_isp\_metadata\_tag\_element()}}
+{\footnotesize\ttfamily static int parse\+\_\+isp\+\_\+metadata\+\_\+tag\+\_\+element (\begin{DoxyParamCaption}\item[{xml\+Node\+Ptr}]{cur,  }\item[{\mbox{\hyperlink{structtest__util__metadata__tag__t}{test\+\_\+util\+\_\+metadata\+\_\+tag\+\_\+t}} $\ast$}]{p\+Tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 590 of file test\+\_\+util.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{test__util_8cpp_a55a2ff7ba3513e4271a911892a4fe018}\label{test__util_8cpp_a55a2ff7ba3513e4271a911892a4fe018}} 
+\index{test\_util.cpp@{test\_util.cpp}!parse\_latency\_mode@{parse\_latency\_mode}}
+\index{parse\_latency\_mode@{parse\_latency\_mode}!test\_util.cpp@{test\_util.cpp}}
+\doxysubsubsection{\texorpdfstring{parse\_latency\_mode()}{parse\_latency\_mode()}}
+{\footnotesize\ttfamily static int parse\+\_\+latency\+\_\+mode (\begin{DoxyParamCaption}\item[{xml\+Doc\+Ptr}]{doc,  }\item[{xml\+Node\+Ptr}]{parent,  }\item[{\mbox{\hyperlink{structtest__util__global__config__t}{test\+\_\+util\+\_\+global\+\_\+config\+\_\+t}} $\ast$}]{global\+\_\+config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 548 of file test\+\_\+util.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{test__util_8cpp_ae571a7da4242322f10141e3a8e4a7583}\label{test__util_8cpp_ae571a7da4242322f10141e3a8e4a7583}} 
+\index{test\_util.cpp@{test\_util.cpp}!parse\_output\_format@{parse\_output\_format}}
+\index{parse\_output\_format@{parse\_output\_format}!test\_util.cpp@{test\_util.cpp}}
+\doxysubsubsection{\texorpdfstring{parse\_output\_format()}{parse\_output\_format()}}
+{\footnotesize\ttfamily static QCar\+Cam\+Color\+Fmt\+\_\+e parse\+\_\+output\+\_\+format (\begin{DoxyParamCaption}\item[{xml\+Node\+Ptr}]{cur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 167 of file test\+\_\+util.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{test__util_8cpp_a1d46fc9f0916dae6b1ccf0ce09740d5e}\label{test__util_8cpp_a1d46fc9f0916dae6b1ccf0ce09740d5e}} 
+\index{test\_util.cpp@{test\_util.cpp}!parse\_stream\_element@{parse\_stream\_element}}
+\index{parse\_stream\_element@{parse\_stream\_element}!test\_util.cpp@{test\_util.cpp}}
+\doxysubsubsection{\texorpdfstring{parse\_stream\_element()}{parse\_stream\_element()}}
+{\footnotesize\ttfamily static int parse\+\_\+stream\+\_\+element (\begin{DoxyParamCaption}\item[{xml\+Doc\+Ptr}]{doc,  }\item[{xml\+Node\+Ptr}]{cur,  }\item[{\mbox{\hyperlink{structtest__util__stream__input__t}{test\+\_\+util\+\_\+stream\+\_\+input\+\_\+t}} $\ast$}]{stream\+\_\+params,  }\item[{int}]{num\+Instances }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 345 of file test\+\_\+util.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 9
+Here is the caller graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{test__util_8cpp_adbd24a5adf8a7eca56d2a8f35472fe59}\label{test__util_8cpp_adbd24a5adf8a7eca56d2a8f35472fe59}} 
+\index{test\_util.cpp@{test\_util.cpp}!string2TagID@{string2TagID}}
+\index{string2TagID@{string2TagID}!test\_util.cpp@{test\_util.cpp}}
+\doxysubsubsection{\texorpdfstring{string2TagID()}{string2TagID()}}
+{\footnotesize\ttfamily static int string2\+Tag\+ID (\begin{DoxyParamCaption}\item[{const char $\ast$}]{psz,  }\item[{\mbox{\hyperlink{structtest__util__metadata__tag__t}{test\+\_\+util\+\_\+metadata\+\_\+tag\+\_\+t}} $\ast$}]{p\+Tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 562 of file test\+\_\+util.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{test__util_8cpp_a4606454b55c3db0b58b808055b0104a2}\label{test__util_8cpp_a4606454b55c3db0b58b808055b0104a2}} 
+\index{test\_util.cpp@{test\_util.cpp}!test\_util\_di\_sw\_weave\_30fps@{test\_util\_di\_sw\_weave\_30fps}}
+\index{test\_util\_di\_sw\_weave\_30fps@{test\_util\_di\_sw\_weave\_30fps}!test\_util.cpp@{test\_util.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_util\_di\_sw\_weave\_30fps()}{test\_util\_di\_sw\_weave\_30fps()}}
+{\footnotesize\ttfamily void test\+\_\+util\+\_\+di\+\_\+sw\+\_\+weave\+\_\+30fps (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtest__util__sw__di__t}{test\+\_\+util\+\_\+sw\+\_\+di\+\_\+t}} $\ast$}]{di\+\_\+info }\end{DoxyParamCaption})}
+
+
+
+Deinterlace 2 fields from souce buf into dest new frame with software weave 30fps method. 
+
+test\+\_\+util\+\_\+di\+\_\+sw\+\_\+weave\+\_\+30fps
+
+
+\begin{DoxyParams}{Parameters}
+{\em di\+\_\+info} & Input souce/dest buffer context \\
+\hline
+{\em test\+\_\+util\+\_\+get\+\_\+buf\+\_\+ptr\+\_\+func} & Helper func to get source/destination buffer virtual address\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void 
+\end{DoxyReturn}
+
+
+Definition at line 279 of file test\+\_\+util.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 12
+Here is the caller graph for this function\+:
+% FIG 13
+\mbox{\Hypertarget{test__util_8cpp_a06f05ebbc1d296b0a761d50b839ca67a}\label{test__util_8cpp_a06f05ebbc1d296b0a761d50b839ca67a}} 
+\index{test\_util.cpp@{test\_util.cpp}!test\_util\_get\_time@{test\_util\_get\_time}}
+\index{test\_util\_get\_time@{test\_util\_get\_time}!test\_util.cpp@{test\_util.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_util\_get\_time()}{test\_util\_get\_time()}}
+{\footnotesize\ttfamily int test\+\_\+util\+\_\+get\+\_\+time (\begin{DoxyParamCaption}\item[{unsigned long long $\ast$}]{p\+Time }\end{DoxyParamCaption})}
+
+
+
+Get current time. 
+
+test\+\_\+util\+\_\+get\+\_\+time
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Time} & Pointer to current time\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 956 of file test\+\_\+util.\+cpp.
+
+\mbox{\Hypertarget{test__util_8cpp_aab74150c272950a78aa6d9628415a441}\label{test__util_8cpp_aab74150c272950a78aa6d9628415a441}} 
+\index{test\_util.cpp@{test\_util.cpp}!test\_util\_parse\_xml\_config\_file@{test\_util\_parse\_xml\_config\_file}}
+\index{test\_util\_parse\_xml\_config\_file@{test\_util\_parse\_xml\_config\_file}!test\_util.cpp@{test\_util.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_util\_parse\_xml\_config\_file()}{test\_util\_parse\_xml\_config\_file()}}
+{\footnotesize\ttfamily int test\+\_\+util\+\_\+parse\+\_\+xml\+\_\+config\+\_\+file (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{\mbox{\hyperlink{structtest__util__xml__input__t}{test\+\_\+util\+\_\+xml\+\_\+input\+\_\+t}} $\ast$}]{inputs,  }\item[{unsigned int}]{max\+\_\+num\+\_\+inputs }\end{DoxyParamCaption})}
+
+
+
+Parse XML config file for qcarcam\+\_\+test. 
+
+parse\+\_\+xml\+\_\+config\+\_\+file
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Char pointer to XML config file name \\
+\hline
+{\em inputs} & Pointer to struct to store parsed inputs parameters \\
+\hline
+{\em max\+\_\+num\+\_\+inputs} & Maximum number of inputs to be parsed from config file \\
+\hline
+{\em global\+\_\+config} & Global xml configurations\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QCARCAM\+\_\+\+RET\+\_\+\+OK if successful 
+\end{DoxyReturn}
+
+
+Definition at line 616 of file test\+\_\+util.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 14
+\mbox{\Hypertarget{test__util_8cpp_a52f8debbad2906d3daf2c3bd842614a5}\label{test__util_8cpp_a52f8debbad2906d3daf2c3bd842614a5}} 
+\index{test\_util.cpp@{test\_util.cpp}!test\_util\_parse\_xml\_config\_file\_v2@{test\_util\_parse\_xml\_config\_file\_v2}}
+\index{test\_util\_parse\_xml\_config\_file\_v2@{test\_util\_parse\_xml\_config\_file\_v2}!test\_util.cpp@{test\_util.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_util\_parse\_xml\_config\_file\_v2()}{test\_util\_parse\_xml\_config\_file\_v2()}}
+{\footnotesize\ttfamily int test\+\_\+util\+\_\+parse\+\_\+xml\+\_\+config\+\_\+file\+\_\+v2 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{\mbox{\hyperlink{structtest__util__xml__input__t}{test\+\_\+util\+\_\+xml\+\_\+input\+\_\+t}} $\ast$}]{xml\+\_\+inputs,  }\item[{unsigned int}]{max\+\_\+num\+\_\+inputs,  }\item[{\mbox{\hyperlink{structtest__util__global__config__t}{test\+\_\+util\+\_\+global\+\_\+config\+\_\+t}} $\ast$}]{global\+\_\+config }\end{DoxyParamCaption})}
+
+
+
+Definition at line 621 of file test\+\_\+util.\+cpp.
+
+Here is the call graph for this function\+:
+% FIG 15
+Here is the caller graph for this function\+:
+% FIG 16
+\mbox{\Hypertarget{test__util_8cpp_a2f1d5926feb78a375a9bd7e75e792727}\label{test__util_8cpp_a2f1d5926feb78a375a9bd7e75e792727}} 
+\index{test\_util.cpp@{test\_util.cpp}!translate\_format\_string@{translate\_format\_string}}
+\index{translate\_format\_string@{translate\_format\_string}!test\_util.cpp@{test\_util.cpp}}
+\doxysubsubsection{\texorpdfstring{translate\_format\_string()}{translate\_format\_string()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{test__util__common_8h_a5712e6a46bef25478ef45eada070169d}{test\+\_\+util\+\_\+color\+\_\+fmt\+\_\+t}} translate\+\_\+format\+\_\+string (\begin{DoxyParamCaption}\item[{char $\ast$}]{format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 196 of file test\+\_\+util.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 17
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{test__util_8cpp_a1a0f0c23c3932e1aa382705505d2aa21}\label{test__util_8cpp_a1a0f0c23c3932e1aa382705505d2aa21}} 
+\index{test\_util.cpp@{test\_util.cpp}!sg\_metadataMapTable@{sg\_metadataMapTable}}
+\index{sg\_metadataMapTable@{sg\_metadataMapTable}!test\_util.cpp@{test\_util.cpp}}
+\doxysubsubsection{\texorpdfstring{sg\_metadataMapTable}{sg\_metadataMapTable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structMetadataMappingType}{Metadata\+Mapping\+Type}} sg\+\_\+metadata\+Map\+Table\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}ANDROID\_CONTROL\_AE\_MODE"{}}, ANDROID\_CONTROL\_AE\_MODE\},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}ANDROID\_CONTROL\_AE\_LOCK"{}}, ANDROID\_CONTROL\_AE\_LOCK\},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}ANDROID\_CONTROL\_AWB\_MODE"{}}, ANDROID\_CONTROL\_AWB\_MODE\},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}ANDROID\_CONTROL\_AWB\_LOCK"{}}, ANDROID\_CONTROL\_AWB\_LOCK\},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}ANDROID\_CONTROL\_EFFECT\_MODE"{}}, ANDROID\_CONTROL\_EFFECT\_MODE\},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}ANDROID\_CONTROL\_MODE"{}}, ANDROID\_CONTROL\_MODE\},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}ANDROID\_CONTROL\_SCENE\_MODE"{}}, ANDROID\_CONTROL\_SCENE\_MODE\},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}ANDROID\_CONTROL\_AE\_ANTIBANDING\_MODE"{}}, ANDROID\_CONTROL\_AE\_ANTIBANDING\_MODE\},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}ANDROID\_CONTROL\_AE\_EXPOSURE\_COMPENSATION"{}}, ANDROID\_CONTROL\_AE\_EXPOSURE\_COMPENSATION\},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}ANDROID\_CONTROL\_AE\_REGIONS"{}}, ANDROID\_CONTROL\_AE\_REGIONS\},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}ANDROID\_NOISE\_REDUCTION\_MODE"{}}, ANDROID\_NOISE\_REDUCTION\_MODE\},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}QCARCAM\_METADATA\_TAG\_SATURATION\_LEVEL"{}}, QCARCAM\_METADATA\_TAG\_SATURATION\_LEVEL, 1\},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}QCARCAM\_METADATA\_TAG\_CONTRAST\_LEVEL"{}}, QCARCAM\_METADATA\_TAG\_CONTRAST\_LEVEL, 1\},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}QCARCAM\_METADATA\_TAG\_SHARPNESS\_STRENGTH"{}}, QCARCAM\_METADATA\_TAG\_SHARPNESS\_STRENGTH, 1\},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}QCARCAM\_METADATA\_TAG\_ICA\_LDC\_TRANSFORM\_MODE"{}}, QCARCAM\_METADATA\_TAG\_ICA\_LDC\_TRANSFORM\_MODE, 1\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line 145 of file test\+\_\+util.\+cpp.
+
+\mbox{\Hypertarget{test__util_8cpp_a266891a36d509fafc649be1b8be2e724}\label{test__util_8cpp_a266891a36d509fafc649be1b8be2e724}} 
+\index{test\_util.cpp@{test\_util.cpp}!sg\_outputFormatTable@{sg\_outputFormatTable}}
+\index{sg\_outputFormatTable@{sg\_outputFormatTable}!test\_util.cpp@{test\_util.cpp}}
+\doxysubsubsection{\texorpdfstring{sg\_outputFormatTable}{sg\_outputFormatTable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structFmtMappingType}{Fmt\+Mapping\+Type}} sg\+\_\+output\+Format\+Table\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 105 of file test\+\_\+util.\+cpp.
+
