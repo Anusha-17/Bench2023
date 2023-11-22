@@ -21,6 +21,7 @@ class shallow
 		cout << "a = " << a << endl;
 		cout << "b = " << b << endl;
 		cout << "*ptr = " << *ptr << endl;
+		cout << ptr << " " << *ptr << endl;
 	}
 };
 
@@ -29,8 +30,8 @@ int main()
 	shallow sobj1;
 	sobj1.setdata(1,2,3);
 	shallow sobj2=sobj1;
+	sobj1.display();
 	sobj2.display();
-	cout << &sobj1.ptr << endl;
-	cout << &sobj2.ptr << endl;
+	
 }
 		

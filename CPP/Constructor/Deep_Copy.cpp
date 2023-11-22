@@ -29,13 +29,17 @@
             std::cout << "value of a is : " <<a<< std::endl;  
             std::cout << "value of b is : " <<b<< std::endl;  
             std::cout << "value of *p is : " <<*p<< std::endl;  
+            std::cout << p << " " << *p << std::endl;
+            
         }  
     };  
     int main()  
     {  
       Demo d1;  
       d1.setdata(4,5,7);  
-      Demo d2 = d1;  
+      Demo d2 = d1; 
+      d1.showdata();
+      *d2.p=10; 
       d2.showdata();  
       return 0;  
     }  
